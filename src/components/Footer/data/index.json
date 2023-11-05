@@ -1,0 +1,38 @@
+{
+  "contacts": [
+    {
+      "name": "Saurav Ghimire",
+      "post": "Coordinator,",
+      "of": "IT Meet",
+      "contact": "9861958825"
+    },
+    {
+      "name": "Aayush Pokharel",
+      "post": "General Secretary,",
+      "of": "KUCC",
+      "contact": "9818155899"
+    }
+  ],
+  "socials": [
+    {
+      "name": "tiktok",
+      "link": "jfalkjd"
+    },
+    {
+      "name": "facebook",
+      "link": "jfalkjd"
+    },
+    {
+      "name": "x",
+      "link": "jfalkjd"
+    },
+    {
+      "name": "linkedIn",
+      "link": "jfalkjd"
+    },
+    {
+      "name": "instagram",
+      "link": "jfalkjd"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+.Footer
+    padding: 64px 192px
+    background-color: var(--dark-grey )
+    color: white
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 92px
+    .contents
+        width: 100%
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+        gap: 44px
+        &:nth-last-child(n)
+            flex: 1
+        .contacts
+            display: flex
+            flex-direction: column
+            gap: 36px
+            .contacts
+                color: var(--primary-green)
+            .post
+                display: flex
+                flex-direction: row
+                gap: 42px
+                .name
+                    color: var(--primary-blue)
+            .add
+                gap: 28px
+                display: flex
+                flex-direction: row
+                align-items: center
+        .guidelines
+            align-self: flex-start
+            display: flex
+            flex-direction: column
+            gap: 28px
+            .followus
+                color: var(--primary-green)
+                margin-bottom: -10px
+            .icons
+                display: flex
+                flex-direction: row
+                gap: 22px
+            .gos
+                background: var(--gradient)
+                background-clip: text
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent

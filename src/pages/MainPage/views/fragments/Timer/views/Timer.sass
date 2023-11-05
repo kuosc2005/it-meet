@@ -1,0 +1,45 @@
+.Timer
+    color: white
+    position: absolute
+    z-index: 450
+    top: 100vh
+    left: 50%
+    transform: translate(-50%,-50%)
+    background-color: var(--mid-grey)
+    border-radius: 32px
+    padding: 32px 154px
+    width: max-content
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: 22px
+    @media screen and (max-width:900px)
+        padding: 32px 64px
+    @media screen and (max-width:548px)
+        padding: 32px 32px
+    .TitleLine
+        margin-top: 0
+    .timer
+        display: flex
+        flex-direction: row
+        gap: 80px
+        @media screen and (max-width:900px)
+            gap: 32px
+        @media screen and (max-width:548px)
+            gap: 16px
+        .date
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            .value
+                text-align: center
+                font-family: Rubik
+                font-size: 54px
+                font-style: normal
+                font-weight: 500
+                background: var(--gradient)
+                background-clip: text
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent

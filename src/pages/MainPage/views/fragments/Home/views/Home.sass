@@ -1,0 +1,55 @@
+.Home
+    background-color: var(--dark-grey)
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    gap: 34px
+    .logo
+        margin-top: calc( 10vh + 34px )
+        & img
+            width: 254px
+    .contents
+        color: white
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: 30px
+        & h1
+            color: white
+            font-size: 48px
+            line-height: 100%
+            font-style: normal
+            text-transform: uppercase
+        .date
+            margin-top: 10px
+            text-align: right
+            font-size: 108px
+            font-style: normal
+            font-weight: 600
+            background: var(--Gradient, linear-gradient(92deg, #369FFF -10.11%, #12DC9F 104.98%))
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+        .at
+            color: var(--primary-green)
+    .absolutes
+        width: 100%
+        position: absolute
+        bottom: 0
+        left: 0
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        .character
+            width: 40vw
+            height: 100%
+        .icons
+            width: 25vw
+            height: 100%
+    .ellipse
+        width: 60%
+        position: absolute
+        bottom: 0
+        right: 0

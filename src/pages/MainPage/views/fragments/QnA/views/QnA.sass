@@ -1,0 +1,56 @@
+.QnA
+    color: white
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    gap: 50px
+    & h2
+        font-size: 32px
+        font-style: normal
+        font-weight: 500
+        line-height: normal
+        letter-spacing: 2.56px
+    .box
+        flex: 1
+        height: 520px
+        border-radius: 40px
+        display: flex
+        flex-direction: column
+        padding: 50px
+    .faq
+        background-color: var(--dark-grey)
+        gap: 30px
+        overflow-y: auto
+    .haveQuestions
+        justify-content: space-between
+        background-color: var(--primary-blue)
+        .input
+            width: 100%
+            & input
+                width: 100%
+                background: none
+                border: none
+                border-bottom: 2px white solid
+                padding: 10px 0
+                color: white
+                font-size: 20px
+                font-style: normal
+                font-weight: 300
+                line-height: 130.4%
+                letter-spacing: 0.8px
+                &:focus
+                    border: none
+                    outline: none
+        .onei
+            width: 100%
+            display: flex
+            flex-direction: row
+            gap: 10px
+        .submit
+            width: fit-content
+            border-radius: 40px
+            background: var(--White, #FFF)
+            padding: 16px 40px
+            border: none
+            font-weight: bold

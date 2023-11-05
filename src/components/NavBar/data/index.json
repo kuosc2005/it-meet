@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Home",
+    "link": "/"
+  },
+  {
+    "title": "About",
+    "link": "/"
+  },
+  {
+    "title": "Pre-events",
+    "link": "/"
+  },
+  {
+    "title": "Main Events",
+    "link": "/"
+  },
+  {
+    "title": "Sponsors",
+    "link": "/"
+  },
+  {
+    "title": "FAQ",
+    "link": "/"
+  },
+  {
+    "title": "Contact",
+    "link": "/"
+  }
+]
