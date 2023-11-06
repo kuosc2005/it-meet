@@ -43,7 +43,7 @@ export default function MainPage() {
                 <Sponsors
                 />
             </section>
-            <section id="qna"
+            <section id="faq"
             >
                 <QnA
                 />

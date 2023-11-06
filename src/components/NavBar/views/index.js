@@ -19,7 +19,7 @@ export default function NavBar
         <div className={`${isMenuOpen ? "" : "active"} NavBar`} >
             {isInMainPage ? <div className='image'>
                 <img src={Logo} alt='IT meet logo' onClick={() => {
-                    navigate("/")
+                    navigate("/#")
                 }} />
             </div> : null}
             <div className='contents'>

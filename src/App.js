@@ -39,7 +39,9 @@ function App() {
           <Route path='/events/:id' element={
             <EventPage />} />
         </Routes>
-        <Footer id="contacts" />
+        <section id="contact" >
+          <Footer />
+        </section>
       </div>
     </DatabaseState>
   );
