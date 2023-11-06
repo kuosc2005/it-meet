@@ -5,8 +5,8 @@ import { useTimer } from '../hooks'
 export default function Timer() {
     const { time } = useTimer()
     return (
-        <>
-            <div className='Timer'>
+        <div className='Timer'>
+            <div className='box'>
                 <h2>See You In</h2>
                 <TitleLine />
                 <div className='timer'>
@@ -29,8 +29,8 @@ export default function Timer() {
 
                 </div>
 
+                <div className='border' />
             </div>
-            <div className='border'></div>
-        </>
+        </div>
     )
 }

@@ -25,9 +25,9 @@ export default function NavBar
             <div className='contents'>
                 {data.map(val => {
                     return (
-                        <Link to={val.link}>
+                        <a href={val.link}>
                             <p>{val.title}</p>
-                        </Link>
+                        </a>
                     )
                 })}
             </div>

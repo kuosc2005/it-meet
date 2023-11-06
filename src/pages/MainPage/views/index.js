@@ -17,14 +17,38 @@ export default function MainPage() {
         <div
             className='MainPage'
         >
-            <Home id={"/"} />
-            <About id="about" />
-            <LegacyNWhy />
-            <PreEvents id="pre-events" />
-            <Events id="events" />
-            <Sponsors id="sponsors" />
-            <QnA id="qna" />
+            <section id={"/"}
+            >
+                <Home
+                />
+            </section>
+            <section id="about"
+            >
+                <About
+                />
+            </section>
+            <LegacyNWhy
+            />
+            <section id="pre-events">
+
+                <PreEvents />
+            </section>
+            <section id="events"
+            >
+                <Events
+                />
+            </section>
+            <section id="sponsors"
+            >
+                <Sponsors
+                />
+            </section>
+            <section id="qna"
+            >
+                <QnA
+                />
+            </section>
             <Maps />
-        </div>
+        </div >
     )
 }
