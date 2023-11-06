@@ -7,7 +7,7 @@ import './LegacyNWhy.sass'
 
 export default function LegacyNWhy() {
     return (
-        <div className='LegacyNWhy'>
+        <div className='LegacyNWhy margin-center'>
             <div className='Legacy'>
                 <div className='title'>
                     <h1>

@@ -12,7 +12,6 @@ function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
   let location = useLocation()
   useEffect(() => {
-    console.log(location);
     if (location.pathname != "/" || scrollPosition > 50) {
       return setHome(true)
     }

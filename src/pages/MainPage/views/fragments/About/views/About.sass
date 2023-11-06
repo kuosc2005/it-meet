@@ -1,5 +1,6 @@
 .About
-    margin: 274px 112px 120px 112px
+    margin-top: 274px
+    margin-bottom: 120px
     display: flex
     flex-direction: column
     gap: 80px
@@ -16,13 +17,14 @@
         align-items: center
         gap: 108px
         .description
-            letter-spacing: 2px
+            flex: 1
             text-align: justify
-            flex: 4
             color: var(--mid-grey)
-            font-size:32px
-            line-height:45.76px
+
         .image
             flex: 1
             width: 25%
             height: 25%
+            display: block
+            @media screen and (max-width:994px)
+                display: none

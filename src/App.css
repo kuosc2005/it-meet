@@ -74,6 +74,12 @@ p {
   margin: 0 80px;
 }
 
+@media screen and (max-width: 664px) {
+  .margin-center {
+    margin: 0 40px;
+  }
+}
+
 .title {
   display: flex;
   flex-direction: column;
