@@ -86,3 +86,10 @@ p {
   align-self: center;
   align-items: center;
 }
+
+input::-webkit-input-placeholder {
+  color: inherit;
+}
+input:-moz-placeholder {
+  color: inherit;
+}

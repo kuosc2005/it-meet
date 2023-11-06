@@ -6,7 +6,7 @@ import logo from '../../../../../../assets/png/logo/light (L)/logo_light_main.pn
 
 export default function About() {
     return (
-        <div className='margin-center About '>
+        <div className='margin-center About ' >
             <div className='title'>
                 <h1>About IT Meet</h1>
                 <TitleLine />

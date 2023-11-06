@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.sass'
 import logo from '../../../../../../assets/svg/logo/dark (D)/logo_dark_slogan_vertical.svg'
-import icons from '../../../../../../assets/p1icons.png'
+import icons from '../../../../../../assets/p1icons.svg'
 import charcater from '../../../../../../assets/p1character.png'
 import ellipse from '../../../../../../assets/ellips.png'
 import Timer from '../../Timer/views'

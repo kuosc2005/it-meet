@@ -17,13 +17,13 @@ export default function MainPage() {
         <div
             className='MainPage'
         >
-            <Home />
-            <About />
+            <Home id={"/"} />
+            <About id="about" />
             <LegacyNWhy />
-            <PreEvents />
-            <Events />
-            <Sponsors />
-            <QnA />
+            <PreEvents id="pre-events" />
+            <Events id="events" />
+            <Sponsors id="sponsors" />
+            <QnA id="qna" />
             <Maps />
         </div>
     )

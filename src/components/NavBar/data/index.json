@@ -5,26 +5,26 @@
   },
   {
     "title": "About",
-    "link": "/"
+    "link": "/#about"
   },
   {
     "title": "Pre-events",
-    "link": "/"
+    "link": "/#pre-events"
   },
   {
     "title": "Main Events",
-    "link": "/"
+    "link": "/#main-events"
   },
   {
     "title": "Sponsors",
-    "link": "/"
+    "link": "/#sponsors"
   },
   {
     "title": "FAQ",
-    "link": "/"
+    "link": "/#faq"
   },
   {
     "title": "Contact",
-    "link": "/"
+    "link": "/#contact"
   }
 ]
