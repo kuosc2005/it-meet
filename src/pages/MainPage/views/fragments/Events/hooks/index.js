@@ -7,7 +7,7 @@ export const useEvents = () => {
     const [event, setEvents] = useState([])
     useEffect(() => {
         const fetchData = async () => {
-            return await database.listDocuments("itmeet", "events", [
+            return await database.listDocuments("itmeet", "allevents", [
                 Query.equal("type", ["post"])
             ])
         }

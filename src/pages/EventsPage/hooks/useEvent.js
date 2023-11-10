@@ -9,9 +9,11 @@ export const useEvent = () => {
   const [event, setEvents] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      return await database.listDocuments("itmeet", "events", [
+      return await database.listDocuments("itmeet", "allevents"
+      , [
         Query.equal("$id", [param.id]),
-      ]);
+      ]
+      );
     };
     fetchData()
       .then((value) => {

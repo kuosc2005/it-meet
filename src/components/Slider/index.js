@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -22,6 +22,21 @@ const Slider = (props) => {
             items: 1
         }
     };
+
+    const [windowsSize, setWindowSize] = useState(0)
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowSize(
+                window.innerWidth,
+            );
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [])
     return (
         <div
             style={{
@@ -30,7 +45,7 @@ const Slider = (props) => {
             }}
         >
             <Carousel
-                centerMode={true}
+                centerMode={windowsSize > 864 ? true : false}
                 responsive={responsive}
                 showDots={true}
                 infinite={true}
