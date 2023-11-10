@@ -8,7 +8,7 @@ export const usePreEvents = () => {
 
     useEffect(() => {
         const fetchData = async (type) => {
-            return await database.listDocuments("itmeet", "events", [
+            return await database.listDocuments("itmeet", "allevents", [
                 Query.equal("type", ["pre"]),
             ]);
         };

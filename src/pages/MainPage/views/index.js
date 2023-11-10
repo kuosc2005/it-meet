@@ -7,6 +7,7 @@ import Events from './fragments/Events/views'
 import Sponsors from './fragments/Sponsors/views'
 import Maps from './fragments/Maps/views'
 import QnA from './fragments/QnA/views'
+import LazyLoad from 'react-lazy-load'
 
 export default function MainPage() {
 
@@ -14,41 +15,45 @@ export default function MainPage() {
         window.scrollTo(0, 0);
     }, [])
     return (
-        <div
-            className='MainPage'
-        >
-            <section id={"/"}
-            >
-                <Home
-                />
-            </section>
-            <section id="about"
-            >
-                <About
-                />
-            </section>
-            <LegacyNWhy
-            />
-            <section id="pre-events">
+        <LazyLoad>
 
-                <PreEvents />
-            </section>
-            <section id="events"
+            <div
+                className='MainPage'
             >
-                <Events
+                <section id={"/"}
+                >
+                    <Home
+                    />
+                </section>
+                <section id="about"
+                >
+                    <About
+                    />
+                </section>
+                <LegacyNWhy
                 />
-            </section>
-            <section id="sponsors"
-            >
-                <Sponsors
-                />
-            </section>
-            <section id="faq"
-            >
-                <QnA
-                />
-            </section>
-            <Maps />
-        </div >
+                <section id="pre-events">
+
+                    <PreEvents />
+                </section>
+                <section id="events"
+                >
+                    <Events
+                    />
+                </section>
+                <section id="sponsors"
+                >
+                    <Sponsors
+                    />
+                </section>
+                <section id="faq"
+                >
+                    <QnA
+                    />
+                </section>
+                <Maps />
+            </div >
+        </LazyLoad>
+
     )
 }

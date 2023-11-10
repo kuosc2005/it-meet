@@ -7,24 +7,24 @@ export default function Timer() {
     return (
         <div className='Timer'>
             <div className='box'>
-                <h2>See You In</h2>
+                <h2>See you in</h2>
                 <TitleLine />
                 <div className='timer'>
                     <div className="date" >
                         <p className="value">{time.days < 10 ? "0" + time.days : time.days}</p>
-                        <p>Days</p>
+                        <p>days</p>
                     </div>
                     <div className="date" >
                         <p className="value">{time.hours < 10 ? "0" + time.hours : time.hours}</p>
-                        <p>Hours</p>
+                        <p>hours</p>
                     </div>
                     <div className="date" >
                         <p className="value">{time.minutes < 10 ? "0" + time.minutes : time.minutes}</p>
-                        <p>Minutes</p>
+                        <p>minutes</p>
                     </div>
                     <div className="date" >
                         <p className="value">{time.seconds < 10 ? "0" + time.seconds : time.seconds}</p>
-                        <p>Seconds</p>
+                        <p>seconds</p>
                     </div>
 
                 </div>

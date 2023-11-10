@@ -7,7 +7,7 @@ export default function Sponsors() {
     return (
         <div className='Sponsors margin-center'>
             <div className='title'>
-                <h1>Our Sponsors</h1>
+                <h1>Our sponsors</h1>
                 <TitleLine />
             </div>
             <div className='sponsorList'>
