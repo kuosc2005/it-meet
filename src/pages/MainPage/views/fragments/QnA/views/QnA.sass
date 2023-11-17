@@ -11,6 +11,9 @@
         font-weight: 500
         line-height: normal
         letter-spacing: 2.56px
+    .wrapper
+        background-color: var(--dark-grey)
+        border-radius: 40px
     .box
         flex: 1
         height: 520px
@@ -18,13 +21,23 @@
         display: flex
         flex-direction: column
         padding: 50px
+        padding-right: 0
     .faq
         background-color: var(--dark-grey)
+        display: grid
         gap: 30px
         overflow-y: auto
+        padding-right: 50px
+        &::-webkit-scrollbar
+            background-color: var(--dark-grey)
+            width: 12px
+            &-thumb
+                background-color: var(--primary-green)
+                border-radius: 6px
     .haveQuestions
         justify-content: space-between
         background-color: var(--primary-blue)
+        padding-right: 50px
         .input
             width: 100%
             & input
