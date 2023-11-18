@@ -18,7 +18,7 @@ export const useEvent = () => {
     fetchData()
       .then((value) => {
         setEvents(value.documents);
-        console.log(value.documents);
+        // console.log(value.documents);
       })
       .catch((err) => {
         alert(err);
