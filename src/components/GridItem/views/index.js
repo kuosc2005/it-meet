@@ -16,7 +16,7 @@ export default function GridItem({ id, src, title, description }) {
         return navigate(`/events/${id}`);
       }}
     >
-      <LazyLoad offset={300} height={300}>
+      <LazyLoad offset={300}>
         <div className='event-image'>
           <img
             src={src}
