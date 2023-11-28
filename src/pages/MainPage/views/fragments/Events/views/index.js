@@ -1,10 +1,9 @@
 import React from 'react';
 import TitleLine from '../../../../../../components/TitleLine';
-// import './PreEvents.sass'
-import Slider from '../../../../../../components/Slider';
+import './Grid.sass'
 
 import { useEvents } from '../hooks';
-import SliderItem from '../../../../../../components/SliderItem/views';
+import GridItem from '../../../../../../components/GridItem/views';
 
 export default function Events() {
   const { event } = useEvents();
@@ -15,11 +14,10 @@ export default function Events() {
         <h1>Events</h1>
         <TitleLine />
       </div>
-      <div className='carousel'>
-        <Slider>
+      <div class="Grid">
           {event.map((element, index) => {
             return (
-              <SliderItem
+              <GridItem
                 id={element.$id}
                 key={index}
                 title={element.title}
@@ -28,7 +26,6 @@ export default function Events() {
               />
             );
           })}
-        </Slider>
       </div>
     </div>
   );
