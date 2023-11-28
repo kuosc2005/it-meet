@@ -1,25 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import './Slider.sass'
 
 const Slider = (props) => {
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
-            items: 3
+            items: 4,
+            slidesToSlide: 4
         },
         desktop: {
             breakpoint: { max: 3000, min: 1224 },
-            items: 2
+            items: 3,
+            slidesToSlide: 3
+
+            
         },
         tablet: {
             breakpoint: { max: 1024, min: 894 },
-            items: 1
+            items: 2,
+            slidesToSlide: 2
+
         },
         mobile: {
             breakpoint: { max: 894, min: 0 },
-            items: 1
+            items: 1,
+            slidesToSlide: 1
         }
     };
 
@@ -45,13 +53,16 @@ const Slider = (props) => {
             }}
         >
             <Carousel
-                centerMode={windowsSize > 864 ? true : false}
-                responsive={responsive}
+                centerMode={false}
                 showDots={true}
+                responsive={responsive}
                 infinite={true}
+                removeArrowOnDeviceType={["tablet", "mobile"]}
                 keyBoardControl={true}
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"
+                autoPlay={true}
+                containerClass='preevent-carousel'
                 renderDotsOutside
             >
                 {props.children}
