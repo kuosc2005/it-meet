@@ -15,7 +15,7 @@ export default function Home() {
                 </div>
                 <div className='contents'>
                     <div>
-                        <h1>Decmeber</h1>
+                        <h1>December</h1>
                         <h1 className='date'>3 & 4</h1>
                     </div>
                     <div>
