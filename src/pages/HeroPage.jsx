@@ -1,49 +1,44 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import ITMeetLogo from "@/assets/images/itmeetlogo.png";
-import BGNeon from "@/assets/images/bgreen.png";
-import Mascot from "@/assets/images/tiger.png";
-import HexaBg from "@/assets/images/hexabg.png";
-import Blocks from "@/assets/images/blocks.png";
-import {
-  FaFacebook,
-  FaSquareInstagram,
-  FaLinkedin,
-  FaSquareXTwitter,
-} from "react-icons/fa6";
+import React from 'react'
+import { useState, useEffect } from 'react'
+import ITMeetLogo from '@/assets/images/itmeetlogo.png'
+import BGNeon from '@/assets/images/bgreen.png'
+import Mascot from '@/assets/images/tiger.png'
+import HexaBg from '@/assets/images/hexabg.png'
+import Blocks from '@/assets/images/blocks.png'
+import { FaFacebook, FaSquareInstagram, FaLinkedin, FaSquareXTwitter } from 'react-icons/fa6'
 
 export default function HeroPage() {
-  const [eventDay, setEventDay] = useState(false);
-  const [days, setDays] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
+  const [eventDay, setEventDay] = useState(false)
+  const [days, setDays] = useState(0)
+  const [hours, setHours] = useState(0)
+  const [minutes, setMinutes] = useState(0)
+  const [seconds, setSeconds] = useState(0)
 
   useEffect(() => {
-    const target = new Date("12/06/2024 23:59:59");
+    const target = new Date('12/06/2024 23:59:59')
     // const target = new Date("09/01/2024 23:37:00");
     const interval = setInterval(() => {
-      const now = new Date();
-      const difference = target.getTime() - now.getTime();
+      const now = new Date()
+      const difference = target.getTime() - now.getTime()
 
-      const d = Math.floor(difference / (1000 * 60 * 60 * 24));
-      setDays(d);
+      const d = Math.floor(difference / (1000 * 60 * 60 * 24))
+      setDays(d)
 
-      const h = Math.floor((difference / (1000 * 60 * 60)) % 24);
-      setHours(h);
+      const h = Math.floor((difference / (1000 * 60 * 60)) % 24)
+      setHours(h)
 
-      const m = Math.floor((difference / 1000 / 60) % 60);
-      setMinutes(m);
+      const m = Math.floor((difference / 1000 / 60) % 60)
+      setMinutes(m)
 
-      const s = Math.floor((difference / 1000) % 60);
-      setSeconds(s);
+      const s = Math.floor((difference / 1000) % 60)
+      setSeconds(s)
 
       if (d <= 0 && h <= 0 && m <= 0 && s <= m) {
-        setEventDay(true);
+        setEventDay(true)
       }
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div className="flex flex-col overflow-hidden items-center justify-center min-h-[calc(100vh-3rem)] relative bg-[#171A23] px-4 sm:px-6 md:px-8">
@@ -57,21 +52,21 @@ export default function HeroPage() {
               className="object-contain w-[160px] sm:w-[200px] md:w-[220px] xl:w-[250px]"
             />
             <div className="flex flex-col gap-2 text-base sm:text-xl lg:text-2xl font-semibold">
-            <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] tracking-wider">
-              REFRESH,
-            </h2>
-            <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] tracking-wider">
-              REIMAGINE &
-            </h2>
-            <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] tracking-wider">
-              INNOVATE
-            </h2>
+              <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] tracking-wider">
+                REFRESH,
+              </h2>
+              <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] tracking-wider">
+                REIMAGINE &
+              </h2>
+              <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] tracking-wider">
+                INNOVATE
+              </h2>
             </div>
           </div>
 
           {/* Main Headings */}
           <div className="text-white flex flex-col gap-2 md:gap-3 xl:gap-4 z-10">
-          <h2 className="text-[25px] sm:text-3xl md:text-4xl lg:text-5xl tracking-wider xl:text-5xl text-center font-semibold">
+            <h2 className="text-[25px] sm:text-3xl md:text-4xl lg:text-5xl tracking-wider xl:text-5xl text-center font-semibold">
               DECEMBER
             </h2>
             <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-[130px] text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] tracking-wider text-center font-bold">
@@ -131,15 +126,15 @@ export default function HeroPage() {
           {/* Main Headings */}
           <div className="text-white flex flex-col gap-2 sm:gap-3 md:gap-4 z-10">
             <h2 className="text-center tracking-wider text-xl sm:text-2xl md:text-4xl font-semibold">
-              MAKE{" "}
+              MAKE{' '}
               <span className="font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
                 IT MEET
-              </span>{" "}
+              </span>{' '}
               GREAT AGAIN
             </h2>
             <hr className="w-1/2 mx-auto" />
             <h1 className="text-4xl tracking-wider sm:text-6xl md:text-7xl xl:text-8xl text-center font-bold">
-              COMING{" "}
+              COMING{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
                 SOON
               </span>
@@ -153,9 +148,7 @@ export default function HeroPage() {
                 <span className="font-bold text-4xl sm:text-5xl text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
                   {days}
                 </span>
-                <span className="text-sm sm:text-base md:text-lg lg:text-xl font-medium">
-                  Days
-                </span>
+                <span className="text-sm sm:text-base md:text-lg lg:text-xl font-medium">Days</span>
               </div>
               <div className="flex flex-col items-center gap-1 rounded-lg border-2 border-[#369fff] bg-gradient-to-t from-[#172633] to-[#205041] p-2 sm:p-3 w-[70px] sm:w-[80px] md:w-[90px] lg:w-[100px]">
                 <span className="font-bold text-4xl sm:text-5xl text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
@@ -274,5 +267,5 @@ export default function HeroPage() {
         />
       </div>
     </div>
-  );
+  )
 }

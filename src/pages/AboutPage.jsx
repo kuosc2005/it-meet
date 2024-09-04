@@ -1,6 +1,6 @@
-import React from "react";
-import ITMeetLogo from "@/assets/images/itmeetdark.png";
-import Activities from "@/components/custom/Carousel";
+import React from 'react'
+import ITMeetLogo from '@/assets/images/itmeetdark.png'
+import Activities from '@/components/custom/Carousel'
 
 export default function AboutPage() {
   return (
@@ -25,21 +25,18 @@ export default function AboutPage() {
           <p className="text-lg sm:text-xl md:text-2xl leading-8 text-justify font-normal text-gray-500">
             <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
               IT MEET
-            </span>{" "}
-            is a non-profit, student-organized university-level tech meetup held
-            annually at Kathmandu University, Dhulikhel. It is the collaborative
-            effort of the Kathmandu University Computer Club (KUCC) and the
-            Department of Computer Science and Engineering (DoCSE). With a
-            strong focus on celebrating recent achievements in the field of
-            information and technology, "IT MEET" has successfully established
-            itself as a platform that offers opportunities for tech enthusiasts
-            to share innovative ideas, compete with their peers, and gain first
-            hand experience of the real world. Now, with the theme “Refresh,
-            Reimagine, Innovate”, we are all set to embark on the journey of “IT
-            MEET 2024”. Our vision is to provide future change-makers with a
-            platform to delve deep into the insights of the tech world, emerging
-            not only with technical skills and knowledge about hardware and
-            computers but also with personal growth.
+            </span>{' '}
+            is a non-profit, student-organized university-level tech meetup held annually at
+            Kathmandu University, Dhulikhel. It is the collaborative effort of the Kathmandu
+            University Computer Club (KUCC) and the Department of Computer Science and Engineering
+            (DoCSE). With a strong focus on celebrating recent achievements in the field of
+            information and technology, "IT MEET" has successfully established itself as a platform
+            that offers opportunities for tech enthusiasts to share innovative ideas, compete with
+            their peers, and gain first hand experience of the real world. Now, with the theme
+            “Refresh, Reimagine, Innovate”, we are all set to embark on the journey of “IT MEET
+            2024”. Our vision is to provide future change-makers with a platform to delve deep into
+            the insights of the tech world, emerging not only with technical skills and knowledge
+            about hardware and computers but also with personal growth.
           </p>
         </div>
         <div className="hidden lg:flex w-full justify-center">
@@ -52,15 +49,15 @@ export default function AboutPage() {
           />
         </div>
       </div>
-        <div className="flex flex-col justify-center items-center gap-2 md:gap-3">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-[#171A23]">
-            Our Legacy
-          </h1>
-          <div className="w-full rounded-full bg-[#14C58F] h-1.5 md:h-2 lg:h-2.5"></div>
-        </div>
-        <div className="mt-5">
-            <Activities />
-        </div>
+      <div className="flex flex-col justify-center items-center gap-2 md:gap-3">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-[#171A23]">
+          Our Legacy
+        </h1>
+        <div className="w-full rounded-full bg-[#14C58F] h-1.5 md:h-2 lg:h-2.5"></div>
+      </div>
+      <div className="mt-5">
+        <Activities />
+      </div>
     </div>
-  );
+  )
 }

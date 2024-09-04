@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import ErrImg from "@/assets/images/OOPS.png";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import ErrImg from '@/assets/images/OOPS.png'
 
 const NotFoundPage = () => {
   return (
@@ -17,10 +17,16 @@ const NotFoundPage = () => {
         </div>
       </div>
       <div className="w-1/2">
-        <img src={ErrImg} alt="errorimg" width={1000} height={1000} className="w-[500px] object-contain"/>
+        <img
+          src={ErrImg}
+          alt="errorimg"
+          width={1000}
+          height={1000}
+          className="w-[500px] object-contain"
+        />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage

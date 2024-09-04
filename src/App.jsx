@@ -9,7 +9,6 @@ import SponsorPage from './pages/SponsorsPage'
 import LocationPage from './pages/Location'
 
 function App() {
-  
   return (
     <>
       <Navbar />
@@ -36,7 +35,7 @@ function App() {
         <Footer />
       </section>
     </>
-  );
+  )
 }
 
 export default App

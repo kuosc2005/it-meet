@@ -1,6 +1,6 @@
-import React from "react";
-import ItmeetLogo from "../../assets/images/itmeetlogo.png";
-import data from "./footerdata.json";
+import React from 'react'
+import ItmeetLogo from '../../assets/images/itmeetlogo.png'
+import data from './footerdata.json'
 import {
   FaFacebook,
   FaSquareInstagram,
@@ -8,7 +8,7 @@ import {
   FaSquareXTwitter,
   FaLocationDot,
   FaEnvelope,
-} from "react-icons/fa6";
+} from 'react-icons/fa6'
 
 export default function Footer() {
   return (
@@ -59,7 +59,9 @@ export default function Footer() {
               </h1>
               <p className="text-lg sm:text-xl md:text-lg lg:text-2xl font-normal">Coordinator,</p>
               <p className="text-lg sm:text-xl md:text-lg lg:text-2xl font-normal">IT Meet</p>
-              <p className="text-lg sm:text-xl md:text-lg lg:text-2xl font-normal">{data.itMeetCoordinator}</p>
+              <p className="text-lg sm:text-xl md:text-lg lg:text-2xl font-normal">
+                {data.itMeetCoordinator}
+              </p>
             </span>
 
             <span className="text-primary-foreground">
@@ -68,7 +70,9 @@ export default function Footer() {
               </h1>
               <p className="text-lg sm:text-xl md:text-lg lg:text-2xl font-normal">President,</p>
               <p className="text-lg sm:text-xl md:text-lg lg:text-2xl font-normal">KUCC</p>
-              <p className="text-lg sm:text-xl md:text-lg lg:text-2xl font-normal">{data.kuccPresident}</p>
+              <p className="text-lg sm:text-xl md:text-lg lg:text-2xl font-normal">
+                {data.kuccPresident}
+              </p>
             </span>
           </div>
 
@@ -107,5 +111,5 @@ export default function Footer() {
         Copyright © 2024 IT Meet. All rights reserved.
       </p>
     </footer>
-  );
+  )
 }

@@ -1,62 +1,62 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App";
-import AboutPage from "./pages/AboutPage";
-import PreEventPage from "./pages/Pre-eventPage";
-import MainEventPage from "./pages/Main-eventPage";
-import SponsorPage from "./pages/SponsorsPage";
-import FAQ from "./pages/FAQ-Page";
-import NotFoundPage from "./pages/NotFoundPage";
-import LocationPage from "./pages/Location";
-import Footer from "./components/custom/Footer";
-import { Toaster } from "react-hot-toast";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import App from './App'
+import AboutPage from './pages/AboutPage'
+import PreEventPage from './pages/Pre-eventPage'
+import MainEventPage from './pages/Main-eventPage'
+import SponsorPage from './pages/SponsorsPage'
+import FAQ from './pages/FAQ-Page'
+import NotFoundPage from './pages/NotFoundPage'
+import LocationPage from './pages/Location'
+import Footer from './components/custom/Footer'
+import { Toaster } from 'react-hot-toast'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
     errorElement: <NotFoundPage />,
   },
   {
-    path: "/abouts",
+    path: '/abouts',
     element: <AboutPage />,
     errorElement: <NotFoundPage />,
   },
   {
-    path: "/pre-events",
+    path: '/pre-events',
     element: <PreEventPage />,
     errorElement: <NotFoundPage />,
   },
   {
-    path: "/main-events",
+    path: '/main-events',
     element: <MainEventPage />,
     errorElement: <NotFoundPage />,
   },
   {
-    path: "/sponsors",
+    path: '/sponsors',
     element: <SponsorPage />,
     errorElement: <NotFoundPage />,
   },
   {
-    path: "/FAQs",
+    path: '/FAQs',
     element: <FAQ />,
     errorElement: <NotFoundPage />,
   },
   {
-    path: "/locations",
+    path: '/locations',
     element: <LocationPage />,
     errorElement: <NotFoundPage />,
   },
   {
-    path: "/contacts",
+    path: '/contacts',
     element: <Footer />,
     errorElement: <NotFoundPage />,
   },
-]);
+])
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
     <Toaster
@@ -67,29 +67,29 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       containerStyle={{}}
       toastOptions={{
         // Define default options
-        className: "",
+        className: '',
         duration: 5000,
         style: {
-          background: "#363636",
-          color: "#fff",
+          background: '#363636',
+          color: '#fff',
         },
 
         // Default options for specific types
         success: {
           duration: 3000,
           theme: {
-            primary: "green",
-            secondary: "black",
+            primary: 'green',
+            secondary: 'black',
           },
         },
         error: {
           duration: 3000,
           theme: {
-            primary: "red",
-            secondary: "black",
+            primary: 'red',
+            secondary: 'black',
           },
         },
       }}
     />
-  </React.StrictMode>
-);
+  </React.StrictMode>,
+)
