@@ -1,6 +1,7 @@
 import React from 'react'
 import ITMeetLogo from '@/assets/images/itmeetdark.png'
 import Activities from '@/components/custom/Carousel'
+import EventGallery from '@/components/custom/EventGallery'
 
 export default function AboutPage() {
   return (
@@ -57,6 +58,15 @@ export default function AboutPage() {
       </div>
       <div className="mt-5">
         <Activities />
+      </div>
+      <div className="flex flex-col justify-center items-center gap-2 md:gap-3">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-[#171A23]">
+          Flashback: IT MEET
+        </h1>
+        <div className="w-full rounded-full bg-[#14C58F] h-1.5 md:h-2 lg:h-2.5"></div>
+      </div>
+      <div className="mt-5">
+        <EventGallery />
       </div>
     </div>
   )
