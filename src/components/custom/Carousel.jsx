@@ -56,7 +56,7 @@ const events = [
 ]
 
 export default function App() {
-  const plugin = React.useRef(Autoplay({ delay: 2000 }))
+  const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: false }))
   return (
     <div>
       <Carousel 
