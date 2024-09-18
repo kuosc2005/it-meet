@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import ITMeetLogo from '@/assets/images/itmeetlogo.png'
-import BGNeon from '@/assets/images/bgreen.png'
-import Mascot from '@/assets/images/tiger.png'
-import HexaBg from '@/assets/images/hexabg.png'
-import Blocks from '@/assets/images/blocks.png'
+import ITMeetLogo from '@/assets/images/itmeetlogo.webp'
+import BGNeon from '@/assets/images/bgreen.webp'
+import Mascot from '@/assets/images/tiger.webp'
+import HexaBg from '@/assets/images/hexabg.webp'
+import Blocks from '@/assets/images/blocks.webp'
 import { FaFacebook, FaSquareInstagram, FaLinkedin, FaSquareXTwitter } from 'react-icons/fa6'
 
 export default function HeroPage() {
