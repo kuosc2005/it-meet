@@ -1,5 +1,5 @@
 import React from 'react'
-import ITMeetLogo from '@/assets/images/itmeetdark.png'
+import ITMeetLogo from '@/assets/images/itmeetdark.webp'
 import Activities from '@/components/custom/Carousel'
 import EventGallery from '@/components/custom/EventGallery'
 

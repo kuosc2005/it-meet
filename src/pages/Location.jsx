@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, CircleMarker } from 'react-leaf
 import 'leaflet/dist/leaflet.css'
 import { Icon } from 'leaflet'
 import { GraduationCap } from 'lucide-react'
-import LogoMap from '@/assets/images/logoMap.png'
+import LogoMap from '@/assets/images/logoMap.webp'
 
 export default function LocationPage() {
   const position = [27.617225501485724, 85.53628499165596]
@@ -29,7 +29,7 @@ export default function LocationPage() {
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.webp"
           />
           <Marker position={position} icon={iconCustom}>
             <Popup>

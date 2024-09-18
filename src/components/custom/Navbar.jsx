@@ -1,5 +1,5 @@
 import React from 'react'
-import ItmeetLogo from '../../assets/images/itmeetlogo.png'
+import ItmeetLogo from '../../assets/images/itmeetlogo.webp'
 import { FaBars, FaX } from 'react-icons/fa6'
 import { useState } from 'react'
 

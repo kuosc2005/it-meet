@@ -1,34 +1,34 @@
-import ev_1 from "@/assets/itmeet_images/event_1.jpg";
-import ev_2 from "@/assets/itmeet_images/event_2.jpg";
-import ev_3 from "@/assets/itmeet_images/event_3.jpg";
-import ev_4 from "@/assets/itmeet_images/event_4.jpg";
-import ev_5 from "@/assets/itmeet_images/event_5.jpg";
-import ev_6 from "@/assets/itmeet_images/event_6.jpg";
-import ev_9 from "@/assets/itmeet_images/e_9.jpg";
-import ev_10 from "@/assets/itmeet_images/e_10.jpg";
-import ev_11 from "@/assets/itmeet_images/e_11.jpg";
-import ev_12 from "@/assets/itmeet_images/e_12.jpg";
-import ev_13 from "@/assets/itmeet_images/e_13.jpg";
-import ev_14 from "@/assets/itmeet_images/e_14.jpg";
-import ev_15 from "@/assets/itmeet_images/e_15.jpg";
-import ev_16 from "@/assets/itmeet_images/e_16.jpg";
-import ev_17 from "@/assets/itmeet_images/e_17.jpg"
+import ev_1 from '@/assets/itmeet_images/event_1.webp'
+import ev_2 from '@/assets/itmeet_images/event_2.webp'
+import ev_3 from '@/assets/itmeet_images/event_3.webp'
+import ev_4 from '@/assets/itmeet_images/event_4.webp'
+import ev_5 from '@/assets/itmeet_images/event_5.webp'
+import ev_6 from '@/assets/itmeet_images/event_6.webp'
+import ev_9 from '@/assets/itmeet_images/e_9.webp'
+import ev_10 from '@/assets/itmeet_images/e_10.webp'
+import ev_11 from '@/assets/itmeet_images/e_11.webp'
+import ev_12 from '@/assets/itmeet_images/e_12.webp'
+import ev_13 from '@/assets/itmeet_images/e_13.webp'
+import ev_14 from '@/assets/itmeet_images/e_14.webp'
+import ev_15 from '@/assets/itmeet_images/e_15.webp'
+import ev_16 from '@/assets/itmeet_images/e_16.webp'
+import ev_17 from '@/assets/itmeet_images/e_17.webp'
 
-import eve_1 from "@/assets/itmeet_images/eve_1.jpg";
-import eve_2 from "@/assets/itmeet_images/eve_2.jpg";
-import eve_3 from "@/assets/itmeet_images/eve_3.jpg";
-import eve_4 from "@/assets/itmeet_images/eve_4.jpg";
-import eve_5 from "@/assets/itmeet_images/eve_5.jpg";
-import eve_6 from "@/assets/itmeet_images/eve_6.jpg";
-import eve_7 from "@/assets/itmeet_images/eve_7.jpg";
-import eve_8 from "@/assets/itmeet_images/eve_8.jpg";
-import eve_9 from "@/assets/itmeet_images/eve_9.jpg";
-import eve_10 from "@/assets/itmeet_images/eve_10.jpg";
-import eve_11 from "@/assets/itmeet_images/eve_11.jpg";
-import eve_13 from "@/assets/itmeet_images/eve_13.jpg";
-import eve_14 from "@/assets/itmeet_images/eve_14.jpg";
-import eve_15 from "@/assets/itmeet_images/eve_15.jpg";
-import eve_16 from "@/assets/itmeet_images/eve_16.jpg";
+import eve_1 from '@/assets/itmeet_images/eve_1.webp'
+import eve_2 from '@/assets/itmeet_images/eve_2.webp'
+import eve_3 from '@/assets/itmeet_images/eve_3.webp'
+import eve_4 from '@/assets/itmeet_images/eve_4.webp'
+import eve_5 from '@/assets/itmeet_images/eve_5.webp'
+import eve_6 from '@/assets/itmeet_images/eve_6.webp'
+import eve_7 from '@/assets/itmeet_images/eve_7.webp'
+import eve_8 from '@/assets/itmeet_images/eve_8.webp'
+import eve_9 from '@/assets/itmeet_images/eve_9.webp'
+import eve_10 from '@/assets/itmeet_images/eve_10.webp'
+import eve_11 from '@/assets/itmeet_images/eve_11.webp'
+import eve_13 from '@/assets/itmeet_images/eve_13.webp'
+import eve_14 from '@/assets/itmeet_images/eve_14.webp'
+import eve_15 from '@/assets/itmeet_images/eve_15.webp'
+import eve_16 from '@/assets/itmeet_images/eve_16.webp'
 
 export const images = [
   {
@@ -91,7 +91,7 @@ export const images = [
     id: 15,
     img: ev_17,
   },
-];
+]
 export const images1 = [
   {
     id: 1,
@@ -153,4 +153,4 @@ export const images1 = [
     id: 15,
     img: eve_16,
   },
-];
+]

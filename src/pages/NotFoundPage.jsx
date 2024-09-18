@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ErrImg from '@/assets/images/OOPS.png'
+import ErrImg from '@/assets/images/OOPS.webp'
 
 const NotFoundPage = () => {
   return (

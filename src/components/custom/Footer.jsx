@@ -1,5 +1,5 @@
 import React from 'react'
-import ItmeetLogo from '../../assets/images/itmeetlogo.png'
+import ItmeetLogo from '../../assets/images/itmeetlogo.webp'
 import data from './footerdata.json'
 import {
   FaFacebook,
