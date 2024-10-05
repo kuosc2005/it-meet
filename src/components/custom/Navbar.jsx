@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ItmeetLogo from '../../assets/images/itmeetlogo.webp'
 import { FaBars, FaX } from 'react-icons/fa6'
-import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const navItems = [
   {
@@ -42,6 +42,8 @@ const navItems = [
 ]
 
 export default function Navbar() {
+
+  const location = useLocation()
   const [open, setOpen] = useState(false)
   const [tilt, setTilt] = useState(false)
 
@@ -54,6 +56,10 @@ export default function Navbar() {
     }, 100)
   }
 
+  const isActive  = (url)=> {
+    return location.hash === url;
+  }
+
   const items = (classes) => {
     return (
       <div className={`${classes} items-center`}>
@@ -61,7 +67,9 @@ export default function Navbar() {
           <a
             key={item.id}
             href={item.url}
-            className="hover:text-[#14C58F] uppercase text-sm sm:text-base md:text-lg"
+            className={`hover:text-[#14C58F] uppercase text-sm sm:text-base md:text-lg ${
+              isActive(item.url) ? 'text-[#14C58F]' : 'text-white'
+            }`}
           >
             {item.title}
           </a>
@@ -87,12 +95,12 @@ export default function Navbar() {
             {open ? (
               <FaX
                 onClick={() => setters()}
-                className={`transform transition-transform duration-250 ease-in-out ${tilt ? 'rotate-0 scale-[1.15]' : '-rotate-90 scale-100'}`}
+                className={`transform transition-all duration-300 ease-in-out ${tilt ? 'rotate-0 scale-[1.15]' : '-rotate-90 scale-100'}`}
               />
             ) : (
               <FaBars
                 onClick={() => setters()}
-                className={`transform transition-transform duration-250 ease-in-out ${tilt ? 'rotate-90 scale-[1.15]' : 'rotate-0 scale-100'}`}
+                className={`transform transition-all duration-300 ease-in-out ${tilt ? 'rotate-90 scale-[1.15]' : 'rotate-0 scale-100'}`}
               />
             )}
           </div>
