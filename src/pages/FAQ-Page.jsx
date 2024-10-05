@@ -58,12 +58,12 @@ const qna = [
 
 export default function FAQ() {
   return (
-    <div className="flex flex-col overflow-hidden p-6 sm:p-8 md:p-10 py-10 md:py-20 lg:px-20 gap-6 sm:gap-8 items-center justify-center min-h-screen bg-slate-100">
+    <div className="flex flex-col overflow-hidden p-6 sm:p-8 md:p-10 py-10 md:py-20 lg:px-20 gap-6 sm:gap-8 items-center justify-center min-h-screen bg-[#171A23]">
       <div className="flex flex-col items-center gap-2 md:gap-4">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-[#171A23]">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
           FAQs
         </h1>
-        <div className="w-full rounded-full bg-[#14C58F] h-1.5 md:h-2 lg:h-2.5"></div>
+        <div className="w-full rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2 lg:h-2.5"></div>
       </div>
       <div className="flex flex-col lg:flex-row items-center w-full mt-0 md:mt-5 justify-between gap-6 sm:gap-8">
         <div className="w-full custom-scrollbar lg:w-1/2 h-[400px] lg:h-[500px] space-y-3 rounded-2xl lg:rounded-3xl overflow-y-scroll bg-[#171A23] text-white p-6 sm:p-8 md:p-10 lg:px-10 xl:px-12">

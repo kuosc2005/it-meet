@@ -2,9 +2,11 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import ITMeetLogo from '@/assets/images/itmeetlogo.webp'
 import BGNeon from '@/assets/images/bgreen.webp'
-import Mascot from '@/assets/images/tiger.webp'
+import EllipeBG from "@/assets/images/Ellipse.png"
+import Mascot from '@/assets/images/hello_tiger.png'
 import HexaBg from '@/assets/images/hexabg.webp'
 import Blocks from '@/assets/images/blocks.webp'
+import BoundaryGreen from "@/assets/images/boundary.png"
 import { FaFacebook, FaSquareInstagram, FaLinkedin, FaSquareXTwitter } from 'react-icons/fa6'
 
 export default function HeroPage() {
@@ -16,7 +18,7 @@ export default function HeroPage() {
 
   useEffect(() => {
     const target = new Date('12/06/2024 23:59:59')
-    // const target = new Date("09/01/2024 23:37:00");
+    // const target = new Date("10/04/2024 23:37:00");
     const interval = setInterval(() => {
       const now = new Date()
       const difference = target.getTime() - now.getTime()
@@ -43,7 +45,8 @@ export default function HeroPage() {
   return (
     <div className="flex flex-col overflow-hidden items-center justify-center min-h-[calc(100vh-3rem)] relative bg-[#171A23] px-4 sm:px-6 md:px-8">
       {eventDay ? (
-        <div className="flex flex-col gap-10 sm:gap-10 xl:gap-12 items-center justify-center">
+        <>
+        <div className="flex flex-col gap-6 sm:gap-10 xl:gap-12 -mt-12 items-center justify-center">
           {/* IT Meet Logo */}
           <div className="flex flex-col gap-6 sm:gap-8 items-center">
             <img
@@ -112,6 +115,28 @@ export default function HeroPage() {
             </h2>
           </div>
         </div>
+        <div className="absolute bottom-0 right-0 z-10">
+        <img
+          src={EllipeBG}
+          alt="bgellipse"
+          className="object-contain w-[200px] sm:w-[280px] md:w-[360px] lg:w-[420px] xl:w-[550px]"
+        />
+      </div>
+      <div className="absolute bottom-0 right-0 z-10">
+        <img
+          src={Mascot}
+          alt="mascot"
+          className="object-contain w-[190px] sm:w-[260px] md:w-[320px] lg:w-[390px] xl:w-[500px]"
+        />
+      </div>
+      <div className="absolute bottom-0 right-0 z-10">
+        <img
+          src={BoundaryGreen}
+          alt="boundary"
+          className="object-contain w-[100px] sm:w-[160px] md:w-[190px] lg:w-[230px] xl:w-[280px]"
+        />
+      </div>
+        </>
       ) : (
         <div className="flex flex-col gap-10 sm:gap-8 md:gap-10 xl:gap-12 items-center justify-center">
           {/* IT Meet Logo */}
@@ -231,20 +256,6 @@ export default function HeroPage() {
           className="object-contain w-[400px] sm:w-[500px] md:w-[550px] lg:w-[620px]"
         />
       </div>
-      {/* <div className="absolute -bottom-48 -right-32 sm:-bottom-56 sm:-right-40 md:-bottom-64 md:-right-48 rotate-90">
-        <img
-          src={BGNeon}
-          alt="bgneo"
-          className="object-contain w-[400px] sm:w-[500px] md:w-[550px] lg:w-[620px]"
-        />
-      </div> */}
-      {/* <div className="absolute -bottom-24 -right-8 sm:-bottom-32 sm:-right-12 md:-bottom-36 md:-right-14 -rotate-45 z-10">
-        <img
-          src={Mascot}
-          alt="mascot"
-          className="object-contain w-[220px] sm:w-[260px] md:w-[310px] lg:w-[330px] xl:w-[370px]"
-        />
-      </div> */}
       <div className="absolute -top-32 opacity-65 sm:opacity-75 md:opacity-85 lg:opacity-90 -right-6 sm:-top-18 sm:-right-8 md:-top-44 md:-right-10 lg:-top-24 lg:-right-8 -rotate-12 z-0">
         <img
           src={HexaBg}
@@ -255,7 +266,7 @@ export default function HeroPage() {
       <div className="absolute -bottom-32 opacity-65 sm:opacity-75 md:opacity-85 lg:opacity-90 -left-12 sm:-bottom-10 sm:-left-20 md:-bottom-10 md:-left-24 lg:-bottom-8 lg:-left-12 rotate-180 z-0">
         <img
           src={HexaBg}
-          alt="hexablue"
+          alt="hexa"
           className="object-contain w-[180px] sm:w-[220px] md:w-[250px]"
         />
       </div>

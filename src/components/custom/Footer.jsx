@@ -12,7 +12,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 h-full p-5">
+    <footer className="bg-[#171A23] h-full p-5">
       <div className="flex flex-col space-y-12 md:flex-row justify-between items-center text-gray-400 py-3 sm:py-4 md:py-3 md:px-10 lg:px-14">
         {/*left side */}
         <div className="space-y-6 md:space-y-8 lg:space-y-12 md">
@@ -48,7 +48,7 @@ export default function Footer() {
 
         {/* Middle part */}
         <div className="flex flex-col space-y-5 md:space-y-8 lg:space-y-10">
-          <h1 className="text-[#12dc9f] text-center font-semibold text-2xl md:text-3xl lg:text-4xl">
+          <h1 className="text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] text-center font-semibold text-2xl md:text-3xl lg:text-4xl">
             Contact Us
           </h1>
           {/* Coordinator and president */}
