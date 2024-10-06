@@ -2,11 +2,11 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import ITMeetLogo from '@/assets/images/itmeetlogo.webp'
 import BGNeon from '@/assets/images/bgreen.webp'
-import EllipeBG from "@/assets/images/Ellipse.webp"
+import EllipeBG from '@/assets/images/Ellipse.webp'
 import Mascot from '@/assets/images/hello_tiger.webp'
 import HexaBg from '@/assets/images/hexabg.webp'
 import Blocks from '@/assets/images/blocks.webp'
-import BoundaryGreen from "@/assets/images/boundary.webp"
+import BoundaryGreen from '@/assets/images/boundary.webp'
 import { FaFacebook, FaSquareInstagram, FaLinkedin, FaSquareXTwitter } from 'react-icons/fa6'
 
 export default function HeroPage() {
@@ -15,11 +15,12 @@ export default function HeroPage() {
   const [hours, setHours] = useState(0)
   const [minutes, setMinutes] = useState(0)
   const [seconds, setSeconds] = useState(0)
+  const [timerStarted, setTimerStarted] = useState(false)
 
   useEffect(() => {
-    // const target = new Date('12/06/2024 23:59:59')
-    const target = new Date("10/04/2024 23:37:00");
-    const interval = setInterval(() => {
+    const target = new Date('12/06/2024 23:59:59')
+
+    function updateTime() {
       const now = new Date()
       const difference = target.getTime() - now.getTime()
 
@@ -38,9 +39,16 @@ export default function HeroPage() {
       if (d <= 0 && h <= 0 && m <= 0 && s <= m) {
         setEventDay(true)
       }
-    }, 1000)
+    }
+
+    if (!timerStarted) {
+      updateTime()
+      setTimerStarted(true)
+    }
+
+    const interval = setInterval(updateTime, 1000)
     return () => clearInterval(interval)
-  }, [])
+  }, [timerStarted])
 
   return (
     <div className="flex flex-col overflow-hidden items-center justify-center min-h-[calc(100vh-3rem)] relative bg-[#171A23] px-4 sm:px-6 md:px-8">
@@ -54,7 +62,7 @@ export default function HeroPage() {
                 alt="itmeetlogo"
                 className="object-contain w-[140px] sm:w-[180px] md:w-[200px] lg:w-[220px] xl:w-[250px]"
               />
-              <div  className="flex flex-col gap-2 text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl font-semibold">
+              <div className="flex flex-col gap-2 text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl font-semibold">
                 <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] tracking-wider">
                   REFRESH,
                 </h2>
