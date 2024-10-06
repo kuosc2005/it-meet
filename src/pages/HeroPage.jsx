@@ -2,11 +2,11 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import ITMeetLogo from '@/assets/images/itmeetlogo.webp'
 import BGNeon from '@/assets/images/bgreen.webp'
-import EllipeBG from "@/assets/images/Ellipse.png"
-import Mascot from '@/assets/images/hello_tiger.png'
+import EllipeBG from "@/assets/images/Ellipse.webp"
+import Mascot from '@/assets/images/hello_tiger.webp'
 import HexaBg from '@/assets/images/hexabg.webp'
 import Blocks from '@/assets/images/blocks.webp'
-import BoundaryGreen from "@/assets/images/boundary.png"
+import BoundaryGreen from "@/assets/images/boundary.webp"
 import { FaFacebook, FaSquareInstagram, FaLinkedin, FaSquareXTwitter } from 'react-icons/fa6'
 
 export default function HeroPage() {
@@ -46,15 +46,15 @@ export default function HeroPage() {
     <div className="flex flex-col overflow-hidden items-center justify-center min-h-[calc(100vh-3rem)] relative bg-[#171A23] px-4 sm:px-6 md:px-8">
       {eventDay ? (
         <>
-        <div className="flex flex-col gap-6 sm:gap-10 xl:gap-12 -mt-12 items-center justify-center">
+        <div className="flex flex-col gap-6 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 -mt-16 sm:mt-0 items-center justify-center z-20">
           {/* IT Meet Logo */}
           <div className="flex flex-col gap-6 sm:gap-8 items-center">
             <img
               src={ITMeetLogo}
               alt="itmeetlogo"
-              className="object-contain w-[160px] sm:w-[200px] md:w-[220px] xl:w-[250px]"
+              className="object-contain w-[140px] sm:w-[180px] md:w-[200px] lg:w-[220px] xl:w-[250px]"
             />
-            <div className="flex flex-col gap-2 text-base sm:text-xl lg:text-2xl font-semibold">
+            <div className="flex flex-col gap-2 text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl font-semibold">
               <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] tracking-wider">
                 REFRESH,
               </h2>
@@ -69,10 +69,10 @@ export default function HeroPage() {
 
           {/* Main Headings */}
           <div className="text-white flex flex-col gap-2 md:gap-3 xl:gap-4 z-10">
-            <h2 className="text-[25px] sm:text-3xl md:text-4xl lg:text-5xl tracking-wider xl:text-5xl text-center font-semibold">
+            <h2 className="text-[20px] sm:text-3xl md:text-4xl lg:text-5xl tracking-wider xl:text-5xl text-center font-semibold">
               DECEMBER
             </h2>
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-[130px] text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] tracking-wider text-center font-bold">
+            <h1 className="text-5xl sm:text-6xl lg:text-8xl xl:text-[130px] text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] tracking-wider text-center font-bold">
               6 & 7
             </h1>
           </div>
@@ -83,34 +83,34 @@ export default function HeroPage() {
               href="https://www.facebook.com/KUITMEET/"
               className="hover:translate-y-0.5 hover:transition-all"
             >
-              <FaFacebook className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" />
+              <FaFacebook className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9" />
             </a>
             <a
               href="https://www.instagram.com/kuitmeet/"
               className="hover:translate-y-0.5 hover:transition-all"
             >
-              <FaSquareInstagram className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" />
+              <FaSquareInstagram className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9" />
             </a>
             <a
               href="https://www.linkedin.com/company/kuitmeet/"
               className="hover:translate-y-0.5 hover:transition-all"
             >
-              <FaLinkedin className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" />
+              <FaLinkedin className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9" />
             </a>
             <a
               href="https://twitter.com/kuitmeet"
               className="hover:translate-y-0.5 hover:transition-all"
             >
-              <FaSquareXTwitter className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" />
+              <FaSquareXTwitter className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9" />
             </a>
           </div>
 
           {/* Location */}
           <div className="flex flex-col items-center text-gray-300 text-center z-10">
-            <h1 className="text-lg sm:text-xl lg:text-2xl flex gap-2 font-semibold tracking-wider">
+            <h1 className="text-base sm:text-lg lg:text-2xl flex gap-2 font-semibold tracking-wider">
               <span className="text-[#14C58F]">@</span>KATHMANDU UNIVERSITY
             </h1>
-            <h2 className="font-medium tracking-wider text-sm sm:text-base lg:text-lg">
+            <h2 className="font-medium tracking-wider text-xs sm:text-sm lg:text-lg">
               Dhulikhel, Kavrepalanchok
             </h2>
           </div>

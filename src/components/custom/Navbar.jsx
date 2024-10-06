@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ItmeetLogo from '../../assets/images/itmeetlogo.webp'
 import { FaBars, FaX } from 'react-icons/fa6'
 import { useLocation } from 'react-router-dom'
@@ -11,31 +11,26 @@ const navItems = [
   },
   // {
   //   id: 2,
-  //   title: "Pre-events",
-  //   url: "#pre-events",
+  //   title: "events",
+  //   url: "#events",
   // },
   // {
   //   id: 3,
-  //   title: "Main-events",
-  //   url: "#main-events",
-  // },
-  // {
-  //   id: 4,
   //   title: "Sponsors",
   //   url: "#sponsors",
   // },
   {
-    id: 5,
+    id: 4,
     title: 'FAQ',
     url: '#faq',
   },
   {
-    id: 6,
+    id: 5,
     title: 'Map',
     url: '#locations',
   },
   {
-    id: 7,
+    id: 6,
     title: 'Contact',
     url: '#contacts',
   },
@@ -46,6 +41,24 @@ export default function Navbar() {
   const location = useLocation()
   const [open, setOpen] = useState(false)
   const [tilt, setTilt] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  // function to handle scroll event
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const setters = () => {
     setOpen(!open)
@@ -56,6 +69,7 @@ export default function Navbar() {
     }, 100)
   }
 
+  // function for active path
   const isActive  = (url)=> {
     return location.hash === url;
   }
@@ -79,7 +93,7 @@ export default function Navbar() {
   }
   return (
     <>
-      <nav className="sticky bg-[#171A23] top-0 z-50 backdrop-filter backdrop-blur-lg border-b border-gray-900 w-full">
+      <nav className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-[#171A23]/80 backdrop-blur-md' : 'bg-[#171A23]'}`}>
         <div className="flex justify-between items-center font-semibold text-slate-100 py-3 px-6 sm:px-10 md:py-4 lg:py-5 md:px-16 lg:px-20">
           <a href="#">
             <img
@@ -109,7 +123,7 @@ export default function Navbar() {
 
       {open && (
         <div
-          className={`w-full h-auto bg-[#171A23] text-white fixed z-50`}
+          className={`w-full h-auto bg-[#171A23]/80 backdrop-blur-md text-white fixed z-50`}
           onClick={() => setters()}
         >
           {items('flex flex-col justify-center space-y-5 p-5 font-semibold text-slate-200')}
