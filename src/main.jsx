@@ -4,14 +4,15 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App'
 import AboutPage from './pages/AboutPage'
-import PreEventPage from './pages/Pre-eventPage'
-import MainEventPage from './pages/Main-eventPage'
+import PreEventPage from './components/custom/Pre-eventPage'
+import MainEventPage from './components/custom/Main-eventPage'
 import SponsorPage from './pages/SponsorsPage'
 import FAQ from './pages/FAQ-Page'
 import NotFoundPage from './pages/NotFoundPage'
 import LocationPage from './pages/Location'
 import Footer from './components/custom/Footer'
 import { Toaster } from 'react-hot-toast'
+import Events from './pages/Events'
 
 const router = createBrowserRouter([
   {
@@ -25,13 +26,8 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
   },
   {
-    path: '/pre-events',
-    element: <PreEventPage />,
-    errorElement: <NotFoundPage />,
-  },
-  {
-    path: '/main-events',
-    element: <MainEventPage />,
+    path: '/events',
+    element: <Events />,
     errorElement: <NotFoundPage />,
   },
   {

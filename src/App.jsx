@@ -3,10 +3,11 @@ import Navbar from './components/custom/Navbar'
 import AboutPage from './pages/AboutPage'
 import FAQ from './pages/FAQ-Page'
 import HeroPage from './pages/HeroPage'
-import MainEventPage from './pages/Main-eventPage'
-import PreEventPage from './pages/Pre-eventPage'
+import MainEventPage from './components/custom/Main-eventPage'
+import PreEventPage from './components/custom/Pre-eventPage'
 import SponsorPage from './pages/SponsorsPage'
 import LocationPage from './pages/Location'
+import Events from './pages/Events'
 
 function App() {
   return (
@@ -16,12 +17,10 @@ function App() {
       <section id="about">
         <AboutPage />
       </section>
-      {/* <section id="pre-events">
-        <PreEventPage />
-      </section>
-      <section id="main-events">
-        <MainEventPage />
-      </section>
+      {/* <section id="events">
+        <Events />
+      </section> */}
+      {/*
       <section id="sponsors">
         <SponsorPage />
       </section> */}

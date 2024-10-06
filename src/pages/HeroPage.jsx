@@ -2,11 +2,11 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import ITMeetLogo from '@/assets/images/itmeetlogo.webp'
 import BGNeon from '@/assets/images/bgreen.webp'
-import EllipeBG from '@/assets/images/Ellipse.webp'
+import EllipeBG from "@/assets/images/Ellipse.webp"
 import Mascot from '@/assets/images/hello_tiger.webp'
 import HexaBg from '@/assets/images/hexabg.webp'
 import Blocks from '@/assets/images/blocks.webp'
-import BoundaryGreen from '@/assets/images/boundary.webp'
+import BoundaryGreen from "@/assets/images/boundary.webp"
 import { FaFacebook, FaSquareInstagram, FaLinkedin, FaSquareXTwitter } from 'react-icons/fa6'
 
 export default function HeroPage() {
@@ -17,8 +17,8 @@ export default function HeroPage() {
   const [seconds, setSeconds] = useState(0)
 
   useEffect(() => {
-    const target = new Date('12/06/2024 23:59:59')
-    // const target = new Date("10/04/2024 23:37:00");
+    // const target = new Date('12/06/2024 23:59:59')
+    const target = new Date("10/04/2024 23:37:00");
     const interval = setInterval(() => {
       const now = new Date()
       const difference = target.getTime() - now.getTime()
@@ -46,15 +46,15 @@ export default function HeroPage() {
     <div className="flex flex-col overflow-hidden items-center justify-center min-h-[calc(100vh-3rem)] relative bg-[#171A23] px-4 sm:px-6 md:px-8">
       {eventDay ? (
         <>
-          <div className="flex flex-col gap-6 sm:gap-10 xl:gap-12 -mt-12 items-center justify-center">
+          <div className="flex flex-col gap-6 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 -mt-16 sm:mt-0 items-center justify-center z-20">
             {/* IT Meet Logo */}
             <div className="flex flex-col gap-6 sm:gap-8 items-center">
               <img
                 src={ITMeetLogo}
                 alt="itmeetlogo"
-                className="object-contain w-[160px] sm:w-[200px] md:w-[220px] xl:w-[250px]"
+                className="object-contain w-[140px] sm:w-[180px] md:w-[200px] lg:w-[220px] xl:w-[250px]"
               />
-              <div className="flex flex-col gap-2 text-base sm:text-xl lg:text-2xl font-semibold">
+              <div  className="flex flex-col gap-2 text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl font-semibold">
                 <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] tracking-wider">
                   REFRESH,
                 </h2>

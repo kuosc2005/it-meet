@@ -12,8 +12,8 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#171A23] h-full p-5">
-      <div className="flex flex-col space-y-12 md:flex-row justify-between items-center text-gray-400 py-3 sm:py-4 md:py-3 md:px-10 lg:px-14">
+    <footer className="bg-[#171A23] h-full p-5 overflow-hidden">
+      <div className="flex flex-col space-y-12 md:flex-row justify-between items-center text-gray-400 py-3 sm:py-4 md:py-3 md:px-10 lg:px-12">
         {/*left side */}
         <div className="space-y-6 md:space-y-8 lg:space-y-12 md">
           <div className="md:flex md:justify-center">

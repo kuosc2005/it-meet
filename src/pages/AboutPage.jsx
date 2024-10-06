@@ -17,13 +17,13 @@ export default function AboutPage() {
           <img
             src={ITMeetLogo}
             alt="itmeetlogodark"
-            className="object-contain w-[200px] sm:w-[280px] md:w-[300px]"
+            className="object-contain w-[180px] sm:w-[260px] md:w-[300px]"
             width={1000}
             height={1000}
           />
         </div>
         <div className="lg:w-full">
-          <p className="text-lg sm:text-xl md:text-2xl leading-8 text-justify font-normal text-gray-500">
+          <p className="text-sm sm:text-base md:text-xl leading-8 text-justify font-normal text-gray-500">
             <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
               IT MEET
             </span>{' '}
@@ -54,7 +54,6 @@ export default function AboutPage() {
         <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
           Our Legacy
         </h1>
-        <div className="w-full rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2 lg:h-2.5"></div>
       </div>
       <div className="mt-5">
         <Activities />
@@ -63,7 +62,6 @@ export default function AboutPage() {
         <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
           Flashback: IT MEET
         </h1>
-        <div className="w-full rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2 lg:h-2.5"></div>
       </div>
       <div className="mt-5">
         <EventGallery />
