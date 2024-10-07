@@ -7,7 +7,6 @@ import Mascot from '@/assets/images/hello_tiger.webp'
 import HexaBg from '@/assets/images/hexabg.webp'
 import Blocks from '@/assets/images/blocks.webp'
 import BoundaryGreen from '@/assets/images/boundary.webp'
-import { FaFacebook, FaSquareInstagram, FaLinkedin, FaSquareXTwitter } from 'react-icons/fa6'
 
 export default function HeroPage() {
   const [eventDay, setEventDay] = useState(false)
@@ -19,6 +18,7 @@ export default function HeroPage() {
 
   useEffect(() => {
     const target = new Date('12/06/2024 23:59:59')
+    // const target = new Date('10/06/2024 23:59:59')
 
     function updateTime() {
       const now = new Date()
@@ -51,7 +51,7 @@ export default function HeroPage() {
   }, [timerStarted])
 
   return (
-    <div className="flex flex-col overflow-hidden items-center justify-center min-h-[calc(100vh-3rem)] relative bg-[#171A23] px-4 sm:px-6 md:px-8">
+    <div id='' className="flex flex-col overflow-hidden items-center justify-center min-h-[calc(100vh-3rem)] relative bg-[#171A23] px-4 sm:px-6 md:px-8">
       {eventDay ? (
         <>
           <div className="flex flex-col gap-6 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 -mt-16 sm:mt-0 items-center justify-center z-20">
@@ -83,34 +83,6 @@ export default function HeroPage() {
               <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-[130px] text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] tracking-wider text-center font-bold">
                 6 & 7
               </h1>
-            </div>
-
-            {/* Social Media Icons */}
-            <div className="text-gray-400 flex items-center z-20 gap-4">
-              <a
-                href="https://www.facebook.com/KUITMEET/"
-                className="hover:translate-y-0.5 hover:transition-all"
-              >
-                <FaFacebook className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" />
-              </a>
-              <a
-                href="https://www.instagram.com/kuitmeet/"
-                className="hover:translate-y-0.5 hover:transition-all"
-              >
-                <FaSquareInstagram className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/kuitmeet/"
-                className="hover:translate-y-0.5 hover:transition-all"
-              >
-                <FaLinkedin className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" />
-              </a>
-              <a
-                href="https://twitter.com/kuitmeet"
-                className="hover:translate-y-0.5 hover:transition-all"
-              >
-                <FaSquareXTwitter className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" />
-              </a>
             </div>
 
             {/* Location */}
@@ -146,7 +118,7 @@ export default function HeroPage() {
           </div>
         </>
       ) : (
-        <div className="flex flex-col gap-10 sm:gap-8 md:gap-10 xl:gap-12 items-center justify-center">
+        <div className="flex flex-col gap-10 sm:gap-8 md:gap-10 xl:gap-12 items-center justify-center z-10">
           {/* IT Meet Logo */}
           <div>
             <img
@@ -208,34 +180,6 @@ export default function HeroPage() {
                 </span>
               </div>
             </div>
-          </div>
-
-          {/* Social Media Icons */}
-          <div className="text-gray-400 flex items-center z-20 gap-4">
-            <a
-              href="https://www.facebook.com/KUITMEET/"
-              className="hover:translate-y-0.5 hover:transition-all"
-            >
-              <FaFacebook className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" />
-            </a>
-            <a
-              href="https://www.instagram.com/kuitmeet/"
-              className="hover:translate-y-0.5 hover:transition-all"
-            >
-              <FaSquareInstagram className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/kuitmeet/"
-              className="hover:translate-y-0.5 hover:transition-all"
-            >
-              <FaLinkedin className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" />
-            </a>
-            <a
-              href="https://twitter.com/kuitmeet"
-              className="hover:translate-y-0.5 hover:transition-all"
-            >
-              <FaSquareXTwitter className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" />
-            </a>
           </div>
 
           {/* Location */}
