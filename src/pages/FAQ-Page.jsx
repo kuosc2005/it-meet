@@ -87,16 +87,6 @@ export default function FAQ() {
             ))}
           </div>
         </div>
-        <div className="w-full lg:w-1/2 flex flex-col gap-2 md:gap-4 h-auto lg:h-[500px] bg-[#369FFF] text-white rounded-2xl lg:rounded-3xl p-6 sm:p-8 md:p-10 lg:px-10 xl:px-12">
-          <div>
-            <h1 className="text-lg sm:text-2xl xl:text-3xl font-bold text-center">
-              Any questions? Let&apos;s talk.
-            </h1>
-          </div>
-          <div className="mt-4 lg:mt-4">
-            <FormFAQ />
-          </div>
-        </div>
       </div>
     </div>
   )
