@@ -90,9 +90,9 @@ export default function FAQ() {
               <img 
                 id="about-the-event"
                 src={selectedFaqQts === "about-the-event" ? GreenSmiley : WhiteSmiley}
-                className="max-w-[50px] hover:cursor-pointer"
+                className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
               />
-              <button id="about-the-event" className={`hover:cursor-auto text-2xl ${selectedFaqQts === "about-the-event" ? "text-[#14C58F]" : "text-white"}`}>
+              <button id="about-the-event" className={`hover:cursor-auto text-xl md:text-2xl ${selectedFaqQts === "about-the-event" ? "text-[#14C58F]" : "text-white"}`}>
                 About the Event
               </button>
             </div>
@@ -100,9 +100,9 @@ export default function FAQ() {
               <img 
                 id="event-logistics" 
                 src={selectedFaqQts === "event-logistics" ? GreenSmiley : WhiteSmiley}
-                className="max-w-[50px] hover:cursor-pointer"
+                className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
               />
-              <button id="event-logistics" className={`hover:cursor-default text-2xl ${selectedFaqQts === "event-logistics" ? "text-[#14C58F]" : "text-white"}`}>
+              <button id="event-logistics" className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === "event-logistics" ? "text-[#14C58F]" : "text-white"}`}>
                 Event Logistics
               </button>
             </div>
@@ -110,9 +110,9 @@ export default function FAQ() {
               <img 
                 id="participation-guidelines" 
                 src={selectedFaqQts === "participation-guidelines" ? GreenSmiley : WhiteSmiley}
-                className="max-w-[50px] hover:cursor-pointer"
+                className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
               />
-              <button id="participation-guidelines" className={`hover:cursor-default text-2xl ${selectedFaqQts === "participation-guidelines" ? "text-[#14C58F]" : "text-white"}`}>
+              <button id="participation-guidelines" className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === "participation-guidelines" ? "text-[#14C58F]" : "text-white"}`}>
                 Participation Guidelines
               </button>
             </div>
@@ -120,9 +120,9 @@ export default function FAQ() {
               <img 
                 id="other" 
                 src={selectedFaqQts === "other" ? GreenSmiley : WhiteSmiley}
-                className="max-w-[50px] hover:cursor-pointer"
+                className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
               />
-              <button id="other" className={`hover:cursor-default text-2xl ${selectedFaqQts === "other" ? "text-[#14C58F]" : "text-white"}`}>
+              <button id="other" className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === "other" ? "text-[#14C58F]" : "text-white"}`}>
                 Other
               </button>
             </div>
