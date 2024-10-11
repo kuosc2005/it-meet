@@ -1,11 +1,14 @@
 import React from 'react'
+import { useState } from 'react'
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-import FormFAQ from '@/components/custom/FormFAQ'
+import HelloTiger from '@/assets/images/hello-tiger-faq.png'
+import WhiteSmiley from '@/assets/images/white-smiley.png'
+import GreenSmiley from '@/assets/images/green-smiley.png'
 
 const qna = [
   {
@@ -46,7 +49,7 @@ const qna = [
   {
     id: 8,
     quest:
-      'If I am interested in becoming a sponsor for IT MEET 2024 or have sponsorship-related inquiries, how can I get in touch with the organizers?',
+    'If I am interested in becoming a sponsor for IT MEET 2024 or have sponsorship-related inquiries, how can I get in touch with the organizers?',
     ans: 'If you are interested in becoming a sponsor for IT MEET 2024 or have inquiries about sponsorship packages, please visit the “Our Sponsors” section on our website or you can reach us directly through itmeet@ku.edu.np.',
   },
   {
@@ -57,21 +60,75 @@ const qna = [
 ]
 
 export default function FAQ() {
+
+  // initially about the event section is shown.
+  const [selectedFaqQts, setSelectedFaqQts] = useState("about-the-event")
+
+  const hanldeFaqQtsChange = (event) => {
+    setSelectedFaqQts(event.target.id)
+  }
+
   return (
-    <div id='faqs' className="flex flex-col overflow-hidden p-6 sm:p-8 md:p-10 py-10 md:py-20 lg:px-20 gap-6 sm:gap-8 items-center justify-center min-h-screen bg-[#171A23]">
+    <div id='faqs' className="flex flex-col overflow-hidden p-6 sm:p-8 md:p-10 py-10 md:py-20 lg:px-20 items-center justify-center min-h-screen bg-[#171A23]">
       <div className="flex flex-col items-center gap-2 md:gap-4">
         <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
           FAQs
         </h1>
         <div className="w-full rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2 lg:h-2.5"></div>
       </div>
-      <div className="flex flex-col lg:flex-row items-center w-full mt-0 md:mt-5 justify-between gap-6 sm:gap-8">
-        <div className="w-full custom-scrollbar lg:w-1/2 h-[400px] lg:h-[500px] space-y-3 rounded-2xl lg:rounded-3xl overflow-y-scroll bg-[#171A23] text-white p-6 sm:p-8 md:p-10 lg:px-10 xl:px-12">
-          <div>
-            <h1 className="text-lg sm:text-2xl xl:text-3xl font-bold text-center">
-              Frequently Asked Questions
-            </h1>
+      <div className="flex flex-col lg:flex-row items-center w-full mt-0 md:mt-5 xl:px-32">
+        <div className="flex flex-row w-full sm:h-36 lg:h-[400px] items-center">
+          <div className="w-[0%] lg:w-[20%] h-[400px]">
+            <img
+              src={HelloTiger}
+              alt="Hello Tiger"
+              className="hidden lg:flex w-24"
+            /> 
           </div>
+          <div className="flex flex-row lg:flex-col gap-6 w-[80%] h-[100px] lg:h-[400px] m-auto whitespace-nowrap overflow-x-auto hide-scrollbar">
+            <div className="flex flex-row gap-4 items-center" onClick={hanldeFaqQtsChange}>
+              <img 
+                id="about-the-event"
+                src={selectedFaqQts === "about-the-event" ? GreenSmiley : WhiteSmiley}
+                className="max-w-[50px] hover:cursor-pointer"
+              />
+              <button id="about-the-event" className={`hover:cursor-auto text-2xl ${selectedFaqQts === "about-the-event" ? "text-[#14C58F]" : "text-white"}`}>
+                About the Event
+              </button>
+            </div>
+            <div className="flex flex-row gap-4 items-center" onClick={hanldeFaqQtsChange}>
+              <img 
+                id="event-logistics" 
+                src={selectedFaqQts === "event-logistics" ? GreenSmiley : WhiteSmiley}
+                className="max-w-[50px] hover:cursor-pointer"
+              />
+              <button id="event-logistics" className={`hover:cursor-default text-2xl ${selectedFaqQts === "event-logistics" ? "text-[#14C58F]" : "text-white"}`}>
+                Event Logistics
+              </button>
+            </div>
+            <div className="flex flex-row gap-4 items-center" onClick={hanldeFaqQtsChange}>
+              <img 
+                id="participation-guidelines" 
+                src={selectedFaqQts === "participation-guidelines" ? GreenSmiley : WhiteSmiley}
+                className="max-w-[50px] hover:cursor-pointer"
+              />
+              <button id="participation-guidelines" className={`hover:cursor-default text-2xl ${selectedFaqQts === "participation-guidelines" ? "text-[#14C58F]" : "text-white"}`}>
+                Participation Guidelines
+              </button>
+            </div>
+            <div className="flex flex-row gap-4 items-center" onClick={hanldeFaqQtsChange}>
+              <img 
+                id="other" 
+                src={selectedFaqQts === "other" ? GreenSmiley : WhiteSmiley}
+                className="max-w-[50px] hover:cursor-pointer"
+              />
+              <button id="other" className={`hover:cursor-default text-2xl ${selectedFaqQts === "other" ? "text-[#14C58F]" : "text-white"}`}>
+                Other
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="w-full custom-scrollbar lg:w-1/2 h-[400px] lg:h-[500px] space-y-3 rounded-2xl lg:rounded-3xl overflow-y-scroll bg-[#171A23] text-white p-6 sm:p-8 md:p-10 lg:px-10 xl:px-12">
           <div className="space-y-3 sm:space-y-5">
             {qna.map((item) => (
               <Accordion key={item.id} type="single" collapsible className="w-full">
