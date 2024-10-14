@@ -1,17 +1,20 @@
 import React from 'react'
 import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
 import ITMeetLogo from '@/assets/images/itmeetlogo.webp'
+
 export default function MainEventPage() {
 
   const eventsData = [
     {
       id: 1,
+      imgSrc:"",
       title: "KU HACKFEST",
       description: "ALorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex",
     },
 
     {
       id: 2,
+      imgSrc:"",
       title: "EMPOWER HER",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex",
       
@@ -19,6 +22,7 @@ export default function MainEventPage() {
 
     {
       id: 3,
+      imgSrc:"",
       title: "EMPOWER HER",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex",
       
@@ -41,11 +45,11 @@ export default function MainEventPage() {
         
         {/*<div className="w-full rounded-full bg-[#14C58F] h-1.5 md:h-2 lg:h-2.5"></div>*/}
 
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-8">
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 w-full mt-8">
 
   {eventsData.map((event) => (
     <div 
-    className=" bg-gradient-to-l from-[#369FFF] to-[#17C58F] p-0.5 rounded-3xl shadow-[0_0_6px_2px_rgba(20,197,143,0.5)] h-25vh"
+    className=" bg-gradient-to-l from-[#369FFF] to-[#17C58F] p-0.5 rounded-3xl shadow-[0_0_6px_2px_rgba(20,197,143,0.5)] h-[25rem] sm:h-[25rem] md:h-[30rem] lg:h-[35rem]"
   >
     <Card 
       key={event.id} 
@@ -55,15 +59,14 @@ export default function MainEventPage() {
       <img
         src={ITMeetLogo}
         alt="IT Meet logo"
-        style={{
-          width: 'auto', 
-          height: 'clamp(2rem, 2vw, 3rem)'
-        }}
+        className="w-auto h-[2rem] sm:h-[2rem] md:h-[2.5rem] lg:h-[3rem] mx-2 mt-2"
+        
+        
       />
       </CardHeader>
       
       <CardContent>
-      <div className="relative flex items-center justify-center w-full mt-[-1rem] p-2">
+      <div className="relative flex items-center justify-center w-full mt-[-1rem] p-4">
                   <div 
                     className="flex items-center justify-center overflow-hidden bg-white rounded-full" 
                     style={{
