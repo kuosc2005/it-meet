@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import { Link } from 'react-router-dom'
 import {
   Card,
   CardHeader,
@@ -6,58 +7,27 @@ import {
   CardTitle,
   CardDescription,
   CardContent,
-} from '@/components/ui/card';
-import ITMeetLogo from '@/assets/images/itmeetlogo.webp';
+} from '@/components/ui/card'
+import ITMeetLogo from '@/assets/images/itmeetlogo.webp'
 
-export default function MainEventPage() {
-  const eventsData = [
-    {
-      id: 1,
-      imgSrc: '/api/placeholder/300/300',
-      title: 'KU HACKFEST',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ut labore et dolore magna aliqua.',
-    },
-    {
-      id: 2,
-      imgSrc: '/api/placeholder/300/300',
-      title: 'EMPOWER HER',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ut labore et dolore magna aliqua.',
-    },
-    {
-      id: 3,
-      imgSrc: '/api/placeholder/300/300',
-      title: 'AR TREASURE HUNT',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ut labore et dolore magna aliqua.',
-    },
-    {
-      id: 4,
-      title: 'WE SHIELD CYBER',
-      imgSrc: '/api/placeholder/300/300',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ut labore et dolore magna aliqua.',
-    },
-  ];
-
+export default function MainEventPage({ events }) {
   return (
-    <div className="flex flex-col overflow-hidden p-16 sm:p-6 md:p-8 gap-6 items-center justify-center min-h-screen bg-[#171A23]">
-      <div className="flex flex-col items-center gap-4 w-full max-w-6xl">
-        <h1 className="text-xl sm:text-2xl md:text-3xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] mb-4">
-          MAIN-EVENTS
-        </h1>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 w-full">
-          {eventsData.map((event) => (
-            <div key={event.id} className="bg-gradient-to-l from-[#369FFF] to-[#17C58F] p-0.5 rounded-2xl shadow-[0_0_4px_1px_rgba(20,197,143,0.5)]">
+    <div className="flex flex-col items-center gap-4 w-full max-w-6xl">
+      <h1 className="text-xl sm:text-2xl md:text-3xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] mb-4">
+        MAIN-EVENTS
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 w-full">
+        {events.map((event) => (
+          <Link
+            key={event.id}
+            to={`/events/${event.title.toLowerCase().replace(/ /g, '-')}`}
+            state={{ eventData: event }}
+            className="block"
+          >
+            <div className="bg-gradient-to-l from-[#369FFF] to-[#17C58F] p-0.5 rounded-2xl shadow-[0_0_4px_1px_rgba(20,197,143,0.5)]">
               <Card className="bg-[#1A1E28] text-white rounded-2xl h-full flex flex-col">
                 <CardHeader className="flex items-start justify-start p-4 sm:p-6">
-                  <img
-                    src={ITMeetLogo}
-                    alt="IT Meet logo"
-                    className="w-auto h-6 sm:h-8"
-                  />
+                  <img src={ITMeetLogo} alt="IT Meet logo" className="w-auto h-6 sm:h-8" />
                 </CardHeader>
                 <CardContent className="flex-none flex items-center justify-center p-1">
                   <div className="relative w-full aspect-square max-w-[160px] ">
@@ -80,9 +50,9 @@ export default function MainEventPage() {
                 </CardFooter>
               </Card>
             </div>
-          ))}
-        </div>
+          </Link>
+        ))}
       </div>
     </div>
-  );
+  )
 }
