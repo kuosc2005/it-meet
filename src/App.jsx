@@ -4,6 +4,7 @@ import Prospectus from './pages/Prospectus'
 import Navbar from './components/custom/Navbar'
 import NotFoundPage from './pages/NotFoundPage'
 import Events from './pages/Events'
+import { EventProvider } from './components/custom/EventContext';
 import EventDetails from './pages/EventDetails'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <EventProvider>
       <Routes>
         <Route path="/" element={<Home />} errorElement={<NotFoundPage />} />
         <Route path="/events" element={<Events />} errorElement={<NotFoundPage />} />
@@ -22,6 +24,7 @@ function App() {
         <Route path="/teams" element={<Team />} errorElement={<NotFoundPage />} />
         <Route path="/prospectus" element={<Prospectus />} errorElement={<NotFoundPage />} />
       </Routes>
+      </EventProvider>
       <Footer />
     </>
   )

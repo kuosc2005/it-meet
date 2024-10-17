@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function PreEventPage({ events }) {
   return (
-    <div className="flex flex-col items-center gap-2 md:gap-4">
+    <div className="flex flex-col items-center px-16 gap-2 md:gap-4">
       <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
         PRE-EVENTS
       </h1>
