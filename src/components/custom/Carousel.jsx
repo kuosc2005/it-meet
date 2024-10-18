@@ -68,7 +68,8 @@ export default function App() {
           {events.map((event) => (
             <CarouselItem key={event.id} className="pl-1 sm:basis-1/2 md:basis-1/3 xl:basis-1/4">
               <div className="p-5">
-                <Card className="flex flex-col items-center justify-center w-full h-[210px] shadow-lg border border-green-500 bg-transparent hover:scale-105 duration-500 transition-all rounded-3xl">
+                <div className='bg-gradient-to-l from-[#369FFF] to-[#17C58F] p-[1px] rounded-3xl'>
+                <Card className="flex flex-col items-center justify-center w-full h-[210px] bg-[#171A23] hover:scale-105 hover:border duration-500 transition-all rounded-3xl">
                   <CardContent className="flex flex-col justify-center items-center space-y-3 p-4">
                     <span>{event.icon}</span>
                     <div className="text-[#14C58F] font-bold text-4xl text-wrap text-center">
@@ -79,6 +80,7 @@ export default function App() {
                     </div>
                   </CardContent>
                 </Card>
+                </div>
               </div>
             </CarouselItem>
           ))}

@@ -1,60 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App'
-import AboutPage from './pages/AboutPage'
-import PreEventPage from './components/custom/Pre-eventPage'
-import MainEventPage from './components/custom/Main-eventPage'
-import SponsorPage from './pages/SponsorsPage'
-import FAQ from './pages/FAQ-Page'
-import NotFoundPage from './pages/NotFoundPage'
-import LocationPage from './pages/Location'
-import Footer from './components/custom/Footer'
 import { Toaster } from 'react-hot-toast'
-import Events from './pages/Events'
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    errorElement: <NotFoundPage />,
-  },
-  {
-    path: '/abouts',
-    element: <AboutPage />,
-    errorElement: <NotFoundPage />,
-  },
-  {
-    path: '/events',
-    element: <Events />,
-    errorElement: <NotFoundPage />,
-  },
-  {
-    path: '/sponsors',
-    element: <SponsorPage />,
-    errorElement: <NotFoundPage />,
-  },
-  {
-    path: '/FAQs',
-    element: <FAQ />,
-    errorElement: <NotFoundPage />,
-  },
-  {
-    path: '/locations',
-    element: <LocationPage />,
-    errorElement: <NotFoundPage />,
-  },
-  {
-    path: '/contacts',
-    element: <Footer />,
-    errorElement: <NotFoundPage />,
-  },
-])
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
+  <BrowserRouter>
+    <App />
     <Toaster
       position="top-center"
       reverseOrder={false}
@@ -87,5 +40,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         },
       }}
     />
-  </React.StrictMode>,
+</BrowserRouter>
 )

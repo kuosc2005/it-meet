@@ -58,7 +58,7 @@ const qna = [
 
 export default function FAQ() {
   return (
-    <div className="flex flex-col overflow-hidden p-6 sm:p-8 md:p-10 py-10 md:py-20 lg:px-20 gap-6 sm:gap-8 items-center justify-center min-h-screen bg-[#171A23]">
+    <div id='faqs' className="flex flex-col overflow-hidden p-6 sm:p-8 md:p-10 py-10 md:py-20 lg:px-20 gap-6 sm:gap-8 items-center justify-center min-h-screen bg-[#171A23]">
       <div className="flex flex-col items-center gap-2 md:gap-4">
         <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
           FAQs
