@@ -14,8 +14,9 @@ const Events = () => {
       <div className="space-y-4">
         <Banner />
         <EventList events={listEvents} />
-        <PreEventPage events={preEvents} />
         <MainEventPage events={mainEvents} />
+        <PreEventPage events={preEvents} />
+        
       </div>
     </div>
   );

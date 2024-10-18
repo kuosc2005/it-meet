@@ -18,7 +18,7 @@ export const EventProvider = ({ children }) => {
   const [preEvents] = useState([
     { id: 1, imgSrc: '', title: 'KU HACKFEST' },
     { id: 2, imgSrc: '', title: 'AR TREASURE HUNT' },
-    { id: 2, imgSrc: '', title: 'LINE FOLLOWING ROBOT' },
+    { id: 3, imgSrc: '', title: 'LINE FOLLOWING ROBOT' },
     
   ]);
 
