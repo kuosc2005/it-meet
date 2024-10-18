@@ -62,7 +62,7 @@ const qna = [
 export default function FAQ() {
 
   // initially about the event section is shown.
-  const [selectedFaqQts, setSelectedFaqQts] = useState("about-the-event")
+  const [selectedFaqQts, setSelectedFaqQts] = useState("about-the-event");
 
   const hanldeFaqQtsChange = (event) => {
     setSelectedFaqQts(event.target.id)
@@ -76,17 +76,18 @@ export default function FAQ() {
         </h1>
         <div className="w-full rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2 lg:h-2.5"></div>
       </div>
-      <div className="flex flex-col lg:flex-row items-center w-full mt-0 md:mt-5 xl:px-32">
+      <div className="flex flex-col lg:flex-row items-center justify-center w-full mt-0 md:mt-5 xl:px-32">
         <div className="flex flex-row w-full h-28 sm:h-36 lg:h-[400px] items-center">
-          <div className="w-[0%] lg:w-[20%] h-[400px]">
-            <img
-              src={HelloTiger}
-              alt="Hello Tiger"
-              className="hidden lg:flex w-24"
-            /> 
-          </div>
-          <div className="flex flex-row lg:flex-col gap-6 w-[80%] h-[100px] lg:h-[400px] m-auto whitespace-nowrap overflow-x-auto hide-scrollbar">
-            <div className="flex flex-row gap-4 items-center" onClick={hanldeFaqQtsChange}>
+          <div className="flex flex-row lg:flex-col gap-8 w-[80%] h-[100px] lg:h-[400px] m-auto whitespace-nowrap overflow-x-auto hide-scrollbar">
+            <div id="about-the-event" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
+              <div className="lg:w-24 relative">
+                <img
+                  id="about-the-event"
+                  src={HelloTiger}
+                  alt="Hello Tiger"
+                  className={`w-24 absolute top-[-45px] ${selectedFaqQts === "about-the-event" ? "visible" : "invisible"}`}
+                /> 
+              </div>
               <img 
                 id="about-the-event"
                 src={selectedFaqQts === "about-the-event" ? GreenSmiley : WhiteSmiley}
@@ -96,7 +97,15 @@ export default function FAQ() {
                 About the Event
               </button>
             </div>
-            <div className="flex flex-row gap-4 items-center" onClick={hanldeFaqQtsChange}>
+            <div id="event-logistics" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
+              <div className="lg:w-24 relative">
+                <img
+                  id="event-logistics" 
+                  src={HelloTiger}
+                  alt="Hello Tiger"
+                  className={`w-24 absolute top-[-45px] ${selectedFaqQts === "event-logistics" ? "visible" : "invisible"}`}
+                /> 
+              </div>
               <img 
                 id="event-logistics" 
                 src={selectedFaqQts === "event-logistics" ? GreenSmiley : WhiteSmiley}
@@ -106,7 +115,15 @@ export default function FAQ() {
                 Event Logistics
               </button>
             </div>
-            <div className="flex flex-row gap-4 items-center" onClick={hanldeFaqQtsChange}>
+            <div id="participation-guidelines" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
+              <div className="lg:w-24 relative">
+                <img
+                  id="participation-guidelines" 
+                  src={HelloTiger}
+                  alt="Hello Tiger"
+                  className={`w-24 absolute top-[-45px] ${selectedFaqQts === "participation-guidelines" ? "visible" : "invisible"}`}
+                /> 
+              </div>
               <img 
                 id="participation-guidelines" 
                 src={selectedFaqQts === "participation-guidelines" ? GreenSmiley : WhiteSmiley}
@@ -116,7 +133,15 @@ export default function FAQ() {
                 Participation Guidelines
               </button>
             </div>
-            <div className="flex flex-row gap-4 items-center" onClick={hanldeFaqQtsChange}>
+            <div id="other" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
+              <div className="lg:w-24 relative">
+                <img
+                  id="other" 
+                  src={HelloTiger}
+                  alt="Hello Tiger"
+                  className={`w-24 absolute top-[-45px] ${selectedFaqQts === "other" ? "visible" : "invisible"}`}
+                /> 
+              </div>
               <img 
                 id="other" 
                 src={selectedFaqQts === "other" ? GreenSmiley : WhiteSmiley}
