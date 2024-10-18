@@ -77,7 +77,7 @@ export default function FAQ() {
         <div className="w-full rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2 lg:h-2.5"></div>
       </div>
       <div className="flex flex-col lg:flex-row items-center w-full mt-0 md:mt-5 xl:px-32">
-        <div className="flex flex-row w-full sm:h-36 lg:h-[400px] items-center">
+        <div className="flex flex-row w-full h-28 sm:h-36 lg:h-[400px] items-center">
           <div className="w-[0%] lg:w-[20%] h-[400px]">
             <img
               src={HelloTiger}
