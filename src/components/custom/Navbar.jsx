@@ -22,12 +22,20 @@ const Navbar = () => {
     },
     { id: 2, title: 'Team', url: '/teams' },
     { id: 3, title: 'Prospectus', url: '/prospectus' },
-    { id: 4, title: 'Events', url: '/events' },
+    { id: 4, 
+      title: 'Events', 
+      url: '/events', 
+      subItems: [
+        {id:1, title:'Upcoming Events', url:'#upcoming'},
+        {id:2, title:'Main Events', url:'#main'},
+        {id:3, title:'Pre Events', url:'#pre-events'},
+      ]},
   ];
 
   const location = useLocation()
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isHomeSubmenuOpen, setHomeSubmenuOpen] = useState(false);
+  const [isEventsSubmenuOpen, setEventsSubmenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false)
 
   const toggleMobileMenu = () => {
@@ -37,6 +45,10 @@ const Navbar = () => {
 
   const toggleHomeSubmenu = () => {
     setHomeSubmenuOpen(!isHomeSubmenuOpen);
+  };
+
+  const toggleEventsSubmenu = () => { // Function to toggle Events submenu
+    setEventsSubmenuOpen(!isEventsSubmenuOpen);
   };
     // function to handle scroll event
   useEffect(() => {
@@ -85,7 +97,7 @@ const Navbar = () => {
         <div className='items-center gap-6 lg:flex hidden'>
             {navItems.map((item) => (
           <>
-            {item.subItems && item.url==="/" ? (
+            {(item.subItems && item.url==="/" || item.url === "/events")  ? (
               <a
               className={`uppercase text-sm sm:text-base md:text-lg hover:text-[#14C58F] cursor-pointer relative group ${
                 isActive(item.url) ? 'text-[#14C58F]' : 'text-white'}`}
@@ -94,11 +106,11 @@ const Navbar = () => {
             >
               <div className="flex items-center gap-2">
                 {item.title} {' '} 
-                {location.pathname === '/' && (
+                {(location.pathname === '/' || location.pathname === '/events') && (
                     <ChevronDown className="bg-gray-800 rounded-full w-4 h-4" />
                   )}
               </div>
-              {location.pathname === '/' && (
+              {(location.pathname === '/' || location.pathname === '/events')  && (
               <div className="hidden space-y-3 w-44 absolute z-10 p-5 bg-[#1f222c] group-hover:block transform duration-700">
                 {item.subItems.map((subItem) => {
                   return (
@@ -175,7 +187,7 @@ const Navbar = () => {
           <div className='gap-5 sm:gap-6 items-center lg:hidden flex flex-col font-semibold text-slate-200'>
             {navItems.map((item) => (
           <>
-            {item.subItems && item.url==="/" ? (
+            {(item.subItems && item.url==="/" || item.url === "/events")? (
               <a
               className={`uppercase text-sm sm:text-base md:text-lg hover:text-[#14C58F] cursor-pointer ${
                 isActive(item.url) ? 'text-[#14C58F]' : 'text-white'}`}
