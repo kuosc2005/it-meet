@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 
 export default function EventList({ events }) {
   return (
-    <div className="flex flex-col p-6 gap-6 bg-[#171A23] min-h-screen">
+    <div id='upcoming' className="flex flex-col p-6 gap-6 bg-[#171A23] min-h-screen">
       {events.map((event) => (
         <Card
           key={event.id}
