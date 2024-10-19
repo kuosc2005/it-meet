@@ -44,7 +44,7 @@ const teamMEMBER = [
         name: "Arekh Shrestha",
         department: "MEMBER",
         image: '/src/assets/team/arekh.png',
-        linkedIn: '',
+        linkedIn: 'https://www.linkedin.com/in/sthaarekh',
         insta: 'sthaarekh',
         github: 'sthaarekh',
     },
@@ -70,7 +70,7 @@ const teamMEMBER = [
         image: '/src/assets/team/lawan.png',
         linkedIn: '',
         insta: '',
-        github: '',
+        github: 'Lawan-Poudyal',
     },
     {
         name: "Prajwal Ghimire",
