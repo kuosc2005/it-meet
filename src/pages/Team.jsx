@@ -35,9 +35,9 @@ const Team = () => {
 
                 <div className="h-52 flex sm:h-56 md:h-60 lg:h-64 overflow-hidden">
                   <div className="flex flex-col items-center justify-center ml-2 mr-16 lg:mr-32 xl:mr-28">
-                      <GrLinkedinOption className="text-white bg-[#0077b5] rounded-sm mb-2 cursor-pointer w-6 h-6 xl:w-7 xl:h-7" onClick={() => window.open(member.linkedIn, '_blank')}/>
-                      <IoLogoInstagram className="bg-white bg-gradient-to-b from-[#833ab4] via-[#fd1d1d] to-[#fcb045] rounded-md mb-2 cursor-pointer w-6 h-6 xl:w-7 xl:h-7" onClick={() => window.open(`https://instagram.com/${member.insta}`, '_blank')}/>
-                      <FaGithub className="cursor-pointer w-6 h-6 xl:w-7 xl:h-7" color="white" onClick={() => window.open(`https://github.com/${member.github}`, '_blank')}/>
+                      {member.linkedIn && (<GrLinkedinOption className="text-white bg-[#0077b5] rounded-sm mb-2 cursor-pointer w-6 h-6 xl:w-7 xl:h-7" onClick={() => window.open(member.linkedIn, '_blank')}/>)}
+                      {member.insta && (<IoLogoInstagram className="bg-white bg-gradient-to-b from-[#833ab4] via-[#fd1d1d] to-[#fcb045] rounded-md mb-2 cursor-pointer w-6 h-6 xl:w-7 xl:h-7" onClick={() => window.open(`https://instagram.com/${member.insta}`, '_blank')}/>)}
+                      {member.github && (<FaGithub className="cursor-pointer w-6 h-6 xl:w-7 xl:h-7" color="white" onClick={() => window.open(`https://github.com/${member.github}`, '_blank')}/>)}
                   </div>
                   <div className='group relative'>
                     <img src={shadowImage} className="absolute w-[350px] blur-md sm:pt-10 md:pt-0"/>
