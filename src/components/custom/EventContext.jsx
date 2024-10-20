@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-import Bg from '@/assets/images/pngbg.png'
+
 
 const EventContext = createContext();
 
@@ -24,8 +24,8 @@ export const EventProvider = ({ children }) => {
   ]);
 
   const [listEvents] = useState([
-    { id: 1, imgSrc: {Bg}, title: 'KU HACKFEST', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac elit porta, aliquam nibh eu, fermentum tortor. Suspendisse commodo massa metus, at sodales felis sollicitudin quis.' },
-    { id: 2, imgSrc: {Bg}, title: 'EMPOWER HER', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac elit porta, aliquam nibh eu, fermentum tortor. Suspendisse commodo massa metus, at sodales felis sollicitudin quis.' },
+    { id: 1, imgSrc: '', title: 'KU HACKFEST', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac elit porta, aliquam nibh eu, fermentum tortor. Suspendisse commodo massa metus, at sodales felis sollicitudin quis.' },
+    { id: 2, imgSrc: '', title: 'EMPOWER HER', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac elit porta, aliquam nibh eu, fermentum tortor. Suspendisse commodo massa metus, at sodales felis sollicitudin quis.' },
     
   ]);
 
