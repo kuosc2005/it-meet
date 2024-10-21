@@ -3,7 +3,7 @@ import ITMeetLogo from '@/assets/images/itmeetlogo.png';
 
 
 const Sponsor = ({ name, tier, image }) => (
-  <div className="sponsor-group flex flex-col items-center gap-2 md:gap-4">
+  <div className="sponsor-group flex flex-col items-center gap-2 md:gap-8">
     <h3 className="sponsor-tier text-lg sm:text-xl md:text-2xl font-bold text-[#12dc9f]"
        style={{
         backgroundImage: 'linear-gradient(90deg, #369FFF, #3BD0A3, #14C58F)',
@@ -13,33 +13,46 @@ const Sponsor = ({ name, tier, image }) => (
           
     {tier} Sponsor
     </h3>
-
-
-    {
-  tier === 'Gold' ? (
+ 
    
-    <div className="flex flex-row gap-2 ">
-      <img src={image} alt={`${tier} Sponsor - Logo 1`}
-       className="sponsor-logo object-contain w-[324px] h-[57px]" />
-      <img src={image} alt={`${tier} Sponsor - Logo 2`} 
-      className="sponsor-logo object-contain w-[324px] h-[57px]" />
-    </div>
-  ) : tier === 'Silver' ? (
     
-    <div className="flex flex-row gap-2 ">
-      <img src={image} alt={`${tier} Sponsor - Logo 1`} 
-      className="sponsor-logo object-contain w-[324px] h-[57px]" />
+  {tier === 'Gold' ? (
+   
+    <div className="flex items-center gap-6" >
+     <div>
+      <img src={image} alt={`${tier} Sponsor - Logo 1`}
+       className="sponsor-logo object-contain w-[140px]" />
+       </div>
+       <div>
       <img src={image} alt={`${tier} Sponsor - Logo 2`} 
-      className="sponsor-logo object-contain w-[324px] h-[57px]" />
-      <img src={image} alt={`${tier} Sponsor - Logo 3`} 
-      className="sponsor-logo object-contain w-[324px] h-[57px]" />
+      className="sponsor-logo object-contain w-[140px] " />
+      </div>
     </div>
+    
+  ) : tier === 'Bronze' ? (
+    
+    <div className="flex flex-row gap-6 ">
+      <img src={image} alt={`${tier} Sponsor - Logo 1`} 
+      className="sponsor-logo object-contain w-[140px] " />
+      <img src={image} alt={`${tier} Sponsor - Logo 2`} 
+      className="sponsor-logo object-contain w-[140px]" />
+      <img src={image} alt={`${tier} Sponsor - Logo 3`} 
+      className="sponsor-logo object-contain w-[140px] " />
+    
+    </div>
+    
+  
+  
   ) : (
   
     <img src={image} alt={`${tier} Sponsor - Logo 1`}
-     className="sponsor-logo object-contain w-[324px] h-[57px]" />
-  )
-}
+     className="sponsor-logo object-contain w-[140px] " />
+     
+  )}
+  </div>
+  
+
+);
 
 
 
