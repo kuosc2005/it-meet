@@ -9,7 +9,7 @@ import {
 import HelloTiger from '@/assets/images/hello-tiger-faq.png'
 import WhiteSmiley from '@/assets/images/white-smiley.png'
 import GreenSmiley from '@/assets/images/green-smiley.png'
-import Faq_what_else from "../components/ui/what_else.jsx"
+import Faq_what_else from "../components/custom/what_else.jsx"
 
 const qna = [
   {
@@ -175,6 +175,5 @@ export default function FAQ() {
       </div >
       <Faq_what_else />
     </>
-
   )
 }
