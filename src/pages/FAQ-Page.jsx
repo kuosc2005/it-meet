@@ -9,6 +9,7 @@ import {
 import HelloTiger from '@/assets/images/hello-tiger-faq.png'
 import WhiteSmiley from '@/assets/images/white-smiley.png'
 import GreenSmiley from '@/assets/images/green-smiley.png'
+import Faq_what_else from "../components/ui/what_else.jsx"
 
 const qna = [
   {
@@ -49,7 +50,7 @@ const qna = [
   {
     id: 8,
     quest:
-    'If I am interested in becoming a sponsor for IT MEET 2024 or have sponsorship-related inquiries, how can I get in touch with the organizers?',
+      'If I am interested in becoming a sponsor for IT MEET 2024 or have sponsorship-related inquiries, how can I get in touch with the organizers?',
     ans: 'If you are interested in becoming a sponsor for IT MEET 2024 or have inquiries about sponsorship packages, please visit the “Our Sponsors” section on our website or you can reach us directly through itmeet@ku.edu.np.',
   },
   {
@@ -69,107 +70,111 @@ export default function FAQ() {
   }
 
   return (
-    <div id='faqs' className="flex flex-col overflow-hidden p-6 sm:p-8 md:p-10 py-10 md:py-20 lg:px-20 items-center justify-center min-h-screen bg-[#171A23]">
-      <div className="flex flex-col items-center gap-2 md:gap-4">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
-          FAQs
-        </h1>
-        <div className="w-full rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2 lg:h-2.5"></div>
-      </div>
-      <div className="flex flex-col lg:flex-row items-center justify-center w-full mt-0 md:mt-5 xl:px-32">
-        <div className="flex flex-row w-full h-28 sm:h-36 lg:h-[400px] items-center">
-          <div className="flex flex-row lg:flex-col gap-8 w-[80%] h-[100px] lg:h-[400px] m-auto whitespace-nowrap overflow-x-auto hide-scrollbar">
-            <div id="about-the-event" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
-              <div className="lg:w-24 relative">
+    <>
+      <div id='faqs' className="flex flex-col overflow-hidden p-6 sm:p-8 md:p-10 py-10 md:py-20 lg:px-20 items-center justify-center min-h-screen bg-[#171A23]">
+        <div className="flex flex-col items-center gap-2 md:gap-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
+            FAQs
+          </h1>
+          <div className="w-full rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2 lg:h-2.5"></div>
+        </div>
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full mt-0 md:mt-5 xl:px-32">
+          <div className="flex flex-row w-full h-28 sm:h-36 lg:h-[400px] items-center">
+            <div className="flex flex-row lg:flex-col gap-8 w-[80%] h-[100px] lg:h-[400px] m-auto whitespace-nowrap overflow-x-auto hide-scrollbar">
+              <div id="about-the-event" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
+                <div className="lg:w-24 relative">
+                  <img
+                    id="about-the-event"
+                    src={HelloTiger}
+                    alt="Hello Tiger"
+                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === "about-the-event" ? "visible" : "invisible"}`}
+                  />
+                </div>
                 <img
                   id="about-the-event"
-                  src={HelloTiger}
-                  alt="Hello Tiger"
-                  className={`w-24 absolute top-[-45px] ${selectedFaqQts === "about-the-event" ? "visible" : "invisible"}`}
-                /> 
+                  src={selectedFaqQts === "about-the-event" ? GreenSmiley : WhiteSmiley}
+                  className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
+                />
+                <button id="about-the-event" className={`hover:cursor-auto text-xl md:text-2xl ${selectedFaqQts === "about-the-event" ? "text-[#14C58F]" : "text-white"}`}>
+                  About the Event
+                </button>
               </div>
-              <img 
-                id="about-the-event"
-                src={selectedFaqQts === "about-the-event" ? GreenSmiley : WhiteSmiley}
-                className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
-              />
-              <button id="about-the-event" className={`hover:cursor-auto text-xl md:text-2xl ${selectedFaqQts === "about-the-event" ? "text-[#14C58F]" : "text-white"}`}>
-                About the Event
-              </button>
-            </div>
-            <div id="event-logistics" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
-              <div className="lg:w-24 relative">
+              <div id="event-logistics" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
+                <div className="lg:w-24 relative">
+                  <img
+                    id="event-logistics"
+                    src={HelloTiger}
+                    alt="Hello Tiger"
+                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === "event-logistics" ? "visible" : "invisible"}`}
+                  />
+                </div>
                 <img
-                  id="event-logistics" 
-                  src={HelloTiger}
-                  alt="Hello Tiger"
-                  className={`w-24 absolute top-[-45px] ${selectedFaqQts === "event-logistics" ? "visible" : "invisible"}`}
-                /> 
+                  id="event-logistics"
+                  src={selectedFaqQts === "event-logistics" ? GreenSmiley : WhiteSmiley}
+                  className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
+                />
+                <button id="event-logistics" className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === "event-logistics" ? "text-[#14C58F]" : "text-white"}`}>
+                  Event Logistics
+                </button>
               </div>
-              <img 
-                id="event-logistics" 
-                src={selectedFaqQts === "event-logistics" ? GreenSmiley : WhiteSmiley}
-                className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
-              />
-              <button id="event-logistics" className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === "event-logistics" ? "text-[#14C58F]" : "text-white"}`}>
-                Event Logistics
-              </button>
-            </div>
-            <div id="participation-guidelines" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
-              <div className="lg:w-24 relative">
+              <div id="participation-guidelines" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
+                <div className="lg:w-24 relative">
+                  <img
+                    id="participation-guidelines"
+                    src={HelloTiger}
+                    alt="Hello Tiger"
+                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === "participation-guidelines" ? "visible" : "invisible"}`}
+                  />
+                </div>
                 <img
-                  id="participation-guidelines" 
-                  src={HelloTiger}
-                  alt="Hello Tiger"
-                  className={`w-24 absolute top-[-45px] ${selectedFaqQts === "participation-guidelines" ? "visible" : "invisible"}`}
-                /> 
+                  id="participation-guidelines"
+                  src={selectedFaqQts === "participation-guidelines" ? GreenSmiley : WhiteSmiley}
+                  className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
+                />
+                <button id="participation-guidelines" className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === "participation-guidelines" ? "text-[#14C58F]" : "text-white"}`}>
+                  Participation Guidelines
+                </button>
               </div>
-              <img 
-                id="participation-guidelines" 
-                src={selectedFaqQts === "participation-guidelines" ? GreenSmiley : WhiteSmiley}
-                className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
-              />
-              <button id="participation-guidelines" className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === "participation-guidelines" ? "text-[#14C58F]" : "text-white"}`}>
-                Participation Guidelines
-              </button>
-            </div>
-            <div id="other" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
-              <div className="lg:w-24 relative">
+              <div id="other" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
+                <div className="lg:w-24 relative">
+                  <img
+                    id="other"
+                    src={HelloTiger}
+                    alt="Hello Tiger"
+                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === "other" ? "visible" : "invisible"}`}
+                  />
+                </div>
                 <img
-                  id="other" 
-                  src={HelloTiger}
-                  alt="Hello Tiger"
-                  className={`w-24 absolute top-[-45px] ${selectedFaqQts === "other" ? "visible" : "invisible"}`}
-                /> 
+                  id="other"
+                  src={selectedFaqQts === "other" ? GreenSmiley : WhiteSmiley}
+                  className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
+                />
+                <button id="other" className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === "other" ? "text-[#14C58F]" : "text-white"}`}>
+                  Other
+                </button>
               </div>
-              <img 
-                id="other" 
-                src={selectedFaqQts === "other" ? GreenSmiley : WhiteSmiley}
-                className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
-              />
-              <button id="other" className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === "other" ? "text-[#14C58F]" : "text-white"}`}>
-                Other
-              </button>
+            </div>
+          </div>
+          <div className="w-full custom-scrollbar lg:w-1/2 h-[400px] lg:h-[500px] space-y-3 rounded-2xl lg:rounded-3xl overflow-y-scroll bg-[#171A23] text-white p-6 sm:p-8 md:p-10 lg:px-10 xl:px-12">
+            <div className="space-y-3 sm:space-y-5">
+              {qna.map((item) => (
+                <Accordion key={item.id} type="single" collapsible className="w-full">
+                  <AccordionItem value={item.id.toString()}>
+                    <AccordionTrigger className="text-lg sm:text-xl text-start">
+                      {item.quest}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm sm:text-base font-semibold text-gray-300">
+                      {item.ans}
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              ))}
             </div>
           </div>
         </div>
-        <div className="w-full custom-scrollbar lg:w-1/2 h-[400px] lg:h-[500px] space-y-3 rounded-2xl lg:rounded-3xl overflow-y-scroll bg-[#171A23] text-white p-6 sm:p-8 md:p-10 lg:px-10 xl:px-12">
-          <div className="space-y-3 sm:space-y-5">
-            {qna.map((item) => (
-              <Accordion key={item.id} type="single" collapsible className="w-full">
-                <AccordionItem value={item.id.toString()}>
-                  <AccordionTrigger className="text-lg sm:text-xl text-start">
-                    {item.quest}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-sm sm:text-base font-semibold text-gray-300">
-                    {item.ans}
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+      </div >
+      <Faq_what_else />
+    </>
+
   )
 }
