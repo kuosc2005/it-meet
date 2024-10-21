@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { FaFacebook, FaSquareInstagram, FaLinkedin, FaSquareXTwitter } from 'react-icons/fa6'
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
 
@@ -13,11 +14,11 @@ const Navbar = () => {
       title: 'Home',
       url: '/',
       subItems: [
-        { id: 1, title: 'About', url: '#about' },
-        { id: 2, title: 'Sponsors', url: '#sponsors' },
-        { id: 3, title: 'FAQs', url: '#faqs' },
-        { id: 4, title: 'Map', url: '#locations' },
-        { id: 5, title: 'Contact', url: '#contacts' },
+        { id: 1, title: 'About', url: 'about' },
+        { id: 2, title: 'Sponsors', url: 'sponsors' },
+        { id: 3, title: 'FAQs', url: 'faqs' },
+        { id: 4, title: 'Map', url: 'locations' },
+        { id: 5, title: 'Contact', url: 'contacts' },
       ],
     },
     { id: 2, title: 'Team', url: '/teams' },
@@ -86,11 +87,11 @@ const Navbar = () => {
             {navItems.map((item) => (
           <>
             {item.subItems && item.url==="/" ? (
-              <a
+              <NavLink
               className={`uppercase text-sm sm:text-base md:text-lg hover:text-[#14C58F] cursor-pointer relative group ${
                 isActive(item.url) ? 'text-[#14C58F]' : 'text-white'}`}
               key={item.id}
-              href={item.url}
+              to={item.url}
             >
               <div className="flex items-center gap-2">
                 {item.title} {' '} 
@@ -102,20 +103,20 @@ const Navbar = () => {
               <div className="hidden space-y-3 w-44 absolute z-10 p-5 bg-[#1f222c] group-hover:block transform duration-700">
                 {item.subItems.map((subItem) => {
                   return (
-                    <a
+                    <Link
                         key={subItem.id}
-                        href={subItem.url}
+                        to={subItem.url}
                         className={`flex flex-col hover:text-[#14C58F] uppercase text-sm sm:text-base md:text-lg ${
                           isActive(subItem.url) ? 'text-[#14C58F]' : 'text-white'
                         }`}
                       >
                         {subItem.title}
-                      </a>
+                      </Link>
                   )
                 })}
               </div>
               )}
-            </a>
+            </NavLink>
             ): (
               <NavLink
               key={item.id}
@@ -176,11 +177,11 @@ const Navbar = () => {
             {navItems.map((item) => (
           <>
             {item.subItems && item.url==="/" ? (
-              <a
+              <NavLink
               className={`uppercase text-sm sm:text-base md:text-lg hover:text-[#14C58F] cursor-pointer ${
                 isActive(item.url) ? 'text-[#14C58F]' : 'text-white'}`}
               key={item.id}
-              href={`${location.pathname === "/" ? "#": item.url}`}
+              to={`${location.pathname === "/" ? "#": item.url}`}
               onClick={toggleHomeSubmenu}
             >
               <div className={`flex items-center justify-center gap-2 ${location.pathname === "/" ? "ml-4": "ml-0"}`}>
@@ -194,20 +195,20 @@ const Navbar = () => {
                 isHomeSubmenuOpen ? 'max-h-60 flex flex-col mt-3 ml-12 space-y-2' : 'hidden'}`}>
                 {item.subItems.map((subItem) => {
                   return (
-                    <a
+                    <Link
                         key={subItem.id}
-                        href={subItem.url}
+                        to={subItem.url}
                         className={`hover:text-[#14C58F] uppercase text-xs sm:text-sm md:text-base border-b border-gray-600 ${
                           isActive(subItem.url) ? 'text-[#14C58F]' : 'text-white'
                         }`}
                       >
                         {subItem.title}
-                      </a>
+                      </Link>
                   )
                 })}
               </div>
               )}
-            </a>
+            </NavLink>
             ): (
               <NavLink
               key={item.id}
