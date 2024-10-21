@@ -40,9 +40,9 @@ const Team = () => {
                             {member.insta && (<IoLogoInstagram className="bg-white bg-gradient-to-b from-[#833ab4] via-[#fd1d1d] to-[#fcb045] rounded-md mb-2 cursor-pointer w-6 h-6 xl:w-7 xl:h-7" onClick={() => window.open(`https://instagram.com/${member.insta}`, '_blank')}/>)}
                             {member.github && (<FaGithub className="cursor-pointer w-6 h-6 xl:w-7 xl:h-7" color="white" onClick={() => window.open(`https://github.com/${member.github}`, '_blank')}/>)}
                         </div> */}
-                        <div className='group relative ml-16 lg:ml-32 xl:ml-28'>
+                        <div className='relative ml-16 lg:ml-32 xl:ml-28'>
                           <img src={shadowImage} className="absolute w-[350px] blur-md sm:pt-10 md:pt-0"/>
-                          <img src={member.image} className="h-[280px] sm:h-[300px] md:h-[320px] xl:h-[300px] w-auto transform filter grayscale group-hover:filter-none object-contain transition duration-300" alt={member.name}/>
+                          <img src={member.image} className="h-[280px] sm:h-[300px] md:h-[320px] xl:h-[300px] w-auto transform object-contain transition duration-300" alt={member.name}/>
                         </div>
                       </div>
                     </div>
