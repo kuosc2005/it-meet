@@ -14,9 +14,6 @@ const ImagePlaceholder = ({ imgSrc, alt }) => (
     <div className="bg-gray-200 w-full h-full lg:w-[500px] lg:h-[250px] rounded-br-[80px] overflow-hidden">
       <img src={imgSrc} alt={alt} className="w-full h-full object-cover" />
     </div>
-    <div className="w-20 h-20 rounded-full border-4 border-[#171A23] absolute right-8 bottom-4 overflow-hidden">
-      <img src={imgSrc} alt={alt} className="w-full h-full object-cover" />
-    </div>
   </div>
 )
 
