@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import {
   Accordion,
@@ -6,9 +5,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-import HelloTiger from '@/assets/images/hello-tiger-faq.png'
-import WhiteSmiley from '@/assets/images/white-smiley.png'
-import GreenSmiley from '@/assets/images/green-smiley.png'
+import HelloTiger from '@/assets/images/hello-tiger-faq.webp'
+import WhiteSmiley from '@/assets/images/white-smiley.webp'
+import GreenSmiley from '@/assets/images/green-smiley.webp'
 // import Faq_what_else from "../components/custom/what_else.jsx"
 
 const qna = [
@@ -61,9 +60,8 @@ const qna = [
 ]
 
 export default function FAQ() {
-
   // initially about the event section is shown.
-  const [selectedFaqQts, setSelectedFaqQts] = useState("about-the-event");
+  const [selectedFaqQts, setSelectedFaqQts] = useState('about-the-event')
 
   const hanldeFaqQtsChange = (event) => {
     setSelectedFaqQts(event.target.id)
@@ -71,7 +69,10 @@ export default function FAQ() {
 
   return (
     <>
-      <div id='faqs' className="flex flex-col overflow-hidden p-6 sm:p-8 md:p-10 py-10 md:py-20 lg:px-20 items-center justify-center min-h-screen bg-[#171A23]">
+      <div
+        id="faqs"
+        className="flex flex-col overflow-hidden p-6 sm:p-8 md:p-10 py-10 md:py-20 lg:px-20 items-center justify-center min-h-screen bg-[#171A23]"
+      >
         <div className="flex flex-col items-center gap-2 md:gap-4">
           <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
             FAQs
@@ -81,75 +82,103 @@ export default function FAQ() {
         <div className="flex flex-col lg:flex-row items-center justify-center w-full mt-0 md:mt-5 xl:px-32">
           <div className="flex flex-row w-full h-28 sm:h-36 lg:h-[400px] items-center">
             <div className="flex flex-row lg:flex-col gap-8 w-[80%] h-[100px] lg:h-[400px] m-auto whitespace-nowrap overflow-x-auto hide-scrollbar">
-              <div id="about-the-event" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
+              <div
+                id="about-the-event"
+                className="flex flex-row gap-4 lg:h-26 items-center relative"
+                onClick={hanldeFaqQtsChange}
+              >
                 <div className="lg:w-24 relative">
                   <img
                     id="about-the-event"
                     src={HelloTiger}
                     alt="Hello Tiger"
-                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === "about-the-event" ? "visible" : "invisible"}`}
+                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === 'about-the-event' ? 'visible' : 'invisible'}`}
                   />
                 </div>
                 <img
                   id="about-the-event"
-                  src={selectedFaqQts === "about-the-event" ? GreenSmiley : WhiteSmiley}
+                  src={selectedFaqQts === 'about-the-event' ? GreenSmiley : WhiteSmiley}
                   className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
                 />
-                <button id="about-the-event" className={`hover:cursor-auto text-xl md:text-2xl ${selectedFaqQts === "about-the-event" ? "text-[#14C58F]" : "text-white"}`}>
+                <button
+                  id="about-the-event"
+                  className={`hover:cursor-auto text-xl md:text-2xl ${selectedFaqQts === 'about-the-event' ? 'text-[#14C58F]' : 'text-white'}`}
+                >
                   About the Event
                 </button>
               </div>
-              <div id="event-logistics" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
+              <div
+                id="event-logistics"
+                className="flex flex-row gap-4 lg:h-26 items-center relative"
+                onClick={hanldeFaqQtsChange}
+              >
                 <div className="lg:w-24 relative">
                   <img
                     id="event-logistics"
                     src={HelloTiger}
                     alt="Hello Tiger"
-                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === "event-logistics" ? "visible" : "invisible"}`}
+                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === 'event-logistics' ? 'visible' : 'invisible'}`}
                   />
                 </div>
                 <img
                   id="event-logistics"
-                  src={selectedFaqQts === "event-logistics" ? GreenSmiley : WhiteSmiley}
+                  src={selectedFaqQts === 'event-logistics' ? GreenSmiley : WhiteSmiley}
                   className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
                 />
-                <button id="event-logistics" className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === "event-logistics" ? "text-[#14C58F]" : "text-white"}`}>
+                <button
+                  id="event-logistics"
+                  className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === 'event-logistics' ? 'text-[#14C58F]' : 'text-white'}`}
+                >
                   Event Logistics
                 </button>
               </div>
-              <div id="participation-guidelines" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
+              <div
+                id="participation-guidelines"
+                className="flex flex-row gap-4 lg:h-26 items-center relative"
+                onClick={hanldeFaqQtsChange}
+              >
                 <div className="lg:w-24 relative">
                   <img
                     id="participation-guidelines"
                     src={HelloTiger}
                     alt="Hello Tiger"
-                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === "participation-guidelines" ? "visible" : "invisible"}`}
+                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === 'participation-guidelines' ? 'visible' : 'invisible'}`}
                   />
                 </div>
                 <img
                   id="participation-guidelines"
-                  src={selectedFaqQts === "participation-guidelines" ? GreenSmiley : WhiteSmiley}
+                  src={selectedFaqQts === 'participation-guidelines' ? GreenSmiley : WhiteSmiley}
                   className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
                 />
-                <button id="participation-guidelines" className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === "participation-guidelines" ? "text-[#14C58F]" : "text-white"}`}>
+                <button
+                  id="participation-guidelines"
+                  className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === 'participation-guidelines' ? 'text-[#14C58F]' : 'text-white'}`}
+                >
                   Participation Guidelines
                 </button>
               </div>
-              <div id="other" className="flex flex-row gap-4 lg:h-26 items-center relative" onClick={hanldeFaqQtsChange}>
+              <div
+                id="other"
+                className="flex flex-row gap-4 lg:h-26 items-center relative"
+                onClick={hanldeFaqQtsChange}
+              >
                 <div className="lg:w-24 relative">
                   <img
                     id="other"
                     src={HelloTiger}
                     alt="Hello Tiger"
-                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === "other" ? "visible" : "invisible"}`}
+                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === 'other' ? 'visible' : 'invisible'}`}
                   />
                 </div>
                 <img
                   id="other"
-                  src={selectedFaqQts === "other" ? GreenSmiley : WhiteSmiley}
+                  src={selectedFaqQts === 'other' ? GreenSmiley : WhiteSmiley}
                   className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
                 />
-                <button id="other" className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === "other" ? "text-[#14C58F]" : "text-white"}`}>
+                <button
+                  id="other"
+                  className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === 'other' ? 'text-[#14C58F]' : 'text-white'}`}
+                >
                   Other
                 </button>
               </div>
@@ -172,7 +201,7 @@ export default function FAQ() {
             </div>
           </div>
         </div>
-      </div >
+      </div>
       {/* <Faq_what_else /> */}
     </>
   )
