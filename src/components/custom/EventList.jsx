@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   Card,
   CardHeader,
@@ -8,19 +7,32 @@ import {
   CardContent,
 } from '@/components/ui/card'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
-const ImagePlaceholder = ({ imgSrc, alt }) => (
-  <div className="relative w-full h-full">
-    <div className="bg-gray-200 w-full h-full lg:w-[500px] lg:h-[250px] rounded-br-[80px] overflow-hidden">
-      <img src={imgSrc} alt={alt} className="w-full h-full object-cover" />
+const ImagePlaceholder = ({ imgSrc, alt }) => {
+  console.log('ImagePlaceholder imgSrc:', imgSrc); // Debug log
+  return (
+    <div className="relative w-full h-full">
+      <div className="bg-gray-200 w-full h-full lg:w-[500px] lg:h-[250px] rounded-br-[80px] overflow-hidden">
+        <img src={imgSrc} alt={alt} className="w-full h-full object-cover" />
+      </div>
+      <div className="w-20 h-20 rounded-full border-4 border-[#171A23] absolute right-8 bottom-4 overflow-hidden">
+        <img src={imgSrc} alt={alt} className="w-full h-full object-cover" />
+      </div>
     </div>
-  </div>
-)
+  );
+};
+
+ImagePlaceholder.propTypes = {
+  imgSrc: PropTypes.string.isRequired, // Require imgSrc to be a string
+  alt: PropTypes.string.isRequired,     // Require alt to be a string
+};
 
 export default function EventList({ events }) {
   return (
     <div id="upcoming" className="flex flex-col p-6 gap-6 bg-[#171A23] min-h-screen">
       {events.map((event, index) => (
+        console.log('Event:', event),
         <Card key={event.id} className="bg-[#171A23] text-white border-none flex items-stretch p-4">
           <div className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} w-full`}>
             <div className="flex-grow w-[60%]">
@@ -35,9 +47,9 @@ export default function EventList({ events }) {
                 </CardDescription>
               </CardContent>
               <CardFooter className="flex gap-2 pt-4">
-                <button className="bg-gradient-to-r from-[#369FFF] to-[#14C58F] text-black px-5 py-1.5 rounded hover:bg-[#00cc99] transition-colors">
+                {/* <button className="bg-gradient-to-r from-[#369FFF] to-[#14C58F] text-black px-5 py-1.5 rounded hover:bg-[#00cc99] transition-colors">
                   APPLY
-                </button>
+                </button> */}
                 <Link
                   to={`/events/${event.title.toLowerCase().replace(/ /g, '-')}`}
                   state={{ eventData: event }}
@@ -56,5 +68,16 @@ export default function EventList({ events }) {
         </Card>
       ))}
     </div>
-  )
+  );
 }
+
+EventList.propTypes = {
+  events: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,      // Validate id as required number
+      title: PropTypes.string.isRequired,   // Validate title as required string
+      description: PropTypes.string.isRequired, // Validate description as required string
+      imgSrc: PropTypes.string.isRequired,  // Validate imgSrc as required string
+    })
+  ).isRequired, // Validate events as a required array of objects
+};

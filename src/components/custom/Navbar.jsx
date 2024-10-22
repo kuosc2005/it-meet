@@ -19,7 +19,7 @@ const Navbar = () => {
         { id: 5, title: 'Contact', url: 'contacts' },
       ],
     },
-    { id: 2, title: 'Team', url: '/teams' },
+    // { id: 2, title: 'Team', url: '/teams' },
     { id: 3, title: 'Prospectus', url: '/prospectus' },
     { id: 4, 
       title: 'Events', 
@@ -38,7 +38,7 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen)
-    setHomeSubmenuOpen(false)
+    // setHomeSubmenuOpen(false)
   }
 
   const toggleSubmenu = () => {
