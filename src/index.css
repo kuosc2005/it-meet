@@ -32,6 +32,15 @@ html {
   z-index: 5;
 }
 
+/* Hide horizontal scrollbar in FAQ page for sm and md screens */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
