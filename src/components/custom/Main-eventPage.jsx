@@ -12,11 +12,14 @@ import ITMeetLogo from '@/assets/images/itmeetlogo.webp'
 
 export default function MainEventPage({ events }) {
   return (
-    <div id='main' className="flex flex-col overflow-hidden px-16 sm:p-6 md:p-8 gap-6 items-center justify-center min-h-screen bg-[#171A23]">
+    <div
+      id="main"
+      className="flex flex-col overflow-hidden px-16 sm:p-6 md:p-8 gap-6 items-center justify-center min-h-screen bg-[#171A23]"
+    >
       <h1 className="text-xl sm:text-2xl md:text-3xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] mb-4">
         MAIN-EVENTS
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 w-full">
+      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 w-[clamp(22rem,72vw,72rem)]">
         {events.map((event) => (
           <Link
             key={event.id}
