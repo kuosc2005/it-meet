@@ -22,12 +22,21 @@ const Navbar = () => {
     },
     { id: 2, title: 'Team', url: '/teams' },
     { id: 3, title: 'Prospectus', url: '/prospectus' },
-    { id: 4, title: 'Events', url: '/events' },
-  ]
+    { id: 4, 
+      title: 'Events', 
+      url: '/events', 
+      subItems: [
+        {id:1, title:'Upcoming Events', url:'#upcoming'},
+        {id:2, title:'Main Events', url:'#main'},
+        {id:3, title:'Pre Events', url:'#pre-events'},
+      ]},
+  ];
 
   const location = useLocation()
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [isHomeSubmenuOpen, setHomeSubmenuOpen] = useState(false)
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isHomeSubmenuOpen, setHomeSubmenuOpen] = useState(false);
+  const [isEventsSubmenuOpen, setEventsSubmenuOpen] = useState(false);
+
   const [isScrolled, setIsScrolled] = useState(false)
 
   const toggleMobileMenu = () => {
@@ -36,9 +45,13 @@ const Navbar = () => {
   }
 
   const toggleHomeSubmenu = () => {
-    setHomeSubmenuOpen(!isHomeSubmenuOpen)
-  }
-  // function to handle scroll event
+    setHomeSubmenuOpen(!isHomeSubmenuOpen);
+  };
+
+  const toggleEventsSubmenu = () => { // Function to toggle Events submenu
+    setEventsSubmenuOpen(!isEventsSubmenuOpen);
+  };
+    // function to handle scroll event
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
