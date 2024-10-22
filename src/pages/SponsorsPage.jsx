@@ -4,14 +4,14 @@ import ITMeetLogo from '@/assets/images/itmeetlogo.png';
 
 const Sponsor = ({ name, tier, image }) => (
   <div className="sponsor-group flex flex-col items-center gap-2 md:gap-8">
-    <h3 className="sponsor-tier text-lg sm:text-xl md:text-2xl font-bold text-[#12dc9f]"
+    <h3 className="sponsor-tier text-lg sm:text-xl md:text-3xl font-bold text-[#12dc9f]"
        style={{
         backgroundImage: 'linear-gradient(90deg, #369FFF, #3BD0A3, #14C58F)',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
       }}>
           
-    {tier} Sponsor
+    {tier} 
     </h3>
  
    
@@ -20,23 +20,23 @@ const Sponsor = ({ name, tier, image }) => (
    
     <div className="flex items-center gap-6" >
      <div>
-      <img src={image} alt={`${tier} Sponsor - Logo 1`}
+      <img src={image} alt={`${tier}  - Logo 1`}
        className="sponsor-logo object-contain w-[140px]" />
        </div>
        <div>
-      <img src={image} alt={`${tier} Sponsor - Logo 2`} 
+      <img src={image} alt={`${tier}  - Logo 2`} 
       className="sponsor-logo object-contain w-[140px] " />
       </div>
     </div>
     
-  ) : tier === 'Bronze' ? (
+  ) : tier === 'Bronze Sponsor' || tier === 'Community Partners' || tier === 'Supported By' ? (
     
     <div className="flex flex-row gap-6 ">
-      <img src={image} alt={`${tier} Sponsor - Logo 1`} 
+      <img src={image} alt={`${tier}  - Logo 1`} 
       className="sponsor-logo object-contain w-[140px] " />
-      <img src={image} alt={`${tier} Sponsor - Logo 2`} 
+      <img src={image} alt={`${tier}  - Logo 2`} 
       className="sponsor-logo object-contain w-[140px]" />
-      <img src={image} alt={`${tier} Sponsor - Logo 3`} 
+      <img src={image} alt={`${tier}  - Logo 3`} 
       className="sponsor-logo object-contain w-[140px] " />
     
     </div>
@@ -45,7 +45,7 @@ const Sponsor = ({ name, tier, image }) => (
   
   ) : (
   
-    <img src={image} alt={`${tier} Sponsor - Logo 1`}
+    <img src={image} alt={`${tier}  - Logo 1`}
      className="sponsor-logo object-contain w-[140px] " />
      
   )}
@@ -59,11 +59,13 @@ const Sponsor = ({ name, tier, image }) => (
 export default function SponsorPage() {
   
   const sponsors = [
-    { name: 'IT Meet', tier: 'Title', image: ITMeetLogo },
-    { name: 'IT Meet', tier: 'Diamond', image: ITMeetLogo },
-    {name:'IT Meet', tier:'Gold' , image: ITMeetLogo,},
-    {name:'IT Meet', tier:'Silver' , image: ITMeetLogo,},
-    {name:'IT Meet', tier:'Bronze' , image: ITMeetLogo,}
+    { name: 'IT Meet', tier: 'Title Sponsor', image: ITMeetLogo },
+    { name: 'IT Meet', tier: 'Diamond Sponsor', image: ITMeetLogo },
+    {name:'IT Meet', tier:'Gold Sponsor' , image: ITMeetLogo,},
+    {name:'IT Meet', tier:'Silver Sponsor' , image: ITMeetLogo,},
+    {name:'IT Meet', tier:'Bronze Sponsor' , image: ITMeetLogo,},
+    {name:'IT Meet', tier:'Community Partners' , image: ITMeetLogo,},
+    {name:'IT Meet', tier:'Supported By' , image: ITMeetLogo,}
   ];
 
   return (
