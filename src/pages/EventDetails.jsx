@@ -7,8 +7,8 @@ const EventDetails = () => {
   const { mainEvents, preEvents, listEvents } = useEvents(); // Get events from context
 
   // Combine all events into one array (you could also keep them separate)
-  const allEvents = [...mainEvents, ...preEvents, ...listEvents];
-
+  const allEvents = [ ...listEvents,...mainEvents, ...preEvents];
+  
   // Find the event that matches the eventTitle in the URL
   const event = allEvents.find(
     (e) => e.title.toLowerCase().replace(/ /g, '-') === eventTitle
