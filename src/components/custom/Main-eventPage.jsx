@@ -24,8 +24,8 @@ export default function MainEventPage({ events }) {
             state={{ eventData: event }}
             className="block"
           >
-            <div className="bg-gradient-to-l from-[#369FFF] to-[#17C58F] p-0.5 rounded-2xl shadow-[0_0_4px_1px_rgba(20,197,143,0.5)]">
-              <Card className="bg-[#1A1E28] text-white rounded-2xl h-full flex flex-col">
+            <div className="bg-gradient-to-l from-[#369FFF] to-[#17C58F] p-0.5 rounded-2xl hover:translate-y-[-8px] transition-all duration-500 shadow-[0_0_4px_1px_rgba(20,197,143,0.5)]">
+              <Card className="bg-[#1A1E28] text-white rounded-2xl h-full overflow-hidden flex flex-col">
                 <CardHeader className="flex items-start justify-start p-4 sm:p-6">
                   <img src={ITMeetLogo} alt="IT Meet logo" className="w-auto h-6 sm:h-8" />
                 </CardHeader>
