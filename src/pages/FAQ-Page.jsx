@@ -4,6 +4,7 @@ import HelloTiger from '@/assets/images/hello-tiger-faq.png'
 import Faq_what_else from "../components/custom/what_else.jsx"
 import { useEffect } from 'react'
 import { databases, DATABASE_ID, FAQ_COLLECTION_ID } from "@/config/appwrite.js";
+import { IoIosArrowDown } from "react-icons/io";
 
 
 
@@ -44,7 +45,7 @@ export default function FAQ() {
 
   return (
     <>
-      <div className=" w-full text-pretty h-full text-white p-10 md:p-16 md:py-0 cursor-default bg-primary box-border nowrap">
+      <div className=" w-full text-pretty h-full text-white p-10 md:p-16 md:py-0 cursor-default bg-[#171a23] box-border nowrap">
 
         <div className="flex flex-col justify-between items-center font-bold text-xl sm:text-2xl md:text-3xl overflow-hidden mb-14 md:mb-0">
           <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
@@ -53,9 +54,9 @@ export default function FAQ() {
           </h1>
         </div>
 
-        <div className='flex flex-col md:flex-row justify-between items-center h-full w-full text-lg md:h-[500px] sm:text-xl md:text-2xl font-medium gap-10 '>
+        <div className='flex flex-col md:flex-row justify-between items-center h-full w-full md:h-[500px]  gap-10 '>
           {/*Left part  */}
-          <div className='flex md:flex-col md:justify-center items-start lg:items-end lg:pr-24  h-auto w-full md:w-1/2 gap-x-8 md:gap-8 overflow-x-scroll flex-row '>
+          <div className='flex md:flex-col md:justify-center items-start min-[1250px]:items-end lg:pr-10  h-auto w-full md:w-[40%] gap-x-8 md:gap-8 overflow-x-scroll flex-row no-scrollbar text-[18px] md:text-[24px] font-medium'>
             {
               Object.keys(data).map((value, index) =>
                 <div
@@ -68,14 +69,14 @@ export default function FAQ() {
                   }}
                 >
                   <div className='inline-flex items-center h-full'>
-                    <p className='flex order-2 lg:order-1'>{value}</p>
+                    <p className='flex order-2 min-[1250px]:order-1'>{value}</p>
 
                     <img
                       src={`${HelloTiger} `}
                       alt="__"
                       height={50}
                       width={50}
-                      className={`hidden md:flex order-1 lg:order-2 ${clickedKey == index ? "visible" : "invisible"} `}
+                      className={`hidden md:flex order-1 min-[1250px]:order-2 ${clickedKey == index ? "visible" : "invisible"} `}
                     />
                   </div>
                 </div>
@@ -86,7 +87,7 @@ export default function FAQ() {
 
           {/* Right part */}
           <div
-            className='flex flex-col justify-start md:items-start gap-14 w-full md:w-1/2 overflow-y-auto  no-scrollbar  lg:pt-0'
+            className='flex flex-col md:items-start gap-14 w-full md:w-[60%] overflow-y-auto  no-scrollbar lg:pt-0  text-[18px] md:text-[24px]  font-medium'
           >
             {
               Object.values(data).map((value, id) =>
@@ -94,6 +95,7 @@ export default function FAQ() {
                   ?
                   value.map(each =>
                     <div
+                      className='w-full'
                       key={each.id}>
                       <div
                         key={each.id}
@@ -101,13 +103,21 @@ export default function FAQ() {
                         className='eachQuestion h-full border-b-4 border-[#369fff] w-full'
                         onClick={() => handleClick(each)}
                       >
-                        <button
-                          className="flex items-start justify-between md:items-center text-left gap-8 py-2 w-full h-full"
-                          onClick={() => handleClick(each)}
-                          aria-expanded={isclicked && clickedEachQuestion === each.id}
-                        >
-                          {each.ques}
-                        </button>
+                        <div className='flex h-full w-full '>
+                          <div
+                            className="text-left py-2 w-full h-full"
+                            onClick={() => handleClick(each)}
+                            aria-expanded={isclicked && clickedEachQuestion === each.id}
+                          >
+                            {each.ques}
+                          </div>
+
+                          <span>
+                            <IoIosArrowDown
+                              className={`transition-all duration-300 ${isclicked && clickedEachQuestion === each.id ? "rotate-180" : "rotate-0"}`}
+                            />
+                          </span>
+                        </div>
 
                         {/* Answer Section */}
                         <div
