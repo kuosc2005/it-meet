@@ -10,12 +10,12 @@ import Home from './pages/Home'
 function App() {
   return (
     <>
-    <Navbar/>
-    <Routes>
-        <Route path="/" element={<Home />} errorElement={<NotFoundPage />}/>
-        <Route path="/events" element={<Events />} errorElement={<NotFoundPage />}/>
-        <Route path="/teams" element={<Team />} errorElement={<NotFoundPage />}/>
-        <Route path="/prospectus" element={<Prospectus />} errorElement={<NotFoundPage />}/>
+      {/* <Navbar/> */}
+      <Routes>
+        <Route path="/" element={<Home />} errorElement={<NotFoundPage />} />
+        <Route path="/events" element={<Events />} errorElement={<NotFoundPage />} />
+        <Route path="/teams" element={<Team />} errorElement={<NotFoundPage />} />
+        <Route path="/prospectus" element={<Prospectus />} errorElement={<NotFoundPage />} />
       </Routes>
       <Footer />
     </>
