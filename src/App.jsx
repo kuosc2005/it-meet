@@ -10,7 +10,7 @@ import Home from './pages/Home'
 function App() {
   return (
     <>
-      {/* <Navbar/> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} errorElement={<NotFoundPage />} />
         <Route path="/events" element={<Events />} errorElement={<NotFoundPage />} />
