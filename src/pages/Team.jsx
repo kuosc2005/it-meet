@@ -12,13 +12,13 @@ const Team = () => {
           Meet The Team
         </h1>
         
-        <div className="text-white pl-8 pr-8 sm:pl-11 sm:pr-11 md:pl-20 md:pr-20 lg:pl-24 lg:pr-24 ">
+        <div className="text-white pl-8 pr-8 sm:pl-11 sm:pr-11 md:pl-20 md:pr-20 lg:pl-24 lg:pr-24">
           {team.map((team, index) => (
             <div key={index} >
               <h1 className={`text-left text-[26px] sm:text-[27px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#369FFF] via-[#3BD0A3] to-[#14C58F] ${index > 0 ? 'pt-12' : ''}`}>
                 {team.title}
               </h1>
-
+        
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-7 md:gap-8 lg:gap-9">
                 {team.members.map((member, memberIndex) => (
                     <div key={memberIndex} className="relative gradient-border pt-6">
@@ -40,10 +40,11 @@ const Team = () => {
                             {member.insta && (<IoLogoInstagram className="bg-white bg-gradient-to-b from-[#833ab4] via-[#fd1d1d] to-[#fcb045] rounded-md mb-2 cursor-pointer w-6 h-6 xl:w-7 xl:h-7" onClick={() => window.open(`https://instagram.com/${member.insta}`, '_blank')}/>)}
                             {member.github && (<FaGithub className="cursor-pointer w-6 h-6 xl:w-7 xl:h-7" color="white" onClick={() => window.open(`https://github.com/${member.github}`, '_blank')}/>)}
                         </div> */}
-                        <div className='relative ml-16 lg:ml-32 xl:ml-28'>
-                          <img src={shadowImage} className="absolute w-[350px] blur-md sm:pt-10 md:pt-0"/>
-                          <img src={member.image} className="h-[280px] sm:h-[300px] md:h-[320px] xl:h-[300px] w-auto transform object-contain transition duration-300" alt={member.name}/>
+                        <div className="group relative ml-16 lg:ml-32 xl:ml-28">
+                          <img src={shadowImage} className="absolute w-[350px] blur-md transform group-hover:translate-x-3 group-hover:translate-y-10 transition-all ease-in-out duration-500 sm:translate-y-20 md:translate-y-3" />
+                          <img src={member.image} className="h-[280px] sm:h-[300px] md:h-[320px] xl:h-[300px] w-auto filter grayscale group-hover:filter-none transform object-contain transition duration-500" alt={member.name} />
                         </div>
+
                       </div>
                     </div>
                 ))}
