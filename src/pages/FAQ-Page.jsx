@@ -45,7 +45,7 @@ export default function FAQ() {
 
   return (
     <>
-      <div className=" w-full text-pretty h-full text-white p-10  md:py-0 cursor-default bg-[#171a23] box-border nowrap">
+      <div id="faqs" className=" w-full text-pretty h-full text-white p-10  md:py-0 cursor-default bg-[#171a23] box-border nowrap">
 
         <div className="flex flex-col justify-between items-center font-bold text-xl sm:text-2xl md:text-3xl overflow-hidden mb-14">
           <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
