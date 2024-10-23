@@ -8,7 +8,7 @@ import {
 import HelloTiger from '@/assets/images/hello-tiger-faq.webp'
 import WhiteSmiley from '@/assets/images/white-smiley.webp'
 import GreenSmiley from '@/assets/images/green-smiley.webp'
-// import Faq_what_else from "../components/custom/what_else.jsx"
+import Faq_what_else from "../components/custom/what_else.jsx"
 
 const qna = [
   {
@@ -202,7 +202,7 @@ export default function FAQ() {
           </div>
         </div>
       </div>
-      {/* <Faq_what_else /> */}
+      <Faq_what_else />
     </>
   )
 }
