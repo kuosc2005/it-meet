@@ -45,18 +45,18 @@ export default function FAQ() {
 
   return (
     <>
-      <div className=" w-full text-pretty h-full text-white p-10 md:p-16 md:py-0 cursor-default bg-[#171a23] box-border nowrap">
+      <div className=" w-full text-pretty h-full text-white p-10  md:py-0 cursor-default bg-[#171a23] box-border nowrap">
 
-        <div className="flex flex-col justify-between items-center font-bold text-xl sm:text-2xl md:text-3xl overflow-hidden mb-14 md:mb-0">
+        <div className="flex flex-col justify-between items-center font-bold text-xl sm:text-2xl md:text-3xl overflow-hidden mb-14">
           <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
             FAQs
             <div className="w-full rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2 lg:h-2.5"></div>
           </h1>
         </div>
 
-        <div className='flex flex-col md:flex-row justify-between items-center h-full w-full md:h-[500px]  gap-10 '>
+        <div className='flex flex-col md:flex-row justify-between items-start h-full w-full md:h-[450px] gap-10 '>
           {/*Left part  */}
-          <div className='flex md:flex-col md:justify-center items-start min-[1250px]:items-end lg:pr-10  h-auto w-full md:w-[40%] gap-x-8 md:gap-8 overflow-x-scroll flex-row no-scrollbar text-[18px] md:text-[24px] font-medium'>
+          <div className='flex md:flex-col md:justify-center items-start min-[1250px]:items-end lg:pr-10  h-auto w-full md:w-[40%] gap-x-8 md:gap-7 overflow-x-scroll flex-row no-scrollbar text-[18px] md:text-[24px] font-medium'>
             {
               Object.keys(data).map((value, index) =>
                 <div
@@ -98,7 +98,6 @@ export default function FAQ() {
                       className='w-full'
                       key={each.id}>
                       <div
-                        key={each.id}
                         id={id}
                         className='eachQuestion h-full border-b-4 border-[#369fff] w-full'
                         onClick={() => handleClick(each)}
