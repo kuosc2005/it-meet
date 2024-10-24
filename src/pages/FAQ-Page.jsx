@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from 'react'
 import HelloTiger from '@/assets/images/hello-tiger-faq.png'
 import Faq_what_else from "../components/custom/what_else.jsx"
@@ -136,7 +135,6 @@ export default function FAQ() {
 
         </div>
       </div >
-
       <Faq_what_else />
     </>
   )

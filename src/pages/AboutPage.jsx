@@ -1,11 +1,14 @@
 import React from 'react'
-import ITMeetLogo from '@/assets/images/itmeetlogo.png'
+import ITMeetLogo from '@/assets/images/itmeetlogo.webp'
 import Activities from '@/components/custom/Carousel'
 import EventGallery from '@/components/custom/EventGallery'
 
 export default function AboutPage() {
   return (
-    <div id='about' className="flex flex-col overflow-hidden p-6 sm:p-8 md:p-10 py-20 lg:px-20 gap-8 items-center justify-center min-h-screen bg-[#171A23]">
+    <div
+      id="about"
+      className="flex flex-col overflow-hidden p-6 sm:p-8 md:p-10 py-20 lg:px-20 gap-8 items-center justify-center min-h-screen bg-[#171A23]"
+    >
       <div className="flex flex-col items-center gap-2 md:gap-3">
         <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
           ABOUT IT MEET
