@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import HelloTiger from '@/assets/images/hello-tiger-faq.png'
+import HelloTiger from '@/assets/images/hello-tiger-faq.webp'
 import Faq_what_else from "../components/custom/what_else.jsx"
 import { useEffect } from 'react'
 import { databases, DATABASE_ID, FAQ_COLLECTION_ID } from "@/config/appwrite.js";
 import { IoIosArrowDown } from "react-icons/io";
-
 
 
 export default function FAQ() {
@@ -86,7 +85,7 @@ export default function FAQ() {
 
           {/* Right part */}
           <div
-            className='flex flex-col md:items-start gap-14 w-full md:w-[60%] overflow-y-auto  no-scrollbar lg:pt-0  text-[18px] md:text-[24px]  font-medium'
+            className='flex flex-col md:items-start gap-6 sm:gap-8 w-full md:w-[60%] overflow-y-auto  no-scrollbar lg:pt-0 lg:pr-16 xl:pr-24  text-[18px] md:text-[24px]  font-medium'
           >
             {
               Object.values(data).map((value, id) =>
@@ -98,7 +97,7 @@ export default function FAQ() {
                       key={each.id}>
                       <div
                         id={id}
-                        className='eachQuestion h-full border-b-4 border-[#369fff] w-full'
+                        className='eachQuestion h-full border-b-4 border-[#369fff] cursor-pointer w-full'
                         onClick={() => handleClick(each)}
                       >
                         <div className='flex h-full w-full '>
@@ -119,10 +118,10 @@ export default function FAQ() {
 
                         {/* Answer Section */}
                         <div
-                          className={`overflow-scroll no-scrollbar  w-full transition-all ease-in-out duration-200 ${isclicked && clickedEachQuestion === each.id ? 'max-h-16 opacity-100' : 'max-h-0 opacity-0'
+                          className={`overflow-scroll no-scrollbar  w-full transition-all ease-in-out duration-200 ${isclicked && clickedEachQuestion === each.id ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
                             } `}
                         >
-                          <p className="text-sm font-normal sm:text-base">{each.ans}</p>
+                          <p className="text-sm text-pretty font-normal sm:text-base">{each.ans}</p>
                         </div>
                       </div >
                     </div >
