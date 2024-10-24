@@ -1,11 +1,11 @@
-import P_F from "@/assets/prosp_images/front.svg"
-import P_B from "@/assets/prosp_images/back.svg"
-import P_1 from "@/assets/prosp_images/pg1.svg"
-import P_2 from "@/assets/prosp_images/pg2.svg"
-import P_3 from "@/assets/prosp_images/pg3.svg"
-import P_4 from "@/assets/prosp_images/pg4.svg"
-import P_5 from "@/assets/prosp_images/pg5.svg"
-import P_6 from "@/assets/prosp_images/pg6.svg"
+import P_F from "@/assets/prosp_images/front.webp"
+import P_B from "@/assets/prosp_images/back.webp"
+import P_1 from "@/assets/prosp_images/pg1.webp"
+import P_2 from "@/assets/prosp_images/pg2.webp"
+import P_3 from "@/assets/prosp_images/pg3.webp"
+import P_4 from "@/assets/prosp_images/pg4.webp"
+import P_5 from "@/assets/prosp_images/pg5.webp"
+import P_6 from "@/assets/prosp_images/pg6.webp"
 
 export const prosp_images_single = [
     { id: 1, img: P_F },
