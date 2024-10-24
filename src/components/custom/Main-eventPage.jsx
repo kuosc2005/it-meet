@@ -13,7 +13,7 @@ import ITMeetLogo from '@/assets/images/itmeetlogo.webp'
 export default function MainEventPage({ events }) {
   return (
     <div
-      id="main"
+      // id="main"
       className="flex flex-col overflow-hidden px-16 sm:p-6 md:p-8 gap-6 items-center justify-center min-h-screen bg-[#171A23]"
     >
       <h1 className="text-xl sm:text-2xl md:text-3xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] mb-4">

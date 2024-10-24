@@ -10,10 +10,10 @@ const Prospectus = () => {
     const screenWidth = window.innerWidth
 
     if (screenWidth >= 1280) {
-      setFlipbookSize({ width: 550, height: 780 })
+      setFlipbookSize({ width: 450, height: 650 })
       setIsSinglePage(false)
     } else if (screenWidth >= 1024) {
-      setFlipbookSize({ width: 450, height: 630 })
+      setFlipbookSize({ width: 400, height: 600 })
       setIsSinglePage(false)
     } else if (screenWidth >= 784) {
       setFlipbookSize({ width: 350, height: 500 })

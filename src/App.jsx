@@ -17,10 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} errorElement={<NotFoundPage />} />
         <Route path="/events" element={<Events />} errorElement={<NotFoundPage />} />
-
-        <Route path="/events" element={<Events />} />
-        <Route path="/events/:eventTitle" element={<EventDetails />} />
-
+        <Route path="/events/:eventTitle" element={<EventDetails />} errorElement={<NotFoundPage />}/>
         <Route path="/teams" element={<Team />} errorElement={<NotFoundPage />} />
         <Route path="/prospectus" element={<Prospectus />} errorElement={<NotFoundPage />} />
       </Routes>
