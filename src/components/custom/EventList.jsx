@@ -27,7 +27,9 @@ ImagePlaceholder.propTypes = {
 
 export default function EventList({ events }) {
   return (
-    <div id="upcoming" className="flex flex-col p-6 gap-6 bg-[#171A23] min-h-screen">
+    <div 
+      // id="upcoming" 
+      className="flex flex-col p-6 gap-6 bg-[#171A23] min-h-screen">
       {events.map((event, index) => (
         console.log('Event:', event),
         <Card key={event.id} className="bg-[#171A23] text-white border-none flex items-stretch p-4">

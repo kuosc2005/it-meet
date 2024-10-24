@@ -13,22 +13,23 @@ const Navbar = () => {
       url: '/',
       subItems: [
         { id: 1, title: 'About', url: 'about' },
-        { id: 2, title: 'Sponsors', url: 'sponsors' },
+        // { id: 2, title: 'Sponsors', url: 'sponsors' },
         { id: 3, title: 'FAQs', url: 'faqs' },
         { id: 4, title: 'Map', url: 'locations' },
         { id: 5, title: 'Contact', url: 'contacts' },
       ],
     },
-    { id: 2, title: 'Team', url: '/teams' },
+    // { id: 2, title: 'Team', url: '/teams' },
     { id: 3, title: 'Prospectus', url: '/prospectus' },
     { id: 4, 
       title: 'Events', 
       url: '/events', 
-      subItems: [
-        {id:1, title:'Upcoming Events', url:'upcoming'},
-        {id:2, title:'Pre Events', url:'pre-events'},
-        {id:3, title:'Main Events', url:'main'},
-      ]},
+      // subItems: [
+      //   {id:1, title:'Upcoming Events', url:'upcoming'},
+      //   {id:2, title:'Pre Events', url:'pre-events'},
+      //   {id:3, title:'Main Events', url:'main'},
+      // ]
+    },
   ];
 
   const location = useLocation()
@@ -91,7 +92,7 @@ const Navbar = () => {
         <div className="items-center gap-6 lg:flex hidden">
           {navItems.map((item) => (
              <React.Fragment key={item.id}>
-              {(item.subItems && item.url === '/' && location.pathname === '/') || (item.url === '/events' && location.pathname === '/events') ? (
+              {(item.subItems && item.url === '/' && location.pathname === '/') ? (
                 <NavLink
                   className={`uppercase text-sm sm:text-base md:text-lg hover:text-[#14C58F] cursor-pointer relative group ${
                     isActive(item.url) ? 'text-[#14C58F]' : 'text-white'
@@ -101,11 +102,11 @@ const Navbar = () => {
                 >
                   <div className="flex items-center gap-2">
                     {item.title}{' '}
-                    {(location.pathname === '/' || location.pathname === '/events') && (
+                    {(location.pathname === '/') && (
                       <ChevronDown className="bg-gray-800 rounded-full w-4 h-4" />
                     )}
                   </div>
-                  {(location.pathname === '/' || location.pathname === '/events') && (
+                  {(location.pathname === '/') && (
                     <div className="hidden space-y-3 w-44 absolute z-10 p-5 bg-[#1f222c] group-hover:block transform duration-700">
                       {item.subItems.map((subItem) => {
                         return (
@@ -189,7 +190,7 @@ const Navbar = () => {
           <div className="gap-5 sm:gap-6 items-start lg:hidden flex flex-col font-semibold text-slate-200">
             {navItems.map((item) => (
               <React.Fragment key={item.id}>
-                {(item.subItems && item.url === '/' && location.pathname === '/') || (item.url === '/events' && location.pathname === '/events') ? (
+                {(item.subItems && item.url === '/' && location.pathname === '/') ? (
                   <NavLink
                     className={`uppercase text-base sm:text-lg hover:text-[#14C58F] cursor-pointer ${
                       isActive(item.url) ? 'text-[#14C58F]' : 'text-white'
@@ -202,11 +203,11 @@ const Navbar = () => {
                       className="flex items-center gap-2"
                     >
                       {item.title}{' '}
-                      {(location.pathname === '/' || location.pathname === '/events') && (
+                      {(location.pathname === '/') && (
                         <ChevronDown className="bg-gray-800 rounded-full w-4 h-4" />
                       )}
                     </div>
-                    {(location.pathname === '/' || location.pathname === '/events') && (
+                    {(location.pathname === '/') && (
                       <div
                         className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
                           isSubmenuOpen

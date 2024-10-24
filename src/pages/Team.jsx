@@ -1,6 +1,6 @@
 import React from 'react';
 import team from '@/assets/team/teamMembers'; // Adjust the import path as needed
-import shadowImage from '@/assets/images/bgimg.png'
+// import shadowImage from '@/assets/images/bgimg.png'
 import { FaGithub } from 'react-icons/fa';
 import { GrLinkedinOption } from 'react-icons/gr';
 import { IoLogoInstagram } from "react-icons/io";

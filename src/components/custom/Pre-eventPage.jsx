@@ -14,7 +14,9 @@ export default function PreEventPage({ events }) {
     ).isRequired,
   };
   return (
-    <div id="pre-events" className="flex flex-col items-center px-16 gap-2 md:gap-4">
+    <div 
+      // id="pre-events" 
+      className="flex flex-col items-center px-16 gap-2 md:gap-4">
       <h1 className="text-xl sm:text-2xl md:text-3xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] mb-4">
         PRE-EVENTS
       </h1>
