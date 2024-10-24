@@ -6,6 +6,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding: 36px;
 }
+
 /* Designing for scroll-bar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -27,9 +28,23 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #727171;
 }
+
 .leaflet-container {
   height: 75vh;
   z-index: 5;
+}
+
+/* Hide horizontal scrollbar in FAQ page for sm and md screens */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* Internet Explorer and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
 }
 
 @layer base {
@@ -93,6 +108,7 @@ html {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     font-family: 'Rubik', sans-serif;

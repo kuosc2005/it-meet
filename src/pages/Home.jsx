@@ -1,9 +1,8 @@
-import React from 'react'
 import HeroPage from './HeroPage'
 import AboutPage from './AboutPage'
-import SponsorPage from './SponsorsPage'
-import FAQ from './FAQ-Page'
 import LocationPage from './Location'
+import FAQ from './FAQ-Page'
+import SponsorPage from './SponsorsPage'
 
 const Home = () => {
   return (
