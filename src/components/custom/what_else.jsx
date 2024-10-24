@@ -16,10 +16,10 @@ export default function Faq_what_else() {
             );
             storeData(response.documents);
 
-            
+
             if (response.documents.length > 0) {
                 setTargetId(response.documents[0].id);
-                setOpen(true); 
+                setOpen(true);
             }
         } catch (error) {
             console.log("While requesting Data from database", error);
@@ -55,11 +55,11 @@ export default function Faq_what_else() {
     const image_component = () => {
         return (
             <div className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden p-10">
-                <div className=" w-[22rem] sm:h-[30rem] rounded-md shadow-[-10px_10px_#369fff]" >
+                <div className="sm:w-[18rem] md:w-[22rem] min-[400px]:h-[17rem] h-[21rem]  sm:h-[24rem] md:h-[30rem]  rounded-md shadow-[-10px_10px_#369fff]" >
                     <img
                         src={ImageSrc}
                         alt="image"
-                        className="object-cover h-full w-full"
+                        className="object-cover h-full w-full rounded-md"
                     />
                 </div>
             </div>
@@ -116,8 +116,8 @@ export default function Faq_what_else() {
     )
 
     return (
-        <div className="w-full text-pretty h-full bg-[#171A23] text-white p-16 cursor-default">
-            <div className="flex justify-center items-center font-bold text-xl sm:text-2xl md:text-3xl">
+        <div className="w-full text-pretty h-full bg-[#171A23] text-white p-10 md:p-16 cursor-default">
+            <div className="flex justify-center items-center font-bold text-xl sm:text-2xl md:text-3xl pb-10">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
                     What Else Can You Expect at IT Meet?
                 </h1>
@@ -126,7 +126,7 @@ export default function Faq_what_else() {
             <div className="md:flex justify-center items-center">
                 {/*Left side */}
                 <div className="h-full w-full min-[500px]:px-16 md:px-0 lg:px-20 overflow-hidden">
-                    <div className="flex-col space-y-9 justify-center md:justify-end items-center md:pl-20">
+                    <div className="flex-col space-y-9 justify-center md:justify-end items-center pl-0 ">
                         {data.map(({ heading, paragraph, id, svg }) =>
                             components(id, heading, paragraph, svg)
                         )}

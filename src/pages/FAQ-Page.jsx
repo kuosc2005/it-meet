@@ -1,207 +1,140 @@
 import { useState } from 'react'
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion'
-import HelloTiger from '@/assets/images/hello-tiger-faq.webp'
-import WhiteSmiley from '@/assets/images/white-smiley.webp'
-import GreenSmiley from '@/assets/images/green-smiley.webp'
+import HelloTiger from '@/assets/images/hello-tiger-faq.png'
 import Faq_what_else from "../components/custom/what_else.jsx"
+import { useEffect } from 'react'
+import { databases, DATABASE_ID, FAQ_COLLECTION_ID } from "@/config/appwrite.js";
+import { IoIosArrowDown } from "react-icons/io";
 
-const qna = [
-  {
-    id: 1,
-    quest: 'What is IT MEET?',
-    ans: 'IT MEET is a non-profit, student-organized university-level tech meetup held annually at Kathmandu University, Dhulikhel. It is a collaborative effort of the Kathmandu University Computer Club (KUCC) and the Department of Computer Science and Engineering (DoCSE). IT MEET focuses on celebrating recent achievements in the field of information and technology, providing opportunities for tech enthusiasts to share innovative ideas, compete with their peers, and gain real-world experience.',
-  },
-  {
-    id: 2,
-    quest: 'When and where will IT MEET 2024 take place?',
-    ans: 'IT MEET 2024 will be held at Kathmandu University, Dhulikhel, on December 6 and 7.',
-  },
-  {
-    id: 3,
-    quest: 'What is the theme of IT MEET 2024?',
-    ans: 'Refresh, Reimagine and Innovate',
-  },
-  {
-    id: 4,
-    quest: 'What types of events and competitions can I expect at IT MEET 2024?',
-    ans: 'IT MEET 2024 will feature a variety of tech and non-tech-related events, including Coding challenges, Codecamps, Robomaze, Project Exhibition, Panel Discussion, and many more. You can visit our website and official social media pages for more information.',
-  },
-  {
-    id: 5,
-    quest: 'How can I participate in the different events of IT MEET 2024?',
-    ans: 'To register for different events at IT MEET 2024, please stay informed by following our official social media pages, where we will regularly post updates about event registrations.',
-  },
-  {
-    id: 6,
-    quest: 'Is IT MEET only for students of Kathmandu University?',
-    ans: "IT MEET is open to students from various schools, colleges, and universities. If you're 16 years or older and currently in high school, college, or graduate school, you can participate in IT MEET 2024.",
-  },
-  {
-    id: 7,
-    quest: 'Are there any age restrictions for participants?',
-    ans: 'There is no age restriction for participants of IT MEET 2024. It is a tech festival where we invite people from diverse backgrounds.',
-  },
-  {
-    id: 8,
-    quest:
-      'If I am interested in becoming a sponsor for IT MEET 2024 or have sponsorship-related inquiries, how can I get in touch with the organizers?',
-    ans: 'If you are interested in becoming a sponsor for IT MEET 2024 or have inquiries about sponsorship packages, please visit the “Our Sponsors” section on our website or you can reach us directly through itmeet@ku.edu.np.',
-  },
-  {
-    id: 9,
-    quest: 'How can I contact the organizers if I have questions or need assistance?',
-    ans: "If you have any questions or need assistance, feel free to contact us at itmeet@ku.edu.np.com. You can also connect with us on our official social media accounts (Facebook, Instagram, LinkedIn, and Twitter), and we'll be happy to assist you promptly.",
-  },
-]
+
 
 export default function FAQ() {
-  // initially about the event section is shown.
-  const [selectedFaqQts, setSelectedFaqQts] = useState('about-the-event')
 
-  const hanldeFaqQtsChange = (event) => {
-    setSelectedFaqQts(event.target.id)
+  const [clickedKey, setclickedKey] = useState(0);
+  const [clickedEachQuestion, setclickedEachQuestion] = useState(0);
+  const [isclicked, setclicked] = useState(false);
+  const [data, storeData] = useState("");
+
+  const list_document = async () => {
+    try {
+
+      const response = await databases.listDocuments(
+        `${DATABASE_ID}`,
+        `${FAQ_COLLECTION_ID}`,
+      );
+      storeData(JSON.parse(response.documents[0].data));
+
+    } catch (error) {
+      console.log("While requesting Data from database of collection FAQ", error);
+    }
   }
+
+  function handleClick(each) {
+    if (each.id == clickedEachQuestion) {
+      setclicked(!isclicked);
+    } else {
+      setclickedEachQuestion(each.id);
+      setclicked(true);
+    }
+  }
+
+  useEffect(() => {
+    list_document()
+  }, [])
+
 
   return (
     <>
-      <div
-        id="faqs"
-        className="flex flex-col overflow-hidden p-6 sm:p-8 md:p-10 py-10 md:py-20 lg:px-20 items-center justify-center min-h-screen bg-[#171A23]"
-      >
-        <div className="flex flex-col items-center gap-2 md:gap-4">
+      <div id="faqs" className=" w-full text-pretty h-full text-white p-10  md:py-0 cursor-default bg-[#171a23] box-border nowrap">
+
+        <div className="flex flex-col justify-between items-center font-bold text-xl sm:text-2xl md:text-3xl overflow-hidden mb-14">
           <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
             FAQs
+            <div className="w-full rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2 lg:h-2.5"></div>
           </h1>
-          <div className="w-full rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2 lg:h-2.5"></div>
         </div>
-        <div className="flex flex-col lg:flex-row items-center justify-center w-full mt-0 md:mt-5 xl:px-32">
-          <div className="flex flex-row w-full h-28 sm:h-36 lg:h-[400px] items-center">
-            <div className="flex flex-row lg:flex-col gap-8 w-[80%] h-[100px] lg:h-[400px] m-auto whitespace-nowrap overflow-x-auto hide-scrollbar">
-              <div
-                id="about-the-event"
-                className="flex flex-row gap-4 lg:h-26 items-center relative"
-                onClick={hanldeFaqQtsChange}
-              >
-                <div className="lg:w-24 relative">
-                  <img
-                    id="about-the-event"
-                    src={HelloTiger}
-                    alt="Hello Tiger"
-                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === 'about-the-event' ? 'visible' : 'invisible'}`}
-                  />
-                </div>
-                <img
-                  id="about-the-event"
-                  src={selectedFaqQts === 'about-the-event' ? GreenSmiley : WhiteSmiley}
-                  className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
-                />
-                <button
-                  id="about-the-event"
-                  className={`hover:cursor-auto text-xl md:text-2xl ${selectedFaqQts === 'about-the-event' ? 'text-[#14C58F]' : 'text-white'}`}
+
+        <div className='flex flex-col md:flex-row justify-between items-start h-full w-full md:h-[450px] gap-10 '>
+          {/*Left part  */}
+          <div className='flex md:flex-col md:justify-center items-start min-[1250px]:items-end lg:pr-10  h-auto w-full md:w-[40%] gap-x-8 md:gap-7 overflow-x-scroll flex-row no-scrollbar text-[18px] md:text-[24px] font-medium'>
+            {
+              Object.keys(data).map((value, index) =>
+                <div
+                  key={index}
+                  id={index}
+                  tabIndex={0}
+                  className={`leftItem min-w-28 cursor-pointer ${clickedKey == index ? "bg-gradient-to-l text-transparent bg-clip-text from-[#369fff] to-[#12dc9f]" : ""} `}
+                  onClick={(e) => {
+                    setclickedKey(Number(e.target.closest(".leftItem").id));
+                  }}
                 >
-                  About the Event
-                </button>
-              </div>
-              <div
-                id="event-logistics"
-                className="flex flex-row gap-4 lg:h-26 items-center relative"
-                onClick={hanldeFaqQtsChange}
-              >
-                <div className="lg:w-24 relative">
-                  <img
-                    id="event-logistics"
-                    src={HelloTiger}
-                    alt="Hello Tiger"
-                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === 'event-logistics' ? 'visible' : 'invisible'}`}
-                  />
+                  <div className='inline-flex items-center h-full'>
+                    <p className='flex order-2 min-[1250px]:order-1'>{value}</p>
+
+                    <img
+                      src={`${HelloTiger} `}
+                      alt="__"
+                      height={50}
+                      width={50}
+                      className={`hidden md:flex order-1 min-[1250px]:order-2 ${clickedKey == index ? "visible" : "invisible"} `}
+                    />
+                  </div>
                 </div>
-                <img
-                  id="event-logistics"
-                  src={selectedFaqQts === 'event-logistics' ? GreenSmiley : WhiteSmiley}
-                  className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
-                />
-                <button
-                  id="event-logistics"
-                  className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === 'event-logistics' ? 'text-[#14C58F]' : 'text-white'}`}
-                >
-                  Event Logistics
-                </button>
-              </div>
-              <div
-                id="participation-guidelines"
-                className="flex flex-row gap-4 lg:h-26 items-center relative"
-                onClick={hanldeFaqQtsChange}
-              >
-                <div className="lg:w-24 relative">
-                  <img
-                    id="participation-guidelines"
-                    src={HelloTiger}
-                    alt="Hello Tiger"
-                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === 'participation-guidelines' ? 'visible' : 'invisible'}`}
-                  />
-                </div>
-                <img
-                  id="participation-guidelines"
-                  src={selectedFaqQts === 'participation-guidelines' ? GreenSmiley : WhiteSmiley}
-                  className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
-                />
-                <button
-                  id="participation-guidelines"
-                  className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === 'participation-guidelines' ? 'text-[#14C58F]' : 'text-white'}`}
-                >
-                  Participation Guidelines
-                </button>
-              </div>
-              <div
-                id="other"
-                className="flex flex-row gap-4 lg:h-26 items-center relative"
-                onClick={hanldeFaqQtsChange}
-              >
-                <div className="lg:w-24 relative">
-                  <img
-                    id="other"
-                    src={HelloTiger}
-                    alt="Hello Tiger"
-                    className={`w-24 absolute top-[-45px] ${selectedFaqQts === 'other' ? 'visible' : 'invisible'}`}
-                  />
-                </div>
-                <img
-                  id="other"
-                  src={selectedFaqQts === 'other' ? GreenSmiley : WhiteSmiley}
-                  className="max-w-[40px] md:max-w-[50px] hover:cursor-pointer"
-                />
-                <button
-                  id="other"
-                  className={`hover:cursor-default text-xl md:text-2xl ${selectedFaqQts === 'other' ? 'text-[#14C58F]' : 'text-white'}`}
-                >
-                  Other
-                </button>
-              </div>
-            </div>
+              )
+            }
           </div>
-          <div className="w-full custom-scrollbar lg:w-1/2 h-[400px] lg:h-[500px] space-y-3 rounded-2xl lg:rounded-3xl overflow-y-scroll bg-[#171A23] text-white p-6 sm:p-8 md:p-10 lg:px-10 xl:px-12">
-            <div className="space-y-3 sm:space-y-5">
-              {qna.map((item) => (
-                <Accordion key={item.id} type="single" collapsible className="w-full">
-                  <AccordionItem value={item.id.toString()}>
-                    <AccordionTrigger className="text-lg sm:text-xl text-start">
-                      {item.quest}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-sm sm:text-base font-semibold text-gray-300">
-                      {item.ans}
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              ))}
-            </div>
+
+
+          {/* Right part */}
+          <div
+            className='flex flex-col md:items-start gap-14 w-full md:w-[60%] overflow-y-auto  no-scrollbar lg:pt-0  text-[18px] md:text-[24px]  font-medium'
+          >
+            {
+              Object.values(data).map((value, id) =>
+                id == clickedKey
+                  ?
+                  value.map(each =>
+                    <div
+                      className='w-full'
+                      key={each.id}>
+                      <div
+                        id={id}
+                        className='eachQuestion h-full border-b-4 border-[#369fff] w-full'
+                        onClick={() => handleClick(each)}
+                      >
+                        <div className='flex h-full w-full '>
+                          <div
+                            className="text-left py-2 w-full h-full"
+                            onClick={() => handleClick(each)}
+                            aria-expanded={isclicked && clickedEachQuestion === each.id}
+                          >
+                            {each.ques}
+                          </div>
+
+                          <span>
+                            <IoIosArrowDown
+                              className={`transition-all duration-300 ${isclicked && clickedEachQuestion === each.id ? "rotate-180" : "rotate-0"}`}
+                            />
+                          </span>
+                        </div>
+
+                        {/* Answer Section */}
+                        <div
+                          className={`overflow-scroll no-scrollbar  w-full transition-all ease-in-out duration-200 ${isclicked && clickedEachQuestion === each.id ? 'max-h-16 opacity-100' : 'max-h-0 opacity-0'
+                            } `}
+                        >
+                          <p className="text-sm font-normal sm:text-base">{each.ans}</p>
+                        </div>
+                      </div >
+                    </div >
+                  )
+                  : ""
+              )
+            }
           </div>
+
+
         </div>
-      </div>
+      </div >
       <Faq_what_else />
     </>
   )

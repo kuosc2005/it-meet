@@ -73,9 +73,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? 'bg-[#171A23]/80 backdrop-blur-md' : 'bg-[#171A23]'
-      }`}
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-[#171A23]/80 backdrop-blur-md' : 'bg-[#171A23]'
+        }`}
     >
       <div className="flex justify-between items-center font-medium text-slate-100 py-3 px-6 sm:px-10 md:py-4 lg:py-5 md:px-16 lg:px-20">
         {/* Logo */}
