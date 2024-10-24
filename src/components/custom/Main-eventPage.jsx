@@ -19,8 +19,8 @@ export default function MainEventPage({ events }) {
       <h1 className="text-xl sm:text-2xl md:text-3xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] mb-4">
         MAIN-EVENTS
       </h1>
-      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 w-[clamp(22rem,72vw,72rem)]">
-        {events.map((event) => (
+     <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 w-[clamp(22rem,72vw,72rem)]">
+     {events.map((event) => (
           <Link
             key={event.id}
             to={`/events/${event.title.toLowerCase().replace(/ /g, '-')}`}

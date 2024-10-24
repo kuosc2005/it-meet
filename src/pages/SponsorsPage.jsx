@@ -117,5 +117,5 @@ export default function SponsorPage() {
         <Sponsor key={index} name={sponsor.name} tier={sponsor.tier} image={sponsor.image} />
       ))}
     </div>
-  )
+  );
 }
