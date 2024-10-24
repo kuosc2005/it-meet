@@ -12,7 +12,7 @@ export const PROJECT_BUCKET_ID = '671605330012c01f3505'
 export const FAQ_COLLECTION_ID = 'FAQ'
 export const EXPECT_COLLECTION_ID = 'Expectation'
 
-export const Sponsors_COLLECTION_ID = 'Sponsor'
+export const Sponsors_COLLECTION_ID = 'Sponsors'
 
 export const databases = new Databases(client)
 export const storage = new Storage(client)
