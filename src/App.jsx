@@ -4,6 +4,7 @@ import Prospectus from './pages/Prospectus'
 import Navbar from './components/custom/Navbar'
 import NotFoundPage from './pages/NotFoundPage'
 import Events from './pages/Events'
+
 import { EventProvider } from './components/custom/EventContext';
 import EventDetails from './pages/EventDetails'
 import { Routes, Route } from 'react-router-dom'

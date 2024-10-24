@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import ItmeetLogo from '../../assets/images/itmeetlogo.webp'
 import { useLocation } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
