@@ -35,22 +35,29 @@ export default function EventList({ events }) {
         (event, index) => (
           console.log('Event:', event),
           (
-            <Card
-              key={event.id}
-              className="bg-[#171A23] text-white border-none flex items-stretch p-4"
-            >
-              <div className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} w-full`}>
-                <div className="flex-grow w-[60%]">
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-3xl sm:text-xl font-bold leading-tight tracking-wide bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent mb-1 sm:mb-2">
-                      {event.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-gray-300 text-sm">
-                      {event.description}
-                    </CardDescription>
-                  </CardContent>
+            <Card key={event.id} className="bg-[#171A23] text-white border-none flex  p-4">
+              <div
+                className={`grid md:grid-cols-2 gap-4 ${
+                  index % 2 === 0 ? 'md:grid-flow-row' : 'md:grid-flow-row-dense'
+                }`}
+              >
+                <div
+                  className={`${
+                    index % 2 === 0 ? 'md:col-start-1' : 'md:col-start-2'
+                  } flex flex-col justify-between`}
+                >
+                  <div>
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-3xl sm:text-xl font-bold leading-tight tracking-wide bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent mb-1 sm:mb-2">
+                        {event.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-gray-300 text-sm">
+                        {event.description}
+                      </CardDescription>
+                    </CardContent>
+                  </div>
                   <CardFooter className="flex gap-2 pt-4">
                     {/* <button className="bg-gradient-to-r from-[#369FFF] to-[#14C58F] text-black px-5 py-1.5 rounded hover:bg-[#00cc99] transition-colors">
                   APPLY
