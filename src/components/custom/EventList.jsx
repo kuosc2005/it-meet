@@ -13,7 +13,7 @@ const ImagePlaceholder = ({ imgSrc, alt }) => {
   console.log('ImagePlaceholder imgSrc:', imgSrc) // Debug log
   return (
     <div className="relative w-full h-full">
-      <div className="bg-gray-200 w-full h-full lg:w-[500px] lg:h-[250px] rounded-br-[80px] overflow-hidden">
+      <div className="bg-gray-200 w-full h-full rounded-br-[80px] overflow-hidden">
         <img src={imgSrc} alt={alt} className="w-full h-full object-contain object-top" />
       </div>
     </div>
@@ -48,12 +48,12 @@ export default function EventList({ events }) {
                 >
                   <div>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-3xl sm:text-xl font-bold leading-tight tracking-wide bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent mb-1 sm:mb-2">
+                      <CardTitle className="text-2xl md:text-4xl font-bold leading-tight tracking-wide bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent mb-1 sm:mb-2">
                         {event.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-gray-300 text-sm">
+                      <CardDescription className="text-gray-300 text-md lg:text-lg">
                         {event.description}
                       </CardDescription>
                     </CardContent>
