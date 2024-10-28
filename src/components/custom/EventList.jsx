@@ -10,11 +10,10 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 const ImagePlaceholder = ({ imgSrc, alt }) => {
-  console.log('ImagePlaceholder imgSrc:', imgSrc) // Debug log
   return (
     <div className="relative w-full h-full">
-      <div className="bg-gray-200 w-full h-full rounded-br-[80px] overflow-hidden">
-        <img src={imgSrc} alt={alt} className="w-full h-full object-contain object-top" />
+      <div className="bg-gray-200 w-full aspect-[16/9] md:h-[12rem] lg:h-[16rem] rounded-br-[80px] overflow-hidden relative">
+        <img src={imgSrc} alt={alt} className="w-full h-full object-contain absolute inset-0" />
       </div>
     </div>
   )
@@ -36,14 +35,10 @@ export default function EventList({ events }) {
           console.log('Event:', event),
           (
             <Card key={event.id} className="bg-[#171A23] text-white border-none flex  p-4">
-              <div
-                className={`grid md:grid-cols-2 gap-4 ${
-                  index % 2 === 0 ? 'md:grid-flow-row' : 'md:grid-flow-row-dense'
-                }`}
-              >
+              <div className={`grid lg:grid-cols-2 gap-8 lg:gap-4 w-full`}>
                 <div
                   className={`${
-                    index % 2 === 0 ? 'md:col-start-1' : 'md:col-start-2'
+                    index % 2 === 0 ? 'lg:col-start-1' : 'lg:col-start-2'
                   } flex flex-col justify-between`}
                 >
                   <div>
@@ -73,7 +68,13 @@ export default function EventList({ events }) {
                     </Link>
                   </CardFooter>
                 </div>
-                <div className="w-[40%] p-4">
+                <div
+                  className={`w-full lg:w-auto p-4 lg:flex-grow ${
+                    index % 2 === 0
+                      ? 'lg:ml-auto order-2 lg:order-last'
+                      : 'lg:mr-auto order-2 lg:order-first'
+                  }`}
+                >
                   <ImagePlaceholder imgSrc={event.imgSrc} alt={event.title} />
                 </div>
               </div>
