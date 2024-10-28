@@ -34,9 +34,17 @@ const EventDetails = () => {
         className="w-64 h-64 object-cover rounded-full mb-6"
       />
       <p className="text-lg mb-6 max-w-2xl text-center">{event.details}</p>
-      {/* <button className="bg-gradient-to-r from-[#369FFF] to-[#14C58F] text-white font-bold py-2 px-4 rounded">
-          Apply to Event
-        </button> */}
+      {event.isApplicationOpen && (
+        <Link
+          to={`/events/${event.title.toLowerCase().replace(/ /g, '-')}`}
+          state={{ eventData: event }}
+          className="p-[1px] rounded border-none bg-gradient-to-r from-[#369FFF] to-[#14C58F]"
+        >
+          <button className="bg-gradient-to-r from-[#369FFF] to-[#14C58F] text-white font-bold py-2 px-4 rounded">
+            Apply to Event
+          </button>
+        </Link>
+      )}
       <Link to="/events" className="mt-8 text-[#369FFF] hover:underline">
         Back to Events
       </Link>

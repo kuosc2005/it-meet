@@ -123,6 +123,7 @@ export const EventProvider = ({ children }) => {
       id: 1,
       imgSrc: '/hackfest.webp',
       title: 'KU HACKFEST',
+      isApplicationOpen: true,
       description:
         '“KU Hackfest”, one of the biggest events within IT Meet, is an international-level, 48-hour hackathon, scheduled for 15-17 November 2024. This event aims to cultivate creativity, drive innovation, and empower talented individuals to solve real-world problems.',
       details:
