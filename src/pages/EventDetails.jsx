@@ -71,7 +71,7 @@ const EventDetails = () => {
 
             {event.isApplicationOpen && (
               <Link
-                to="/apply"
+                to={event.formLink}
                 className="w-full max-w-[10rem] bg-gradient-to-r from-[#369FFF] to-[#14C58F] text-white font-bold py-2 px-4 rounded hover:shadow-lg transition duration-200 text-center"
               >
                 Apply to Event
