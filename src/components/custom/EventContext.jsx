@@ -8,114 +8,228 @@ export const EventProvider = ({ children }) => {
       id: 1,
       imgSrc: '/project.webp',
       title: 'Project Exhibition',
+      isApplicationOpen: false,
+      formLink: '',
       description:
         "The event showcases participants' innovative software and hardware projects, celebrating their technical skills and creativity before esteemed judges.",
-      formLink: '',
+      details:
+        "The event showcases participants' innovative software and hardware projects, celebrating their technical skills and creativity before esteemed judges.",
     },
     {
       id: 2,
       imgSrc: '/panel.webp',
       title: 'Panel Discussion',
+      isApplicationOpen: false,
+      formLink: '',
       description:
         "The event features experts discussing key tech topics, with the 2023 focus on artificial intelligence and its implications for Nepal's industries.",
-      formLink: '',
+      details:
+        "The event features experts discussing key tech topics, with the 2023 focus on artificial intelligence and its implications for Nepal's industries.",
     },
     {
       id: 3,
       imgSrc: '/gaming.webp',
       title: 'Gaming Events',
+      isApplicationOpen: false,
+      formLink: '',
       description:
         'IT Meet 2024 will host a grand Gaming (Esports) event featuring popular games and a competitive prize pool, following a successful 2023 with impressive participation across multiple titles.',
-      formLink: '',
+      details:
+        'IT Meet 2024 will host a grand Gaming (Esports) event featuring popular games and a competitive prize pool, following a successful 2023 with impressive participation across multiple titles.',
     },
     {
       id: 4,
       imgSrc: '/googling.webp',
       title: 'Googling Competition',
+      isApplicationOpen: false,
+      formLink: '',
       description:
         "The event tests teams' problem-solving and research skills using Google, rewarding the fastest and most adept participants with attractive prizes.",
-      formLink: '',
+      details:
+        "The event tests teams' problem-solving and research skills using Google, rewarding the fastest and most adept participants with attractive prizes.",
     },
     {
       id: 5,
       imgSrc: '/typing.webp',
       title: 'Typing Competition',
+      isApplicationOpen: false,
+      formLink: '',
       description:
         'The event allows participants to showcase their speed and accuracy in a friendly environment, with around 66 attendees demonstrating their skills during the 2023 event.',
-      formLink: '',
+      details:
+        'The event allows participants to showcase their speed and accuracy in a friendly environment, with around 66 attendees demonstrating their skills during the 2023 event.',
     },
     {
       id: 6,
       imgSrc: '/coding.webp',
       title: 'Coding Challenge',
+      isApplicationOpen: false,
+      formLink: '',
       description:
         "The event showcases participants' coding skills across various difficulty levels, fostering a collaborative community, with 28 participants demonstrating their talent in 2023.",
-      formLink: '',
+      details:
+        "The event showcases participants' coding skills across various difficulty levels, fostering a collaborative community, with 28 participants demonstrating their talent in 2023.",
     },
     {
       id: 7,
       imgSrc: '/mock.webp',
       title: 'Mock Placement',
+      isApplicationOpen: false,
+      formLink: '',
       description:
         'The event simulates corporate recruitment processes, including tests and interviews, offering participants valuable feedback from HR professionals to improve their job readiness.',
-      formLink: '',
+      details:
+        'The event simulates corporate recruitment processes, including tests and interviews, offering participants valuable feedback from HR professionals to improve their job readiness.',
     },
     {
       id: 8,
       imgSrc: '/line.webp',
       title: 'Line Following Robot',
+      isApplicationOpen: false,
+      formLink: '',
       description:
         'The event challenges participants to program robots to navigate a course using line-following sensors, with 48 individuals in 12 teams showcasing their skills over two days at IT Meet 2023.',
-      formLink: '',
+      details:
+        'The event challenges participants to program robots to navigate a course using line-following sensors, with 48 individuals in 12 teams showcasing their skills over two days at IT Meet 2023.',
     },
     {
       id: 9,
       imgSrc: '/career.webp',
       title: 'Career Fair',
+      isApplicationOpen: false,
+      formLink: '',
       description:
         'The event connects students with potential employers through initial interviews and mock placement activities, facilitating valuable exchanges and insights into employment criteria, featuring 15 company stalls in 2023.',
-      formLink: '',
+      details:
+        'The event connects students with potential employers through initial interviews and mock placement activities, facilitating valuable exchanges and insights into employment criteria, featuring 15 company stalls in 2023.',
     },
     {
       id: 10,
       imgSrc: '/blood.webp',
       title: 'Blood Donation',
+      isApplicationOpen: false,
+      formLink: '',
       description:
         'The KU Youth Red Cross and IT Meet organizing committee collaborate on blood donation drives, encouraging attendees to contribute to saving lives and raising awareness about the critical need for regular blood donations in healthcare.',
-      formLink: '',
+      details:
+        'The KU Youth Red Cross and IT Meet organizing committee collaborate on blood donation drives, encouraging attendees to contribute to saving lives and raising awareness about the critical need for regular blood donations in healthcare.',
     },
     {
       id: 11,
       imgSrc: '/photo.webp',
       title: 'Photography Competition',
+      isApplicationOpen: false,
+      formLink: '',
       description:
         "The event invites participants to showcase their artistic talents, allowing visitors to vote for their favorite among 53 submissions, with a prize awarded to the photographer best capturing technology's impact on life.",
-      formLink: '',
+      details:
+        "The event invites participants to showcase their artistic talents, allowing visitors to vote for their favorite among 53 submissions, with a prize awarded to the photographer best capturing technology's impact on life.",
     },
     {
       id: 12,
       imgSrc: '/quiz.webp',
       title: 'IT Quiz',
+      isApplicationOpen: false,
+      formLink: '',
       description:
         'The event is an inter-school event that challenges teams of four with various IT-related questions across seven rounds, inspiring young minds while awarding prizes and a prestigious shield to the winners.',
-      formLink: '',
+      details:
+        'The event is an inter-school event that challenges teams of four with various IT-related questions across seven rounds, inspiring young minds while awarding prizes and a prestigious shield to the winners.',
     },
   ])
 
   const [preEvents] = useState([
-    { id: 1, imgSrc: 'https://picsum.photos/200/300', title: 'KU HACKFEST' },
-    { id: 2, imgSrc: 'https://picsum.photos/200/300', title: 'TEDx' },
-    { id: 3, imgSrc: 'https://picsum.photos/200/300', title: 'Mobile Rush' },
-    { id: 4, imgSrc: 'https://picsum.photos/200/300', title: 'Code Camp' },
-    { id: 5, imgSrc: 'https://picsum.photos/200/300', title: 'All Nepal IT Cup' },
-    { id: 6, imgSrc: 'https://picsum.photos/200/300', title: 'Geo Special' },
-    { id: 7, imgSrc: 'https://picsum.photos/200/300', title: 'AI Competition' },
-    { id: 8, imgSrc: 'https://picsum.photos/200/300', title: 'EmpowerHer' },
-    { id: 9, imgSrc: 'https://picsum.photos/200/300', title: 'Alumni Meet' },
-    { id: 10, imgSrc: 'https://picsum.photos/200/300', title: 'Idea Pitching' },
-    { id: 11, imgSrc: 'https://picsum.photos/200/300', title: 'AR Treasure Hunt' },
-    { id: 12, imgSrc: 'https://picsum.photos/200/300', title: 'KUBing' },
-    { id: 13, imgSrc: 'https://picsum.photos/200/300', title: 'We Shield Cyber' },
+    {
+      id: 1,
+      imgSrc: 'https://picsum.photos/200/300',
+      title: 'KU HACKFEST',
+      isApplicationOpen: false,
+      formLink: '',
+    },
+    {
+      id: 2,
+      imgSrc: 'https://picsum.photos/200/300',
+      title: 'TEDx',
+      isApplicationOpen: false,
+      formLink: '',
+    },
+    {
+      id: 3,
+      imgSrc: 'https://picsum.photos/200/300',
+      title: 'Mobile Rush',
+      isApplicationOpen: false,
+      formLink: '',
+    },
+    {
+      id: 4,
+      imgSrc: 'https://picsum.photos/200/300',
+      title: 'Code Camp',
+      isApplicationOpen: false,
+      formLink: '',
+    },
+    {
+      id: 5,
+      imgSrc: 'https://picsum.photos/200/300',
+      title: 'All Nepal IT Cup',
+      isApplicationOpen: false,
+      formLink: '',
+    },
+    {
+      id: 6,
+      imgSrc: 'https://picsum.photos/200/300',
+      title: 'Geo Special',
+      isApplicationOpen: false,
+      formLink: '',
+    },
+    {
+      id: 7,
+      imgSrc: 'https://picsum.photos/200/300',
+      title: 'AI Competition',
+      isApplicationOpen: false,
+      formLink: '',
+    },
+    {
+      id: 8,
+      imgSrc: 'https://picsum.photos/200/300',
+      title: 'EmpowerHer',
+      isApplicationOpen: false,
+      formLink: '',
+    },
+    {
+      id: 9,
+      imgSrc: 'https://picsum.photos/200/300',
+      title: 'Alumni Meet',
+      isApplicationOpen: false,
+      formLink: '',
+    },
+    {
+      id: 10,
+      imgSrc: 'https://picsum.photos/200/300',
+      title: 'Idea Pitching',
+      isApplicationOpen: false,
+      formLink: '',
+    },
+    {
+      id: 11,
+      imgSrc: 'https://picsum.photos/200/300',
+      title: 'AR Treasure Hunt',
+      isApplicationOpen: false,
+      formLink: '',
+    },
+    {
+      id: 12,
+      imgSrc: 'https://picsum.photos/200/300',
+      title: 'KUBing',
+      isApplicationOpen: false,
+      formLink: '',
+    },
+    {
+      id: 13,
+      imgSrc: 'https://picsum.photos/200/300',
+      title: 'We Shield Cyber',
+      isApplicationOpen: false,
+      formLink: '',
+    },
   ])
 
   const [listEvents] = useState([
@@ -124,6 +238,7 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/hackfest.webp',
       title: 'KU HACKFEST',
       isApplicationOpen: true,
+      formLink: '',
       description:
         '“KU Hackfest”, one of the biggest events within IT Meet, is an international-level, 48-hour hackathon, scheduled for 15-17 November 2024. This event aims to cultivate creativity, drive innovation, and empower talented individuals to solve real-world problems.',
       details:
@@ -133,6 +248,8 @@ export const EventProvider = ({ children }) => {
       id: 2,
       imgSrc: '/empoweher.webp',
       title: 'EMPOWER HER',
+      isApplicationOpen: false,
+      formLink: '',
       description:
         '"EmpowerHer" is an initiative designed to inspire young girls in tech by providing a platform for discussion, skill-building workshops, and networking. ',
       details:
@@ -143,6 +260,8 @@ export const EventProvider = ({ children }) => {
       coc: '/coc_codecamp.pdf',
       imgSrc: '/CodeCamp.webp',
       title: 'CODE CAMP',
+      isApplicationOpen: false,
+      formLink: '',
       description:
         '“Code Camp” is also one of the main events of IT Meet that ignites creativity and brilliance among participants who collaborate in teams of three, engaging in a coding marathon on their selected development platforms.',
       details:
@@ -152,6 +271,8 @@ export const EventProvider = ({ children }) => {
       id: 4,
       imgSrc: '/treasurehunt.webp',
       title: 'AR TREASURE HUNT',
+      isApplicationOpen: false,
+      formLink: '',
       description:
         'The "AR Treasure Hunt" is an exciting event that immerses participants in Augmented Reality, similar to Pokémon Go, as they follow clues to find hidden treasures.',
       details:
