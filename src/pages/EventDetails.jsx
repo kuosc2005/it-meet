@@ -35,7 +35,7 @@ const EventDetails = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-[#171A23] text-white p-8">
-      <Card className="bg-[#1A1E28] rounded-lg shadow-lg p-6 max-w-6xl w-full flex flex-col items-center relative">
+      <Card className="bg-[#1A1E28] rounded-lg shadow-lg p-8 max-w-6xl w-full flex flex-col items-center relative">
         <CardHeader className="flex items-center justify-between w-full">
           <img src={ITMeetLogo} alt="IT Meet logo" className="w-auto h-8 sm:h-10" />
 
@@ -44,22 +44,20 @@ const EventDetails = () => {
           </CardTitle>
         </CardHeader>
 
-        <div className="w-full mt-4">
-          <div className="relative">
-            <div className="float-left mr-4 mb-2 bg-white p-4 rounded-lg w-[20rem] h-[10rem] flex items-center justify-center">
+        <CardContent className="w-full mt-4">
+          <div className="grid grid-cols-1 lg:grid-cols-[24rem_auto] gap-y-4 lg:gap-y-0 lg:gap-x-4">
+            <div className="bg-white p-4 rounded-lg flex items-center justify-center">
               <img
                 src={event.imgSrc}
                 alt={event.title}
-                className="object-contain max-w-full max-h-full"
+                className="object-contain max-w-full max-h-[15rem]"
               />
             </div>
             <CardDescription className="text-md sm:text-lg text-justify">
               {event.details}
             </CardDescription>
-            <div className="clear-both"></div>
           </div>
-        </div>
-
+        </CardContent>
         <CardFooter className="flex flex-col items-center w-full space-y-4 mt-8">
           <div className="flex w-full justify-center space-x-4">
             <Link
