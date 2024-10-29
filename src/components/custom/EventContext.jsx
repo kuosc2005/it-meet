@@ -168,7 +168,7 @@ export const EventProvider = ({ children }) => {
     },
     {
       id: 4,
-      imgSrc: '',
+      imgSrc: '/CodeCamp.webp',
       title: 'Code Camp',
       isApplicationOpen: false,
       formLink: '',
@@ -204,7 +204,7 @@ export const EventProvider = ({ children }) => {
     },
     {
       id: 8,
-      imgSrc: '',
+      imgSrc: '/empoweher.webp',
       title: 'EmpowerHer',
       isApplicationOpen: false,
       formLink: '',
