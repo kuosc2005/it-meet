@@ -26,4 +26,6 @@ export const prosp_images_double = [
     { id: 6, img: P_4 },
     { id: 7, img: P_5 },
     { id: 8, img: P_2 },
+    { id: 9, img: P_F },
+    { id: 10, img: P_B },
 ];

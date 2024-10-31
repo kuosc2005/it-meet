@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import HTMLFlipBook from 'react-pageflip'
 import { prosp_images_single, prosp_images_double } from '@/assets/prosp_images/prospectus_images'
+import SwipeIndicator from '@/components/custom/SwipeIndicator'
 
 const Prospectus = () => {
   const [flipbookSize, setFlipbookSize] = useState({ width: 310, height: 450 })
@@ -48,7 +49,7 @@ const Prospectus = () => {
     <div className="flex flex-col items-center overflow-hidden p-5 gap-8 min-h-full bg-[#171A23]">
       <div>
         {isSinglePage ? (
-          <>
+          <div className='relative'>
             <HTMLFlipBook
               width={flipbookSize.width}
               height={flipbookSize.height}
@@ -66,9 +67,13 @@ const Prospectus = () => {
                 </div>
               ))}
             </HTMLFlipBook>
-          </>
+            <div className="absolute top-12 right-5 ">
+            <SwipeIndicator />
+            </div>
+          </div>
         ) : (
-          <>
+          <div className='relative'>
+            <div>
             <HTMLFlipBook
               width={flipbookSize.width}
               height={flipbookSize.height}
@@ -86,7 +91,11 @@ const Prospectus = () => {
                 </div>
               ))}
             </HTMLFlipBook>
-          </>
+            </div>
+            <div className="absolute top-16 right-12">
+            <SwipeIndicator />
+            </div>
+          </div>
         )}
       </div>
     </div>
