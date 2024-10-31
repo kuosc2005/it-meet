@@ -1,0 +1,102 @@
+@keyframes droneMove {
+	50% {
+	    top: 3%;
+	    right: 30%;
+	}
+
+	100%{
+		top: 3%;
+		right: 60%;
+
+	}
+    }
+    
+@media (min-width: 1280px) {
+	@keyframes droneMove {
+		50% {
+			top: 13%;
+			right: 30%;
+		}
+
+		100%{
+			top: 13%;
+			right: 60%;
+		}
+	}
+    }
+    
+@media (min-width: 1024px) and (max-width: 1279px) {
+	@keyframes droneMove {
+		50% {
+			top: 5%;
+			right: 30%;
+		}
+
+		100% {
+			top: 5%;
+			right: 60%;
+		}
+	}
+    }
+    
+@media (min-width: 768px) and (max-width: 1023px) {
+	@keyframes droneMove {
+		50% {
+			top: 5%;
+			right: 30%;
+		}
+		100%{
+			top: 5%;
+			right: 60%;
+		}
+	}
+    }
+    
+@media (min-width: 640px) and (max-width: 767px) {
+	@keyframes droneMove {
+		50% {
+			top: 5%;
+			right: 30%;
+		}
+		100%{
+			top: 5%;
+			right: 60%;
+		}
+	}
+    }
+    
+
+@keyframes logoMove {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+    }
+
+@keyframes logoFadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+    
+.animate-drone {
+	animation: droneMove 2s ease-in-out forwards;
+}
+    
+.animate-logo {
+	opacity: 0;
+	animation: logoMove 1s ease-in-out forwards, logoFadeOut 0.5s ease-in-out forwards 1.5s;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.animate-date {
+	opacity: 0;
+	animation: logoMove 1s ease-in-out forwards;
+	animation-delay: 1.5s;
+	transition: opacity 0.5s ease-in-out;
+}
