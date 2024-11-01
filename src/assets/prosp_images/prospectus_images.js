@@ -1,11 +1,11 @@
-import P_F from "@/assets/prosp_images/prosp_front.webp"
-import P_B from "@/assets/prosp_images/prosp_back.webp"
-import P_1 from "@/assets/prosp_images/prosp_p1.webp"
-import P_2 from "@/assets/prosp_images/prosp_p2.webp"
-import P_3 from "@/assets/prosp_images/prosp_p3.webp"
-import P_4 from "@/assets/prosp_images/prosp_p4.webp"
-import P_5 from "@/assets/prosp_images/prosp_p5.webp"
-import P_6 from "@/assets/prosp_images/prosp_p6.webp"
+import P_F from "@/assets/prosp_images/front.webp"
+import P_B from "@/assets/prosp_images/back.webp"
+import P_1 from "@/assets/prosp_images/pg1.webp"
+import P_2 from "@/assets/prosp_images/pg2.webp"
+import P_3 from "@/assets/prosp_images/pg3.webp"
+import P_4 from "@/assets/prosp_images/pg4.webp"
+import P_5 from "@/assets/prosp_images/pg5.webp"
+import P_6 from "@/assets/prosp_images/pg6.webp"
 
 export const prosp_images_single = [
     { id: 1, img: P_F },
@@ -26,4 +26,6 @@ export const prosp_images_double = [
     { id: 6, img: P_4 },
     { id: 7, img: P_5 },
     { id: 8, img: P_2 },
+    { id: 9, img: P_F },
+    { id: 10, img: P_B },
 ];
