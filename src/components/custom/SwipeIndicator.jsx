@@ -1,7 +1,5 @@
-import { MousePointerClick } from 'lucide-react';
-import { Pointer } from 'lucide-react';
-import { ArrowBigRightDash } from 'lucide-react';
 import React, {useState, useEffect} from 'react'
+import { FaAngleDoubleRight } from 'react-icons/fa';
 
 const SwipeIndicator = () => {
     const [showIndicator, setShowIndicator] = useState(true);
@@ -16,8 +14,8 @@ const SwipeIndicator = () => {
       return (
         showIndicator && (
           <div className="flex flex-col items-center text-[#12dc9f] opacity-90">
-            <span className="animate-swipe text-2xl"><Pointer /></span>
-            {/* <span className='animate-swipe'>Tap</span> */}
+            <span className="animate-swipe text-xl md:text-2xl"><FaAngleDoubleRight /></span>
+            <span className=''>Next Page</span>
           </div>
         )
       );

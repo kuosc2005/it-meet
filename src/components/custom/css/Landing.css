@@ -1,12 +1,12 @@
 @keyframes droneMove {
 	50% {
-	    top: 8%;
-	    right: 30%;
+	    top: 10%;
+	    right: 32%;
 	}
 
 	100%{
-		top: 8%;
-		right: 60%;
+		top: 10%;
+		right: 70%;
 
 	}
     }
@@ -14,12 +14,12 @@
 @media (min-width: 1280px) {
 	@keyframes droneMove {
 		50% {
-			top: 13%;
+			top: 12%;
 			right: 30%;
 		}
 
 		100%{
-			top: 13%;
+			top: 12%;
 			right: 60%;
 		}
 	}
@@ -28,13 +28,13 @@
 @media (min-width: 1024px) and (max-width: 1279px) {
 	@keyframes droneMove {
 		50% {
-			top: 5%;
+			top: 8%;
 			right: 30%;
 		}
 
 		100% {
-			top: 5%;
-			right: 60%;
+			top: 8%;
+			right: 62%;
 		}
 	}
     }
@@ -42,12 +42,12 @@
 @media (min-width: 768px) and (max-width: 1023px) {
 	@keyframes droneMove {
 		50% {
-			top: 5%;
-			right: 30%;
+			top: 8%;
+			right: 32%;
 		}
 		100%{
-			top: 5%;
-			right: 60%;
+			top: 8%;
+			right: 62%;
 		}
 	}
     }
@@ -55,12 +55,12 @@
 @media (min-width: 640px) and (max-width: 767px) {
 	@keyframes droneMove {
 		50% {
-			top: 5%;
-			right: 30%;
+			top: 7%;
+			right: 32%;
 		}
 		100%{
-			top: 5%;
-			right: 60%;
+			top: 7%;
+			right: 65%;
 		}
 	}
     }
