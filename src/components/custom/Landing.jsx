@@ -1,12 +1,16 @@
+import ku_Lawn from '@/assets/images/ku_Lawn.webp';
 import drone from '@/assets/images/drone.webp';
 import logo from '@/assets/images/logo.webp';
 import ShootingStar from './ShootingStar';
-import './css/landing.css';
+import './css/Landing.css';
 
 export default function LandingComponent() {
 	return (
-		<div className="relative min-h-[calc(100vh-5rem)] overflow-hidden bg-[url('@/assets/images/ku_Lawn.webp')] bg-cover bg-center">
-				
+		<div 
+			className="relative min-h-[calc(100vh-5rem)] overflow-hidden bg-cover bg-center"
+			style={{ backgroundImage: `url(${ku_Lawn})` }}
+			>
+	
 				<div className="absolute top-[10%] right-[5%] sm:top-[10%] sm:right-[2%] md:top-[15%] md:right-[3%] lg:top-[20%] lg:right-[4%] xl:top-[30%] xl:right-[5%] animate-drone ">
 					<img src={drone} alt="Drone" className="w-[50px] sm:w-[70px] md:w-[90px] lg:w-[110px] xl:w-[150px] transition-transform duration-300 ease-in-out"/>
 				</div>
