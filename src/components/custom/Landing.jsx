@@ -1,6 +1,7 @@
 import drone from '@/assets/images/drone.webp'
 import logo from '@/assets/images/logo.webp'
 import ShootingStar from './ShootingStar'
+import './css/Landing.css'
 
 export default function LandingComponent() {
   return (
