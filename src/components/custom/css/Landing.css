@@ -1,11 +1,11 @@
 @keyframes droneMove {
 	50% {
-	    top: 3%;
+	    top: 8%;
 	    right: 30%;
 	}
 
 	100%{
-		top: 3%;
+		top: 8%;
 		right: 60%;
 
 	}
