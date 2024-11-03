@@ -111,14 +111,14 @@ export default function FAQ() {
 
                           <span>
                             <IoIosArrowDown
-                              className={`transition-all duration-300 ${isclicked && clickedEachQuestion === each.id ? "rotate-180" : "rotate-0"}`}
+                              className={`transition-all duration-500 ${isclicked && clickedEachQuestion === each.id ? "rotate-180" : "rotate-0"}`}
                             />
                           </span>
                         </div>
 
                         {/* Answer Section */}
                         <div
-                          className={`overflow-scroll no-scrollbar  w-full transition-all ease-in-out duration-200 ${isclicked && clickedEachQuestion === each.id ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
+                          className={`overflow-scroll no-scrollbar w-full transition-all ease-in-out duration-500 ${isclicked && clickedEachQuestion === each.id ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
                             } `}
                         >
                           <p className="text-sm text-pretty font-normal sm:text-base">{each.ans}</p>

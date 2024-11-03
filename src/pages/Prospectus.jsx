@@ -92,7 +92,7 @@ const Prospectus = () => {
               ))}
             </HTMLFlipBook>
             </div>
-            <div className="absolute top-16 right-12">
+            <div className="absolute md:top-[275px] lg:top-[320px] xl:top-[350px] xl:right-[100px] right-12 md:right-[70px] lg:right-24">
             <SwipeIndicator />
             </div>
           </div>
