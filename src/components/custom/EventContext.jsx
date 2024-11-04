@@ -150,7 +150,7 @@ export const EventProvider = ({ children }) => {
     },
     {
       id: 2,
-      imgSrc: '',
+      imgSrc: '/tedxlogo.webp',
       title: 'TEDx',
       isApplicationOpen: false,
       formLink: '',
@@ -159,7 +159,7 @@ export const EventProvider = ({ children }) => {
     },
     {
       id: 3,
-      imgSrc: '',
+      imgSrc: '/mobile.webp',
       title: 'Mobile Rush',
       isApplicationOpen: false,
       formLink: '',
@@ -249,7 +249,7 @@ export const EventProvider = ({ children }) => {
     },
     {
       id: 13,
-      imgSrc: '',
+      imgSrc: '/weshieldlogo.webp',
       title: 'We Shield Cyber',
       isApplicationOpen: false,
       formLink: '',
