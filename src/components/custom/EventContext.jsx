@@ -177,7 +177,7 @@ export const EventProvider = ({ children }) => {
     },
     {
       id: 5,
-      imgSrc: '',
+      imgSrc: '/itcup.webp',
       title: 'All Nepal IT Cup',
       isApplicationOpen: false,
       formLink: '',
@@ -186,7 +186,7 @@ export const EventProvider = ({ children }) => {
     },
     {
       id: 6,
-      imgSrc: '',
+      imgSrc: '/geospecial.webp',
       title: 'Geo Special',
       isApplicationOpen: false,
       formLink: '',
@@ -195,7 +195,7 @@ export const EventProvider = ({ children }) => {
     },
     {
       id: 7,
-      imgSrc: '',
+      imgSrc: '/ai.webp',
       title: 'AI Competition',
       isApplicationOpen: false,
       formLink: '',
@@ -213,7 +213,7 @@ export const EventProvider = ({ children }) => {
     },
     {
       id: 9,
-      imgSrc: '',
+      imgSrc: '/alumnimeet.webp',
       title: 'Alumni Meet',
       isApplicationOpen: false,
       formLink: '',
@@ -222,7 +222,7 @@ export const EventProvider = ({ children }) => {
     },
     {
       id: 10,
-      imgSrc: '',
+      imgSrc: '/idea_pitching.webp',
       title: 'Idea Pitching',
       isApplicationOpen: false,
       formLink: '',
@@ -240,7 +240,7 @@ export const EventProvider = ({ children }) => {
     },
     {
       id: 12,
-      imgSrc: '',
+      imgSrc: '/kubing.webp',
       title: 'KUBing',
       isApplicationOpen: false,
       formLink: '',
