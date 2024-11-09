@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from 'react'
 import PropTypes from 'prop-types'
+import { TrainFrontTunnel } from 'lucide-react'
 const EventContext = createContext()
 
 export const EventProvider = ({ children }) => {
@@ -161,8 +162,8 @@ export const EventProvider = ({ children }) => {
       id: 3,
       imgSrc: '/mobile.webp',
       title: 'Mobile Rush',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/LpS5JKDhb3stjjH66',
       details:
         '“Mobile Rush” is an event conducted mainly focusing on high school and undergraduate students passionate about mobile development. The event aims to provide a platform for budding mobile developers to showcase their skills, recognize and reward exceptional talent. The event involves participants tackling straightforward tasks within a set time frame. In IT Meet 2023, the participants were challenged to translate a provided Figma design into a mobile app’s front end using their preferred development framework, blending technical proficiency with creative problem-solving. With 13 participants, Mobile Rush provided a dynamic stage for showcasing talents and encouraging creativity.',
     },
@@ -179,8 +180,8 @@ export const EventProvider = ({ children }) => {
       id: 5,
       imgSrc: '/itcup.webp',
       title: 'All Nepal IT Cup',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'linktr.ee/allnepalitcup',
       details:
         'This year, IT Meet is proud to introduce the inaugural "All Nepal IT Cup," a grand event featuring football and basketball competitions. Designed exclusively for IT students, this exciting pre-event aims to bring together participants from various institutions across Nepal, cultivating a sense of fellowship and encouraging healthy competition. The All Nepal IT Cup offers a unique opportunity for students to showcase their athletic talents while networking with peers, enhancing both their physical and professional skills in a vibrant, engaging environment.',
     },
@@ -215,8 +216,8 @@ export const EventProvider = ({ children }) => {
       id: 9,
       imgSrc: '/alumnimeet.webp',
       title: 'Alumni Meet',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/pcKX3CLpiiuLVjiPA',
       details:
         'The “Alumni Meet” is a gathering that unites graduates from the Department of Computer Science and Engineering, offering them a platform to reconnect, network, and share their experiences. This event fosters a strong sense of community among alumni, allowing them to reminisce about their university years, celebrate their achievements, and reflect on their professional journeys since graduation. In Alumni Meet 2023, approximately 27 alumni attended, spanning graduation years from 2000 onwards. The event featured nostalgic reunions where alumni reconnected with peers and professors, shared personal and professional accomplishments, and imparted valuable insights to current students, inspiring them to envision their own future paths. Their contributions added depth and significance to the event, creating a memorable and enriching experience for all participants.',
     },
@@ -233,8 +234,8 @@ export const EventProvider = ({ children }) => {
       id: 11,
       imgSrc: '/treasurehunt.webp',
       title: 'AR Treasure Hunt',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://arth24.tech/',
       details:
         'The “AR Treasure Hunt” is an exhilarating event that introduces participants to the world of Augmented Reality. Emulating the excitement of games like Pokémon Go, teams embark on an adventure, following clues to uncover hidden treasures. The 2023 AR Treasure Hunt, marking its second edition, seamlessly combined technology and cultural exploration. With 218 attendees, the event featured multiple exciting rounds and culminated in a thrilling finale at Patan Durbar Square.',
     },
@@ -242,8 +243,8 @@ export const EventProvider = ({ children }) => {
       id: 12,
       imgSrc: '/kubing.webp',
       title: 'KUBing',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://www.worldcubeassociation.org/competitions/KUbingNepal2024/register',
       details:
         '“KUbing Competition” is one of the pre-events of IT Meet which provides a platform for enhancing problem-solving skills, cognitive abilities, and community spirit. It also encourages participants to develop their speed and efficiency in solving the cube, enhancing both friendly competition and personal growth. KUbing Nepal 2023, an innovative initiative marking the debut of CubeConnect at Kathmandu University, provided a unique platform for cubers to sharpen their skills, engage in friendly competitions, and connect with fellow enthusiasts. The event featured 52 participants, broke three national records, and adhered to World Cube Association (WCA) standards, ensuring integrity and fairness.',
     },
@@ -251,8 +252,8 @@ export const EventProvider = ({ children }) => {
       id: 13,
       imgSrc: '/weshieldlogo.webp',
       title: 'We Shield Cyber',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://docs.google.com/forms/d/e/1FAIpQLSc9SpFmwz3QVm5oQtVF6xXfS-HiajySVEOOUT9sNZ4iJiLEMQ/viewform ',
       details:
         '"We Shield Cyber" is a premier cybersecurity conference at IT Meet 2024, organized by the Kathmandu University Networking and Cybersecurity Community in collaboration with Women in Cybersecurity Nepal. This event offers participants a unique opportunity to engage with leading cybersecurity experts through seminars, gain hands-on experience in a Capture The Flag (CTF) challenge, and explore career opportunities in a dedicated career fair. "We Shield Cyber" aims to raise awareness about the critical importance of cybersecurity, inspire future professionals, and nurture a community committed to protecting digital systems in an increasingly interconnected world.',
     },
@@ -297,8 +298,8 @@ export const EventProvider = ({ children }) => {
       id: 4,
       imgSrc: '/treasurehunt.webp',
       title: 'AR TREASURE HUNT',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://arth24.tech/',
       description:
         'The "AR Treasure Hunt" is an exciting event that immerses participants in Augmented Reality, similar to Pokémon Go, as they follow clues to find hidden treasures.',
       details:
