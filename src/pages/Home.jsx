@@ -1,16 +1,14 @@
-import React from 'react'
 import HeroPage from './HeroPage'
 import AboutPage from './AboutPage'
-import SponsorPage from './SponsorsPage'
-import FAQ from './FAQ-Page'
 import LocationPage from './Location'
+import FAQ from './FAQ-Page'
 
 const Home = () => {
   return (
     <div>
       <HeroPage />
       <AboutPage />
-      <SponsorPage />
+      {/* <SponsorPage /> */}
       <FAQ />
       <LocationPage />
     </div>

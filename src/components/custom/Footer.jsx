@@ -1,5 +1,8 @@
 import React from 'react'
 import ItmeetLogo from '../../assets/images/itmeetlogo.webp'
+import Background from "@/assets/images/boundary.webp"
+import Tiger from "@/assets/images/hello_tiger.webp"
+import Ellipse from "@/assets/images/ellipse.webp"
 import data from './footerdata.json'
 import {
   FaFacebook,
@@ -12,19 +15,13 @@ import {
 
 export default function Footer() {
   return (
-    <footer id='contacts' className="bg-[#171A23] h-full p-5 overflow-hidden">
-      <div className="flex flex-col space-y-12 md:flex-row justify-between items-center text-gray-400 py-3 sm:py-4 md:py-3 md:px-10 lg:px-12">
+    <>
+    <footer id='contacts' className="bg-[#171A23] h-full overflow-hidden">
+    <h1 className="text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] text-center font-semibold sm:mt-5 text-2xl sm:text-3xl lg:text-4xl">
+            Contact Us
+          </h1>
+      <div className="flex flex-col mt-5 md:mt-0 space-y-12 md:flex-row justify-between items-center text-gray-400 py-3 sm:py-4 md:py-3 md:px-10 lg:px-12 xl:px-16">
         {/*left side */}
-        <div className="space-y-6 md:space-y-8 lg:space-y-12 md">
-          <div className="md:flex md:justify-center">
-            <a href="#">
-              <img
-                src={ItmeetLogo}
-                alt="itmeetlogo"
-                className="object-contain w-[140px] sm:w-[160px] md:w-[130px] lg:w-[180px]"
-              />
-            </a>
-          </div>
           <div className="flex flex-col space-y-2 sm:space-y-3 lg:space-y-5">
             <h1 className="text-[#12dc9f] text-center font-semibold text-xl sm:text-2xl md:text-xl lg:text-3xl">
               Follow us on
@@ -43,14 +40,10 @@ export default function Footer() {
                 <FaLinkedin className="hover:scale-90 hover:ease-in-out transition-all" />
               </a>
             </div>
-          </div>
         </div>
 
         {/* Middle part */}
         <div className="flex flex-col space-y-5 md:space-y-8 lg:space-y-10">
-          <h1 className="text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] text-center font-semibold text-2xl md:text-3xl lg:text-4xl">
-            Contact Us
-          </h1>
           {/* Coordinator and president */}
           <div className="flex space-x-6 lg:space-x-12 xl:space-x-24 text-center">
             <span className="text-primary-foreground">
@@ -107,9 +100,40 @@ export default function Footer() {
         </div>
       </div>
 
-      <p className="text-gray-500 text-sm md:text-base lg:text-lg flex font-semibold justify-center items-center mt-10">
+      <p className="text-gray-500 text-xs sm:text-sm md:text-base lg:text-lg flex font-semibold justify-center items-center mt-10">
         Copyright © 2024 IT Meet. All rights reserved.
       </p>
+      <div className='relative mt-48 sm:mt-52 md:mt-60 lg:mt-72'>
+      <img
+            src={ItmeetLogo}
+            alt="itmeetlogo"
+            className="object-contain w-[130px] sm:w-[200px] md:w-[250px] lg:w-[300px] xl:w-[360px] absolute left-5 sm:left-12 md:left-20 lg:left-28 xl:left-36 bottom-0"
+            width={1000}
+            height={1000}
+          />
+        <img
+            src={Background}
+            alt="background"
+            className="object-contain w-[110px] sm:w-[150px] md:w-[180px] lg:w-[220px] xl:w-[280px] absolute right-0 bottom-0 z-20"
+            width={1000}
+            height={1000}
+          />
+          <img
+            src={Tiger}
+            alt="tiger"
+            className="object-contain w-[185px] sm:w-[240px] md:w-[290px] lg:w-[350px] xl:w-[440px] absolute right-0 bottom-0 z-10"
+            width={1000}
+            height={1000}
+          />
+          <img
+            src={Ellipse}
+            alt="ellipse"
+            className="object-contain w-[190px] sm:w-[260px] md:w-[300px] lg:w-[370px] xl:w-[460px] absolute right-0 bottom-0"
+            width={1000}
+            height={1000}
+          />
+      </div>
     </footer>
+    </>
   )
 }
