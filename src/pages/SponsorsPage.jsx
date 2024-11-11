@@ -1,58 +1,63 @@
 import React from 'react';
 import ITMeetLogo from '@/assets/images/itmeetlogo.png';
-
-
-const Sponsor = ({ name, tier, image }) => (
-  <div className="sponsor-group flex flex-col items-center gap-2 md:gap-8">
-    <h3 className="sponsor-tier text-lg sm:text-xl md:text-3xl font-bold text-[#12dc9f]"
-       style={{
-        backgroundImage: 'linear-gradient(90deg, #369FFF, #3BD0A3, #14C58F)',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-      }}>
-          
-    {tier} 
-    </h3>
+const Sponsor = ({ tier, image }) => {
  
-   
-    
-  {tier === 'Gold' ? (
-   
-    <div className="flex items-center gap-6" >
-     <div>
-      <img src={image} alt={`${tier}  - Logo 1`}
-       className="sponsor-logo object-contain w-[140px]" />
-       </div>
-       <div>
-      <img src={image} alt={`${tier}  - Logo 2`} 
-      className="sponsor-logo object-contain w-[140px] " />
-      </div>
-    </div>
-    
-  ) : tier === 'Bronze Sponsor' || tier === 'Community Partners' || tier === 'Supported By' ? (
-    
-    <div className="flex flex-row gap-6 ">
-      <img src={image} alt={`${tier}  - Logo 1`} 
-      className="sponsor-logo object-contain w-[140px] " />
-      <img src={image} alt={`${tier}  - Logo 2`} 
-      className="sponsor-logo object-contain w-[140px]" />
-      <img src={image} alt={`${tier}  - Logo 3`} 
-      className="sponsor-logo object-contain w-[140px] " />
-    
-    </div>
-    
-  
-  
-  ) : (
-  
-    <img src={image} alt={`${tier}  - Logo 1`}
-     className="sponsor-logo object-contain w-[140px] " />
-     
-  )}
-  </div>
-  
+  const imageDimensions = 
+    tier === 'Title Sponsor' ? { width: '220px' } :
+    tier === 'Diamond Sponsor' ? { width: '190px' } :
+    tier === 'Gold' ? { width: '170px' } :
+    tier === 'Silver Sponsor' ? { width: '140px' } :
+    tier === 'Bronze Sponsor' ? { width: '120px' } :
+    tier === 'Community Partners' ? { width: '70px' } :
+    tier === 'Supported By' ? { width: '70px' } : 
+    { width: '140px' }; 
 
-);
+  return (
+    <div className="sponsor-group flex flex-col items-center gap-2 md:gap-8">
+      <h3 className="sponsor-tier text-lg sm:text-xl md:text-3xl font-bold text-[#12dc9f]"
+        style={{
+          backgroundImage: 'linear-gradient(90deg, #369FFF, #3BD0A3, #14C58F)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+        }}>
+        {tier}
+      </h3>
+
+      {tier === 'Gold' ? (
+        <div className="flex items-center gap-6">
+          <div>
+            <img src={image} alt={`${tier} - Logo 1`} 
+                 className="sponsor-logo object-contain" 
+                 style={imageDimensions} />
+          </div>
+          <div>
+            <img src={image} alt={`${tier} - Logo 2`} 
+                 className="sponsor-logo object-contain" 
+                 style={imageDimensions} />
+          </div>
+        </div>
+        
+      ) : tier === 'Bronze Sponsor' || tier === 'Community Partners' || tier === 'Supported By' ? (
+        <div className="flex flex-row gap-6">
+          <img src={image} alt={`${tier} - Logo 1`} 
+               className="sponsor-logo object-contain" 
+               style={imageDimensions} />
+          <img src={image} alt={`${tier} - Logo 2`} 
+               className="sponsor-logo object-contain" 
+               style={imageDimensions} />
+          <img src={image} alt={`${tier} - Logo 3`} 
+               className="sponsor-logo object-contain" 
+               style={imageDimensions} />
+        </div>
+        
+      ) : (
+        <img src={image} alt={`${tier} - Logo 1`} 
+             className="sponsor-logo object-contain" 
+             style={imageDimensions} />
+      )}
+    </div>
+  );
+};
 
 
 
