@@ -15,7 +15,7 @@ const Team = () => {
         <div className="text-white pl-8 pr-8 sm:pl-11 sm:pr-11 md:pl-20 md:pr-20 lg:pl-24 lg:pr-24">
           {team.map((team, index) => (
             <div key={index} >
-              <h1 className={`text-left text-[26px] sm:text-[27px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#369FFF] via-[#3BD0A3] to-[#14C58F] ${index > 0 ? 'pt-12' : ''}`}>
+              <h1 className={`text-left text-[26px] sm:text-[27px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#369FFF] via-[#3BD0A3] to-[#14C58F] ${index > 0 ? 'pt-16' : ''}`}>
                 {team.title}
               </h1>
         
