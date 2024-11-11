@@ -9,6 +9,11 @@ import EllipeBG from '@/assets/images/Ellipse.webp'
 const Banner = () => {
   return (
     <div className=" flex flex-col overflow-hidden p-10 py-20 lg:px-20 gap-8 items-center justify-center min-h-screen bg-[#171A23]">
+       <div className="absolute top-24 md:top-32 lg:top-40 left-5 md:left-20 text-white z-10 max-w-xs sm:max-w-lg md:max-w-4xl px-4 md:px-8">
+       <p className="text-sm sm:text-base md:text-lg font-light leading-relaxed">
+        IT Meet 2024 brings an exciting mix of events, including KU Hackfest, TEDx, All Nepal IT Cup, EmpowerHer, and Alumni Meet. From tech competitions like Code Camp, AI Competition, and Line Following Robot to fun activities like AR Treasure Hunt and Gaming Events (DOTA 2, PUBG, FIFA, Valorant, Mobile Legends, Arcade, Clash Royale), there’s something for everyone. Networking and career opportunities include the Career Fair and Panel Discussions, along with social initiatives like Blood Donation and Acoustic Night for a well-rounded experience.
+        </p>
+      </div>
       <div className="absolute bottom-0 left-5 z-10 w-6/12 max-w-3xl">
         <div className="w-full h-24 sm:h-32 md:h-40 lg:h-48 xl:h-56 shadow-lg relative overflow-hidden">
           <div
@@ -26,7 +31,6 @@ const Banner = () => {
           </div>
         </div>
       </div>
-
       <div className="absolute inset-0 pointer-events-none z-0">
         <img src={texture} alt="texture" className="w-full h-full object-cover" />
         <div className="bg-pattern opacity-50 h-full w-full"></div>
@@ -39,7 +43,6 @@ const Banner = () => {
       <div className="absolute top-0 left-0 z-5">
         <img src={Blue} alt="blue" className="object-contain w-[50vw] max-w-[700px]" />
       </div>
-
       <div className="absolute bottom-0 right-0 z-5">
         <img
           src={EllipeBG}
@@ -63,7 +66,7 @@ const Banner = () => {
           className="object-contain w-[100px] sm:w-[160px] md:w-[190px] lg:w-[230px] xl:w-[280px]"
         />
       </div>
-    </div>
+    </div >
   )
 }
 
