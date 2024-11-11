@@ -1,26 +1,5 @@
 // teamMEMBER.js
 const team = [
-    // {
-    //     title: "Logistics Team",
-    //     members: [
-    //       {
-    //         name: "Member 1",
-    //         department: "LEAD",
-    //         image: '/src/assets/team/logistic/member1.webp',
-    //         linkedIn: '',
-    //         insta: '',
-    //         github: '',
-    //       },
-    //       {
-    //         name: "Member 2",
-    //         department: "SUB LEAD",
-    //         image: '/src/assets/team/logistic/member2.webp',
-    //         linkedIn: '',
-    //         insta: '',
-    //         github: '',
-    //       }
-    //     ]
-    // },
     {
         title: "Technical Team",
         members:[
@@ -51,7 +30,7 @@ const team = [
             {
             name: "James Bhattarai",
             department: "SUB LEAD",
-            image: '/src/assets/team/technical/james.png',
+            image: '/src/assets/team/technical/james.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -75,7 +54,7 @@ const team = [
             {
                 name: "Ashwini Subedi",
                 department: "MEMBER",
-                image: '/src/assets/team/technical/ashwini.png',
+                image: '/src/assets/team/technical/ashwini.webp',
                 linkedIn: '',
                 insta: '',
                 github: 'notashwinii',
@@ -115,7 +94,7 @@ const team = [
             {
                 name: "Rajat Dahal",
                 department: "MEMBER",
-                image: '/src/assets/team/technical/rajat.png',
+                image: '/src/assets/team/technical/rajat.webp',
                 linkedIn: '',
                 insta: '',
                 github: '',
@@ -131,19 +110,19 @@ const team = [
             {
                 name: "Sauhardha Kafle",
                 department: "MEMBER",
-                image: '/src/assets/team/technical/sauhardha.png',
+                image: '/src/assets/team/technical/sauhardha.webp',
                 linkedIn: '',
                 insta: '',
                 github: '',
             },
-            // {
-            //     name: "Shriharsh Sharma",
-            //     department: "MEMBER",
-            //     image: '/src/assets/team/technical/shriharsh.webp',
-            //     linkedIn: '',
-            //     insta: '',
-            //     github: '',
-            // },
+            {
+                name: "Shriharsh Sharma",
+                department: "MEMBER",
+                image: '/src/assets/team/technical/shriharsh.webp',
+                linkedIn: '',
+                insta: '',
+                github: '',
+            },
             {
                 name: "Suvesh Gurung",
                 department: "MEMBER",
@@ -178,7 +157,7 @@ const team = [
           {
             name: "Saumya Shrestha",
             department: "LEAD",
-            image: '/src/assets/team/documentation/saumya.png',
+            image: '/src/assets/team/documentation/saumya.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -186,7 +165,7 @@ const team = [
           {
             name: "Bishist Bikram Pant",
             department: "MEMBER",
-            image: '/src/assets/team/documentation/bishist.png',
+            image: '/src/assets/team/documentation/bishist.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -194,7 +173,7 @@ const team = [
           {
             name: "Jatin Madhikarmi",
             department: "MEMBER",
-            image: '/src/assets/team/documentation/jatin.png',
+            image: '/src/assets/team/documentation/jatin.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -202,7 +181,7 @@ const team = [
           {
             name: "Manish Pokharel",
             department: "MEMBER",
-            image: '/src/assets/team/documentation/manish.png',
+            image: '/src/assets/team/documentation/manish.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -210,7 +189,7 @@ const team = [
           {
             name: "Priyanka Ghimire",
             department: "MEMBER",
-            image: '/src/assets/team/documentation/priyanka.png',
+            image: '/src/assets/team/documentation/priyanka.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -218,7 +197,7 @@ const team = [
           {
             name: "Nerish Shrestha",
             department: "MEMBER",
-            image: '/src/assets/team/documentation/nerish.png',
+            image: '/src/assets/team/documentation/nerish.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -226,7 +205,7 @@ const team = [
           {
             name: "Saurav Maske",
             department: "MEMBER",
-            image: '/src/assets/team/documentation/saurav.png',
+            image: '/src/assets/team/documentation/saurav.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -234,7 +213,7 @@ const team = [
           {
             name: "Shashank Sakha",
             department: "MEMBER",
-            image: '/src/assets/team/documentation/shashank.png',
+            image: '/src/assets/team/documentation/shashank.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -248,7 +227,7 @@ const team = [
           // {
           //   name: "Rohit Raj Karki",
           //   department: "LEAD",
-          //   image: '/src/assets/team/design/rohit.png',
+          //   image: '/src/assets/team/design/rohit.webp',
           //   linkedIn: '',
           //   insta: '',
           //   github: '',
@@ -256,7 +235,7 @@ const team = [
           {
             name: "Royas Shakya",
             department: "SUB LEAD",
-            image: '/src/assets/team/design/royas.png',
+            image: '/src/assets/team/design/royas.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -264,7 +243,7 @@ const team = [
           {
             name: "Ankit Kumar Karn",
             department: "MEMBER",
-            image: '/src/assets/team/design/ankit.png',
+            image: '/src/assets/team/design/ankit.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -272,7 +251,7 @@ const team = [
           {
             name: "Sumira Makaju",
             department: "MEMBER",
-            image: '/src/assets/team/design/sumira.png',
+            image: '/src/assets/team/design/sumira.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -287,7 +266,7 @@ const team = [
             {
             name: "Adhishree Acharya",
             department: "LEAD",
-            image: '/src/assets/team/ir/adhishree.png',
+            image: '/src/assets/team/ir/adhishree.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -295,7 +274,7 @@ const team = [
           {
             name: "Nirjara Thapa",
             department: "LEAD",
-            image: '/src/assets/team/ir/nirjara.png',
+            image: '/src/assets/team/ir/nirjara.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -310,7 +289,7 @@ const team = [
           {
             name: "Jessica Thapa",
             department: "LEAD",
-            image: '/src/assets/team/pr/jessica.png',
+            image: '/src/assets/team/pr/jessica.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -318,7 +297,7 @@ const team = [
           {
             name: "Angelina Ghimire",
             department: "LEAD",
-            image: '/src/assets/team/pr/angelina.png',
+            image: '/src/assets/team/pr/angelina.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -331,7 +310,7 @@ const team = [
           {
             name: "Sunayana Regmi",
             department: "LEAD",
-            image: '/src/assets/team/marketing/sunayana.png',
+            image: '/src/assets/team/marketing/sunayana.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -339,7 +318,7 @@ const team = [
           {
             name: "Mahir Manandhar",
             department: "LEAD",
-            image: '/src/assets/team/marketing/mahir.png',
+            image: '/src/assets/team/marketing/mahir.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -347,7 +326,7 @@ const team = [
           {
             name: "Supriya Adhikari",
             department: "SUB LEAD",
-            image: '/src/assets/team/marketing/supriya.png',
+            image: '/src/assets/team/marketing/supriya.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -355,7 +334,7 @@ const team = [
           {
             name: "Saroj Poudel",
             department: "CONTENT LEAD",
-            image: '/src/assets/team/marketing/saroj.png',
+            image: '/src/assets/team/marketing/saroj.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -363,7 +342,7 @@ const team = [
           {
             name: "Jastika Shrestha",
             department: "MEMBER",
-            image: '/src/assets/team/marketing/jastika.png',
+            image: '/src/assets/team/marketing/jastika.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -371,7 +350,7 @@ const team = [
           {
             name: "Pratik Ghimire",
             department: "MEMBER",
-            image: '/src/assets/team/marketing/pratik.png',
+            image: '/src/assets/team/marketing/pratik.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -379,7 +358,7 @@ const team = [
           {
             name: "Rohit Mandal",
             department: "MEMBER",
-            image: '/src/assets/team/marketing/rohit.png',
+            image: '/src/assets/team/marketing/rohit.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -387,7 +366,7 @@ const team = [
           // {
           //   name: "Rujan Dhamala",
           //   department: "MEMBER",
-          //   image: '/src/assets/team/marketing/rujan.png',
+          //   image: '/src/assets/team/marketing/rujan.webp',
           //   linkedIn: '',
           //   insta: '',
           //   github: '',
@@ -395,7 +374,7 @@ const team = [
           {
             name: "Sanjeevani Pariyar",
             department: "MEMBER",
-            image: '/src/assets/team/marketing/sanjeevani.png',
+            image: '/src/assets/team/marketing/sanjeevani.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -408,7 +387,7 @@ const team = [
           {
             name: "Sudip Bhattarai",
             department: "LEAD",
-            image: '/src/assets/team/logistic/sudip.png',
+            image: '/src/assets/team/logistic/sudip.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -416,7 +395,7 @@ const team = [
           {
             name: "Aryan Koju",
             department: "MEMBER",
-            image: '/src/assets/team/logistic/aryan.png',
+            image: '/src/assets/team/logistic/aryan.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -424,7 +403,7 @@ const team = [
           {
             name: "Homraj shahi",
             department: "MEMBER",
-            image: '/src/assets/team/logistic/homraj.png',
+            image: '/src/assets/team/logistic/homraj.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -432,7 +411,7 @@ const team = [
           {
             name: "Krishna Mohan Sah",
             department: "MEMBER",
-            image: '/src/assets/team/logistic/krishna.png',
+            image: '/src/assets/team/logistic/krishna.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -440,7 +419,7 @@ const team = [
           {
             name: "Prabesh Timilsina",
             department: "MEMBER",
-            image: '/src/assets/team/logistic/prabesh.png',
+            image: '/src/assets/team/logistic/prabesh.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -448,7 +427,7 @@ const team = [
           {
             name: "Salina Nakarmi",
             department: "MEMBER",
-            image: '/src/assets/team/logistic/salina.png',
+            image: '/src/assets/team/logistic/salina.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -456,7 +435,7 @@ const team = [
           {
             name: "Sammit Poudyal",
             department: "MEMBER",
-            image: '/src/assets/team/logistic/sammit.png',
+            image: '/src/assets/team/logistic/sammit.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -464,7 +443,7 @@ const team = [
           {
             name: "Saroj sigdel",
             department: "MEMBER",
-            image: '/src/assets/team/logistic/saroj.png',
+            image: '/src/assets/team/logistic/saroj.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -472,7 +451,7 @@ const team = [
           {
             name: "Umanga Rayamajhi",
             department: "MEMBER",
-            image: '/src/assets/team/logistic/umanga.png',
+            image: '/src/assets/team/logistic/umanga.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -487,7 +466,7 @@ const team = [
           {
             name: "Reewaj Khanal",
             department: "LEAD",
-            image: '/src/assets/team/volunteer/reewaj.png',
+            image: '/src/assets/team/volunteer/reewaj.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -501,7 +480,7 @@ const team = [
           {
             name: "Kushal Aryal",
             department: "LEAD",
-            image: '/src/assets/team/fnl/kushal.png',
+            image: '/src/assets/team/fnl/kushal.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -509,7 +488,7 @@ const team = [
           {
             name: "Pranaw Raj Kafle",
             department: "SUB LEAD",
-            image: '/src/assets/team/fnl/pranaw.png',
+            image: '/src/assets/team/fnl/pranaw.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -517,7 +496,7 @@ const team = [
           {
             name: "Innima Karki",
             department: "SUB LEAD",
-            image: '/src/assets/team/fnl/innima.png',
+            image: '/src/assets/team/fnl/innima.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -530,7 +509,7 @@ const team = [
           {
             name: "Abhyudit Adhikari",
             department: "LEAD",
-            image: '/src/assets/team/sponsorship/abhyudit.png',
+            image: '/src/assets/team/sponsorship/abhyudit.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -538,7 +517,7 @@ const team = [
           {
             name: "Aayush Pokhrel",
             department: "MEMBER",
-            image: '/src/assets/team/sponsorship/aayush.png',
+            image: '/src/assets/team/sponsorship/aayush.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -546,7 +525,7 @@ const team = [
           {
             name: "Bhishma Bhandari",
             department: "MEMBER",
-            image: '/src/assets/team/sponsorship/bhishma.png',
+            image: '/src/assets/team/sponsorship/bhishma.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -554,7 +533,7 @@ const team = [
           {
             name: "Dikshant Sharma ",
             department: "MEMBER",
-            image: '/src/assets/team/sponsorship/dikshant.png',
+            image: '/src/assets/team/sponsorship/dikshant.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -562,7 +541,7 @@ const team = [
           {
             name: "Kausik Poudel",
             department: "MEMBER",
-            image: '/src/assets/team/sponsorship/kausik.png',
+            image: '/src/assets/team/sponsorship/kausik.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -570,7 +549,7 @@ const team = [
           {
             name: "Pranish Kafle",
             department: "MEMBER",
-            image: '/src/assets/team/sponsorship/pranish.png',
+            image: '/src/assets/team/sponsorship/pranish.webp',
             linkedIn: '',
             insta: '',
             github: '',
@@ -578,7 +557,7 @@ const team = [
           {
             name: "Sanjay Pahari",
             department: "MEMBER",
-            image: '/src/assets/team/sponsorship/sanjay.png',
+            image: '/src/assets/team/sponsorship/sanjay.webp',
             linkedIn: '',
             insta: '',
             github: '',
