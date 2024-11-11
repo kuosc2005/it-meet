@@ -35,25 +35,25 @@ const EventDetails = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-[#171A23] text-white p-8">
-      <Card className="bg-[#1A1E28] rounded-lg shadow-lg p-8 max-w-6xl w-full flex flex-col items-center relative">
-        <CardHeader className="flex items-center justify-between w-full">
+      <Card className="bg-[#1A1E28] rounded-lg shadow-lg p-3 md:p-8 max-w-6xl w-full flex flex-col items-center relative">
+        <CardHeader className="flex space-y-5 lg:space-y-8 items-center justify-between w-full">
           <img src={ITMeetLogo} alt="IT Meet logo" className="w-auto h-8 sm:h-10" />
 
-          <CardTitle className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
+          <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
             {event.title}
           </CardTitle>
         </CardHeader>
 
-        <CardContent className="w-full mt-4">
-          <div className="grid grid-cols-1 lg:grid-cols-[24rem_auto] gap-y-4 lg:gap-y-0 lg:gap-x-4">
-            <div className="bg-white p-4 rounded-lg flex items-center justify-center">
+        <CardContent className="w-full mt-3 md:mt-4 lg:mt-5">
+          <div className="grid grid-cols-1 lg:grid-cols-[24rem_auto] gap-y-6 sm:gap-y-8 md:gap-y-10 lg:gap-y-0 lg:gap-x-12">
+            <div className="bg-white p-2 md:p-4 rounded-lg flex items-center justify-center">
               <img
                 src={event.imgSrc}
                 alt={event.title}
-                className="object-contain max-w-full max-h-[15rem]"
+                className="object-contain max-w-full max-h-[12rem] lg:max-h-[15rem]"
               />
             </div>
-            <CardDescription className="text-md sm:text-lg text-justify">
+            <CardDescription className="text-sm sm:text-base text-justify">
               {event.details}
             </CardDescription>
           </div>

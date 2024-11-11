@@ -5,7 +5,7 @@ import './css/Landing.css'
 
 export default function LandingComponent() {
   return (
-    <div className="relative min-h-[40vh] sm:h-[400px] md:min-h-[55vh] lg:min-h-[60vh] xl:min-h-[100vh] h-auto overflow-hidden bg-[url('@/assets/images/ku_Lawn.webp')] bg-cover bg-center">
+    <div className="relative min-h-[50vh] sm:h-[550px] md:min-h-[55vh] lg:min-h-[60vh] xl:min-h-[100vh] h-auto overflow-hidden bg-[url('@/assets/images/ku_Lawn.webp')] bg-cover bg-center">
       <div className="absolute top-[10%] right-[5%] sm:top-[10%] sm:right-[2%] md:top-[15%] md:right-[3%] lg:top-[20%] lg:right-[4%] xl:top-[30%] xl:right-[5%] animate-drone ">
         <img
           src={drone}

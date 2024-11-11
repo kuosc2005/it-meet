@@ -9,8 +9,15 @@ import EllipeBG from '@/assets/images/Ellipse.webp'
 const Banner = () => {
   return (
     <div className=" flex flex-col overflow-hidden p-10 py-20 lg:px-20 gap-8 items-center justify-center min-h-screen bg-[#171A23]">
-       <div className="absolute top-24 md:top-32 lg:top-40 left-5 md:left-20 text-white z-10 max-w-xs sm:max-w-lg md:max-w-4xl px-4 md:px-8">
-       <p className="text-sm sm:text-base md:text-lg font-light leading-relaxed">
+       <div 
+        className="absolute top-24 md:top-28 lg:top-36 xl:top-40 left-5 md:left-20 lg:left-32 text-white z-10 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl px-4 md:px-8 p-3 md:p-4 lg:p-6 rounded-xl"
+        style={{
+          background:
+            'linear-gradient(107.29deg, rgba(0, 147, 208,0.30) 5.8%, rgba(5, 226, 189,0.30) 86.5%)',
+          clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 2rem)',
+        }}
+        >
+       <p className="text-sm sm:text-base md:text-lg font-light leading-relaxed text-justify">
         IT Meet 2024 brings an exciting mix of events, including KU Hackfest, TEDx, All Nepal IT Cup, EmpowerHer, and Alumni Meet. From tech competitions like Code Camp, AI Competition, and Line Following Robot to fun activities like AR Treasure Hunt and Gaming Events (DOTA 2, PUBG, FIFA, Valorant, Mobile Legends, Arcade, Clash Royale), there’s something for everyone. Networking and career opportunities include the Career Fair and Panel Discussions, along with social initiatives like Blood Donation and Acoustic Night for a well-rounded experience.
         </p>
       </div>

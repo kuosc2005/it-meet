@@ -28,14 +28,14 @@ export default function EventList({ events }) {
   return (
     <div
       // id="upcoming"
-      className="flex flex-col p-6 gap-6 bg-[#171A23] min-h-screen"
+      className="flex flex-col p-6 gap-3 md:gap-4 lg:gap-12 bg-[#171A23] min-h-screen"
     >
       {events.map(
         (event, index) => (
           console.log('Event:', event),
           (
-            <Card key={event.id} className="bg-[#171A23] text-white border-none flex  p-4">
-              <div className={`grid lg:grid-cols-2 gap-8 lg:gap-4 w-full`}>
+            <Card key={event.id} className="bg-[#171A23] text-white border-none flex p-4">
+              <div className={`grid lg:grid-cols-2 gap-2 lg:gap-4 w-full`}>
                 <div
                   className={`${
                     index % 2 === 0 ? 'lg:col-start-1' : 'lg:col-start-2'
@@ -43,12 +43,12 @@ export default function EventList({ events }) {
                 >
                   <div>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-2xl md:text-4xl font-bold leading-tight tracking-wide bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent mb-1 sm:mb-2">
+                      <CardTitle className="text-xl sm:text-2xl md:text-4xl font-bold leading-tight tracking-wide bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent mb-1 sm:mb-2">
                         {event.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-gray-300 text-md lg:text-lg">
+                      <CardDescription className="text-gray-300 text-sm sm:text-base lg:text-lg text-pretty">
                         {event.description}
                       </CardDescription>
                     </CardContent>
