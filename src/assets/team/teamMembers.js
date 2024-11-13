@@ -312,14 +312,14 @@ const team = [
   {
     title: 'Design Team',
     members: [
-      // {
-      //   name: "Rohit Raj Karki",
-      //   department: "LEAD",
-      //   image: '/src/assets/team/design/rohit.webp',
-      //   linkedIn: '',
-      //   insta: '',
-      //   github: '',
-      // },
+      {
+        name: "Rohit Raj Karki",
+        department: "LEAD",
+        image: '/src/assets/team/design/rohit.webp',
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
       {
         name: 'Royas Shakya',
         department: 'SUB LEAD',
