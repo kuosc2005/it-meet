@@ -374,7 +374,7 @@ const team = [
     ],
   },
   {
-    title: 'IR Team',
+    title: 'Internal Relation Team',
     members: [
       {
         name: 'Adhishree Acharya',
@@ -395,7 +395,7 @@ const team = [
     ],
   },
   {
-    title: 'PR Team',
+    title: 'Public Relation Team',
     members: [
       {
         name: 'Jessica Thapa',
