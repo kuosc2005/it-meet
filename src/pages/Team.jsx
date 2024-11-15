@@ -35,7 +35,7 @@ const Team = () => {
               ))}
             </div>
 
-            <div ref={membersSectionRef}>
+            <div>
               <h1
                 className={`text-left text-[26px] sm:text-[27px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#369FFF] via-[#3BD0A3] to-[#14C58F]`}
               >

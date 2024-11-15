@@ -33,6 +33,9 @@ import ShashankImage from '@/assets/team/documentation/shashank.webp'
 //---------------Design Team -----------------//
 import RoyasImage from '@/assets/team/design/royas.webp'
 import AnkitImage from '@/assets/team/design/ankit.webp'
+import AaratiImage from '@/assets/team/design/aarati.webp'
+import AayushaImage from '@/assets/team/design/aayusha.webp'
+import ErikaImage from '@/assets/team/design/erika.webp'
 import SumiraImage from '@/assets/team/design/sumira.webp'
 // -----------------------------------//
 //---------------IR Team -----------------//
@@ -312,14 +315,14 @@ const team = [
   {
     title: 'Design Team',
     members: [
-      // {
-      //   name: "Rohit Raj Karki",
-      //   department: "LEAD",
-      //   image: '/src/assets/team/design/rohit.webp',
-      //   linkedIn: '',
-      //   insta: '',
-      //   github: '',
-      // },
+      {
+        name: "Rohit Raj Karki",
+        department: "LEAD",
+        image: '/src/assets/team/design/rohit.png',
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
       {
         name: 'Royas Shakya',
         department: 'SUB LEAD',
@@ -332,6 +335,30 @@ const team = [
         name: 'Ankit Kumar Karn',
         department: 'MEMBER',
         image: AnkitImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Aayusha Jaspau',
+        department: 'MEMBER',
+        image: AayushaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Aarati Sapkota',
+        department: 'MEMBER',
+        image: AaratiImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Erika Shresta',
+        department: 'MEMBER',
+        image: ErikaImage,
         linkedIn: '',
         insta: '',
         github: '',
