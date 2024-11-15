@@ -86,6 +86,43 @@ import SanjayImage from '@/assets/team/sponsorship/sanjay.webp'
 // -----------------------------------//
 const team = [
   {
+    title: 'Event Lead',
+    members: [
+      {
+        name: "Ranjan Lamsal",
+        department: "IT MEET COORDINATOR",
+        image: '/src/assets/team/event/ranjan.png',
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Aavash Lamichhane",
+        department: "EVENTS LEAD",
+        image: '/src/assets/team/event/aavash.png',
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Mukul Aryal",
+        department: "HACKFEST LEAD",
+        image: '/src/assets/team/event/mukul.png',
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Prasun Sapkota",
+        department: "EVENTS LEAD",
+        image: '/src/assets/team/event/prasun.png',
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+    ]
+  },
+  {
     title: 'Technical Team',
     members: [
       {
