@@ -31,6 +31,7 @@ import SauravImage from '@/assets/team/documentation/saurav.webp'
 import ShashankImage from '@/assets/team/documentation/shashank.webp'
 // -----------------------------------//
 //---------------Design Team -----------------//
+import RohitImage from '@/assets/team/design/rohit.webp'
 import RoyasImage from '@/assets/team/design/royas.webp'
 import AnkitImage from '@/assets/team/design/ankit.webp'
 import SumiraImage from '@/assets/team/design/sumira.webp'
@@ -315,7 +316,7 @@ const team = [
       {
         name: "Rohit Raj Karki",
         department: "LEAD",
-        image: '/src/assets/team/design/rohit.webp',
+        image: RohitImage,
         linkedIn: '',
         insta: '',
         github: '',
