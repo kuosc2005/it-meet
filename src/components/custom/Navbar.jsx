@@ -3,7 +3,7 @@ import ItmeetLogo from '../../assets/images/itmeetlogo.webp'
 import { useLocation } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import { Menu, X, ChevronDown } from 'lucide-react'
-import { FaFacebook, FaSquareInstagram, FaLinkedin, FaSquareXTwitter } from 'react-icons/fa6'
+import { FaFacebook, FaSquareInstagram, FaLinkedin, FaSquareXTwitter, FaDiscord } from 'react-icons/fa6'
 
 const Navbar = () => {
   const navItems = [
@@ -148,6 +148,12 @@ const Navbar = () => {
           <div className="text-white bg-[#171A23] p-2 px-4 rounded-3xl flex items-center z-20 gap-4">
             <h1 className="text-sm">Follow us</h1>
             <a
+              href="https://discord.com/invite/bTG3p8Za4f?fbclid=IwY2xjawGo04ZleHRuA2FlbQIxMAABHQmHZabHEfWNH-kgOehhWC-7rebkB8zqb_XRiW3DQ5nLMsZQErZLbi0Ckg_aem_21zGRVqdu65pwVdp44T63g"
+              className="hover:scale-110 hover:text-gray-300 transition-all duration-500"
+            >
+              <FaDiscord className="w-5 h-5" />
+            </a>
+            <a
               href="https://www.facebook.com/KUITMEET/"
               className="hover:scale-110 hover:text-gray-300 transition-all duration-500"
             >
@@ -254,6 +260,12 @@ const Navbar = () => {
           {/* Social Media */}
           <div className="text-white flex justify-start bg-transparent py-2 rounded-3xl items-center z-20 gap-4">
             <h1 className="text-lg font-semibold">Follow us</h1>
+            <a
+              href="https://discord.com/invite/bTG3p8Za4f?fbclid=IwY2xjawGo04ZleHRuA2FlbQIxMAABHQmHZabHEfWNH-kgOehhWC-7rebkB8zqb_XRiW3DQ5nLMsZQErZLbi0Ckg_aem_21zGRVqdu65pwVdp44T63g"
+              className="hover:scale-110 hover:text-gray-300 transition-all duration-500"
+            >
+              <FaDiscord className="w-5 h-5" />
+            </a>
             <a
               href="https://www.facebook.com/KUITMEET/"
               className="hover:scale-110 hover:text-gray-300 transition-all duration-500"

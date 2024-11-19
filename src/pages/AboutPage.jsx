@@ -20,25 +20,22 @@ export default function AboutPage() {
           <img
             src={ITMeetLogo}
             alt="itmeetlogodark"
-            className="object-contain w-[180px] sm:w-[260px] md:w-[300px]"
+            className="object-contain w-[160px] sm:w-[240px] md:w-[300px]"
             width={1000}
             height={1000}
           />
         </div>
         <div className="lg:w-full">
-          <p className="text-sm sm:text-base md:text-xl leading-8 text-justify font-normal text-gray-500">
+          <p className="text-xs sm:text-sm md:text-base xl:text-lg leading-8 text-justify font-normal text-gray-500">
             <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
               IT MEET
             </span>{' '}
-            is a non-profit, student-organized university-level tech meetup held annually at
-            Kathmandu University, Dhulikhel. It is the collaborative effort of the Kathmandu
-            University Computer Club (KUCC) and the Department of Computer Science and Engineering
-            (DoCSE). With a strong focus on celebrating recent achievements in the field of
-            information and technology, "IT MEET" has successfully established itself as a platform
-            that offers opportunities for tech enthusiasts to share innovative ideas, compete with
-            their peers, and gain first hand experience of the real world. Now, with the theme
-            “Refresh, Reimagine, Innovate”, we are all set to embark on the journey of “IT MEET
-            2024”. Our vision is to provide future change-makers with a platform to delve deep into
+            is an annual, national-level event organized by Kathmandu University Computer Club (KUCC) 
+            with the intent of celebrating recent achievements in information and technology, that brings together 
+            tech enthusiasts from all over Nepal. This year, IT Meet aims to continue its tradition of promoting the 
+            creative zeal of technical personnel, providing a premier platform to share innovative ideas and compete 
+            with their peers in a variety of activities, including workshops, competitions, and networking sessions.
+            Our vision is to provide future change-makers with a platform to delve deep into
             the insights of the tech world, emerging not only with technical skills and knowledge
             about hardware and computers but also with personal growth.
           </p>
@@ -47,7 +44,7 @@ export default function AboutPage() {
           <img
             src={ITMeetLogo}
             alt="itmeetlogodark"
-            className="object-contain w-[650px]"
+            className="object-contain w-[600px]"
             width={1000}
             height={1000}
           />
