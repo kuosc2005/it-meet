@@ -39,8 +39,9 @@ import SauravImage from '@/assets/team/documentation/saurav.webp'
 import ShashankImage from '@/assets/team/documentation/shashank.webp'
 // -----------------------------------//
 //---------------Design Team -----------------//
-import RohitImage from '@/assets/team/design/rohit.webp'
+import RohitImage from '@/assets/team/design/rohitt.webp'
 import RoyasImage from '@/assets/team/design/royas.webp'
+import AvipsaImage from '@/assets/team/design/avipsaa.webp'
 import AnkitImage from '@/assets/team/design/ankit.webp'
 import AaratiImage from '@/assets/team/design/aarati.webp'
 import AayushaaImage from '@/assets/team/design/aayusha.webp'
@@ -484,6 +485,14 @@ const team = [
         name: 'Royas Shakya',
         department: 'SUB LEAD',
         image: RoyasImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Avipsa Hamo',
+        department: 'MEMBER',
+        image: AvipsaImage,
         linkedIn: '',
         insta: '',
         github: '',
