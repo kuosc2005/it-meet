@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react'
+
 import PropTypes from 'prop-types'
 import { TrainFrontTunnel } from 'lucide-react'
 const EventContext = createContext()
@@ -9,8 +9,8 @@ export const EventProvider = ({ children }) => {
       id: 1,
       imgSrc: '/project.webp',
       title: 'Project Exhibition',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://linktr.ee/projectexhibition',
       description:
         "The event showcases participants' innovative software and hardware projects, celebrating their technical skills and creativity before esteemed judges.",
       details:
@@ -31,8 +31,8 @@ export const EventProvider = ({ children }) => {
       id: 3,
       imgSrc: '/gaming.webp',
       title: 'Gaming Events',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/RESZHtfayFLjWfNs5',
       description:
         'IT Meet 2024 will host a grand Gaming (Esports) event featuring popular games and a competitive prize pool, following a successful 2023 with impressive participation across multiple titles.',
       details:
@@ -42,8 +42,8 @@ export const EventProvider = ({ children }) => {
       id: 4,
       imgSrc: '/googling.webp',
       title: 'Googling Competition',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/7ztrNTaYtRr9Bpeq7',
       description:
         "The event tests teams' problem-solving and research skills using Google, rewarding the fastest and most adept participants with attractive prizes.",
       details:
@@ -53,8 +53,8 @@ export const EventProvider = ({ children }) => {
       id: 5,
       imgSrc: '/typing.webp',
       title: 'Typing Competition',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/S9F13eE6haZGDhev8',
       description:
         'The event allows participants to showcase their speed and accuracy in a friendly environment, with around 66 attendees demonstrating their skills during the 2023 event.',
       details:
@@ -64,8 +64,8 @@ export const EventProvider = ({ children }) => {
       id: 6,
       imgSrc: '/coding.webp',
       title: 'Coding Challenge',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/ssFuq9RvKnfGDTw59',
       description:
         "The event showcases participants' coding skills across various difficulty levels, fostering a collaborative community, with 28 participants demonstrating their talent in 2023.",
       details:
@@ -75,8 +75,8 @@ export const EventProvider = ({ children }) => {
       id: 7,
       imgSrc: '/mock.webp',
       title: 'Mock Placement',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/X1XPqRXj6q5vAduK6',
       description:
         'The event simulates corporate recruitment processes, including tests and interviews, offering participants valuable feedback from HR professionals to improve their job readiness.',
       details:
@@ -86,8 +86,8 @@ export const EventProvider = ({ children }) => {
       id: 8,
       imgSrc: '/line.webp',
       title: 'Line Following Robot',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/ikhFRq9mPyQSWCCQ6',
       description:
         'The event challenges participants to program robots to navigate a course using line-following sensors, with 48 individuals in 12 teams showcasing their skills over two days at IT Meet 2023.',
       details:
@@ -108,8 +108,8 @@ export const EventProvider = ({ children }) => {
       id: 10,
       imgSrc: '/blood.webp',
       title: 'Blood Donation',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/7m6ER61ejLmBCNsV7',
       description:
         'The KU Youth Red Cross and IT Meet organizing committee collaborate on blood donation drives, encouraging attendees to contribute to saving lives and raising awareness about the critical need for regular blood donations in healthcare.',
       details:
@@ -119,8 +119,8 @@ export const EventProvider = ({ children }) => {
       id: 11,
       imgSrc: '/photo.webp',
       title: 'Photography Competition',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/Lcc66VFZPohqiy7M8',
       description:
         "The event invites participants to showcase their artistic talents, allowing visitors to vote for their favorite among 53 submissions, with a prize awarded to the photographer best capturing technology's impact on life.",
       details:
@@ -130,8 +130,8 @@ export const EventProvider = ({ children }) => {
       id: 12,
       imgSrc: '/quiz.webp',
       title: 'IT Quiz',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://docs.google.com/forms/d/e/1FAIpQLScB2l8RZ0hQ_jSFuCAalebuwSW8o9qlgS2QvK_gEhZ12svkSQ/viewform?usp=sf_link',
       description:
         'The event is an inter-school event that challenges teams of four with various IT-related questions across seven rounds, inspiring young minds while awarding prizes and a prestigious shield to the winners.',
       details:
@@ -171,8 +171,8 @@ export const EventProvider = ({ children }) => {
       id: 4,
       imgSrc: '/CodeCamp.webp',
       title: 'Code Camp',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/fRjJw9CNLvvpZidU8',
       details:
         '“Code Camp” is also one of the main events of IT Meet that ignites creativity and brilliance among participants who collaborate in teams of three, engaging in a coding marathon on their selected development platforms. Throughout the event, teams delve into crafting innovative solutions, showcasing their technical prowess and problem-solving abilities. Expert judges assess projects based on criteria such as market viability, relevance, and innovation level, spotlighting potential industry disruptors and pioneering ideas. Last year, in IT Meet 2023, CodeCamp drew 45 participants who demonstrated exceptional ingenuity and coding skills, illustrating their dedication to advancing technology and innovation at IT MEET.',
     },
@@ -189,8 +189,8 @@ export const EventProvider = ({ children }) => {
       id: 6,
       imgSrc: '/geospecial.webp',
       title: 'Geo Special',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://tiny.cc/mappingku',
       details:
         '“Geo-Special” is a series of events under IT Meet, designed to help students explore open-source geospatial data and technologies, promoting their unexplored potential. Through hands-on training sessions, interactive workshops, and personalized mentoring, participants gain essential skills to harness open-source geo-data technologies, enabling them to transform concepts into innovative project solutions. IT Meet 2023’s Geo-Special program, attended by 50 participants, featured three distinct events: the OSM Contributors Meetup, Geospatial Tech Webinar, and Geo Idea Contest. This comprehensive program brought together geospatial enthusiasts, and provided valuable insights from experts. The event successfully highlighted the importance and potential of geospatial technology, contributing to the growth and knowledge of all attendees.',
     },
@@ -198,8 +198,8 @@ export const EventProvider = ({ children }) => {
       id: 7,
       imgSrc: '/ai.webp',
       title: 'AI Competition',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/Hs7oywqXAxk8kfPH6',
       details:
         'The “AI Competition” event in IT Meet provides a platform for individuals to discover the cutting-edge advancements in Artificial Intelligence (AI) in Nepal. This event brings together teams of up to four participants to tackle software and hardware-based challenges, developing minimum viable products that address real-world problems. Aimed at familiarizing students with the AI industry, the competition encourages innovation and technical skill enhancement. Last year, in IT Meet 2023, the competition featured categories in LLM, Data Extraction, and Data Visualization, with 12 teams and 40 individuals participating. Judges evaluated concepts, pitches, and final products, recognizing the most innovative teams. The AI Competition provides a platform for idea sharing, collaboration, and growth in the AI field.',
     },
@@ -207,8 +207,8 @@ export const EventProvider = ({ children }) => {
       id: 8,
       imgSrc: '/empoweher.webp',
       title: 'EmpowerHer',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/kyqKPUAzGLMBzzX87',
       details:
         '“EmpowerHer” is an innovative initiative aimed at inspiring and empowering young girls by providing a platform to amplify their voices, engage in meaningful discussions, and connect with like-minded individuals in the tech industry. Featuring insightful talks, interactive workshops, and engaging tech-themed activities, EmpowerHER equips participants with the confidence and skills necessary to excel in the evolving tech landscape. This event is a pioneering effort to create an inclusive and empowering environment for girls in tech, boosting self-expression, learning, and engagement. The inaugural EmpowerHER ‘23 event was a significant success, drawing around 80 participants and highlighted speakers like Guna Kesari Pradhan, Roja Kiran Basukala, and Agma Malakar. The event fostered inspiration and dialogue, with notable moments including the “#iamremarkable” reflection session and discussions on women‘s roles in government technology, marking a significant step towards creating an inclusive and empowering environment for girls in tech.',
     },
@@ -225,8 +225,8 @@ export const EventProvider = ({ children }) => {
       id: 10,
       imgSrc: '/idea_pitching.webp',
       title: 'Idea Pitching',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/DRYsCcT1ExHf25BS7',
       details:
         'The “Idea Pitching” competition at IT Meet emphasizes the convergence of creativity, innovation, and strategic foresight. It provides participants with a unique opportunity to showcase their ability to articulate compelling ideas. Each contestant is tasked with delivering a succinct pitch, addressing specific topics provided by the organizers. Judges, esteemed professionals in their fields, evaluate pitches based on criteria such as market feasibility, efficient resource allocation, and scalability potential. This event serves as a pivotal learning experience for engineering students, offering valuable insights into the intricacies of management and nurturing their entrepreneurial spirit. By participating, students expand their horizons, gain practical knowledge, and develop essential skills in pitching and business strategy, preparing them for future challenges in the professional world.',
     },
@@ -275,8 +275,8 @@ export const EventProvider = ({ children }) => {
       id: 2,
       imgSrc: '/empoweher.webp',
       title: 'EMPOWER HER',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/kyqKPUAzGLMBzzX87',
       description:
         '"EmpowerHer" is an initiative designed to inspire young girls in tech by providing a platform for discussion, skill-building workshops, and networking. ',
       details:
@@ -287,8 +287,8 @@ export const EventProvider = ({ children }) => {
       coc: '/coc_codecamp.pdf',
       imgSrc: '/CodeCamp.webp',
       title: 'CODE CAMP',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/fRjJw9CNLvvpZidU8',
       description:
         '“Code Camp” is also one of the main events of IT Meet that ignites creativity and brilliance among participants who collaborate in teams of three, engaging in a coding marathon on their selected development platforms.',
       details:
@@ -309,6 +309,8 @@ export const EventProvider = ({ children }) => {
       id: 5,
       imgSrc: '/AcousticNight.webp',
       title: 'Acoustic Night',
+      isApplicationOpen: true,
+      formLink: 'https://forms.gle/CBuJ5dvMYgz8f8bG8',
       description:
         '"Acoustic Night," the closing event of IT Meet, features talented student performances that create an enchanting evening filled with diverse melodies, fostering connections among attendees.s',
       details:
