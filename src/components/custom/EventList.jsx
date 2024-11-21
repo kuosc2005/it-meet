@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import {
   Card,
   CardHeader,
@@ -25,9 +26,13 @@ ImagePlaceholder.propTypes = {
 }
 
 export default function EventList({ events }) {
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [events])
+
   return (
     <div
-      // id="upcoming"
       className="flex flex-col p-6 gap-3 md:gap-4 lg:gap-12 bg-[#171A23] min-h-screen"
     >
       {events.map(
@@ -54,9 +59,6 @@ export default function EventList({ events }) {
                     </CardContent>
                   </div>
                   <CardFooter className="flex gap-2 pt-4">
-                    {/* <button className="bg-gradient-to-r from-[#369FFF] to-[#14C58F] text-black px-5 py-1.5 rounded hover:bg-[#00cc99] transition-colors">
-                  APPLY
-                </button> */}
                     <Link
                       to={`/events/${event.title.toLowerCase().replace(/ /g, '-')}`}
                       state={{ eventData: event }}

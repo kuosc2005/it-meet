@@ -26,8 +26,9 @@ const EventDetails = () => {
   const event = allEvents.find((e) => e.title.toLowerCase().replace(/ /g, '-') === eventTitle)
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [location])
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location]);
+  
 
   if (!event) {
     return <div>Event not found</div>
