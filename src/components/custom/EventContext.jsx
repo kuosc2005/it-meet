@@ -9,8 +9,8 @@ export const EventProvider = ({ children }) => {
       id: 1,
       imgSrc: '/project.webp',
       title: 'Project Exhibition',
-      isApplicationOpen: false,
-      formLink: '',
+      isApplicationOpen: true,
+      formLink: 'https://linktr.ee/projectexhibition',
       description:
         "The event showcases participants' innovative software and hardware projects, celebrating their technical skills and creativity before esteemed judges.",
       details:
