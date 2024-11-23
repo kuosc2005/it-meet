@@ -16,7 +16,6 @@ export default function Faq_what_else() {
             );
             storeData(response.documents);
 
-
             if (response.documents.length > 0) {
                 setTargetId(response.documents[0].id);
                 setOpen(true);
@@ -58,7 +57,7 @@ export default function Faq_what_else() {
                 <div className="sm:w-[18rem] md:w-[22rem] min-[400px]:h-[17rem] h-[21rem]  sm:h-[24rem] md:h-[30rem]  rounded-md shadow-[-10px_10px_#369fff]" >
                     <img
                         src={ImageSrc}
-                        alt="image"
+                        alt=""
                         className="object-cover h-full w-full rounded-md"
                     />
                 </div>
