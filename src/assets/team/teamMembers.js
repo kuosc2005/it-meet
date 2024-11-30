@@ -47,6 +47,8 @@ import AaratiImage from '@/assets/team/design/aarati.webp'
 import AayushaaImage from '@/assets/team/design/aayusha.webp'
 import ErikaImage from '@/assets/team/design/erika.webp'
 import SumiraImage from '@/assets/team/design/sumira.webp'
+import PrajwallImage from '@/assets/team/design/prajwall.webp'
+import KshzitzImage from '@/assets/team/design/kshitiz.webp'
 // -----------------------------------//
 //---------------IR Team -----------------//
 import AdhishreeImage from '@/assets/team/ir/adhishree.webp'
@@ -491,7 +493,7 @@ const team = [
       },
       {
         name: 'Avipsa Hamo',
-        department: 'MEMBER',
+        department: 'SUB LEAD',
         image: AvipsaImage,
         linkedIn: '',
         insta: '',
@@ -533,6 +535,22 @@ const team = [
         name: 'Sumira Makaju',
         department: 'MEMBER',
         image: SumiraImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Kshitiz Khanal',
+        department: 'MEMBER',
+        image: KshzitzImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Prajwal Pandey',
+        department: 'MEMBER',
+        image: PrajwallImage,
         linkedIn: '',
         insta: '',
         github: '',
@@ -640,14 +658,6 @@ const team = [
         insta: '',
         github: '',
       },
-      // {
-      //   name: "Rujan Dhamala",
-      //   department: "MEMBER",
-      //   image: '/src/assets/team/marketing/rujan.webp',
-      //   linkedIn: '',
-      //   insta: '',
-      //   github: '',
-      // },
       {
         name: 'Sanjeevani Pariyar',
         department: 'MEMBER',

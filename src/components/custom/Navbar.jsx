@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { FaFacebook, FaSquareInstagram, FaLinkedin, FaSquareXTwitter, FaDiscord } from 'react-icons/fa6'
+import { ShoppingCart } from 'lucide-react';
 
 const Navbar = () => {
   const navItems = [
@@ -144,6 +145,7 @@ const Navbar = () => {
           ))}
         </div>
 
+        <div className='flex items-center lg:gap-3 xl:gap-6'>
         <div className="rounded-3xl hidden lg:flex bg-gradient-to-l from-[#369FFF] to-[#17C58F] p-[1px]">
           <div className="text-white bg-[#171A23] p-2 px-4 rounded-3xl flex items-center z-20 gap-4">
             <h1 className="text-sm">Follow us</h1>
@@ -178,6 +180,15 @@ const Navbar = () => {
               <FaSquareXTwitter className="w-5 h-5" />
             </a>
           </div>
+        </div>
+        <div className='hidden lg:flex'>
+        <a
+              href="https://kucc.blanxer.io/"
+              className="hover:scale-110 hover:text-[#14C58F] transition-all duration-500"
+            >
+              <ShoppingCart className="w-6 h-6" />
+            </a>
+        </div>
         </div>
 
         {/* ................Mobile View ............... */}
@@ -289,6 +300,15 @@ const Navbar = () => {
               className="hover:scale-110 hover:text-gray-300 transition-all duration-500"
             >
               <FaSquareXTwitter className="w-5 h-5" />
+            </a>
+          </div>
+          <div>
+          <a
+              href="https://kucc.blanxer.io/"
+              className="hover:text-[#14C58F] flex items-center gap-2"
+            >
+                        <h1 className="text-lg font-semibold">Store</h1>
+              <ShoppingCart className="w-5 h-5" />
             </a>
           </div>
         </div>
