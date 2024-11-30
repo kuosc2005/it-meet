@@ -43,7 +43,7 @@ export default function FAQ() {
 
   return (
     <>
-      <div id="faqs" className=" w-full text-pretty h-full text-white p-10  md:py-0 cursor-default bg-[#171a23] box-border nowrap md:overflow-scroll no-scrollbar">
+      <div id="faqs" className=" w-full text-pretty h-full text-white p-10 md:py-0 cursor-default bg-[#171a23] box-border nowrap md:overflow-scroll no-scrollbar">
 
         <div className="flex flex-col justify-between items-center font-bold text-xl sm:text-2xl md:text-3xl overflow-hidden mb-14">
           <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
@@ -54,7 +54,7 @@ export default function FAQ() {
 
         <div className='flex flex-col md:flex-row justify-between items-start h-full w-full md:h-[450px] gap-10 '>
           {/*Left part  */}
-          <div className='flex md:flex-col md:justify-center items-start min-[1250px]:items-end lg:pr-10  h-auto w-full md:w-[40%] gap-x-8 md:gap-7 overflow-x-scroll flex-row no-scrollbar text-[18px] md:text-[24px] font-medium'>
+          <div className='flex md:flex-col md:justify-center items-start min-[1250px]:items-end lg:pr-10  h-auto w-full md:w-[35%] gap-x-8 md:gap-7 lg:gap-8 overflow-x-scroll flex-row no-scrollbar text-[18px] md:text-[24px] font-medium'>
             {
               Object.keys(data).map((value, index) =>
                 <div
@@ -101,7 +101,7 @@ export default function FAQ() {
                       >
                         <div className='flex h-full w-full '>
                           <div
-                            className="text-left py-2 w-full h-full"
+                            className="text-left text-base sm:text-lg lg:text-xl xl:text-2xl py-2 w-full h-full"
                             onClick={() => handleClick(each)}
                             aria-expanded={isclicked && clickedEachQuestion === each.id}
                           >
