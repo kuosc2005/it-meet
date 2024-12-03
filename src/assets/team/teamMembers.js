@@ -1,14 +1,39 @@
 // teamMEMBER.js
-//---------------Event Leads -----------------//
+//---------------Core Committee -----------------//
 import RanjanImage from '@/assets/team/event/ranjan.webp'
+import AsimImage from '@/assets/team/technical/asim.webp'
+import SaumyaImage from '@/assets/team/documentation/saumya.webp'
+import RohitImage from '@/assets/team/design/rohitt.webp'
+import AdhishreeImage from '@/assets/team/ir/adhishree.webp'
+import NirjaraImage from '@/assets/team/ir/nirjara.webp'
+import JessicaImage from '@/assets/team/pr/jessica.webp'
+import AngelinaImage from '@/assets/team/pr/angelina.webp'
+import SunayanaImage from '@/assets/team/marketing/sunayana.webp'
+import MahirImage from '@/assets/team/marketing/mahir.webp'
+import SudeepImage from '@/assets/team/logistic/sudip.webp'
+import KushalImage from '@/assets/team/fnl/kushal.webp'
+import ReewajImage from '@/assets/team/volunteer/reewaj.webp'
+import AbhyuditImage from '@/assets/team/sponsorship/abhyudit.webp'
 import AavashImage from '@/assets/team/event/aavash.webp'
 import MukulImage from '@/assets/team/event/mukul.webp'
 import PrasunImage from '@/assets/team/event/prasun.webp'
+// -----------------------------------//
+//---------------Event Leads -----------------//
 import SamikshyaImage from '@/assets/team/event/samikshya.webp'
 import SuyoggImage from '@/assets/team/event/suyogg.webp'
+import PragyaImage from '@/assets/team/event/pragya.webp'
+import AshrayaImage from '@/assets/team/event/ashrayakadel.webp'
+import PoojaImage from '@/assets/team/event/poojaa.webp'
+import ShaswatImage from '@/assets/team/event/saswatpant.webp'
+import SanjibImage from '@/assets/team/event/sanjib.webp'
+import SabinImage from '@/assets/team/event/sabinrana.webp'
+import RujanImage from '@/assets/team/event/rujan.webp'
+import MahammadImage from '@/assets/team/event/mahammed.webp'
+import AnushaImage from '@/assets/team/event/anusha.webp'
+import AatmiyataImage from '@/assets/team/event/atmiyata.webp'
+import AadityaImage from '@/assets/team/event/aadityasap.webp'
 // -----------------------------------//
 //---------------Technical Team -----------------//
-import AsimImage from '@/assets/team/technical/asim.webp'
 import ShashankaImage from '@/assets/team/technical/shasankha.webp'
 import YuralImage from '@/assets/team/technical/yural.webp'
 import JamesImage from '@/assets/team/technical/james.webp'
@@ -29,7 +54,6 @@ import SwohamImage from '@/assets/team/technical/swoham.webp'
 import UtsavImage from '@/assets/team/technical/utsav.webp'
 // -----------------------------------//
 //---------------Documentation Team -----------------//
-import SaumyaImage from '@/assets/team/documentation/saumya.webp'
 import BishistImage from '@/assets/team/documentation/bishist.webp'
 import JatinImage from '@/assets/team/documentation/jatin.webp'
 import ManishImage from '@/assets/team/documentation/manish.webp'
@@ -39,7 +63,6 @@ import SauravImage from '@/assets/team/documentation/saurav.webp'
 import ShashankImage from '@/assets/team/documentation/shashank.webp'
 // -----------------------------------//
 //---------------Design Team -----------------//
-import RohitImage from '@/assets/team/design/rohitt.webp'
 import RoyasImage from '@/assets/team/design/royas.webp'
 import AvipsaImage from '@/assets/team/design/avipsaa.webp'
 import AnkitImage from '@/assets/team/design/ankit.webp'
@@ -50,17 +73,7 @@ import SumiraImage from '@/assets/team/design/sumira.webp'
 import PrajwallImage from '@/assets/team/design/prajwall.webp'
 import KshzitzImage from '@/assets/team/design/kshitiz.webp'
 // -----------------------------------//
-//---------------IR Team -----------------//
-import AdhishreeImage from '@/assets/team/ir/adhishree.webp'
-import NirjaraImage from '@/assets/team/ir/nirjara.webp'
-// -----------------------------------//
-//---------------PR Team -----------------//
-import JessicaImage from '@/assets/team/pr/jessica.webp'
-import AngelinaImage from '@/assets/team/pr/angelina.webp'
-// -----------------------------------//
 //---------------Marketing Team -----------------//
-import SunayanaImage from '@/assets/team/marketing/sunayana.webp'
-import MahirImage from '@/assets/team/marketing/mahir.webp'
 import SupriyaaaImage from '@/assets/team/marketing/supriya.webp'
 import SarojImage from '@/assets/team/marketing/saroj.webp'
 import JastikaImage from '@/assets/team/marketing/jastika.webp'
@@ -69,7 +82,6 @@ import RohitttImage from '@/assets/team/marketing/rohit.webp'
 import SanjeevaniImage from '@/assets/team/marketing/sanjeevani.webp'
 // -----------------------------------//
 //---------------Logistic Team -----------------//
-import SudeepImage from '@/assets/team/logistic/sudip.webp'
 import ArryaanImage from '@/assets/team/logistic/aryan.webp'
 import HomraajImage from '@/assets/team/logistic/homraj.webp'
 import KrishnaaaImage from '@/assets/team/logistic/krishna.webp'
@@ -82,15 +94,10 @@ import AnupamaImage from '@/assets/team/logistic/anupama.webp'
 import ShreyaanImage from '@/assets/team/logistic/shreeyan.webp'
 // -----------------------------------//
 //---------------Finance and Legalities Team -----------------//
-import KushalImage from '@/assets/team/fnl/kushal.webp'
 import PranawImage from '@/assets/team/fnl/pranaw.webp'
 import InnimaImage from '@/assets/team/fnl/innima.webp'
 // -----------------------------------//
-//---------------Volunteer Team -----------------//
-import ReewajImage from '@/assets/team/volunteer/reewaj.webp'
-// -----------------------------------//
 //---------------Sponsorship Team -----------------//
-import AbhyuditImage from '@/assets/team/sponsorship/abhyudit.webp'
 import AayushImage from '@/assets/team/sponsorship/aayush.webp'
 import BhishmaImage from '@/assets/team/sponsorship/bhishma.webp'
 import DikshantImage from '@/assets/team/sponsorship/dikshant.webp'
@@ -100,7 +107,7 @@ import SanjayImage from '@/assets/team/sponsorship/sanjay.webp'
 // -----------------------------------//
 const team = [
   {
-    title: 'Event Lead',
+    title: 'Core Committee',
     members: [
       {
         name: "Ranjan Lamsal",
@@ -111,6 +118,139 @@ const team = [
         github: '',
       },
       {
+        name: "Mukul Aryal",
+        department: "KU HACKFEST LEAD",
+        image: MukulImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Aavash Lamichhane",
+        department: "EVENT LEAD",
+        image: AavashImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Prasun Sapkota",
+        department: "EVENT LEAD",
+        image: PrasunImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Abhyudit Adhikari",
+        department: "SPONSORSHIP LEAD",
+        image: AbhyuditImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Adhishree Acharya",
+        department: "INTERNAL RELATION LEAD",
+        image: AdhishreeImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Nirjara Thapa",
+        department: "INTERNAL RELATION LEAD",
+        image: NirjaraImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Sudip Bhattarai",
+        department: "LOGISTIC LEAD",
+        image: SudeepImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Mahir Manandhar",
+        department: "MARKETING LEAD",
+        image: MahirImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Sunayana Regmi",
+        department: "MARKETING LEAD",
+        image: SunayanaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Angelina Ghimire",
+        department: "PUBLIC RELATION LEAD",
+        image: AngelinaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Jessica Thapa",
+        department: "PUBLIC RELATION LEAD",
+        image: JessicaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Asim Shrestha",
+        department: "TECHNICAL LEAD",
+        image: AsimImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Reewaj Khanal",
+        department: "VOLUNTEER LEAD",
+        image: ReewajImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Kushal Aryal",
+        department: "FINANCE AND LEGALITIES LEAD",
+        image: KushalImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Rohit Raj Karki",
+        department: "DESIGN LEAD",
+        image: RohitImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Saumya Shrestha",
+        department: "DOCUMENTATION LEAD",
+        image: SaumyaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+    ]
+  },
+  {
+    title: 'Event Lead',
+    members: [
+      {
         name: "Samikshya Upadhaya",
         department: "WE SHIELD CYBER LEAD",
         image: SamikshyaImage,
@@ -119,25 +259,17 @@ const team = [
         github: '',
       },
       {
-        name: "Aavash Lamichhane",
-        department: "EVENTS LEAD",
-        image: AavashImage,
+        name: "Pooja Pathak",
+        department: "CODING CHALLENGE LEAD",
+        image: PoojaImage,
         linkedIn: '',
         insta: '',
         github: '',
       },
       {
-        name: "Mukul Aryal",
-        department: "HACKFEST LEAD",
-        image: MukulImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
-        name: "Prasun Sapkota",
-        department: "EVENTS LEAD",
-        image: PrasunImage,
+        name: "Pragya Joshi",
+        department: "EmpowerHer LEAD",
+        image: PragyaImage,
         linkedIn: '',
         insta: '',
         github: '',
@@ -146,6 +278,78 @@ const team = [
         name: "Suyog Ghimire",
         department: "ALL NEPAL IT CUP LEAD",
         image: SuyoggImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Ashraya Kadel",
+        department: "IDEA PITCHING LEAD",
+        image: AshrayaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Shaswat Pant",
+        department: "MOBILE RUSH LEAD",
+        image: ShaswatImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Sanjib Dahal",
+        department: "CODE CAMP LEAD",
+        image: SanjibImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Sabin Ranabhat",
+        department: "CODE CAMP LEAD",
+        image: SabinImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Rujan Dhamala",
+        department: "PROJECT EXHIBITION LEAD",
+        image: RujanImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Mahammad Mansoor",
+        department: "IT QUIZ LEAD",
+        image: MahammadImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Anusha Rajlawat",
+        department: "PANEL DISCUSSION LEAD",
+        image: AnushaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Aatmiyata Pokhrel",
+        department: "TYPING COMPETITION LEAD",
+        image: AatmiyataImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Aaditya Sapkota",
+        department: "GOOGLING COMPETETION LEAD",
+        image: AadityaImage,
         linkedIn: '',
         insta: '',
         github: '',
@@ -164,7 +368,7 @@ const team = [
         github: '',
       },
       {
-        name: 'Shasankha Luitel',
+        name: 'Shashanka Luitel',
         department: 'SUB LEAD',
         image: ShashankaImage,
         linkedIn: '',
@@ -321,6 +525,14 @@ const team = [
         github: '',
       },
       {
+        name: 'Prabesh Timilsina',
+        department: 'MEMBER',
+        image: PrabeshImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
         name: 'Aryan Koju',
         department: 'MEMBER',
         image: ArryaanImage,
@@ -340,14 +552,6 @@ const team = [
         name: 'Krishna Mohan Sah',
         department: 'MEMBER',
         image: KrishnaaaImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
-        name: 'Prabesh Timilsina',
-        department: 'MEMBER',
-        image: PrabeshImage,
         linkedIn: '',
         insta: '',
         github: '',
@@ -402,76 +606,6 @@ const team = [
       },
     ],
   },
-  {
-    title: 'Documentation Team',
-    members: [
-      {
-        name: 'Saumya Shrestha',
-        department: 'LEAD',
-        image: SaumyaImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
-        name: 'Bishist Bikram Pant',
-        department: 'MEMBER',
-        image: BishistImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
-        name: 'Jatin Madhikarmi',
-        department: 'MEMBER',
-        image: JatinImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
-        name: 'Manish Pokharel',
-        department: 'MEMBER',
-        image: ManishImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
-        name: 'Priyanka Ghimire',
-        department: 'MEMBER',
-        image: PriyankaImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
-        name: 'Nerish Shrestha',
-        department: 'MEMBER',
-        image: NerishImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
-        name: 'Saurav Maske',
-        department: 'MEMBER',
-        image: SauravImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
-        name: 'Shashank Sakha',
-        department: 'MEMBER',
-        image: ShashankImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-    ],
-  },
-
   {
     title: 'Design Team',
     members: [
@@ -558,41 +692,68 @@ const team = [
     ],
   },
   {
-    title: 'Internal Relation Team',
+    title: 'Documentation Team',
     members: [
       {
-        name: 'Adhishree Acharya',
+        name: 'Saumya Shrestha',
         department: 'LEAD',
-        image: AdhishreeImage,
+        image: SaumyaImage,
         linkedIn: '',
         insta: '',
         github: '',
       },
       {
-        name: 'Nirjara Thapa',
-        department: 'LEAD',
-        image: NirjaraImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-    ],
-  },
-  {
-    title: 'Public Relation Team',
-    members: [
-      {
-        name: 'Jessica Thapa',
-        department: 'LEAD',
-        image: JessicaImage,
+        name: 'Bishist Bikram Pant',
+        department: 'MEMBER',
+        image: BishistImage,
         linkedIn: '',
         insta: '',
         github: '',
       },
       {
-        name: 'Angelina Ghimire',
-        department: 'LEAD',
-        image: AngelinaImage,
+        name: 'Jatin Madhikarmi',
+        department: 'MEMBER',
+        image: JatinImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Manish Pokharel',
+        department: 'MEMBER',
+        image: ManishImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Priyanka Ghimire',
+        department: 'MEMBER',
+        image: PriyankaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Nerish Shrestha',
+        department: 'MEMBER',
+        image: NerishImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Saurav Maske',
+        department: 'MEMBER',
+        image: SauravImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Shashank Sakha',
+        department: 'MEMBER',
+        image: ShashankImage,
         linkedIn: '',
         insta: '',
         github: '',
@@ -669,19 +830,6 @@ const team = [
     ],
   },
   {
-    title: 'Volunteer Team',
-    members: [
-      {
-        name: 'Reewaj Khanal',
-        department: 'LEAD',
-        image: ReewajImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-    ],
-  },
-  {
     title: 'Finance and Legalities',
     members: [
       {
@@ -694,7 +842,7 @@ const team = [
       },
       {
         name: 'Pranaw Raj Kafle',
-        department: 'SUB LEAD',
+        department: 'MEMBER',
         image: PranawImage,
         linkedIn: '',
         insta: '',
@@ -702,7 +850,7 @@ const team = [
       },
       {
         name: 'Innima Karki',
-        department: 'SUB LEAD',
+        department: 'MEMBER',
         image: InnimaImage,
         linkedIn: '',
         insta: '',

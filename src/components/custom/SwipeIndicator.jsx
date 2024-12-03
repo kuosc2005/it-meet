@@ -7,7 +7,7 @@ const SwipeIndicator = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
           setShowIndicator(false);
-        }, 4000);
+        }, 3000);
         return () => clearTimeout(timer);
       }, []);
 
