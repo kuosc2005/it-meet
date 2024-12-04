@@ -9,7 +9,18 @@ const Sponsor = ({ tier, images }) => {
     'Silver Sponsor': { base: 'w-14 md:w-24 lg:w-32' },
     'Bronze Sponsor': { base: 'w-12 md:w-20 lg:w-28' },
     'Community Partners': { base: 'w-8 md:w-12 lg:w-16' },
-    'Supported By': { base: 'w-8 md:w-12 lg:w-16' },
+    'Supported Partner': { base: 'w-8 md:w-12 lg:w-16' },
+    'Banking Partner': { base: 'w-8 md:w-12 lg:w-16' },
+    'Beverage Partner': { base: 'w-8 md:w-12 lg:w-16' },
+    'Career Partner': { base: 'w-8 md:w-12 lg:w-16' },
+    'Food Partner': { base: 'w-8 md:w-12 lg:w-16' },
+    'Gift Partner': { base: 'w-8 md:w-12 lg:w-16' },
+    'Internet Partner': { base: 'w-8 md:w-12 lg:w-16' },
+    'SMS Partner': { base: 'w-8 md:w-12 lg:w-16' },
+    'E-Commerce Partner': { base: 'w-8 md:w-12 lg:w-16' },
+    'Confectionery Partner': { base: 'w-8 md:w-12 lg:w-16' },
+    'Media Partner': { base: 'w-8 md:w-12 lg:w-16' },
+    
   }[tier] || { base: 'w-14 md:w-24 lg:w-32' };
 
   const textSize = {
@@ -19,7 +30,17 @@ const Sponsor = ({ tier, images }) => {
     'Silver Sponsor': 'text-md md:text-xl lg:text-2xl',
     'Bronze Sponsor': 'text-sm md:text-lg lg:text-xl',
     'Community Partners': 'text-xs md:text-sm lg:text-md',
-    'Supported By': 'text-xs md:text-sm lg:text-md',
+    'Supported Partners': 'text-xs md:text-sm lg:text-md',
+    'Banking Partner': 'text-xs md:text-sm lg:text-md',
+    'Beverage Partner':'text-xs md:text-sm lg:text-md',
+    'Career Partner': 'text-xs md:text-sm lg:text-md',
+    'Food Partner': 'text-xs md:text-sm lg:text-md',
+    'Gift Partner': 'text-xs md:text-sm lg:text-md',
+    'Internet Partner': 'text-xs md:text-sm lg:text-md',
+    'SMS Partner': 'text-xs md:text-sm lg:text-md',
+    'E-Commerce Partner': 'text-xs md:text-sm lg:text-md',
+    'Confectionery Partner': 'text-xs md:text-sm lg:text-md',
+    'Media Partner': 'text-xs md:text-sm lg:text-md',
   }[tier] || 'text-md md:text-xl lg:text-2xl';
 
 
