@@ -1,20 +1,31 @@
 import React from 'react';
-import ITMeetLogo from '@/assets/images/itmeetlogo.png';
-const Sponsor = ({ tier, image }) => {
+import ITMeetLogo from '@/assets/images/itmeetlogo.webp';
+const Sponsor = ({ tier, images }) => {
  
-  const imageDimensions = 
-    tier === 'Title Sponsor' ? { width: '220px' } :
-    tier === 'Diamond Sponsor' ? { width: '190px' } :
-    tier === 'Gold' ? { width: '170px' } :
-    tier === 'Silver Sponsor' ? { width: '140px' } :
-    tier === 'Bronze Sponsor' ? { width: '120px' } :
-    tier === 'Community Partners' ? { width: '70px' } :
-    tier === 'Supported By' ? { width: '70px' } : 
-    { width: '140px' }; 
+  const imageDimensions = {
+    'Title Sponsor': { base: 'w-24 md:w-36 lg:w-44' },
+    'Diamond Sponsor': { base: 'w-20 md:w-32 lg:w-40' },
+    'Gold': { base: 'w-16 md:w-28 lg:w-36' },
+    'Silver Sponsor': { base: 'w-14 md:w-24 lg:w-32' },
+    'Bronze Sponsor': { base: 'w-12 md:w-20 lg:w-28' },
+    'Community Partners': { base: 'w-8 md:w-12 lg:w-16' },
+    'Supported By': { base: 'w-8 md:w-12 lg:w-16' },
+  }[tier] || { base: 'w-14 md:w-24 lg:w-32' };
+
+  const textSize = {
+    'Title Sponsor': 'text-2xl md:text-4xl lg:text-5xl',
+    'Diamond Sponsor': 'text-xl md:text-3xl lg:text-4xl',
+    'Gold': 'text-lg md:text-2xl lg:text-3xl',
+    'Silver Sponsor': 'text-md md:text-xl lg:text-2xl',
+    'Bronze Sponsor': 'text-sm md:text-lg lg:text-xl',
+    'Community Partners': 'text-xs md:text-sm lg:text-md',
+    'Supported By': 'text-xs md:text-sm lg:text-md',
+  }[tier] || 'text-md md:text-xl lg:text-2xl';
+
 
   return (
     <div className="sponsor-group flex flex-col items-center gap-2 md:gap-8">
-      <h3 className="sponsor-tier text-lg sm:text-xl md:text-3xl font-bold text-[#12dc9f]"
+      <h3 className={`sponsor-tier text-[#12dc9f] ${textSize} font-bold text-[#12dc9f]`}
         style={{
           backgroundImage: 'linear-gradient(90deg, #369FFF, #3BD0A3, #14C58F)',
           WebkitBackgroundClip: 'text',
@@ -23,38 +34,18 @@ const Sponsor = ({ tier, image }) => {
         {tier}
       </h3>
 
-      {tier === 'Gold' ? (
-        <div className="flex items-center gap-6">
-          <div>
-            <img src={image} alt={`${tier} - Logo 1`} 
-                 className="sponsor-logo object-contain" 
-                 style={imageDimensions} />
-          </div>
-          <div>
-            <img src={image} alt={`${tier} - Logo 2`} 
-                 className="sponsor-logo object-contain" 
-                 style={imageDimensions} />
-          </div>
-        </div>
-        
-      ) : tier === 'Bronze Sponsor' || tier === 'Community Partners' || tier === 'Supported By' ? (
-        <div className="flex flex-row gap-6">
-          <img src={image} alt={`${tier} - Logo 1`} 
-               className="sponsor-logo object-contain" 
-               style={imageDimensions} />
-          <img src={image} alt={`${tier} - Logo 2`} 
-               className="sponsor-logo object-contain" 
-               style={imageDimensions} />
-          <img src={image} alt={`${tier} - Logo 3`} 
-               className="sponsor-logo object-contain" 
-               style={imageDimensions} />
-        </div>
-        
-      ) : (
-        <img src={image} alt={`${tier} - Logo 1`} 
-             className="sponsor-logo object-contain" 
-             style={imageDimensions} />
-      )}
+      <div className="flex flex-row gap-4 md:gap-6">
+        {images.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt={`${tier} - Logo ${index + 1}`}
+            className={`sponsor-logo object-contain ${imageDimensions.base}`}
+          />
+        ))}
+      </div>
+
+     
     </div>
   );
 };
@@ -64,13 +55,13 @@ const Sponsor = ({ tier, image }) => {
 export default function SponsorPage() {
   
   const sponsors = [
-    { name: 'IT Meet', tier: 'Title Sponsor', image: ITMeetLogo },
-    { name: 'IT Meet', tier: 'Diamond Sponsor', image: ITMeetLogo },
-    {name:'IT Meet', tier:'Gold Sponsor' , image: ITMeetLogo,},
-    {name:'IT Meet', tier:'Silver Sponsor' , image: ITMeetLogo,},
-    {name:'IT Meet', tier:'Bronze Sponsor' , image: ITMeetLogo,},
-    {name:'IT Meet', tier:'Community Partners' , image: ITMeetLogo,},
-    {name:'IT Meet', tier:'Supported By' , image: ITMeetLogo,}
+    { name: 'IT Meet', tier: 'Title Sponsor', images: [ITMeetLogo] },
+    { name: 'IT Meet', tier: 'Diamond Sponsor', images: [ITMeetLogo] },
+    {name:'IT Meet', tier:'Gold Sponsor' , images: [ITMeetLogo],},
+    {name:'IT Meet', tier:'Silver Sponsor' , images: [ITMeetLogo],},
+    {name:'IT Meet', tier:'Bronze Sponsor' , images: [ITMeetLogo],},
+    {name:'IT Meet', tier:'Community Partners' , images: [ITMeetLogo],},
+    {name:'IT Meet', tier:'Supported By' , images: [ITMeetLogo],}
   ];
 
   return (
@@ -98,7 +89,7 @@ export default function SponsorPage() {
           key={index} 
           name={sponsor.name} 
           tier={sponsor.tier} 
-          image={sponsor.image} 
+          images={sponsor.images} 
         />
       ))}
     </div>
