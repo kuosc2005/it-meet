@@ -825,6 +825,14 @@ const team = [
         github: '',
       },
       {
+        name: "Suyog Ghimire",
+        department: "ALL NEPAL IT CUP LEAD",
+        image: SuyoggImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
         name: "Pooja Pathak",
         department: "CODING CHALLENGE LEAD",
         image: PoojaImage,
@@ -840,14 +848,7 @@ const team = [
         insta: '',
         github: '',
       },
-      {
-        name: "Suyog Ghimire",
-        department: "ALL NEPAL IT CUP LEAD",
-        image: SuyoggImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
+      
       {
         name: "Ashraya Kadel",
         department: "IDEA PITCHING LEAD",
