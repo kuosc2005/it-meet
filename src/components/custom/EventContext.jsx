@@ -199,7 +199,7 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/ai.webp',
       title: 'AI Competition',
       isApplicationOpen: true,
-      formLink: 'https://forms.gle/Hs7oywqXAxk8kfPH6',
+      formLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfLp76btxvLUAgzyHtO92i0u_GOoqs8L6BA4iNExYN2juZpAQ/viewform',
       details:
         'The “AI Competition” event in IT Meet provides a platform for individuals to discover the cutting-edge advancements in Artificial Intelligence (AI) in Nepal. This event brings together teams of up to four participants to tackle software and hardware-based challenges, developing minimum viable products that address real-world problems. Aimed at familiarizing students with the AI industry, the competition encourages innovation and technical skill enhancement. Last year, in IT Meet 2023, the competition featured categories in LLM, Data Extraction, and Data Visualization, with 12 teams and 40 individuals participating. Judges evaluated concepts, pitches, and final products, recognizing the most innovative teams. The AI Competition provides a platform for idea sharing, collaboration, and growth in the AI field.',
     },

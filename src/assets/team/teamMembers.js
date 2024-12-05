@@ -43,6 +43,7 @@ import SurajTImage from '@/assets/team/event/surajthapa.webp'
 import SilviyaImage from '@/assets/team/event/sylviathapa.webp'
 import PreranaImage from '@/assets/team/event/prerana.webp'
 import DipenKImage from '@/assets/team/event/dipenk.webp'
+import SubarnaImage from '@/assets/team/event/subarna.png'
 import BigyannImage from '@/assets/team/event/bigyaan.webp'
 import AkritiPImage from '@/assets/team/event/akritipandey.webp'
 import ShreelaImage from '@/assets/team/event/shreela.webp'
@@ -52,6 +53,8 @@ import PujaImage from '@/assets/team/event/puja.webp'
 import NikkiImage from '@/assets/team/event/nikki.webp'
 import NirutaImage from '@/assets/team/event/niruta.webp'
 import BibhutiImage from '@/assets/team/event/bibhuti.webp'
+import AbiralImage from '@/assets/team/event/abiral.png'
+import ManishShivImage from '@/assets/team/event/manishshiv.png'
 // -----------------------------------//
 //---------------Technical Team -----------------//
 import ShashankaImage from '@/assets/team/technical/shasankha.webp'
@@ -869,9 +872,33 @@ const team = [
         github: '',
       },
       {
+        name: 'Subarna Bhattarai',
+        department: 'CAREER FAIR LEAD',
+        image: SubarnaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
         name: 'Shreela Sapkota',
         department: 'ALUMNI LEAD',
         image: ShreelaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Abiral Adhikari',
+        department: 'AI COMPETITION LEAD',
+        image: AbiralImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Manish Shivabhakti',
+        department: 'AI COMPETITION LEAD',
+        image: ManishShivImage,
         linkedIn: '',
         insta: '',
         github: '',
