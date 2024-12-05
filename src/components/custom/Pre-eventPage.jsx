@@ -17,10 +17,10 @@ export default function PreEventPage({ events }) {
       // id="pre-events"
       className="flex flex-col items-center px-16 gap-2 md:gap-4"
     >
-      <h1 className="text-xl sm:text-2xl md:text-3xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] mb-4">
+      <h1 className="text-xl sm:text-2xl md:text-3xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
         PRE-EVENTS
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 xl:gap-12 w-full mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 xl:gap-12 w-full mt-5 md:mt-8">
         {events.map((preEvent) => (
           <div key={preEvent.id}>
             <Link

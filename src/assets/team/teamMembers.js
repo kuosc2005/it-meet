@@ -21,7 +21,7 @@ import PrasunImage from '@/assets/team/event/prasun.webp'
 //---------------Event Leads -----------------//
 import SamikshyaImage from '@/assets/team/event/samikshya.webp'
 import SuyoggImage from '@/assets/team/event/suyogg.webp'
-import PragyaImage from '@/assets/team/event/pragya.webp'
+import PragyaImage from '@/assets/team/event/pragyaj.webp'
 import AshrayaImage from '@/assets/team/event/ashrayakadel.webp'
 import PoojaImage from '@/assets/team/event/poojaa.webp'
 import ShaswatImage from '@/assets/team/event/saswatpant.webp'
@@ -32,6 +32,22 @@ import MahammadImage from '@/assets/team/event/mahammed.webp'
 import AnushaImage from '@/assets/team/event/anusha.webp'
 import AatmiyataImage from '@/assets/team/event/atmiyata.webp'
 import AadityaImage from '@/assets/team/event/aadityasap.webp'
+import ApekshyaImage from '@/assets/team/event/apekshyabhattt.webp'
+import SasankImage from '@/assets/team/event/sasanksakha.webp'
+import SiddhantImage from '@/assets/team/event/siddhant.webp'
+import SammitPImage from '@/assets/team/event/sammit.webp'
+import DikshyantImage from '@/assets/team/event/dikshyant.webp'
+import ArogyaImage from '@/assets/team/event/arogya.webp'
+import AdityaaaImage from '@/assets/team/event/adityayadav.webp'
+import SurajTImage from '@/assets/team/event/surajthapa.webp'
+import SilviyaImage from '@/assets/team/event/sylviathapa.webp'
+import PreranaImage from '@/assets/team/event/prerana.webp'
+import PragyanImage from '@/assets/team/event/pragyan.webp'
+import DipenKImage from '@/assets/team/event/dipenk.webp'
+import BigyannImage from '@/assets/team/event/bigyaan.webp'
+import AkritiPImage from '@/assets/team/event/akritipandey.webp'
+import ShreelaImage from '@/assets/team/event/shreela.webp'
+import BibhusanImage from '@/assets/team/event/bibhusan.webp'
 // -----------------------------------//
 //---------------Technical Team -----------------//
 import ShashankaImage from '@/assets/team/technical/shasankha.webp'
@@ -817,9 +833,41 @@ const team = [
     title: 'Event Lead',
     members: [
       {
+        name: "Bibhusan Saakha",
+        department: "AR TREASURE HUNT LEAD",
+        image: BibhusanImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
         name: "Samikshya Upadhaya",
         department: "WE SHIELD CYBER LEAD",
         image: SamikshyaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Bigyan Byanju Shrestha",
+        department: "MOCKUP PLACEMENT LEAD",
+        image: BigyannImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Dipen Khatri",
+        department: "CAREER FAIR LEAD",
+        image: DipenKImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Shreela Sapkota",
+        department: "ALUMNI LEAD",
+        image: ShreelaImage,
         linkedIn: '',
         insta: '',
         github: '',
@@ -841,6 +889,14 @@ const team = [
         github: '',
       },
       {
+        name: "Apekshya Bhattarai",
+        department: "CODING CHALLENGE LEAD",
+        image: ApekshyaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
         name: "Pragya Joshi",
         department: "EmpowerHer LEAD",
         image: PragyaImage,
@@ -848,7 +904,22 @@ const team = [
         insta: '',
         github: '',
       },
-      
+      {
+        name: "Prerana Subedi",
+        department: "EmpowerHer LEAD",
+        image: PreranaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Silviya Thapa",
+        department: "PHOTOGRAPHY COMPETITION LEAD",
+        image: SilviyaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
       {
         name: "Ashraya Kadel",
         department: "IDEA PITCHING LEAD",
@@ -914,9 +985,97 @@ const team = [
         github: '',
       },
       {
+        name: "Aakriti Pandey",
+        department: "TYPING COMPETITION LEAD",
+        image: AkritiPImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
         name: "Aaditya Sapkota",
         department: "GOOGLING COMPETETION LEAD",
         image: AadityaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Siddhant Khadka",
+        department: "GAMING EVENTS LEAD",
+        image: SiddhantImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Shashank Sakha",
+        department: "FIFA GAMING LEAD",
+        image: SasankImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Sammit Poudyal",
+        department: "VALORANT GAMING LEAD",
+        image: SammitPImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Dikshyant Adhikari",
+        department: "DOTA2 GAMING LEAD",
+        image: DikshyantImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Arogya Paudel",
+        department: "MOBILE LEGENDS GAMING LEAD",
+        image: ArogyaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Aditya Yadav",
+        department: "CLASH ROYALE GAMING LEAD",
+        image: AdityaaaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Suvesh Gurung",
+        department: "LINE FOLLOWING ROBOT LEAD",
+        image: SuveshImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Rajat Dahal",
+        department: "LINE FOLLOWING ROBOT LEAD",
+        image: RajatImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Suraj Thapa",
+        department: "GEO SPECIAL LEAD",
+        image: SurajTImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Pragyan Baral",
+        department: "GEO SPECIAL LEAD",
+        image: PragyanImage,
         linkedIn: '',
         insta: '',
         github: '',
