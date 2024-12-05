@@ -46,6 +46,8 @@ import PragyanImage from '@/assets/team/event/pragyan.webp'
 import DipenKImage from '@/assets/team/event/dipenk.webp'
 import BigyannImage from '@/assets/team/event/bigyaan.webp'
 import AkritiPImage from '@/assets/team/event/akritipandey.webp'
+import ShreelaImage from '@/assets/team/event/shreela.webp'
+import BibhusanImage from '@/assets/team/event/bibhusan.webp'
 // -----------------------------------//
 //---------------Technical Team -----------------//
 import ShashankaImage from '@/assets/team/technical/shasankha.webp'
@@ -831,9 +833,25 @@ const team = [
     title: 'Event Lead',
     members: [
       {
+        name: "Bibhusan Saakha",
+        department: "AR TREASURE HUNT LEAD",
+        image: BibhusanImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
         name: "Samikshya Upadhaya",
         department: "WE SHIELD CYBER LEAD",
         image: SamikshyaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Bigyan Byanju Shrestha",
+        department: "MOCKUP PLACEMENT LEAD",
+        image: BigyannImage,
         linkedIn: '',
         insta: '',
         github: '',
@@ -847,9 +865,9 @@ const team = [
         github: '',
       },
       {
-        name: "Bigyan Byanju Shrestha",
-        department: "MOCKUP PLACEMENT LEAD",
-        image: BigyannImage,
+        name: "Shreela Sapkota",
+        department: "ALUMNI LEAD",
+        image: ShreelaImage,
         linkedIn: '',
         insta: '',
         github: '',
@@ -890,6 +908,14 @@ const team = [
         name: "Prerana Subedi",
         department: "EmpowerHer LEAD",
         image: PreranaImage,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: "Silviya Thapa",
+        department: "PHOTOGRAPHY COMPETITION LEAD",
+        image: SilviyaImage,
         linkedIn: '',
         insta: '',
         github: '',
@@ -1050,14 +1076,6 @@ const team = [
         name: "Pragyan Baral",
         department: "GEO SPECIAL LEAD",
         image: PragyanImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
-        name: "Silviya Thapa",
-        department: "PHOTOGRAPHY COMPETITION LEAD",
-        image: SilviyaImage,
         linkedIn: '',
         insta: '',
         github: '',
