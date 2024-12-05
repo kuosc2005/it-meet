@@ -8,6 +8,8 @@ client
 
 export const DATABASE_ID = 'ITMeetDatabase'
 export const PROJECT_BUCKET_ID = '671605330012c01f3505'
+export const SPONSORS_BUCKET_ID = "sponsors";
+
 
 export const FAQ_COLLECTION_ID = 'FAQ'
 export const EXPECT_COLLECTION_ID = 'Expectation'

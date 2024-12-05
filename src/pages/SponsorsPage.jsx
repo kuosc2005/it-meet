@@ -1,6 +1,6 @@
 import React from 'react';
 import ITMeetLogo from '@/assets/images/itmeetlogo.webp';
-import { storage } from "@/config/appwrite.js";
+import { storage, SPONSORS_BUCKET_ID } from "@/config/appwrite.js";
 import { useEffect, useState } from 'react';
 
 const Sponsor = ({ tier, images }) => {
@@ -80,7 +80,6 @@ const Sponsor = ({ tier, images }) => {
 export default function SponsorPage() {
 
   const PROJECT_ID = import.meta.env.VITE_APPWRITE_PROJECT_ID;
-  // const PROJECT_ID = "projectsponsor";
 
   const sponsors = [
     { name: 'Title', tier: 'Title Sponsor', images: [] },
@@ -103,25 +102,20 @@ export default function SponsorPage() {
   ];
 
   const [newSponsors, setSponsors] = useState(sponsors);
-
   useEffect(() => {
     const fetchImage = async () => {
-      const updatedSponsors = await Promise.all(
-        sponsors.map(async sponsor => {
-          try {
-            const response = await storage.listFiles(sponsor.name);
-            const imagesPromise = response?.files.map(async (file) =>
-              `https://cloud.appwrite.io/v1/storage/buckets/${sponsor.name}/files/${file.$id}/view?project=${PROJECT_ID}&project=${PROJECT_ID}&mode=admin`
-            );
+      const response = await storage.listFiles("sponsors");
+      const files = response?.files || [];
 
-            const images = await Promise.all(imagesPromise || []);
-            return { ...sponsor, images };
-          } catch (error) {
-            console.log("Error fetching Sponsors images from databases");
-            return { ...sponsor, images: [ITMeetLogo] };
-          }
-        })
-      )
+      const updatedSponsors = sponsors.map(sponsor => {
+        const categoryImages = files.filter(file => file.name.split('.')[0] == sponsor.name)
+          .map(img => `https://cloud.appwrite.io/v1/storage/buckets/${SPONSORS_BUCKET_ID}/files/${img.$id}/view?project=${PROJECT_ID}&project=${PROJECT_ID}&mode=admin`);
+
+        return {
+          ...sponsor,
+          images: categoryImages.length > 0 ? categoryImages : [ITMeetLogo]
+        }
+      });
       setSponsors(updatedSponsors)
     };
     fetchImage();
