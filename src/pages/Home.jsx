@@ -3,7 +3,7 @@ import AboutPage from './AboutPage'
 import LocationPage from './Location'
 import FAQ from './FAQ-Page'
 import LandingComponent from '@/components/custom/Landing'
-// import SponsorPage from './SponsorsPage'
+import SponsorPage from './SponsorsPage'
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
       {/* <HeroPage /> */}
       <LandingComponent />
       <AboutPage />
-      {/* <SponsorPage /> */}
+      <SponsorPage />
       <FAQ />
       <LocationPage />
     </div>
