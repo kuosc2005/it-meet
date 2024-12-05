@@ -1,7 +1,9 @@
 import React from 'react';
 import ITMeetLogo from '@/assets/images/itmeetlogo.webp';
+import { storage } from "@/config/appwrite.js";
+import { useEffect, useState } from 'react';
+
 const Sponsor = ({ tier, images }) => {
- 
   const imageDimensions = {
     'Title Sponsor': { base: 'w-24 md:w-36 lg:w-44' },
     'Diamond Sponsor': { base: 'w-20 md:w-32 lg:w-40' },
@@ -20,7 +22,7 @@ const Sponsor = ({ tier, images }) => {
     'E-Commerce Partner': { base: 'w-8 md:w-12 lg:w-16' },
     'Confectionery Partner': { base: 'w-8 md:w-12 lg:w-16' },
     'Media Partner': { base: 'w-8 md:w-12 lg:w-16' },
-    
+
   }[tier] || { base: 'w-14 md:w-24 lg:w-32' };
 
   const textSize = {
@@ -32,7 +34,7 @@ const Sponsor = ({ tier, images }) => {
     'Community Partners': 'text-xs md:text-sm lg:text-md',
     'Supported Partners': 'text-xs md:text-sm lg:text-md',
     'Banking Partner': 'text-xs md:text-sm lg:text-md',
-    'Beverage Partner':'text-xs md:text-sm lg:text-md',
+    'Beverage Partner': 'text-xs md:text-sm lg:text-md',
     'Career Partner': 'text-xs md:text-sm lg:text-md',
     'Food Partner': 'text-xs md:text-sm lg:text-md',
     'Gift Partner': 'text-xs md:text-sm lg:text-md',
@@ -56,42 +58,83 @@ const Sponsor = ({ tier, images }) => {
       </h3>
 
       <div className="flex flex-row gap-4 md:gap-6">
+
+
         {images.map((img, index) => (
-          <img
+          < img
             key={index}
             src={img}
-            alt={`${tier} - Logo ${index + 1}`}
+            alt={`${tier} - Logo ${index + 1}`
+            }
             className={`sponsor-logo object-contain ${imageDimensions.base}`}
           />
-        ))}
-      </div>
+        )
+        )}
 
-     
-    </div>
+      </div>
+    </div >
   );
 };
 
 
-
 export default function SponsorPage() {
-  
+
+  const PROJECT_ID = import.meta.env.VITE_APPWRITE_PROJECT_ID;
+  // const PROJECT_ID = "projectsponsor";
+
   const sponsors = [
-    { name: 'IT Meet', tier: 'Title Sponsor', images: [ITMeetLogo] },
-    { name: 'IT Meet', tier: 'Diamond Sponsor', images: [ITMeetLogo] },
-    {name:'IT Meet', tier:'Gold Sponsor' , images: [ITMeetLogo],},
-    {name:'IT Meet', tier:'Silver Sponsor' , images: [ITMeetLogo],},
-    {name:'IT Meet', tier:'Bronze Sponsor' , images: [ITMeetLogo],},
-    {name:'IT Meet', tier:'Community Partners' , images: [ITMeetLogo],},
-    {name:'IT Meet', tier:'Supported By' , images: [ITMeetLogo],}
+    { name: 'Title', tier: 'Title Sponsor', images: [] },
+    { name: 'Diamond', tier: 'Diamond Sponsor', images: [] },
+    { name: 'Gold', tier: 'Gold Sponsor', images: [] },
+    { name: 'Silver', tier: 'Silver Sponsor', images: [] },
+    { name: 'Bronze', tier: 'Bronze Sponsor', images: [] },
+    { name: 'Community', tier: 'Community Partners', images: [] },
+    { name: 'Supported', tier: 'Supported Partners', images: [] },
+    { name: 'Banking', tier: 'Banking Partner', images: [] },
+    { name: 'Beverage', tier: 'Beverage Partner', images: [] },
+    { name: 'Career', tier: 'Career Partner', images: [] },
+    { name: 'Food', tier: 'Food Partner', images: [] },
+    { name: 'Gift', tier: 'Gift Partner', images: [] },
+    { name: 'Internet', tier: 'Internet Partner', images: [] },
+    { name: 'SMS', tier: 'SMS Partner', images: [] },
+    { name: 'E-Commerce', tier: 'E-Commerce Partner', images: [] },
+    { name: 'Confectionery', tier: 'Confectionery Partner', images: [] },
+    { name: 'Media', tier: 'Media Partner', images: [] },
   ];
+
+  const [newSponsors, setSponsors] = useState(sponsors);
+
+  useEffect(() => {
+    const fetchImage = async () => {
+      const updatedSponsors = await Promise.all(
+        sponsors.map(async sponsor => {
+          try {
+            const response = await storage.listFiles(sponsor.name);
+            const imagesPromise = response?.files.map(async (file) =>
+              `https://cloud.appwrite.io/v1/storage/buckets/${sponsor.name}/files/${file.$id}/view?project=${PROJECT_ID}&project=${PROJECT_ID}&mode=admin`
+            );
+
+            const images = await Promise.all(imagesPromise || []);
+            return { ...sponsor, images };
+          } catch (error) {
+            console.log("Error fetching Sponsors images from databases");
+            return { ...sponsor, images: [ITMeetLogo] };
+          }
+        })
+      )
+      setSponsors(updatedSponsors)
+    };
+    fetchImage();
+  }, [])
+
 
   return (
     <div id='sponsors' className="flex flex-col overflow-hidden p-10 py-20 lg:px-20 gap-8 items-center justify-center min-h-screen bg-[#171A23]">
-      
-    
+
+
       <div className="flex flex-col items-center gap-2 md:gap-4">
         <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]"
-         style={{ backgroundImage: 'linear-gradient(90deg, #369FFF, #3BD0A3, #14C58F)' }}>
+          style={{ backgroundImage: 'linear-gradient(90deg, #369FFF, #3BD0A3, #14C58F)' }}>
           Our Sponsors
 
         </h1>
@@ -105,14 +148,15 @@ export default function SponsorPage() {
         <div className="w-full rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2 lg:h-2.5"></div>
       </div>
 
-      {sponsors.map((sponsor, index) => (
-        <Sponsor 
-          key={index} 
-          name={sponsor.name} 
-          tier={sponsor.tier} 
-          images={sponsor.images} 
+      {newSponsors.map((sponsor, index) => (
+        <Sponsor
+          key={index}
+          name={sponsor.name}
+          tier={sponsor.tier}
+          images={sponsor.images}
         />
       ))}
+
     </div>
   );
 }
