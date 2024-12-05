@@ -42,16 +42,12 @@ import AdityaaaImage from '@/assets/team/event/adityayadav.webp'
 import SurajTImage from '@/assets/team/event/surajthapa.webp'
 import SilviyaImage from '@/assets/team/event/sylviathapa.webp'
 import PreranaImage from '@/assets/team/event/prerana.webp'
+import PragyanImage from '@/assets/team/event/pragyan.webp'
 import DipenKImage from '@/assets/team/event/dipenk.webp'
 import BigyannImage from '@/assets/team/event/bigyaan.webp'
 import AkritiPImage from '@/assets/team/event/akritipandey.webp'
 import ShreelaImage from '@/assets/team/event/shreela.webp'
 import BibhusanImage from '@/assets/team/event/bibhusan.webp'
-import ParichitImage from '@/assets/team/event/parichit.png'
-import PujaImage from '@/assets/team/event/puja.png'
-import NikkiImage from '@/assets/team/event/nikki.png'
-import NirutaImage from '@/assets/team/event/niruta.png'
-import BibhutiImage from '@/assets/team/event/bibhuti.png'
 // -----------------------------------//
 //---------------Technical Team -----------------//
 import ShashankaImage from '@/assets/team/technical/shasankha.webp'
@@ -1013,30 +1009,6 @@ const team = [
         github: '',
       },
       {
-        name: "Sarbesh KC",
-        department: "GAMING TECHNICAL",
-        image: SarbeshImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
-        name: "Puja Kadayat",
-        department: "GAMING TECHNICAL",
-        image: PujaImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
-        name: "Nikki Kayastha",
-        department: "GAMING DOCUMENTATION",
-        image: NikkiImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
         name: "Shashank Sakha",
         department: "FIFA GAMING LEAD",
         image: SasankImage,
@@ -1048,14 +1020,6 @@ const team = [
         name: "Sammit Poudyal",
         department: "VALORANT GAMING LEAD",
         image: SammitPImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
-        name: "Parichit Giri",
-        department: "PUBG GAMING LEAD",
-        image: ParichitImage,
         linkedIn: '',
         insta: '',
         github: '',
@@ -1109,17 +1073,9 @@ const team = [
         github: '',
       },
       {
-        name: "Niruta Neupane",
+        name: "Pragyan Baral",
         department: "GEO SPECIAL LEAD",
-        image: NirutaImage,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
-        name: "Bibhuti Budhathoki",
-        department: "OSM TRAINER",
-        image: BibhutiImage,
+        image: PragyanImage,
         linkedIn: '',
         insta: '',
         github: '',
