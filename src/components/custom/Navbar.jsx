@@ -14,7 +14,7 @@ const Navbar = () => {
       url: '/',
       subItems: [
         { id: 1, title: 'About', url: 'about' },
-        // { id: 2, title: 'Sponsors', url: 'sponsors' },
+        { id: 2, title: 'Sponsors', url: 'sponsors' },
         { id: 3, title: 'FAQs', url: 'faqs' },
         { id: 4, title: 'Map', url: 'locations' },
         { id: 5, title: 'Contact', url: 'contacts' },
