@@ -1,5 +1,5 @@
 import React from 'react'
-import ITMeetLogo from '@/assets/images/itmeetlogo.webp'
+import ITMeetLogo from '@/assets/images/itmeetlogo.svg'
 import Activities from '@/components/custom/Carousel'
 import EventGallery from '@/components/custom/EventGallery'
 
@@ -30,14 +30,15 @@ export default function AboutPage() {
             <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
               IT MEET
             </span>{' '}
-            is an annual, national-level event organized by Kathmandu University Computer Club (KUCC) 
-            with the intent of celebrating recent achievements in information and technology, that brings together 
-            tech enthusiasts from all over Nepal. This year, IT Meet aims to continue its tradition of promoting the 
-            creative zeal of technical personnel, providing a premier platform to share innovative ideas and compete 
-            with their peers in a variety of activities, including workshops, competitions, and networking sessions.
-            Our vision is to provide future change-makers with a platform to delve deep into
-            the insights of the tech world, emerging not only with technical skills and knowledge
-            about hardware and computers but also with personal growth.
+            is an annual, national-level event organized by Kathmandu University Computer Club
+            (KUCC) with the intent of celebrating recent achievements in information and technology,
+            that brings together tech enthusiasts from all over Nepal. This year, IT Meet aims to
+            continue its tradition of promoting the creative zeal of technical personnel, providing
+            a premier platform to share innovative ideas and compete with their peers in a variety
+            of activities, including workshops, competitions, and networking sessions. Our vision is
+            to provide future change-makers with a platform to delve deep into the insights of the
+            tech world, emerging not only with technical skills and knowledge about hardware and
+            computers but also with personal growth.
           </p>
         </div>
         <div className="hidden lg:flex w-full justify-center">

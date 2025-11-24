@@ -1,5 +1,5 @@
 import React from 'react'
-import ItmeetLogo from '../../assets/images/itmeetlogo.webp'
+import ItmeetLogo from '../../assets/images/itmeetlogo.svg'
 import Background from '@/assets/images/boundary.webp'
 import Tiger from '@/assets/images/hello_tiger.webp'
 import Ellipse from '@/assets/images/Ellipse.webp'
@@ -48,7 +48,7 @@ export default function Footer() {
             <div className="flex space-x-6 lg:space-x-12 xl:space-x-24 text-center">
               <span className="text-primary-foreground">
                 <h1 className="text-[#369fff] font-semibold text-xl sm:text-2xl md:text-xl lg:text-3xl">
-                  Ranjan Lamsal
+                  Saroj Sigdel
                 </h1>
                 <p className="text-lg sm:text-xl md:text-lg lg:text-2xl font-normal">
                   Coordinator,
@@ -61,7 +61,7 @@ export default function Footer() {
 
               <span className="text-primary-foreground">
                 <h1 className="text-[#369fff] font-semibold text-xl sm:text-2xl md:text-xl lg:text-3xl">
-                  Nirjal Bhurtel
+                  Sakshi KC
                 </h1>
                 <p className="text-lg sm:text-xl md:text-lg lg:text-2xl font-normal">President,</p>
                 <p className="text-lg sm:text-xl md:text-lg lg:text-2xl font-normal">KUCC</p>
@@ -99,13 +99,13 @@ export default function Footer() {
             </h1>
             <h1 className="text-white text-lg md:text-lg sm:text-xl lg:text-2xl">Brand Assest</h1>
             <p className="text-lg sm:text-xl md:text-lg lg:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#369fff] to-[#12dc9f]">
-              #geekoutinstyle
+              #Connect. Compute. Create
             </p>
           </div>
         </div>
 
         <p className="text-gray-500 text-xs sm:text-sm md:text-base lg:text-lg flex font-semibold justify-center items-center mt-10">
-          Copyright © 2024 IT Meet. All rights reserved.
+          Copyright © 2025 IT Meet. All rights reserved.
         </p>
         <div className="relative mt-48 sm:mt-52 md:mt-60 lg:mt-72">
           <img

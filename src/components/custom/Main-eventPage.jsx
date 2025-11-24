@@ -8,7 +8,7 @@ import {
   CardDescription,
   CardContent,
 } from '@/components/ui/card'
-import ITMeetLogo from '@/assets/images/itmeetlogo.webp'
+import ITMeetLogo from '@/assets/images/itmeetlogo.svg'
 
 export default function MainEventPage({ events }) {
   return (
@@ -19,8 +19,8 @@ export default function MainEventPage({ events }) {
       <h1 className="text-xl sm:text-2xl md:text-3xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
         MAIN-EVENTS
       </h1>
-     <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 sm:gap-10 w-[clamp(22rem,72vw,72rem)] mt-3 sm:mt-4 md:mt-8">
-     {events.map((event) => (
+      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 sm:gap-10 w-[clamp(22rem,72vw,72rem)] mt-3 sm:mt-4 md:mt-8">
+        {events.map((event) => (
           <Link
             key={event.id}
             to={`/events/${event.title.toLowerCase().replace(/ /g, '-')}`}
@@ -59,3 +59,4 @@ export default function MainEventPage({ events }) {
     </div>
   )
 }
+

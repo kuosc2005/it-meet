@@ -12,7 +12,7 @@ import {
   CardContent,
 } from '@/components/ui/card'
 
-import ITMeetLogo from '@/assets/images/itmeetlogo.webp'
+import ITMeetLogo from '@/assets/images/itmeetlogo.svg'
 
 const EventDetails = () => {
   const { eventTitle } = useParams()
@@ -26,9 +26,8 @@ const EventDetails = () => {
   const event = allEvents.find((e) => e.title.toLowerCase().replace(/ /g, '-') === eventTitle)
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [location]);
-  
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [location])
 
   if (!event) {
     return <div>Event not found</div>

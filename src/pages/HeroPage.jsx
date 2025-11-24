@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import ITMeetLogo from '@/assets/images/itmeetlogo.webp'
+import ITMeetLogo from '@/assets/images/itmeetlogo.svg'
 import BGNeon from '@/assets/images/bgreen.webp'
 import EllipeBG from '@/assets/images/Ellipse.webp'
 import Mascot from '@/assets/images/hello_tiger.webp'
@@ -51,7 +51,10 @@ export default function HeroPage() {
   }, [timerStarted])
 
   return (
-    <div id='' className="flex flex-col overflow-hidden items-center justify-center min-h-[calc(100vh-3rem)] relative bg-[#171A23] px-4 sm:px-6 md:px-8">
+    <div
+      id=""
+      className="flex flex-col overflow-hidden items-center justify-center min-h-[calc(100vh-3rem)] relative bg-[#171A23] px-4 sm:px-6 md:px-8"
+    >
       {eventDay ? (
         <>
           <div className="flex flex-col gap-6 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 -mt-16 sm:mt-0 items-center justify-center z-20">
