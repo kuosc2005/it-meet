@@ -111,7 +111,7 @@ export default function Footer() {
           <img
             src={ItmeetLogo}
             alt="itmeetlogo"
-            className="object-contain w-[130px] sm:w-[200px] md:w-[250px] lg:w-[300px] xl:w-[360px] absolute left-5 sm:left-12 md:left-20 lg:left-28 xl:left-36 bottom-0"
+            className="object-contain w-[130px] sm:w-[200px] md:w-[250px] lg:w-[300px] xl:w-[360px] absolute left-5 sm:left-12 md:left-20 lg:left-28 xl:left-36 bottom-0 pb-6"
             width={1000}
             height={1000}
           />
