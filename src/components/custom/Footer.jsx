@@ -20,7 +20,7 @@ export default function Footer() {
         <h1 className="text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] text-center font-semibold sm:mt-5 text-2xl sm:text-3xl lg:text-4xl">
           Contact Us
         </h1>
-        <div className="flex flex-col mt-5 md:mt-0 space-y-12 md:flex-row justify-between items-center text-gray-400 py-3 sm:py-4 md:py-3 md:px-10 lg:px-12 xl:px-16">
+        <div className="flex flex-col mt-5 md:mt-0 space-y-12 md:flex-row justify-between items-center text-gray-400 py-3 sm:py-4 md:py-3 md:px-10 lg:px-12 xl:px-13">
           {/*left side */}
           <div className="flex flex-col space-y-2 sm:space-y-3 lg:space-y-5">
             <h1 className="text-[#12dc9f] text-center font-semibold text-xl sm:text-2xl md:text-xl lg:text-3xl">
@@ -98,7 +98,7 @@ export default function Footer() {
               Brand Guidelines
             </h1>
             <h1 className="text-white text-lg md:text-lg sm:text-xl lg:text-2xl">Brand Assest</h1>
-            <p className="text-lg sm:text-xl md:text-lg lg:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#369fff] to-[#12dc9f]">
+            <p className="text-lg sm:text-xl md:text-lg lg:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#369fff] to-[#12dc9f]">
               #Connect. Compute. Create
             </p>
           </div>

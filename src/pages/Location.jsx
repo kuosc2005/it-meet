@@ -14,7 +14,10 @@ export default function LocationPage() {
   })
 
   return (
-    <div id='locations' className="flex flex-col p-6 sm:p-8 md:p-10 py-20 lg:px-20 overflow-hidden gap-8 items-center justify-center min-h-screen bg-[#171A23]">
+    <div
+      id="locations"
+      className="flex flex-col p-6 sm:p-8 md:p-10 py-20 lg:px-20 overflow-hidden gap-8 items-center justify-center min-h-screen bg-[#171A23]"
+    >
       <div className="flex flex-col items-center gap-2 md:gap-4">
         <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
           Event Location
@@ -37,7 +40,7 @@ export default function LocationPage() {
                 <GraduationCap className="text-red-600 gray" />
                 <h1 className="font-bold">Kathmandu University</h1>
               </div>
-              <h2 className="text-center font-semibold text-xs">IT MEET 24' VENUE </h2>
+              <h2 className="text-center font-semibold text-xs">IT MEET 25' VENUE </h2>
             </Popup>
           </Marker>
           <CircleMarker center={position} pathOptions={fillBlueOptions} radius={40} />

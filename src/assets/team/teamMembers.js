@@ -9,6 +9,7 @@ import Priyanka from '@/assets/team/documentation/PriyankaGhimire.svg'
 import BivamshuKhadka from '@/assets/team/design/BivamshuKhadka.svg'
 import SubashSingh from '@/assets/team/logistic/SubashSingh.svg'
 import SauhardaImage from '@/assets/team/technical/sauhardha.webp'
+import AdityaYadav from '@/assets/team/pr/AdityaYadav.svg'
 // -----------------------------------//
 //---------------Event Leads -----------------//
 import Utkrist from '@/assets/team/event/UtkristNeupane.svg'
@@ -57,7 +58,7 @@ const team = [
         github: '',
       },
       {
-        name: 'Utkrist Mani Neupani',
+        name: 'Utkrist Mani Neupane',
         department: 'KU HACKFEST LEAD',
         image: Utkrist,
         linkedIn: '',
@@ -107,7 +108,7 @@ const team = [
         github: '',
       },
       {
-        name: 'Bivamshu  Khadka',
+        name: 'Bivamshu Khadka',
         department: 'DESIGN LEAD',
         image: BivamshuKhadka,
         linkedIn: '',
@@ -118,6 +119,14 @@ const team = [
         name: 'Priyanka Ghimire ',
         department: 'DOCUMENTATION LEAD',
         image: Priyanka,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Aditya Yadav',
+        department: 'PUBLIC RELATION LEAD',
+        image: AdityaYadav,
         linkedIn: '',
         insta: '',
         github: '',
@@ -137,6 +146,20 @@ const team = [
       },
     ],
   },
+  {
+    title: 'Public Relation Team',
+    members: [
+      {
+        name: 'Aditya Yadav',
+        department: 'LEAD',
+        image: AdityaYadav,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+    ],
+  },
+
   {
     title: 'Design Team',
     members: [
