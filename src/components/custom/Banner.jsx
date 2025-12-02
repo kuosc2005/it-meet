@@ -19,11 +19,11 @@ const Banner = () => {
       >
         <p className="text-sm sm:text-base md:text-lg font-light leading-relaxed text-justify">
           IT Meet 2025 brings an exciting mix of events, including KU Hackfest, EmpowerHer, and
-          Alumni Meet. Not only the tech competitions but only fun activities like AR Treasure Hunt
-          and Gaming Events (PUBG, FIFA, Valorant, Mobile Legends, Arcade, Clash Royale), there’s
-          something for everyone. Networking and career opportunities include the Career Fair and
-          Panel Discussions, along with social initiatives like Acoustic Night for a well-rounded
-          experience.
+          Alumni Meet. Not only the tech competitions but also fun activities like AR Treasure Hunt
+          and Gaming Events (PUBG, FIFA/EA-FC, Valorant, Mobile Legends, eFootball, Clash Royale),
+          there’s something for everyone. Networking and career opportunities include the Career
+          Fair and Panel Discussions, along with social initiatives like Acoustic Night for a
+          well-rounded experience.
         </p>
       </div>
       <div className="absolute bottom-0 left-5 z-10 w-6/12 max-w-3xl">
