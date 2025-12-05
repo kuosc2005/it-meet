@@ -34,51 +34,6 @@ import eve_16 from '@/assets/itmeet_images/eve_16.webp'
 import eve_17 from '@/assets/itmeet_images/eve_17.webp'
 import eve_18 from '@/assets/itmeet_images/eve_18.webp'
 
-// export const sliders = [
-//   {
-//     id: 'slider1',
-//     images: [
-//       ev_1,
-//       ev_2,
-//       ev_3,
-//       ev_4,
-//       ev_5,
-//       ev_6,
-//       ev_9,
-//       ev_10,
-//       ev_11,
-//       ev_12,
-//       ev_13,
-//       ev_14,
-//       ev_15,
-//       ev_16,
-//       ev_17,
-//     ],
-//     direction: 'left',
-//   },
-//   {
-//     id: 'slider2',
-//     images: [
-//       eve_1,
-//       eve_2,
-//       eve_3,
-//       eve_4,
-//       eve_5,
-//       eve_6,
-//       eve_7,
-//       eve_8,
-//       eve_9,
-//       eve_10,
-//       eve_11,
-//       eve_13,
-//       eve_14,
-//       eve_15,
-//       eve_16,
-//     ],
-//     direction: 'right',
-//   },
-// ]
-
 export const images = [
   {
     id: 1,
