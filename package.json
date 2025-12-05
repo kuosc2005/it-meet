@@ -23,6 +23,7 @@
     "embla-carousel-react": "^8.2.1",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.412.0",
+    "mind-ar": "^1.2.5",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -36,7 +37,8 @@
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
     "tailwind-merge": "^2.4.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "0.150.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
