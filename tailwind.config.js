@@ -14,10 +14,10 @@ module.exports = {
       padding: '2rem',
       screens: {
         '2xl': '1400px',
-        'xl': '1280px',
-        'lg': '1024px',
-        'md': '768px', 
-        'sm': '640px', 
+        xl: '1280px',
+        lg: '1024px',
+        md: '768px',
+        sm: '640px',
       },
     },
     extend: {
@@ -79,10 +79,9 @@ module.exports = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'swipe': 'swipe 1.5s ease-in-out infinite',
+        swipe: 'swipe 1.5s ease-in-out infinite',
       },
     },
   },
   plugins: [require('tailwindcss-animate')],
-
 }
