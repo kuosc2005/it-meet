@@ -37,10 +37,10 @@ export default function Interested() {
                     className="w-full rounded-2xl bg-[#171A23] px-8 min-[500px]:px-12 py-12 md:px-12 md:py-16 flex flex-col md:flex-row items-center justify-between gap-10"
                 >
                     <div className="flex flex-col gap-4 max-w-2xl text-center md:text-left">
-                        <h2 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369FFF] to-[#17C58F]">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369FFF] to-[#17C58F]">
                             Intrested for IT-Meet 2025?
                         </h2>
-                        <p className="text-white max-[410px]:text-sm text-base md:text-lg leading-relaxed">
+                        <p className="text-white text-lg max-[410px]:text-lg text-base md:text-lg leading-relaxed">
                             Enter your email to get exclusive news and announcements regarding
                             the events of IT Meet.
                         </p>
@@ -67,7 +67,7 @@ export default function Interested() {
                         <button
                             type="submit"
                             disabled={status === "loading"}
-                            className="w-full bg-[#17C58F] text-primary-foreground hover:bg-[#369FFF] hover:text-[#369FFF]-foreground disabled:opacity-70 disabled:cursor-not-allowed font-bold px-8 py-3 rounded-lg transition-colors shadow-lg"
+                            className="w-full text-xl small:text-lg bg-[#17C58F] text-primary-foreground hover:bg-[#369FFF] hover:text-[#369FFF]-foreground disabled:opacity-70 disabled:cursor-not-allowed font-bold px-8 py-3 rounded-lg transition-colors shadow-lg"
                         >
                             {status === "loading" ? "Submitting..." : "Confirm"}
                         </button>
