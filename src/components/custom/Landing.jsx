@@ -52,10 +52,10 @@ export default function LandingComponent() {
 
       <div className="absolute top-[8%] sm:top-[4%] md:top-[4%] lg:top-[4%] xl:top-[9%] w-full space-y-2 sm:space-y-1 justify-center flex flex-col items-center animate-date">
         <p className="font-rubik text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-none tracking-normal uppercase text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] text-center sm:mt-5">
-          Coming Soon
+          DECEMBER
         </p>
-        <p className="font-rubik text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-none tracking-[3px] sm:tracking-[4px] md:tracking-[5px] lg:tracking-[6px] xl:tracking-[7px] uppercase bg-gradient-to-r from-[#369FFF] via-[#3BD0A3] to-[#14C58F] bg-clip-text text-transparent">
-          {/* 6 & 7 */}
+        <p className="font-rubik text-2xl sm:text-3xl md:text-4xl font-semibold leading-none tracking-[3px] sm:tracking-[4px] md:tracking-[5px] lg:tracking-[6px] xl:tracking-[7px] uppercase bg-gradient-to-r from-[#369FFF] via-[#3BD0A3] to-[#14C58F] bg-clip-text text-transparent">
+          20-26
         </p>
       </div>
       <ShootingStar />
