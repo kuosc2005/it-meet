@@ -1,6 +1,6 @@
 import React from 'react'
 import ITMeetLogo from '@/assets/images/itmeetlogo.svg'
-import Activities from '@/components/custom/Carousel'
+import Activities from '@/components/custom/Legacy'
 import EventGallery from '@/components/custom/EventGallery'
 
 export default function AboutPage() {
@@ -59,14 +59,14 @@ export default function AboutPage() {
       <div className="mt-5">
         <Activities />
       </div>
-      {/* <div className="flex flex-col justify-center items-center gap-2 md:gap-3"> */}
-      {/*   <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]"> */}
-      {/*     Flashback: IT MEET */}
-      {/*   </h1> */}
-      {/* </div> */}
-      {/* <div className="mt-5"> */}
-      {/*   <EventGallery /> */}
-      {/* </div>{' '} */}
+      <div className="flex flex-col justify-center items-center gap-2 md:gap-3 mt-1">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
+          Event Gallery
+        </h2>
+      </div>
+      <div className="mt-5">
+        <EventGallery />
+      </div>
     </div>
   )
 }
