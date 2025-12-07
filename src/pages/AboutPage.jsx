@@ -51,22 +51,22 @@ export default function AboutPage() {
           />
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center gap-2 md:gap-3">
+      <div className="flex flex-col justify-center items-center gap-2 md:gap-3 my-10">
         <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
           Our Legacy
         </h1>
+        <div className="pt-10">
+          <Activities />
+        </div>
       </div>
-      <div className="mt-5">
-        <Activities />
-      </div>
-      <div className="flex flex-col justify-center items-center gap-2 md:gap-3 mt-1">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
-          Event Gallery
-        </h2>
-      </div>
-      <div className="mt-5">
-        <EventGallery />
-      </div>
+      {/* <div className="flex flex-col justify-center items-center gap-2 md:gap-3 mt-1"> */}
+      {/*   <h2 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]"> */}
+      {/*     Event Gallery */}
+      {/*   </h2> */}
+      {/* </div> */}
+      {/* <div className="mt-5"> */}
+      {/*   <EventGallery /> */}
+      {/* </div> */}
     </div>
   )
 }
