@@ -8,20 +8,20 @@ import { Card, CardContent } from '@/components/ui/card'
 const keyData = [
   {
     id: 1,
-    icon: <FaSackDollar className="w-6 h-6 text-[#369fff]/40" />,
+    icon: <FaSackDollar className="w-6 h-6 text-[#369fff]" />,
     participation: 'Rs. 500k',
     title: 'Prize Pool',
   },
 
   {
     id: 2,
-    icon: <FaCalendarDays className="w-6 h-6 text-[#369fff]/40" />,
+    icon: <FaCalendarDays className="w-6 h-6 text-[#369fff]" />,
     participation: '25+',
     title: 'Events',
   },
   {
     id: 3,
-    icon: <FaUsers className="w-6 h-6 text-[#369fff]/40" />,
+    icon: <FaUsers className="w-6 h-6 text-[#369fff]" />,
     participation: '10k+',
     title: 'Participants',
   },
@@ -30,25 +30,25 @@ const keyData = [
 const institutionsData = [
   {
     id: 1,
-    icon: <BiSolidSchool className="w-6 h-6 text-[#369fff]/40" />,
+    icon: <BiSolidSchool className="w-6 h-6 text-[#369fff]" />,
     participation: '7+',
     title: 'School Participations',
   },
   {
     id: 2,
-    icon: <BiSolidNetworkChart className="w-6 h-6 text-[#369fff]/40" />,
+    icon: <BiSolidNetworkChart className="w-6 h-6 text-[#369fff]" />,
     participation: '5+',
     title: 'IT College Participations',
   },
   {
     id: 3,
-    icon: <FaSchoolFlag className="w-6 h-6 text-[#369fff]/40" />,
+    icon: <FaSchoolFlag className="w-6 h-6 text-[#369fff]" />,
     participation: '9+',
     title: '+2 College Participations',
   },
   {
     id: 4,
-    icon: <FaGraduationCap className="w-6 h-6 text-[#369fff]/40" />,
+    icon: <FaGraduationCap className="w-6 h-6 text-[#369fff]" />,
     participation: '3+',
     title: 'Univeristy Participations',
   },
@@ -59,7 +59,7 @@ const InstitutionChart = ({ data }) => {
   const total = data.reduce((sum, item) => sum + parseInt(item.participation), 0)
 
   return (
-    <div className="h-full p-[2px] rounded-2xl bg-gradient-to-br to-[#12dc9f]/50 from-[#171A23] overflow-scroll hide-scrollbar">
+    <div className="h-full p-[2px] group rounded-2xl bg-gradient-to-br to-[#12dc9f]/60 from-[#171A23] hover:to-[#12dc9f] hover:from-[#171A23]  overflow-scroll hide-scrollbar">
       <div className="flex flex-col justify-around h-full w-full bg-[#171A23] p-4 pb-0 rounded-2xl px-8">
         <div className="space-y-7 py-9 md:py-0">
           {data.map((institution) => (
@@ -80,7 +80,7 @@ const InstitutionChart = ({ data }) => {
           ))}
         </div>
         <div className="flex justify-end py-5 md:py-0">
-          <span className="text-[#12dc9f]/80 font-semibold text-xl max-[280px]:text-lg max-[250px]:text-sm">
+          <span className="text-[#12dc9f]/90 group-hover:text-[#12dc9f] font-semibold text-xl max-[280px]:text-lg max-[250px]:text-sm">
             {total}+ INSTITUTIONS
           </span>
         </div>
@@ -99,7 +99,7 @@ export default function App() {
               key={item.id}
               className="bg-[#171A23] p-2 rounded-2xl text-primary-foreground cursor-pointer"
             >
-              <CardContent className="flex max-[320px]:flex-col items-center justify-between py-6  gap-10 bg-gradient-to-br from-[#171A23]/10 to-[#12dc9f]/10 rounded-2xl">
+              <CardContent className="flex max-[320px]:flex-col items-center justify-between py-6  gap-10 bg-gradient-to-br hover:from-[#171A23]/30 hover:to-[#12dc9f]/30 from-[#171A23]/20 to-[#12dc9f]/20 rounded-2xl">
                 <div className="flex flex-col items-start space-y-10 max-[320px]:space-y-0 text-left">
                   <span className="text-xl bg-[#171A23] p-3 rounded-full">{item.icon}</span>
                   <span className="font-medium text-lg max-[365px]:text-base max-[200px]:text-xs text-white/80">
