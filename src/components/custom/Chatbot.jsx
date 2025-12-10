@@ -1,87 +1,105 @@
-import { useState } from "react";
-import { FiMessageCircle, FiX } from "react-icons/fi";
+import { useState } from 'react'
+import HelloTiger from '@/assets/images/hello-tiger-faq.webp'
+import { IoMdSend } from 'react-icons/io'
+
+
+// TBD; Replace response, replace Mascot with new one
+
+
 
 export default function Chatbot() {
-  const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { from: "bot", text: "Hi! How can I help you today? 😊" }
-  ]);
-  const [input, setInput] = useState("");
+    { from: 'ai', text: 'Hello! How can I help you today?' },
+  ])
+  const [input, setInput] = useState('')
+  const [isOpen, setIsOpen] = useState(false)
 
-  const sendMessage = () => {
-    if (!input.trim()) return;
-
-    setMessages(prev => [...prev, { from: "user", text: input }]);
-    setInput("");
-
+  const handleSend = () => {
+    if (!input.trim()) return
+    setMessages([...messages, { from: 'user', text: input }])
+    setInput('')
+    // Fake AI response after 1s (replace with real API)
     setTimeout(() => {
-      setMessages(prev => [...prev, { from: "bot", text: "I'm thinking..." }]);
-    }, 800);
-  };
+      setMessages((prev) => [
+        ...prev,
+        { from: 'ai', text: `AI Response to: "${input}"` },
+      ])
+    }, 1000)
+  }
 
   return (
-    <div>
-      {/* Floating Button */}
-      <button
-        onClick={() => setOpen(true)}
-        className={`fixed bottom-6 right-6 bg-blue-500 text-white p-4 rounded-full shadow-xl transition-all ${
-          open ? "scale-0" : "scale-100"
-        }`}
-      >
-        <FiMessageCircle size={24} />
-      </button>
+    <div className="fixed bottom-5 right-5 z-50">
+      {/* Chat toggle button */}
+      {!isOpen && (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="bg-gradient-to-r from-[#369fff] to-[#12dc9f] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#33353B]"
+        >
+           <img
+                src={HelloTiger}
+                alt="AI"
+                className="w-8 h-8 flex-shrink-0 rounded-full"
+            />
+        </button>
+      )}
 
-      {/* Chat Window */}
-      <div
-        className={`fixed bottom-6 right-6 w-80 md:w-96 bg-[#0f0f17] rounded-2xl shadow-2xl overflow-hidden border border-gray-700 transition-all ${
-          open ? "opacity-100 translate-y-0" : "opacity-0 pointer-events-none translate-y-4"
-        }`}
-      >
-        {/* Header */}
-        <div className="flex justify-between items-center px-4 py-3 border-b border-gray-700">
-          <h2 className="text-lg font-semibold text-white">Chat Assist</h2>
-          <button
-            onClick={() => setOpen(false)}
-            className="text-gray-400 hover:text-white transition"
-          >
-            <FiX size={22} />
-          </button>
-        </div>
+      {/* Chat window */}
+      {isOpen && (
+        <div className="w-[320px] h-[400px] bg-[#2A2C33] text-white rounded-xl shadow-lg flex flex-col overflow-hidden">
+          {/* Header */}
+          <div className="flex justify-between items-center p-3 bg-[#2A2C33]">
+            <h2 className="font-bold pl-2">Chat</h2>
+            <button onClick={() => setIsOpen(false)}>✕</button>
+          </div>
 
-        {/* Messages Area */}
-        <div className="h-80 overflow-y-auto p-4 space-y-3 bg-[#0f0f17]">
-          {messages.map((msg, idx) => (
-            <div
-              key={idx}
-              className={`max-w-[80%] p-3 rounded-xl text-sm ${
-                msg.from === "bot"
-                  ? "bg-blue-600 text-white self-start rounded-bl-none"
-                  : "bg-gray-800 text-white ml-auto rounded-br-none"
-              }`}
+          {/* Messages */}
+          <div className="flex-1 p-3 overflow-y-auto flex flex-col gap-3">
+            {messages.map((msg, idx) => (
+              <div
+                key={idx}
+                className={`flex items-start gap-2 ${
+                  msg.from === 'user' ? 'justify-end' : 'justify-start'
+                }`}
+              >
+                {msg.from === 'ai' && (
+                  <img
+                    src={HelloTiger}
+                    alt="AI"
+                    className=" w-8 h-8 flex-shrink-0 rounded-full"
+                  />
+                )}
+                <div
+                  className={`px-3 py-2 rounded-lg max-w-[70%] break-words ${
+                    msg.from === 'user'
+                      ? 'bg-gradient-to-r from-[#369fff] to-[#12dc9f] text-white'
+                      : 'bg-[#2E3038] text-white'
+                  }`}
+                >
+                  {msg.text}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Input */}
+          <div className="flex p-3 gap-2 bg-[#2A2C33]">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="Ask me anything"
+              className="flex-1 px-3 py-2 rounded-full bg-[#22242B] text-white outline-none text-sm"
+              onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+            />
+            <button
+              onClick={handleSend}
+              className="p-2 pl-3 rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] text-white hover:scale-110 transition-all"
             >
-              {msg.text}
-            </div>
-          ))}
+              <IoMdSend size={20} />
+            </button>
+          </div>
         </div>
-
-        {/* Input */}
-        <div className="p-3 border-t border-gray-700 flex gap-2">
-          <input
-            type="text"
-            className="flex-1 px-3 py-2 bg-gray-900 text-white rounded-lg outline-none border border-gray-700 focus:border-blue-500"
-            placeholder="Ask me anything…"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-          />
-          <button
-            onClick={sendMessage}
-            className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-white"
-          >
-            Send
-          </button>
-        </div>
-      </div>
+      )}
     </div>
-  );
+  )
 }
