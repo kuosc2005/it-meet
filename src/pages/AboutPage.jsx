@@ -59,6 +59,7 @@ export default function AboutPage() {
           <Activities />
         </div>
       </div>
+
       {/* <div className="flex flex-col justify-center items-center gap-2 md:gap-3 mt-1"> */}
       {/*   <h2 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]"> */}
       {/*     Event Gallery */}
