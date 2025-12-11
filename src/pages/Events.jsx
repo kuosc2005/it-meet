@@ -14,14 +14,13 @@ const Events = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
-  
+
   return (
     <div className="flex flex-col overflow-hidden p-10 py-20 lg:px-20 gap-8 items-center justify-center min-h-screen bg-[#171A23]">
       <div className="space-y-4 md:space-y-8">
-        <Banner />
-        <EventList events={listEvents} />
-        <PreEventPage events={preEvents} />
-        <MainEventPage events={mainEvents} />
+        {/*<Banner />*/}
+        <PreEventPage preEvents={preEvents} mainEvents={mainEvents} />
+        <EventList preEvents={preEvents} mainEvents={mainEvents} />
       </div>
     </div>
   );
