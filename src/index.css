@@ -154,12 +154,14 @@ html {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px; /* Border thickness */
+  height: 2px;
+  /* Border thickness */
   background: linear-gradient(90deg, #369fff 0%, #3bd0a3 64.4%, #14c58f 91.9%);
   z-index: 10;
 }
 
 @layer utilities {
+
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -170,5 +172,37 @@ html {
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
+  }
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: scroll-reverse 30s linear infinite;
+}
+
+@keyframes scroll-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
   }
 }
