@@ -26,7 +26,6 @@ ImagePlaceholder.propTypes = {
 }
 
 export default function EventList({ events }) {
-
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [events])
@@ -39,7 +38,7 @@ export default function EventList({ events }) {
       const isANumber = !isNaN(dayA)
       const isBNumber = !isNaN(dayB)
 
-      // If both are numbers: sort ascending 
+      // If both are numbers: sort ascending
       if (isANumber && isBNumber) {
         return dayA - dayB
       }
@@ -56,15 +55,13 @@ export default function EventList({ events }) {
   return (
     <div className="relative flex flex-col p-6 py-12 bg-[#171A23] min-h-screen overflow-hidden">
       <div className="w-full max-w-6xl mx-auto relative">
-
-        <div className="absolute left-4 md:left-8 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#369fff] via-[#12dc9f] to-[#171A23] opacity-30"></div>
+        <div className="absolute left-4 md:left-8 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#369fff] via-[#12dc9f] to-[#171A23] opacity-70"></div>
 
         <div className="flex flex-col gap-16">
           {sortedEvents.map((event) => (
             <div key={event.id} className="relative pl-16 md:pl-28 group">
-
               <div className="absolute left-4 md:left-8 top-0 transform -translate-x-1/2 flex flex-col items-center">
-                <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#171A23] border-[2px] border-[#369FFF] group-hover:border-[#12dc9f] transition-colors duration-500 flex flex-col items-center justify-center shadow-[0_0_15px_rgba(54,159,255,0.3)] z-10">
+                <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#171A23] border-[3px] border-[#369FFF] group-hover:border-[#12dc9f] transition-colors duration-500 flex flex-col items-center justify-center shadow-[0_0_15px_rgba(54,159,255,0.3)] z-10">
                   <span className="text-white font-bold text-lg md:text-xl leading-none">
                     {event.day || '00'}
                   </span>
@@ -74,7 +71,6 @@ export default function EventList({ events }) {
               <div className="absolute left-8 md:left-14 top-6 w-8 md:w-14 h-[1px] bg-gradient-to-r from-[#369FFF] to-transparent opacity-50"></div>
 
               <div className="flex flex-col lg:flex-row gap-8 items-start">
-
                 <div className="w-full lg:w-3/5 flex flex-col justify-start pt-1">
                   <Card className="bg-transparent border-none shadow-none p-0">
                     <CardHeader className="p-0 pb-3">
@@ -95,7 +91,9 @@ export default function EventList({ events }) {
                       >
                         <button className="relative px-6 py-2 overflow-hidden font-medium text-[#12dc9f] border border-[#12dc9f] rounded-lg shadow-inner group hover:text-black hover:bg-[#12dc9f] transition-all duration-300 ease-out">
                           <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#12dc9f] to-[#369FFF] opacity-0 group-hover:opacity-60 transition-opacity duration-300"></span>
-                          <span className="relative uppercase tracking-widest text-sm">Interested</span>
+                          <span className="relative uppercase tracking-widest text-sm">
+                            Interested
+                          </span>
                         </button>
                       </Link>
                     </CardFooter>
@@ -105,7 +103,6 @@ export default function EventList({ events }) {
                 <div className="w-full lg:w-2/5 flex justify-center lg:justify-end">
                   <ImagePlaceholder imgSrc={event.imgSrc} alt={event.title} />
                 </div>
-
               </div>
             </div>
           ))}
@@ -123,6 +120,6 @@ EventList.propTypes = {
       description: PropTypes.string,
       imgSrc: PropTypes.string.isRequired,
       day: PropTypes.string,
-    })
+    }),
   ).isRequired,
 }

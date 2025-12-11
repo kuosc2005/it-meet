@@ -10,10 +10,10 @@ export const EventProvider = ({ children }) => {
       title: 'Project Exhibition',
       isApplicationOpen: true,
       formLink: 'https://linktr.ee/projectexhibition',
-      day: 'TBD',
+      day: '26',
       category: 'main_event',
       description:
-        "An opportunity for creators to display their completed projects, highlight technical achievements, and interact with viewers through hands-on demonstrations and detailed explanations.",
+        'An opportunity for creators to display their completed projects, highlight technical achievements, and interact with viewers through hands-on demonstrations and detailed explanations.',
       details:
         'IT Meet’s “Project Exhibition” stands as a testament to the extraordinary technical prowess and innovative spirit of our participants. Here, they will have the opportunity to unveil and demonstrate their software and hardware projects before a panel of esteemed judges. Each project not only showcases their depth of knowledge and technical skill but also highlights their creativity and unwavering dedication to pushing the boundaries of technology. As the judges evaluate each entry based on its novelty, practicality, and technical complexity, the exhibition becomes a vibrant celebration of the remarkable innovation and ingenuity that defines our tech community. It serves not only as a platform for showcasing cutting-edge projects but also as an inspiring testament to the endless possibilities of technology-driven creativity and problem-solving.',
     },
@@ -23,7 +23,7 @@ export const EventProvider = ({ children }) => {
       title: 'Panel Discussion',
       isApplicationOpen: false,
       formLink: '',
-      day: "TBD",
+      day: '26',
       category: 'main_event',
       description:
         "The event features experts discussing key tech topics, with the 2024 focus on artificial intelligence and its implications for Nepal's industries.",
@@ -36,12 +36,12 @@ export const EventProvider = ({ children }) => {
       title: 'KU Hackfest',
       isApplicationOpen: true,
       formLink: 'https://dorahacks.io/hackathon/kuhackfest/detail',
-      day: "24",
+      day: '24',
       category: 'main_event',
       description:
-        '“KU Hackfest”, one of the biggest events within IT Meet, is an international-level, 48-hour hackathon, scheduled for 24-25 December 2025. This event aims to cultivate creativity, drive innovation, and empower talented individuals to solve real-world problems.',
+        '“KU Hackfest”, one of the biggest events within IT Meet, is an international-level, 48-hour hackathon, scheduled for 24-26 December 2025. This event aims to cultivate creativity, drive innovation, and empower talented individuals to solve real-world problems.',
       details:
-        ' “KU Hackfest”, one of the biggest events within IT Meet, is an international-level, 48-hour hackathon, scheduled for 24-25 December 2025. This event aims to cultivate creativity, drive innovation, and empower talented individuals to solve real-world problems. By gathering programmers, developers, designers, and tech enthusiasts from around the globe, KU Hackfest creates a dynamic environment for knowledge sharing and collaboration. Participants will benefit from extensive networking opportunities, interactive workshops, and expert mentorship, bridging the gap between academia and industry. Building on past successes, KU Hackfest 2025 aspires to surpass previous iterations in scope and impact. Last year KU Hackfest 2024, held from September 29 to October 1, was Nepal’s largest in-person Major League Hacking (MLH) hackathon, attracting 501 applicants from diverse backgrounds and resulting in 51 finalized projects. With a cash prize pool exceeding Rs. 1,70,000, the event fostered teamwork and creativity, offering young coders a platform to showcase their skills, learn, and collaborate on innovative solutions.',
+        ' “KU Hackfest”, one of the biggest events within IT Meet, is an international-level, 48-hour hackathon, scheduled for 24-26 December 2025. This event aims to cultivate creativity, drive innovation, and empower talented individuals to solve real-world problems. By gathering programmers, developers, designers, and tech enthusiasts from around the globe, KU Hackfest creates a dynamic environment for knowledge sharing and collaboration. Participants will benefit from extensive networking opportunities, interactive workshops, and expert mentorship, bridging the gap between academia and industry. Building on past successes, KU Hackfest 2025 aspires to surpass previous iterations in scope and impact. Last year KU Hackfest 2024, held from September 29 to October 1, was Nepal’s largest in-person Major League Hacking (MLH) hackathon, attracting 501 applicants from diverse backgrounds and resulting in 51 finalized projects. With a cash prize pool exceeding Rs. 1,70,000, the event fostered teamwork and creativity, offering young coders a platform to showcase their skills, learn, and collaborate on innovative solutions.',
     },
     {
       id: 4,
@@ -49,8 +49,8 @@ export const EventProvider = ({ children }) => {
       title: 'Alumni Meet',
       isApplicationOpen: true,
       formLink: 'https://forms.gle/pcKX3CLpiiuLVjiPA',
-      day: "TBD",
-      category: 'main_event',
+      day: '25',
+      category: 'pre_event',
       description:
         'An alumni meet is a special gathering where our alumni of KU come together to reconnect, celebrate, and strengthen their bond with their alma mater. It serves as a platform for alumni to meet old friends, share memories, and network professionally, while also allowing the institution to showcase its growth and achievements.',
       details:
@@ -63,31 +63,20 @@ export const EventProvider = ({ children }) => {
       title: 'Mock Placement',
       isApplicationOpen: true,
       formLink: 'https://forms.gle/X1XPqRXj6q5vAduK6',
-      day: "TBD",
+      day: '26',
       category: 'main_event',
       description:
         'The event simulates corporate recruitment processes, including tests and interviews, offering participants valuable feedback from HR professionals to improve their job readiness.',
       details:
         'The “Mock Placement” event mirrors the actual recruitment procedures found in corporate settings, encompassing three pivotal rounds: an aptitude test, group discussion, and personal interview. This comprehensive simulation aims to gauge participants’ foundational skills, their adeptness in communication, and their overall suitability for professional roles. Beyond assessment, successful candidates benefit from invaluable feedback and tailored advice provided by seasoned HR professionals. This holistic approach not only enhances their readiness for real-world job interviews but also cultivates a deeper understanding of the expectations and dynamics within the corporate hiring landscape.',
     },
-    // {
-    //   id: 15,
-    //   imgSrc: '/typing.webp',
-    //   title: 'Typing Competition',
-    //   isApplicationOpen: true,
-    //   formLink: 'https://forms.gle/S9F13eE6haZGDhev8',
-    //   description:
-    //     'The event allows participants to showcase their speed and accuracy in a friendly environment, with around 66 attendees demonstrating their skills during the 2024 event.',
-    //   details:
-    //     'The “Typing Competition” in IT Meet offers a platform for enthusiasts to showcase their skills and compete in a friendly environment. Participants, ranging from various backgrounds and skill levels, engage in both online and physical competitions over three days. IT Meet 2024’s event, with approximately 66 attendees, saw impressive demonstrations of speed and accuracy, highlighting the dedication and talent of participants. This event serves as an opportunity to celebrate and refine typing skills.',
-    // },
     {
       id: 6,
       imgSrc: '/career.webp',
       title: 'Career Fair',
       isApplicationOpen: false,
       formLink: '',
-      day: "TBD",
+      day: '26',
       category: 'main_event',
       description:
         'The event connects students with potential employers through initial interviews and mock placement activities, facilitating valuable exchanges and insights into employment criteria, featuring 15 company stalls in 2024.',
@@ -100,7 +89,7 @@ export const EventProvider = ({ children }) => {
       title: 'Blood Donation',
       isApplicationOpen: true,
       formLink: 'https://forms.gle/7m6ER61ejLmBCNsV7',
-      day: "TBD",
+      day: '26',
       category: 'main_event',
       description:
         'The KU Youth Red Cross and IT Meet organizing committee collaborate on blood donation drives, encouraging attendees to contribute to saving lives and raising awareness about the critical need for regular blood donations in healthcare.',
@@ -114,7 +103,7 @@ export const EventProvider = ({ children }) => {
       isApplicationOpen: true,
       formLink:
         'https://docs.google.com/forms/d/e/1FAIpQLScB2l8RZ0hQ_jSFuCAalebuwSW8o9qlgS2QvK_gEhZ12svkSQ/viewform?usp=sf_link',
-      day: "TBD",
+      day: '26',
       category: 'main_event',
       description:
         'The event is an inter-school event that challenges teams of four with various IT-related questions across seven rounds, inspiring young minds while awarding prizes and a prestigious shield to the winners.',
@@ -127,7 +116,7 @@ export const EventProvider = ({ children }) => {
       title: 'Gaming Events',
       isApplicationOpen: true,
       formLink: 'https://forms.gle/RESZHtfayFLjWfNs5',
-      day: "22",
+      day: '22',
       category: 'pre_event',
       description:
         'IT Meet 2025 will host a grand Gaming (Esports) event featuring popular games and a competitive prize pool, following a successful 2024 with impressive participation across multiple titles.',
@@ -139,11 +128,12 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/empoweher.webp',
       title: 'EmpowerHer',
       isApplicationOpen: true,
-      formLink: 'https://forms.gle/kyqKPUAzGLMBzzX87',
+      formLink:
+        'https://docs.google.com/forms/d/1Yi7CQKg-wuNAwRUYCRqgIgXo2CsQT_CHUOKmUm4K3_w/viewform?edit_requested=true&brid=aRSE_vjT8Xy1tlD7gF4SFg',
       day: '20',
       category: 'pre_event',
       details:
-        '“EmpowerHer” is an innovative initiative aimed at inspiring and empowering young girls by providing a platform to amplify their voices, engage in meaningful discussions, and connect with like-minded individuals in the tech industry. Featuring insightful talks, interactive workshops, and engaging tech-themed activities, EmpowerHER equips participants with the confidence and skills necessary to excel in the evolving tech landscape. This event is a pioneering effort to create an inclusive and empowering environment for girls in tech, boosting self-expression, learning, and engagement. The inaugural EmpowerHER ‘23 event was a significant success, drawing around 80 participants and highlighted speakers like Guna Kesari Pradhan, Roja Kiran Basukala, and Agma Malakar. The event fostered inspiration and dialogue, with notable moments including the “#iamremarkable” reflection session and discussions on women‘s roles in government technology, marking a significant step towards creating an inclusive and empowering environment for girls in tech.',
+        'EmpowerHer is a dedicated initiative to encourage women in technology and academia by building confidence, enhancing technical skills, and fostering leadership. The program begins with virtual workshops on AI, cybersecurity, and research writing, along with a community wellness marathon to strengthen engagement. The main event offers a full day of hands-on technical sessions, confidence-building activities, networking, and inspirational talks from women leaders. With over 150 expected participants and wider online reach, EmpowerHer 2025 aims to create a safe, inclusive, and motivating environment that encourages women’s growth in STEM and drives long-term community impact.',
       description:
         '"EmpowerHer" is an initiative designed to inspire young girls in tech by providing a platform for discussion, skill-building workshops, and networking. ',
     },
@@ -157,8 +147,8 @@ export const EventProvider = ({ children }) => {
       category: 'pre_event',
       details:
         'The “Idea Pitching” competition at IT Meet emphasizes the convergence of creativity, innovation, and strategic foresight. It provides participants with a unique opportunity to showcase their ability to articulate compelling ideas. Each contestant is tasked with delivering a succinct pitch, addressing specific topics provided by the organizers. Judges, esteemed professionals in their fields, evaluate pitches based on criteria such as market feasibility, efficient resource allocation, and scalability potential. This event serves as a pivotal learning experience for engineering students, offering valuable insights into the intricacies of management and nurturing their entrepreneurial spirit. By participating, students expand their horizons, gain practical knowledge, and develop essential skills in pitching and business strategy, preparing them for future challenges in the professional world.',
-      description: "A platform where participants showcase innovative concepts, present problem-solving approaches, and demonstrate creativity through concise and impactful pitches."
-
+      description:
+        'A platform where participants showcase innovative concepts, present problem-solving approaches, and demonstrate creativity through concise and impactful pitches.',
     },
     {
       id: 12,
@@ -167,11 +157,12 @@ export const EventProvider = ({ children }) => {
       isApplicationOpen: true,
       formLink:
         'https://docs.google.com/forms/d/e/1FAIpQLSc9SpFmwz3QVm5oQtVF6xXfS-HiajySVEOOUT9sNZ4iJiLEMQ/viewform ',
-      day: "21",
+      day: '21',
       category: 'pre_event',
       details:
         '"We Shield Cyber" is a premier cybersecurity conference at IT Meet 2025, organized by the Kathmandu University Networking and Cybersecurity Community in collaboration with Women in Cybersecurity Nepal. This event offers participants a unique opportunity to engage with leading cybersecurity experts through seminars, gain hands-on experience in a Capture The Flag (CTF) challenge, and explore career opportunities in a dedicated career fair. "We Shield Cyber" aims to raise awareness about the critical importance of cybersecurity, inspire future professionals, and nurture a community committed to protecting digital systems in an increasingly interconnected world.',
-      description: "A cybersecurity-focused event that encourages participants to explore digital defense, analyze vulnerabilities, and build awareness on safeguarding systems in a rapidly evolving threat landscape."
+      description:
+        'A cybersecurity-focused event that encourages participants to explore digital defense, analyze vulnerabilities, and build awareness on safeguarding systems in a rapidly evolving threat landscape.',
     },
     {
       id: 13,
@@ -180,7 +171,7 @@ export const EventProvider = ({ children }) => {
       day: '26',
       isApplicationOpen: true,
       formLink: 'https://forms.gle/CBuJ5dvMYgz8f8bG8',
-      category: 'late_event',
+      category: 'post_event',
       description:
         '"Acoustic Night," the closing event of IT Meet, features talented student performances that create an enchanting evening filled with diverse melodies, fostering connections among attendees.s',
       details:
@@ -190,10 +181,10 @@ export const EventProvider = ({ children }) => {
       id: 14,
       imgSrc: '/treasurehunt.webp',
       title: 'AR Treasure Hunt',
-      day: '30',
+      day: 'TBD',
       isApplicationOpen: true,
       formLink: 'https://arth24.tech/',
-      category: 'late_event',
+      category: 'post_event',
       description:
         'The "AR Treasure Hunt" is an exciting event that immerses participants in Augmented Reality, similar to Pokémon Go, as they follow clues to find hidden treasures.',
       details:
@@ -201,11 +192,7 @@ export const EventProvider = ({ children }) => {
     },
   ])
 
-  return (
-    <EventContext.Provider value={{ events }}>
-      {children}
-    </EventContext.Provider>
-  )
+  return <EventContext.Provider value={{ events }}>{children}</EventContext.Provider>
 }
 
 EventProvider.propTypes = {
