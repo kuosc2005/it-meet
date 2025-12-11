@@ -124,7 +124,6 @@ export const EventProvider = ({ children }) => {
       title: 'Gaming Events',
       isApplicationOpen: true,
       formLink: 'https://forms.gle/RESZHtfayFLjWfNs5',
-      // formLink: 'http://linktr.ee/kuitmeet25',
       description:
         'IT Meet 2025 will host a grand Gaming (Esports) event featuring popular games and a competitive prize pool, following a successful 2024 with impressive participation across multiple titles.',
       details:
