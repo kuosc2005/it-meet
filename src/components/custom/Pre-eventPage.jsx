@@ -38,7 +38,6 @@ export default function EventPage({ events }) {
   return (
     <div className="flex flex-col items-center px-6 md:px-16 pb-12 gap-12 min-h-screen bg-[#171A23]">
 
-      <div className="h-2"></div>
 
       {sections.map((section) => (
         <div key={section.title} className="w-full flex flex-col items-center">
