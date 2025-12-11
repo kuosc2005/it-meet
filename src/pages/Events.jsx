@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 
 
 const Events = () => {
-  const { mainEvents, preEvents, listEvents } = useEvents();
+  const { events } = useEvents();
   const location = useLocation();
 
   useEffect(() => {
@@ -19,8 +19,8 @@ const Events = () => {
     <div className="flex flex-col overflow-hidden p-10 py-20 lg:px-20 gap-8 items-center justify-center min-h-screen bg-[#171A23]">
       <div className="space-y-4 md:space-y-8">
         {/*<Banner />*/}
-        <PreEventPage preEvents={preEvents} mainEvents={mainEvents} />
-        <EventList preEvents={preEvents} mainEvents={mainEvents} />
+        <PreEventPage events={events} />
+        <EventList events={events} />
       </div>
     </div>
   );

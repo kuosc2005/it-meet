@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import React, { useEffect, useMemo } from 'react'
 import {
   Card,
   CardHeader,
@@ -25,14 +25,32 @@ ImagePlaceholder.propTypes = {
   alt: PropTypes.string.isRequired,
 }
 
-export default function EventList({ preEvents, mainEvents }) {
-  const events = [
-    ...preEvents.map(e => ({ ...e, _key: `pre-${e.id}` })),
-    ...mainEvents.map(e => ({ ...e, _key: `main-${e.id}` }))
-  ]
+export default function EventList({ events }) {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [events])
+
+  const sortedEvents = useMemo(() => {
+    return [...events].sort((a, b) => {
+      const dayA = parseInt(a.day, 10)
+      const dayB = parseInt(b.day, 10)
+
+      const isANumber = !isNaN(dayA)
+      const isBNumber = !isNaN(dayB)
+
+      // If both are numbers: sort ascending 
+      if (isANumber && isBNumber) {
+        return dayA - dayB
+      }
+
+      // If A is not a number (TBD), move it to the end
+      if (!isANumber && isBNumber) return 1
+
+      // If B is not a number (TBD), move it to the end
+      if (isANumber && !isBNumber) return -1
+      return 0
+    })
   }, [events])
 
   return (
@@ -42,8 +60,8 @@ export default function EventList({ preEvents, mainEvents }) {
         <div className="absolute left-4 md:left-8 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#369fff] via-[#12dc9f] to-[#171A23] opacity-30"></div>
 
         <div className="flex flex-col gap-16">
-          {events.map((event) => (
-            <div key={event._key} className="relative pl-16 md:pl-28 group">
+          {sortedEvents.map((event) => (
+            <div key={event.id} className="relative pl-16 md:pl-28 group">
 
               <div className="absolute left-4 md:left-8 top-0 transform -translate-x-1/2 flex flex-col items-center">
                 <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#171A23] border-[2px] border-[#369FFF] group-hover:border-[#12dc9f] transition-colors duration-500 flex flex-col items-center justify-center shadow-[0_0_15px_rgba(54,159,255,0.3)] z-10">
@@ -76,8 +94,8 @@ export default function EventList({ preEvents, mainEvents }) {
                         className="inline-block"
                       >
                         <button className="relative px-6 py-2 overflow-hidden font-medium text-[#12dc9f] border border-[#12dc9f] rounded-lg shadow-inner group hover:text-black hover:bg-[#12dc9f] transition-all duration-300 ease-out">
-                          <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#12dc9f] to-[#369FFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                          <span className="relative uppercase tracking-widest text-sm">More Details</span>
+                          <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#12dc9f] to-[#369FFF] opacity-0 group-hover:opacity-60 transition-opacity duration-300"></span>
+                          <span className="relative uppercase tracking-widest text-sm">Interested</span>
                         </button>
                       </Link>
                     </CardFooter>
@@ -98,21 +116,11 @@ export default function EventList({ preEvents, mainEvents }) {
 }
 
 EventList.propTypes = {
-  preEvents: PropTypes.arrayOf(
+  events: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
       title: PropTypes.string.isRequired,
       description: PropTypes.string,
-      imgSrc: PropTypes.string.isRequired,
-      day: PropTypes.string,
-    })
-  ).isRequired,
-
-  mainEvents: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
       imgSrc: PropTypes.string.isRequired,
       day: PropTypes.string,
     })
