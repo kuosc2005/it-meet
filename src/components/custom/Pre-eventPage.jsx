@@ -23,19 +23,19 @@ export default function EventPage({ events }) {
 
     const pre = events.filter((e) => e.category === 'pre_event')
     const main = events.filter((e) => e.category === 'main_event')
-    const late = events.filter((e) => e.category === 'late_event')
+    const post = events.filter((e) => e.category === 'post_event')
 
     const result = []
 
     if (pre.length > 0) result.push({ title: 'PRE EVENTS', data: sortEvents(pre) })
     if (main.length > 0) result.push({ title: 'MAIN EVENTS', data: sortEvents(main) })
-    if (late.length > 0) result.push({ title: 'LATE EVENTS', data: sortEvents(late) })
+    if (post.length > 0) result.push({ title: 'POST EVENTS', data: sortEvents(post) })
 
     return result
   }, [events])
 
   return (
-    <div className="flex flex-col items-center px-6 md:px-16 pb-12 gap-12 min-h-screen bg-[#171A23]">
+    <div className="flex flex-col items-center px-6 md:px-16 pb-12 gap-12 w-full bg-[#171A23]">
       {sections.map((section) => (
         <div key={section.title} className="w-full flex flex-col items-start">
           <h2 className="text-xl sm:text-xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] uppercase mb-8 text-center">
@@ -50,12 +50,9 @@ export default function EventPage({ events }) {
                   state={{ eventData: event }}
                   className="block group h-full"
                 >
-                  {/* Wrapper */}
                   <div className="bg-gradient-to-l from-[#369FFF] to-[#17C58F] p-0.5 rounded-lg hover:translate-y-[-8px] transition-all duration-500 shadow-lg h-full">
-                    {/* Card*/}
                     <Card className="bg-[#1A1E28] border-none text-white rounded-lg w-full h-full shadow-lg flex flex-col justify-center p-2">
                       <div className="flex items-center w-full">
-                        {/* Image*/}
                         <div
                           className="bg-white rounded-full overflow-hidden flex-shrink-0"
                           style={{ width: '3rem', height: '3rem' }}
@@ -67,7 +64,6 @@ export default function EventPage({ events }) {
                           />
                         </div>
 
-                        {/* Text*/}
                         <h2 className="pl-4 font-semibold tracking-wide bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent truncate flex-grow">
                           {event.title}
                         </h2>
