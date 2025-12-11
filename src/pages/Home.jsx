@@ -4,7 +4,6 @@ import LocationPage from './Location'
 import FAQ from './FAQ-Page'
 import LandingComponent from '@/components/custom/Landing'
 import SponsorPage from './SponsorsPage'
-import Chatbot from '@/components/custom/Chatbot'
 
 const Home = () => {
   return (
@@ -15,8 +14,6 @@ const Home = () => {
       {/* <SponsorPage /> */}
       <FAQ />
       <LocationPage />
-      <Chatbot />
-
     </div>
   )
 }

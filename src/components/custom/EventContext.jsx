@@ -167,7 +167,7 @@ export const EventProvider = ({ children }) => {
         '“EmpowerHer” is an innovative initiative aimed at inspiring and empowering young girls by providing a platform to amplify their voices, engage in meaningful discussions, and connect with like-minded individuals in the tech industry. Featuring insightful talks, interactive workshops, and engaging tech-themed activities, EmpowerHER equips participants with the confidence and skills necessary to excel in the evolving tech landscape. This event is a pioneering effort to create an inclusive and empowering environment for girls in tech, boosting self-expression, learning, and engagement. The inaugural EmpowerHER ‘23 event was a significant success, drawing around 80 participants and highlighted speakers like Guna Kesari Pradhan, Roja Kiran Basukala, and Agma Malakar. The event fostered inspiration and dialogue, with notable moments including the “#iamremarkable” reflection session and discussions on women‘s roles in government technology, marking a significant step towards creating an inclusive and empowering environment for girls in tech.',
     },
     {
-      id: 2,
+      id: 13,
       imgSrc: '/gaming.webp',
       title: 'Gaming Events',
       isApplicationOpen: true,
@@ -178,7 +178,7 @@ export const EventProvider = ({ children }) => {
         'IT Meet 2025 will feature a grand Gaming (Esports) event, showcasing games like Valorant, Clash Royale, PUBG, and FIFA. The event is divided into two parts: the pre-event qualifiers, where players compete fiercely to earn a spot in the main-day competitions, and the semi-finals, which take place on the IT Meet day itself. The event will feature an attractive prize pool, making the competition even more exciting. It’s a chance to compete on a big stage, win great prizes, and become part of the thriving Esports community. Last year, IT Meet 2024 saw impressive participation with, Clash Royale (24 participants), PUBG (16 teams), Valorant (13 teams), and FIFA (22 participants).',
     },
     {
-      id: 3,
+      id: 14,
       imgSrc: '/hackfest.webp',
       title: 'KU HACKFEST',
       isApplicationOpen: true,
@@ -190,7 +190,7 @@ export const EventProvider = ({ children }) => {
     },
 
     {
-      id: 4,
+      id: 15,
       imgSrc: '/mock.webp',
       title: 'Mock Placement',
       isApplicationOpen: true,
@@ -201,7 +201,7 @@ export const EventProvider = ({ children }) => {
         'The “Mock Placement” event mirrors the actual recruitment procedures found in corporate settings, encompassing three pivotal rounds: an aptitude test, group discussion, and personal interview. This comprehensive simulation aims to gauge participants’ foundational skills, their adeptness in communication, and their overall suitability for professional roles. Beyond assessment, successful candidates benefit from invaluable feedback and tailored advice provided by seasoned HR professionals. This holistic approach not only enhances their readiness for real-world job interviews but also cultivates a deeper understanding of the expectations and dynamics within the corporate hiring landscape.',
     },
     {
-      id: 13,
+      id: 16,
       imgSrc: '/AcousticNight.webp',
       title: 'Acoustic Night',
       day: '26',
@@ -214,7 +214,7 @@ export const EventProvider = ({ children }) => {
         'Acoustic Night” is a special celebration of music and serves as the closing event of IT MEET. This event features talented students performing a variety of songs, creating an enchanting evening of melodies. The performances will build connections between students and the guests of IT MEET. Acoustic Night offers a memorable conclusion to the journey, leaving participants with cherished memories. This event not only showcases the musical talents within the community but also marks the successful conclusion of IT Meet.',
     },
     {
-      id: 14,
+      id: 17,
       imgSrc: '/treasurehunt.webp',
       title: 'AR Treasure Hunt',
       day: 'TBD',
