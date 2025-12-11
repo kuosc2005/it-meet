@@ -1,34 +1,79 @@
 // teamMEMBER.js
+
 //---------------Core Committee -----------------//
-import SarojSigdel from '@/assets/team/event/SarojSigdel.svg'
-import BishistPant from '@/assets/team/volunteer/BishistBikramPant.svg'
-import NishantSapkota from '@/assets/team/sponsorship/NishantSapkota.svg'
-import PratikGhimire from '@/assets/team/sponsorship/PratikGhimire.svg'
-import RikeshPanta from '@/assets/team/marketing/RikeshPanta.svg'
-import Priyanka from '@/assets/team/documentation/PriyankaGhimire.svg'
-import BivamshuKhadka from '@/assets/team/design/BivamshuKhadka.svg'
-import SubashSingh from '@/assets/team/logistic/SubashSingh.svg'
+import SarojSigdel from '@/assets/team/event/SarojSigdel.PNG'
+import BishistPant from '@/assets/team/volunteer/BishistBikramPant.png'
+import NishantSapkota from '@/assets/team/sponsorship/NishantSapkota.png'
+import PratikGhimire from '@/assets/team/sponsorship/PratikGhimire.jpg'
+import RikeshPanta from '@/assets/team/marketing/RikeshPanta.png'
+import Priyanka from '@/assets/team/documentation/Priyanka.png'
+import BivamshuKhadka from '@/assets/team/design/BivamshuKhadka.png'
+import SubashSingh from '@/assets/team/logistics/SubashSingh.svg'
 import SauhardaImage from '@/assets/team/technical/sauhardha.webp'
-import AdityaYadav from '@/assets/team/pr/AdityaYadav.svg'
+import AdityaYadav from '@/assets/team/pr/AadityaYadav.png'
 // -----------------------------------//
+
 //---------------Event Leads -----------------//
-import Utkrist from '@/assets/team/event/UtkristNeupane.svg'
+import Utkrist from '@/assets/team/event/UtkristNeupane.png'
 import SohamAryal from '@/assets/team/event/SohamAryal.svg'
 // -----------------------------------//
+
 //---------------Technical Team -----------------//
+import TechnicalSuyagyaPaudel from '@/assets/team/technical/TechnicalSuyagyaPaudel.png'
+import TechnicalAshitomBudhathoki from '@/assets/team/technical/TechnicalAshitomBudhathoki.png'
+import TechnicalSwarnimBajracharya from '@/assets/team/technical/TechnicalSwarnimBajracharya.png'
+import TechnicalAdarshaPant from '@/assets/team/technical/TechnicalAdarshaPant.png'
+import TechnicalSamirPanday from '@/assets/team/technical/TechnicalSamirPanday.png'
+import TechnicalPranayaShrestha from '@/assets/team/technical/TechnicalPranayaShrestha.png'
+import TechnicalArjitChand from '@/assets/team/technical/TechnicalArjitChand.png'
+import TechnicalLawanPoudyal from '@/assets/team/technical/TechnicalLawanPoudyal.png'
+import TechnicalSwastiPradhan from '@/assets/team/technical/TechnicalSwastiPradhan.png'
+
 // -----------------------------------//
+
+//---------------Public Relations Team -----------------//
+import PRMaheshPanta from '@/assets/team/pr/PRMaheshPanta.png'
+import PRShreyashMahato from '@/assets/team/pr/PRShreyashMahato.png'
+import PRPrimulGairapiple from '@/assets/team/pr/PRPrimulGairapiple.png'
+import PRAyushPaudel from '@/assets/team/pr/PRAyushPaudel.png'
+import PRBisistaAdhikari from '@/assets/team/pr/PRBisistaAdhikari.png'
+// -----------------------------------//
+
 //---------------Documentation Team -----------------//
+import DocumentationPrasiddhiDumre from '@/assets/team/documentation/DocumentationPrasiddhiDumre.png'
+import DocumentationSajanaRanjitkar from '@/assets/team/documentation/DocumentationSajanaRanjitkar.png'
+import DocumentationDeekshyaBadal from '@/assets/team/documentation/DocumentationDeekshyaBadal.png'
 // -----------------------------------//
+
 //---------------Design Team -----------------//
+
 // -----------------------------------//
+
 //---------------Marketing Team -----------------//
+import MarketingDivyanshiMainali from '@/assets/team/marketing/MarketingDivyanshiMainali.png'
+import MarketingAbhyudayaPokhrel from '@/assets/team/marketing/MarketingAbhyudayaPokhrel.png'
+import MarketingDaltonKhatri from '@/assets/team/marketing/MarketingDaltonKhatri.png'
+import MarketingSauravShah from '@/assets/team/marketing/MarketingSauravShah.png'
+import MarketingBaldeepKarki from '@/assets/team/marketing/MarketingBaldeepKarki.png'
+import MarketingSahajWagle from '@/assets/team/marketing/MarketingSahajWagle.png'
+import MarketingRubinBhattarai from '@/assets/team/marketing/MarketingRubinBhattarai.png'
+import MarketingSilviyaThapa from '@/assets/team/marketing/MarketingSilviyaThapa.png'
+import MarketingRituKoju from '@/assets/team/marketing/MarketingRituKoju.png'
 // -----------------------------------//
-//---------------Logistic Team -----------------//
+
+//---------------logistics Team -----------------//
+import logisticsKapilAdhikari from '@/assets/team/logistics/logisticsKapilAdhikari.png'
+import logisticsNirajKumarRam from '@/assets/team/logistics/logisticsNirajKumarRam.png'
+import logisticsMohanKrishnaShrestha from '@/assets/team/logistics/logisticsMohanKrishnaShrestha.png'
 // -----------------------------------//
+
 //---------------Finance and Legalities Team -----------------//
 // -----------------------------------//
+
 //---------------Sponsorship Team -----------------//
+import SponsorshipKiranDahal from '@/assets/team/sponsorship/SponsorshipKiranDahal.png'
 // -----------------------------------//
+
 const team = [
   {
     title: 'Core Committee',
@@ -92,7 +137,7 @@ const team = [
 
       {
         name: 'Subash Singh',
-        department: 'LOGISTIC LEAD',
+        department: 'LOGISTICS LEAD',
         image: SubashSingh,
         linkedIn: '',
         insta: '',
@@ -144,10 +189,19 @@ const team = [
         insta: '',
         github: '',
       },
+      { name: 'Suyagya Paudel', department: 'Member', image: TechnicalSuyagyaPaudel },
+      { name: 'Ashitom Budhathoki', department: 'Member', image: TechnicalAshitomBudhathoki },
+      { name: 'Swarnim Bajracharya', department: 'Member', image: TechnicalSwarnimBajracharya },
+      { name: 'Adarsha Pant', department: 'Member', image: TechnicalAdarshaPant },
+      { name: 'Samir Panday', department: 'Member', image: TechnicalSamirPanday },
+      { name: 'Pranaya Shrestha', department: 'Member', image: TechnicalPranayaShrestha },
+      { name: 'Arjit Chand', department: 'Member', image: TechnicalArjitChand },
+      { name: 'Lawan Poudyal', department: 'Member', image: TechnicalLawanPoudyal },
+      { name: 'Swasti Pradhan', department: 'Member', image: TechnicalSwastiPradhan },
     ],
   },
   {
-    title: 'Public Relation Team',
+    title: 'Public Relations Team',
     members: [
       {
         name: 'Aditya Yadav',
@@ -157,6 +211,11 @@ const team = [
         insta: '',
         github: '',
       },
+      { name: 'Mahesh Panta', department: 'Member', image: PRMaheshPanta },
+      { name: 'Shreyash Mahato', department: 'Member', image: PRShreyashMahato },
+      { name: 'Primul Gairapiple', department: 'Member', image: PRPrimulGairapiple },
+      { name: 'Ayush Paudel', department: 'Member', image: PRAyushPaudel },
+      { name: 'Bisista Adhikari', department: 'Member', image: PRBisistaAdhikari },
     ],
   },
 
@@ -184,6 +243,10 @@ const team = [
         insta: '',
         github: '',
       },
+      { name: 'Prasiddhi Dumre', department: 'Member', image: DocumentationPrasiddhiDumre },
+      { name: 'Sajana Ranjitkar', department: 'Member', image: DocumentationSajanaRanjitkar },
+      { name: 'Deekshya Badal', department: 'Member', image: DocumentationDeekshyaBadal },
+      { name: 'Swasti Pradhan', department: 'Member', image: TechnicalSwastiPradhan },
     ],
   },
   {
@@ -197,6 +260,15 @@ const team = [
         insta: '',
         github: '',
       },
+      { name: 'Divyanshi Mainali', department: 'Member', image: MarketingDivyanshiMainali },
+      { name: 'Abhyudaya Pokhrel', department: 'Member', image: MarketingAbhyudayaPokhrel },
+      { name: 'Dalton Khatri', department: 'Member', image: MarketingDaltonKhatri },
+      { name: 'Saurav Shah', department: 'Member', image: MarketingSauravShah },
+      { name: 'Baldeep Karki', department: 'Member', image: MarketingBaldeepKarki },
+      { name: 'Sahaj Wagle', department: 'Member', image: MarketingSahajWagle },
+      { name: 'Rubin Bhattarai', department: 'Member', image: MarketingRubinBhattarai },
+      { name: 'Silviya Thapa', department: 'Member', image: MarketingSilviyaThapa },
+      { name: 'Ritu Koju', department: 'Member', image: MarketingRituKoju },
     ],
   },
   {
@@ -218,10 +290,11 @@ const team = [
         insta: '',
         github: '',
       },
+      { name: 'Kiran Dahal', department: 'Member', image: SponsorshipKiranDahal },
     ],
   },
   {
-    title: 'Logistic Team',
+    title: 'Logistics Team',
     members: [
       {
         name: 'Subash Singh',
@@ -230,7 +303,11 @@ const team = [
         linkedIn: '',
         insta: '',
         github: '',
+
       },
+      { name: 'Kapil Adhikari', department: 'Member', image: logisticsKapilAdhikari },
+      { name: 'Niraj Kumar Ram', department: 'Member', image: logisticsNirajKumarRam },
+      { name: 'Mohan Krishna Shrestha', department: 'Member', image: logisticsMohanKrishnaShrestha },
     ],
   },
   {
