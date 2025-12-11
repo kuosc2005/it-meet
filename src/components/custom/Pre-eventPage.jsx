@@ -1,57 +1,112 @@
+import React, { useMemo } from 'react'
 import { Card } from '@/components/ui/card'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-export default function PreEventPage({ events }) {
-  PreEventPage.propTypes = {
-    events: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        // Add other properties of preEvent if needed
-      })
-    ).isRequired,
+export default function EventPage({ events }) {
+  const sortEvents = (eventList) => {
+    return [...eventList].sort((a, b) => {
+      const dayA = a.day
+      const dayB = b.day
+      const isNumA = !isNaN(parseFloat(dayA)) && isFinite(dayA)
+      const isNumB = !isNaN(parseFloat(dayB)) && isFinite(dayB)
+
+      if (isNumA && isNumB) return parseFloat(dayA) - parseFloat(dayB)
+      if (isNumA && !isNumB) return -1
+      if (!isNumA && isNumB) return 1
+      return 0
+    })
   }
+
+  const sections = useMemo(() => {
+    if (!events) return []
+
+    const pre = events.filter((e) => e.category === 'pre_event')
+    const main = events.filter((e) => e.category === 'main_event')
+    const post = events.filter((e) => e.category === 'post_event')
+
+    const result = []
+
+    if (pre.length > 0) result.push({ title: 'PRE EVENTS', data: sortEvents(pre) })
+    if (main.length > 0) result.push({ title: 'MAIN EVENTS', data: sortEvents(main) })
+    if (post.length > 0) result.push({ title: 'POST EVENTS', data: sortEvents(post) })
+
+    return result
+  }, [events])
+
   return (
-    <div
-      // id="pre-events"
-      className="flex flex-col items-center px-16 gap-2 md:gap-4"
-    >
-      <h1 className="text-xl sm:text-2xl md:text-3xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
-        PRE-EVENTS
-      </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 xl:gap-12 w-full mt-5 md:mt-8">
-        {events.map((preEvent) => (
-          <div key={preEvent.id}>
-            <Link
-              key={preEvent.id}
-              to={`/events/${preEvent.title.toLowerCase().replace(/ /g, '-')}`}
-              state={{ eventData: preEvent }}
-              className="block "
-            >
-              <div className="bg-gradient-to-l from-[#369FFF] to-[#17C58F] p-0.5 rounded-lg hover:translate-y-[-8px] transition-all duration-500 shadow-lg w-full sm:min-w-[16rem] md:min-w-[18rem] lg:min-w-[1rem] xl:min-w-[18rem] mx-auto">
-                <Card className="bg-[#1A1E28] text-white rounded-lg w-full h-full max-h-[12rem] lg:max-h-[14rem] shadow-lg flex flex-col items-center p-4">
-                  <div className="flex items-center justify-center w-full">
-                    <div
-                      className="bg-white rounded-full overflow-hidden flex-shrink-0"
-                      style={{ width: '3rem', height: '3rem' }}
-                    >
-                      <img
-                        src={preEvent.imgSrc}
-                        alt={preEvent.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <h2 className="ml-4 text-sm sm:text-base md:text-lg lg:text-base xl:text-lg font-bold tracking-wide bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent truncate">
-                      {preEvent.title}
-                    </h2>
+    <div className="flex flex-col items-center px-6 md:px-16 pb-12 gap-12 w-full bg-[#171A23]">
+      {sections.map((section) => (
+        <div key={section.title} className="w-full flex flex-col items-start">
+          <h2 className="text-xl sm:text-xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] uppercase mb-8 text-center">
+            {section.title}
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4 xl:gap-12 w-full">
+            {section.data.map((event) => (
+              <div key={event.id}>
+                <Link
+                  to={`/events/${event.title.toLowerCase().replace(/ /g, '-')}`}
+                  state={{ eventData: event }}
+                  className="block group h-full"
+                >
+                  <div className="bg-gradient-to-l from-[#369FFF] to-[#17C58F] p-0.5 rounded-lg hover:translate-y-[-8px] transition-all duration-500 shadow-lg h-full">
+                    <Card className="bg-[#1A1E28] border-none text-white rounded-lg w-full h-full shadow-lg flex flex-col justify-center p-2">
+                      <div className="flex items-center w-full">
+                        <div
+                          className="bg-white rounded-full overflow-hidden flex-shrink-0"
+                          style={{ width: '3rem', height: '3rem' }}
+                        >
+                          <img
+                            src={event.imgSrc}
+                            alt={event.title}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+
+                        <h2 className="pl-4 font-semibold tracking-wide bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent truncate flex-grow">
+                          {event.title}
+                        </h2>
+
+                        {/* Arrow*/}
+                        <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 group-hover:translate-x-0">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="19"
+                            height="19"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#12dc9f"
+                            strokeWidth="3.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="m9 18 6-6-6-6" />
+                          </svg>
+                        </div>
+                      </div>
+                    </Card>
                   </div>
-                </Card>
+                </Link>
               </div>
-            </Link>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
+
+      {sections.length === 0 && <div className="text-gray-400 mt-20">No events found.</div>}
     </div>
   )
+}
+
+EventPage.propTypes = {
+  events: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+      title: PropTypes.string.isRequired,
+      imgSrc: PropTypes.string,
+      day: PropTypes.string,
+      category: PropTypes.string,
+    }),
+  ).isRequired,
 }
