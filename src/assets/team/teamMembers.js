@@ -1,48 +1,48 @@
 // teamMEMBER.js
 
 //---------------Core Committee -----------------//
-import SarojSigdel from '@/assets/team/event/SarojSigdel.PNG'
+import SarojSigdel from '@/assets/team/event/SarojSigdel.webp'
 import BishistPant from '@/assets/team/volunteer/BishistBikramPant.png'
-import NishantSapkota from '@/assets/team/sponsorship/NishantSapkota.png'
-import PratikGhimire from '@/assets/team/sponsorship/PratikGhimire.jpg'
-import RikeshPanta from '@/assets/team/marketing/RikeshPanta.png'
-import Priyanka from '@/assets/team/documentation/Priyanka.png'
+import NishantSapkota from '@/assets/team/sponsorship/NishantSapkota.webp'
+import PratikGhimire from '@/assets/team/sponsorship/PratikGhimire.webp'
+import RikeshPanta from '@/assets/team/marketing/RikeshPanta.webp'
+import Priyanka from '@/assets/team/documentation/Priyanka.webp'
 import BivamshuKhadka from '@/assets/team/design/BivamshuKhadka.png'
 import SubashSingh from '@/assets/team/logistics/SubashSingh.svg'
 import SauhardaImage from '@/assets/team/technical/sauhardha.webp'
-import AdityaYadav from '@/assets/team/pr/AadityaYadav.png'
+import AdityaYadav from '@/assets/team/pr/AadityaYadav.webp'
 // -----------------------------------//
 
 //---------------Event Leads -----------------//
-import Utkrist from '@/assets/team/event/UtkristNeupane.png'
+import Utkrist from '@/assets/team/event/UtkristNeupane.webp'
 import SohamAryal from '@/assets/team/event/SohamAryal.svg'
 // -----------------------------------//
 
 //---------------Technical Team -----------------//
-import TechnicalSuyagyaPaudel from '@/assets/team/technical/TechnicalSuyagyaPaudel.png'
-import TechnicalAshitomBudhathoki from '@/assets/team/technical/TechnicalAshitomBudhathoki.png'
-import TechnicalSwarnimBajracharya from '@/assets/team/technical/TechnicalSwarnimBajracharya.png'
-import TechnicalAdarshaPant from '@/assets/team/technical/TechnicalAdarshaPant.png'
-import TechnicalSamirPanday from '@/assets/team/technical/TechnicalSamirPanday.png'
-import TechnicalPranayaShrestha from '@/assets/team/technical/TechnicalPranayaShrestha.png'
-import TechnicalArjitChand from '@/assets/team/technical/TechnicalArjitChand.png'
-import TechnicalLawanPoudyal from '@/assets/team/technical/TechnicalLawanPoudyal.png'
-import TechnicalSwastiPradhan from '@/assets/team/technical/TechnicalSwastiPradhan.png'
+import TechnicalSuyagyaPaudel from '@/assets/team/technical/TechnicalSuyagyaPaudel.webp'
+import TechnicalAshitomBudhathoki from '@/assets/team/technical/TechnicalAshitomBudhathoki.webp'
+import TechnicalSwarnimBajracharya from '@/assets/team/technical/TechnicalSwarnimBajracharya.webp'
+import TechnicalAdarshaPant from '@/assets/team/technical/TechnicalAdarshaPant.webp'
+import TechnicalSamirPanday from '@/assets/team/technical/TechnicalSamirPanday.webp'
+import TechnicalPranayaShrestha from '@/assets/team/technical/TechnicalPranayaShrestha.webp'
+import TechnicalArjitChand from '@/assets/team/technical/TechnicalArjitChand.webp'
+import TechnicalLawanPoudyal from '@/assets/team/technical/TechnicalLawanPoudyal.webp'
+import TechnicalSwastiPradhan from '@/assets/team/technical/TechnicalSwastiPradhan.webp'
 
 // -----------------------------------//
 
 //---------------Public Relations Team -----------------//
-import PRMaheshPanta from '@/assets/team/pr/PRMaheshPanta.png'
-import PRShreyashMahato from '@/assets/team/pr/PRShreyashMahato.png'
-import PRPrimulGairapiple from '@/assets/team/pr/PRPrimulGairapiple.png'
-import PRAyushPaudel from '@/assets/team/pr/PRAyushPaudel.png'
-import PRBisistaAdhikari from '@/assets/team/pr/PRBisistaAdhikari.png'
+import PRMaheshPanta from '@/assets/team/pr/PRMaheshPanta.webp'
+import PRShreyashMahato from '@/assets/team/pr/PRShreyashMahato.webp'
+import PRPrimulGairapiple from '@/assets/team/pr/PRPrimulGairapiple.webp'
+import PRAyushPaudel from '@/assets/team/pr/PRAyushPaudel.webp'
+import PRBisistaAdhikari from '@/assets/team/pr/PRBisistaAdhikari.webp'
 // -----------------------------------//
 
 //---------------Documentation Team -----------------//
-import DocumentationPrasiddhiDumre from '@/assets/team/documentation/DocumentationPrasiddhiDumre.png'
-import DocumentationSajanaRanjitkar from '@/assets/team/documentation/DocumentationSajanaRanjitkar.png'
-import DocumentationDeekshyaBadal from '@/assets/team/documentation/DocumentationDeekshyaBadal.png'
+import DocumentationPrasiddhiDumre from '@/assets/team/documentation/DocumentationPrasiddhiDumre.webp'
+import DocumentationSajanaRanjitkar from '@/assets/team/documentation/DocumentationSajanaRanjitkar.webp'
+import DocumentationDeekshyaBadal from '@/assets/team/documentation/DocumentationDeekshyaBadal.webp'
 // -----------------------------------//
 
 //---------------Design Team -----------------//
@@ -50,28 +50,28 @@ import DocumentationDeekshyaBadal from '@/assets/team/documentation/Documentatio
 // -----------------------------------//
 
 //---------------Marketing Team -----------------//
-import MarketingDivyanshiMainali from '@/assets/team/marketing/MarketingDivyanshiMainali.png'
-import MarketingAbhyudayaPokhrel from '@/assets/team/marketing/MarketingAbhyudayaPokhrel.png'
-import MarketingDaltonKhatri from '@/assets/team/marketing/MarketingDaltonKhatri.png'
-import MarketingSauravShah from '@/assets/team/marketing/MarketingSauravShah.png'
-import MarketingBaldeepKarki from '@/assets/team/marketing/MarketingBaldeepKarki.png'
-import MarketingSahajWagle from '@/assets/team/marketing/MarketingSahajWagle.png'
-import MarketingRubinBhattarai from '@/assets/team/marketing/MarketingRubinBhattarai.png'
-import MarketingSilviyaThapa from '@/assets/team/marketing/MarketingSilviyaThapa.png'
-import MarketingRituKoju from '@/assets/team/marketing/MarketingRituKoju.png'
+import MarketingDivyanshiMainali from '@/assets/team/marketing/MarketingDivyanshiMainali.webp'
+import MarketingAbhyudayaPokhrel from '@/assets/team/marketing/MarketingAbhyudayaPokhrel.webp'
+import MarketingDaltonKhatri from '@/assets/team/marketing/MarketingDaltonKhatri.webp'
+import MarketingSauravShah from '@/assets/team/marketing/MarketingSauravShah.webp'
+import MarketingBaldeepKarki from '@/assets/team/marketing/MarketingBaldeepKarki.webp'
+import MarketingSahajWagle from '@/assets/team/marketing/MarketingSahajWagle.webp'
+import MarketingRubinBhattarai from '@/assets/team/marketing/MarketingRubinBhattarai.webp'
+import MarketingSilviyaThapa from '@/assets/team/marketing/MarketingSilviyaThapa.webp'
+import MarketingRituKoju from '@/assets/team/marketing/MarketingRituKoju.webp'
 // -----------------------------------//
 
 //---------------logistics Team -----------------//
-import logisticsKapilAdhikari from '@/assets/team/logistics/logisticsKapilAdhikari.png'
-import logisticsNirajKumarRam from '@/assets/team/logistics/logisticsNirajKumarRam.png'
-import logisticsMohanKrishnaShrestha from '@/assets/team/logistics/logisticsMohanKrishnaShrestha.png'
+import logisticsKapilAdhikari from '@/assets/team/logistics/logisticsKapilAdhikari.webp'
+import logisticsNirajKumarRam from '@/assets/team/logistics/logisticsNirajKumarRam.webp'
+import logisticsMohanKrishnaShrestha from '@/assets/team/logistics/logisticsMohanKrishnaShrestha.webp'
 // -----------------------------------//
 
 //---------------Finance and Legalities Team -----------------//
 // -----------------------------------//
 
 //---------------Sponsorship Team -----------------//
-import SponsorshipKiranDahal from '@/assets/team/sponsorship/SponsorshipKiranDahal.png'
+import SponsorshipKiranDahal from '@/assets/team/sponsorship/SponsorshipKiranDahal.webp'
 // -----------------------------------//
 
 const team = [
