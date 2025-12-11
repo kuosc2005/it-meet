@@ -115,7 +115,7 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/gaming.webp',
       title: 'Gaming Events',
       isApplicationOpen: true,
-      formLink: 'https://forms.gle/RESZHtfayFLjWfNs5',
+      formLink: 'https://linktr.ee/Itmeetgaming2025',
       day: '22',
       category: 'pre_event',
       description:
