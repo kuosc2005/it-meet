@@ -62,9 +62,9 @@ import MarketingRituKoju from '@/assets/team/marketing/MarketingRituKoju.webp'
 // -----------------------------------//
 
 //---------------logistics Team -----------------//
-import logisticsKapilAdhikari from '@/assets/team/logistics/logisticsKapilAdhikari.webp'
-import logisticsNirajKumarRam from '@/assets/team/logistics/logisticsNirajKumarRam.webp'
-import logisticsMohanKrishnaShrestha from '@/assets/team/logistics/logisticsMohanKrishnaShrestha.webp'
+import LogisticsKapilAdhikari from '@/assets/team/logistics/LogisticsKapilAdhikari.webp'
+import LogisticsNirajKumarRam from '@/assets/team/logistics/LogisticsNirajKumarRam.webp'
+import LogisticsMohanKrishnaShrestha from '@/assets/team/logistics/LogisticsMohanKrishnaShrestha.webp'
 // -----------------------------------//
 
 //---------------Finance and Legalities Team -----------------//
@@ -303,11 +303,14 @@ const team = [
         linkedIn: '',
         insta: '',
         github: '',
-
       },
-      { name: 'Kapil Adhikari', department: 'Member', image: logisticsKapilAdhikari },
-      { name: 'Niraj Kumar Ram', department: 'Member', image: logisticsNirajKumarRam },
-      { name: 'Mohan Krishna Shrestha', department: 'Member', image: logisticsMohanKrishnaShrestha },
+      { name: 'Kapil Adhikari', department: 'Member', image: LogisticsKapilAdhikari },
+      { name: 'Niraj Kumar Ram', department: 'Member', image: LogisticsNirajKumarRam },
+      {
+        name: 'Mohan Krishna Shrestha',
+        department: 'Member',
+        image: LogisticsMohanKrishnaShrestha,
+      },
     ],
   },
   {
