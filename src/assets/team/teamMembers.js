@@ -2,12 +2,12 @@
 
 //---------------Core Committee -----------------//
 import SarojSigdel from '@/assets/team/event/SarojSigdel.webp'
-import BishistPant from '@/assets/team/volunteer/BishistBikramPant.svg'
+import BishistPant from '@/assets/team/volunteer/BishistBikramPant.png'
 import NishantSapkota from '@/assets/team/sponsorship/NishantSapkota.webp'
 import PratikGhimire from '@/assets/team/sponsorship/PratikGhimire.webp'
 import RikeshPanta from '@/assets/team/marketing/RikeshPanta.webp'
 import Priyanka from '@/assets/team/documentation/Priyanka.webp'
-import BivamshuKhadka from '@/assets/team/design/BivamshuKhadka.svg'
+import BivamshuKhadka from '@/assets/team/design/BivamshuKhadka.png'
 import SubashSingh from '@/assets/team/logistics/SubashSingh.svg'
 import SauhardaImage from '@/assets/team/technical/sauhardha.webp'
 import AdityaYadav from '@/assets/team/pr/AadityaYadav.webp'
