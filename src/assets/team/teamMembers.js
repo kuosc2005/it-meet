@@ -2,20 +2,20 @@
 
 //---------------Core Committee -----------------//
 import SarojSigdel from '@/assets/team/event/SarojSigdel.webp'
-import BishistPant from '@/assets/team/volunteer/BishistBikramPant.png'
+import BishistPant from '@/assets/team/volunteer/BishistBikramPant.webp'
 import NishantSapkota from '@/assets/team/sponsorship/NishantSapkota.webp'
 import PratikGhimire from '@/assets/team/sponsorship/PratikGhimire.webp'
 import RikeshPanta from '@/assets/team/marketing/RikeshPanta.webp'
 import Priyanka from '@/assets/team/documentation/Priyanka.webp'
-import BivamshuKhadka from '@/assets/team/design/BivamshuKhadka.png'
-import SubashSingh from '@/assets/team/logistics/SubashSingh.svg'
+import BivamshuKhadka from '@/assets/team/design/BivamshuKhadka.webp'
+import SubashSingh from '@/assets/team/logistics/SubashSingh.webp'
 import SauhardaImage from '@/assets/team/technical/sauhardha.webp'
 import AdityaYadav from '@/assets/team/pr/AadityaYadav.webp'
 // -----------------------------------//
 
 //---------------Event Leads -----------------//
 import Utkrist from '@/assets/team/event/UtkristNeupane.webp'
-import SohamAryal from '@/assets/team/event/SohamAryal.svg'
+import SohamAryal from '@/assets/team/event/SohamAryal.webp'
 // -----------------------------------//
 
 //---------------Technical Team -----------------//
