@@ -9,6 +9,7 @@ import EventDetails from './pages/EventDetails'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import ARView from './pages/ARView'
+import ARNavigation from './pages/ARNavigation'
 import { useLocation } from 'react-router-dom'
 
 function App() {
@@ -32,6 +33,11 @@ function App() {
                 errorElement={<NotFoundPage />}
               />
               <Route path="/teams" element={<Team />} errorElement={<NotFoundPage />} />
+              <Route
+                path="/ar-navigation"
+                element={<ARNavigation />}
+                errorElement={<NotFoundPage />}
+              />
               {/* <Route path="/prospectus" element={<Prospectus />} errorElement={<NotFoundPage />} /> */}
             </Routes>
           </EventProvider>
