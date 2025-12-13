@@ -16,6 +16,7 @@ import AdityaYadav from '@/assets/team/pr/AadityaYadav.webp'
 //---------------Event Leads -----------------//
 import Utkrist from '@/assets/team/event/UtkristNeupane.webp'
 import SohamAryal from '@/assets/team/event/SohamAryal.webp'
+import AbhinabBasnet from '@/assets/team/event/AbhinabBasnet.webp'
 // -----------------------------------//
 
 //---------------Technical Team -----------------//
@@ -28,6 +29,7 @@ import TechnicalPranayaShrestha from '@/assets/team/technical/TechnicalPranayaSh
 import TechnicalArjitChand from '@/assets/team/technical/TechnicalArjitChand.webp'
 import TechnicalLawanPoudyal from '@/assets/team/technical/TechnicalLawanPoudyal.webp'
 import TechnicalSwastiPradhan from '@/assets/team/technical/TechnicalSwastiPradhan.webp'
+import TechnicalSurajThapa from '@/assets/team/technical/TechnicalSurajThapa.webp'
 
 // -----------------------------------//
 
@@ -46,6 +48,12 @@ import DocumentationDeekshyaBadal from '@/assets/team/documentation/Documentatio
 // -----------------------------------//
 
 //---------------Design Team -----------------//
+import DesignAnubhavBasnet from '@/assets/team/design/DesignAnubhavBasnet.webp';
+import DesignAshutoshChaudhary from '@/assets/team/design/DesignAshutoshChaudhary.webp';
+import DesignBishwasAdhikari from '@/assets/team/design/DesignBishwasAdhikari.webp';
+import DesignDinishaUprety from '@/assets/team/design/DesignDinishaUprety.webp';
+import DesignKritamKhatiwada from '@/assets/team/design/DesignKritamKhatiwada.webp';
+import DesignSubhechhaKarki from '@/assets/team/design/DesignSubhechhaKarki.webp';
 
 // -----------------------------------//
 
@@ -71,7 +79,10 @@ import LogisticsMohanKrishnaShrestha from '@/assets/team/logistics/LogisticsMoha
 // -----------------------------------//
 
 //---------------Sponsorship Team -----------------//
-import SponsorshipKiranDahal from '@/assets/team/sponsorship/SponsorshipKiranDahal.webp'
+import SponsorshipAjurshaDahal from '@/assets/team/sponsorship/SponsorshipAjurshaDahal.webp';
+import SponsorshipKiranDahal from '@/assets/team/sponsorship/SponsorshipKiranDahal.webp';
+import SponsorshipPratisthitKhaniya from '@/assets/team/sponsorship/SponsorshipPratisthitKhaniya.webp';
+import SponsorshipSunitiShrestha from '@/assets/team/sponsorship/SponsorshipSunitiShrestha.webp';
 // -----------------------------------//
 
 const team = [
@@ -176,6 +187,14 @@ const team = [
         insta: '',
         github: '',
       },
+      {
+        name: 'Abhinab Basnet',
+        department: 'Idea Pitching Lead',
+        image: AbhinabBasnet,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
     ],
   },
   {
@@ -189,15 +208,16 @@ const team = [
         insta: '',
         github: '',
       },
-      { name: 'Suyagya Paudel', department: 'Member', image: TechnicalSuyagyaPaudel },
-      { name: 'Ashitom Budhathoki', department: 'Member', image: TechnicalAshitomBudhathoki },
-      { name: 'Swarnim Bajracharya', department: 'Member', image: TechnicalSwarnimBajracharya },
       { name: 'Adarsha Pant', department: 'Member', image: TechnicalAdarshaPant },
-      { name: 'Samir Panday', department: 'Member', image: TechnicalSamirPanday },
-      { name: 'Pranaya Shrestha', department: 'Member', image: TechnicalPranayaShrestha },
       { name: 'Arjit Chand', department: 'Member', image: TechnicalArjitChand },
+      { name: 'Ashitom Budhathoki', department: 'Member', image: TechnicalAshitomBudhathoki },
       { name: 'Lawan Poudyal', department: 'Member', image: TechnicalLawanPoudyal },
+      { name: 'Pranaya Shrestha', department: 'Member', image: TechnicalPranayaShrestha },
+      { name: 'Samir Panday', department: 'Member', image: TechnicalSamirPanday },
+      { name: 'Suyagya Paudel', department: 'Member', image: TechnicalSuyagyaPaudel },
+      { name: 'Swarnim Bajracharya', department: 'Member', image: TechnicalSwarnimBajracharya },
       { name: 'Swasti Pradhan', department: 'Member', image: TechnicalSwastiPradhan },
+      { name: 'Suraj Thapa', department: 'Member', image: TechnicalSurajThapa },
     ],
   },
   {
@@ -211,11 +231,11 @@ const team = [
         insta: '',
         github: '',
       },
-      { name: 'Mahesh Panta', department: 'Member', image: PRMaheshPanta },
-      { name: 'Shreyash Mahato', department: 'Member', image: PRShreyashMahato },
-      { name: 'Primul Gairapiple', department: 'Member', image: PRPrimulGairapiple },
       { name: 'Ayush Paudel', department: 'Member', image: PRAyushPaudel },
       { name: 'Bisista Adhikari', department: 'Member', image: PRBisistaAdhikari },
+      { name: 'Mahesh Panta', department: 'Member', image: PRMaheshPanta },
+      { name: 'Primul Gairapiple', department: 'Member', image: PRPrimulGairapiple },
+      { name: 'Shreyash Mahato', department: 'Member', image: PRShreyashMahato },
     ],
   },
 
@@ -230,6 +250,12 @@ const team = [
         insta: '',
         github: '',
       },
+      { name: 'Anubhav Basnet', department: 'Design', image: DesignAnubhavBasnet },
+      { name: 'Ashutosh Chaudhary', department: 'Design', image: DesignAshutoshChaudhary },
+      { name: 'Bishwas Adhikari', department: 'Design', image: DesignBishwasAdhikari },
+      { name: 'Dinisha Uprety', department: 'Design', image: DesignDinishaUprety },
+      { name: 'Kritam Khatiwada', department: 'Design', image: DesignKritamKhatiwada },
+      { name: 'Subhechha Karki', department: 'Design', image: DesignSubhechhaKarki }
     ],
   },
   {
@@ -243,9 +269,9 @@ const team = [
         insta: '',
         github: '',
       },
+      { name: 'Deekshya Badal', department: 'Member', image: DocumentationDeekshyaBadal },
       { name: 'Prasiddhi Dumre', department: 'Member', image: DocumentationPrasiddhiDumre },
       { name: 'Sajana Ranjitkar', department: 'Member', image: DocumentationSajanaRanjitkar },
-      { name: 'Deekshya Badal', department: 'Member', image: DocumentationDeekshyaBadal },
       { name: 'Swasti Pradhan', department: 'Member', image: TechnicalSwastiPradhan },
     ],
   },
@@ -260,15 +286,15 @@ const team = [
         insta: '',
         github: '',
       },
-      { name: 'Divyanshi Mainali', department: 'Member', image: MarketingDivyanshiMainali },
       { name: 'Abhyudaya Pokhrel', department: 'Member', image: MarketingAbhyudayaPokhrel },
-      { name: 'Dalton Khatri', department: 'Member', image: MarketingDaltonKhatri },
-      { name: 'Saurav Shah', department: 'Member', image: MarketingSauravShah },
       { name: 'Baldeep Karki', department: 'Member', image: MarketingBaldeepKarki },
-      { name: 'Sahaj Wagle', department: 'Member', image: MarketingSahajWagle },
-      { name: 'Rubin Bhattarai', department: 'Member', image: MarketingRubinBhattarai },
-      { name: 'Silviya Thapa', department: 'Member', image: MarketingSilviyaThapa },
+      { name: 'Dalton Khatri', department: 'Member', image: MarketingDaltonKhatri },
+      { name: 'Divyanshi Mainali', department: 'Member', image: MarketingDivyanshiMainali },
       { name: 'Ritu Koju', department: 'Member', image: MarketingRituKoju },
+      { name: 'Rubin Bhattarai', department: 'Member', image: MarketingRubinBhattarai },
+      { name: 'Saurav Shah', department: 'Member', image: MarketingSauravShah },
+      { name: 'Sahaj Wagle', department: 'Member', image: MarketingSahajWagle },
+      { name: 'Silviya Thapa', department: 'Member', image: MarketingSilviyaThapa },
     ],
   },
   {
@@ -290,7 +316,11 @@ const team = [
         insta: '',
         github: '',
       },
-      { name: 'Kiran Dahal', department: 'Member', image: SponsorshipKiranDahal },
+      { name: 'Ajursha Dahal', department: 'Sponsorship', image: SponsorshipAjurshaDahal },
+      { name: 'Kiran Dahal', department: 'Sponsorship', image: SponsorshipKiranDahal },
+      { name: 'Pratisthit Khaniya', department: 'Sponsorship', image: SponsorshipPratisthitKhaniya },
+      { name: 'Suniti Shrestha', department: 'Sponsorship', image: SponsorshipSunitiShrestha },
+
     ],
   },
   {
@@ -305,12 +335,12 @@ const team = [
         github: '',
       },
       { name: 'Kapil Adhikari', department: 'Member', image: LogisticsKapilAdhikari },
-      { name: 'Niraj Kumar Ram', department: 'Member', image: LogisticsNirajKumarRam },
       {
         name: 'Mohan Krishna Shrestha',
         department: 'Member',
         image: LogisticsMohanKrishnaShrestha,
       },
+      { name: 'Niraj Kumar Ram', department: 'Member', image: LogisticsNirajKumarRam },
     ],
   },
   {
@@ -328,6 +358,14 @@ const team = [
         name: 'Utkrist Mani Neupane',
         department: 'Hackfest Lead',
         image: Utkrist,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Abhinab Basnet',
+        department: 'Idea Pitching Lead',
+        image: AbhinabBasnet,
         linkedIn: '',
         insta: '',
         github: '',
