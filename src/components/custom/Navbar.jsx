@@ -38,6 +38,8 @@ const Navbar = () => {
       //   {id:3, title:'Main Events', url:'main'},
       // ]
     },
+
+    { id: 5, title: 'AR-PATH', url: '/ar-navigation' },
   ]
 
   const location = useLocation()
