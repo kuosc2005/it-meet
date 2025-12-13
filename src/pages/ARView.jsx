@@ -126,7 +126,7 @@ export default function ARView() {
           onClick={() => {
             window.location.href = '/'
           }}
-          className="absolute group bottom-4 left-1/2 -translate-x-1/2  px-8 py-4 font-semibold text-white bg-gradient-to-r from-[#369fff] to-[#12dc9f] rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[#12dc9f]/50 flex items-center gap-3 z-10"
+          className="absolute group bottom-16 sm:bottom-8 left-1/2 -translate-x-1/2 px-4 py-2 sm:px-8 sm:py-4 font-semibold text-white bg-gradient-to-r from-[#369fff] to-[#12dc9f] rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[#12dc9f]/50 flex items-center gap-2 sm:gap-3 z-10"
         >
           Navigate to Home
           <ExternalLink className="w-5 h-5" />
