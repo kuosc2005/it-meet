@@ -77,34 +77,14 @@ export default function ARNavigation() {
         </p>
       </div>
 
-      <div className="w-full max-w-6xl mt-8 md:mt-12">
-        <div className="flex flex-col items-center gap-3 mb-8 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
-            How It Works
-          </h2>
-          <div className="w-24 sm:w-32 rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2"></div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-gradient-to-br from-[#369fff]/5 to-[#12dc9f]/5 border border-[#369fff]/20 rounded-xl p-6 hover:border-[#12dc9f]/40 transition-all duration-300 "
-            >
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-gradient-to-br from-[#369fff]/20 to-[#12dc9f]/20 rounded-lg">
-                  {feature.icon}
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">{feature.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="w-full max-w-3xl mt-12 md:mt-16 flex flex-col items-center gap-6">
+        <button
+          onClick={handleLaunchAR}
+          className="group relative px-8 py-4 text-base sm:text-lg font-semibold text-white bg-gradient-to-r from-[#369fff] to-[#12dc9f] rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[#12dc9f]/50 flex items-center gap-3"
+        >
+          Launch AR Navigation
+          <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+        </button>
       </div>
 
       <div className="w-full max-w-5xl mt-8 md:mt-12">
@@ -172,14 +152,34 @@ export default function ARNavigation() {
         </div>
       </div>
 
-      <div className="w-full max-w-3xl mt-12 md:mt-16 flex flex-col items-center gap-6">
-        <button
-          onClick={handleLaunchAR}
-          className="group relative px-8 py-4 text-base sm:text-lg font-semibold text-white bg-gradient-to-r from-[#369fff] to-[#12dc9f] rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[#12dc9f]/50 flex items-center gap-3"
-        >
-          Launch AR Navigation
-          <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-        </button>
+      <div className="w-full max-w-6xl mt-8 md:mt-12">
+        <div className="flex flex-col items-center gap-3 mb-8 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
+            How It Works
+          </h2>
+          <div className="w-24 sm:w-32 rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2"></div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-gradient-to-br from-[#369fff]/5 to-[#12dc9f]/5 border border-[#369fff]/20 rounded-xl p-6 hover:border-[#12dc9f]/40 transition-all duration-300 "
+            >
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-gradient-to-br from-[#369fff]/20 to-[#12dc9f]/20 rounded-lg">
+                  {feature.icon}
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">{feature.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
