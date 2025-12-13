@@ -109,7 +109,12 @@ export default function ARView() {
     >
       {showMessage && (
         <div className="absolute top-6 left-1/2 -translate-x-1/2 z-10">
-          <div className="px-6 py-4 rounded-2xl bg-black/50 backdrop-blur-lg text-white shadow-2xl border border-white/10">
+          <div
+            style={{
+              backgroundColor: 'rgba(0, 0, 0, 0.50)',
+            }}
+            className="px-6 py-4 rounded-2xl text-white shadow-2xl border border-white/10"
+          >
             <p className="text-xs uppercase tracking-widest text-white/70">AR Ready</p>
             <p className="text-sm font-semibold mt-1">Point your camera at the target image</p>
           </div>
