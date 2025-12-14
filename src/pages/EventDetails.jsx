@@ -10,7 +10,6 @@ import {
   CardContent,
 } from '@/components/ui/card'
 
-import ITMeetLogo from '@/assets/images/itmeetlogo.svg'
 
 const EventDetails = () => {
   const { eventTitle } = useParams()
@@ -56,10 +55,10 @@ const EventDetails = () => {
         </CardContent>
 
         <CardFooter className="flex flex-col items-center w-full space-y-4 mt-8">
-          <div className="flex w-full justify-center space-x-4">
+          <div className="flex w-full justify-center space-x-6">
             <Link
               to="/events"
-              className="w-full max-w-[10rem] bg-[#1e2433] border-2 border-[#369FFF] text-[#369FFF] font-bold py-2 px-4 rounded hover:shadow-lg transition duration-200 text-center"
+              className="w-full max-w-[12rem] bg-[#1e2433] border-2 border-[#369FFF] text-[#369FFF] font-bold py-2 px-4 rounded hover:shadow-lg transition duration-200 text-center"
             >
               Back to Events
             </Link>
@@ -78,7 +77,7 @@ const EventDetails = () => {
                 disabled
                 className="w-full max-w-[10rem] bg-gray-700 text-gray-400 font-bold py-2 px-4 rounded cursor-not-allowed"
               >
-                Closed
+                Opening soon!!
               </button>
             )}
           </div>

@@ -74,6 +74,17 @@ export default function EventList({ events }) {
                 <div className="w-full lg:w-3/5 flex flex-col justify-start pt-1">
                   <Card className="bg-transparent border-none shadow-none p-0">
                     <CardHeader className="p-0 pb-3">
+                      {event.isApplicationOpen && (
+                        <div className="mb-2 flex justify-start">
+                          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#12dc9f] bg-[#12dc9f]/10 border border-[#12dc9f]/30 shadow-[0_0_10px_rgba(18,220,159,0.15)]">
+                            <span className="relative flex h-2 w-2">
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#12dc9f] opacity-75"></span>
+                              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#12dc9f]"></span>
+                            </span>
+                            Registration Open
+                          </span>
+                        </div>
+                      )}
                       <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight tracking-wide bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent group-hover:translate-x-2 transition-transform duration-300">
                         {event.title}
                       </CardTitle>
