@@ -4,6 +4,7 @@ import 'leaflet/dist/leaflet.css'
 import { Icon } from 'leaflet'
 import { GraduationCap } from 'lucide-react'
 import LogoMap from '@/assets/images/logoMap.webp'
+import { ExternalLink } from 'lucide-react'
 
 export default function LocationPage() {
   const position = [27.617225501485724, 85.53628499165596]
@@ -24,6 +25,7 @@ export default function LocationPage() {
         </h1>
         <div className="w-full rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2 lg:h-2.5"></div>
       </div>
+
       <div className="w-full">
         <MapContainer
           center={[27.617225501485724, 85.53628499165596]}
@@ -45,6 +47,16 @@ export default function LocationPage() {
           </Marker>
           <CircleMarker center={position} pathOptions={fillBlueOptions} radius={40} />
         </MapContainer>
+      </div>
+
+      <div className="w-full max-w-3xl py-5 pb-9 flex flex-col items-center gap-6">
+        <button
+          onClick={() => window.open('/ar-navigation/index.html', '_blank')}
+          className="group relative px-8 py-4 text-base sm:text-lg font-semibold text-white bg-gradient-to-r from-[#369fff] to-[#12dc9f] rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[#12dc9f]/50 flex items-center gap-3"
+        >
+          Launch AR Navigation
+          <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+        </button>
       </div>
     </div>
   )

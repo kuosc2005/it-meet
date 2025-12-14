@@ -2,14 +2,15 @@
  * This module uses MindARThree for playing a video on particular image (Image Tracking).
  */
 
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { MindARThree } from 'mind-ar/dist/mindar-image-three.prod.js'
 import * as THREE from 'three'
-import { useState } from 'react'
+import { ExternalLink } from 'lucide-react'
 
 export default function ARView() {
   const containerRef = useRef(null)
   const [showMessage, setShowMessage] = useState(true)
+  const [showHomeButton, setShowHomeButton] = useState(false)
 
   useEffect(() => {
     let mindarThree
@@ -19,7 +20,7 @@ export default function ARView() {
       try {
         mindarThree = new MindARThree({
           container: containerRef.current,
-          imageTargetSrc: '', // path to the .mind file
+          imageTargetSrc: '/targets.mind', // path to the .mind file
         })
 
         const { renderer, scene, camera } = mindarThree
@@ -29,18 +30,26 @@ export default function ARView() {
         const video = document.createElement('video')
         video.src = 'https://sauhardh.github.io/ar-assets/ad.mp4' // video is hosted on this link
         video.crossOrigin = 'anonymous'
-        video.loop = true
+        video.loop = false
         video.muted = true
         video.playsInline = true
 
         const texture = new THREE.VideoTexture(video)
-        // Video is expected of 9:16(width, height) aspect ratio.
+        // Video is expected of 9:16 (width, height) aspect ratio.
         const geometry = new THREE.PlaneGeometry(1, 16 / 9)
         const material = new THREE.MeshBasicMaterial({ map: texture })
         const plane = new THREE.Mesh(geometry, material)
         anchor.group.add(plane)
 
         await mindarThree.start()
+
+        video.addEventListener('ended', () => {
+          // Since, home button is only shown after a video ended for the first time.
+          // and video has to be looped again.
+          setShowHomeButton(true)
+          video.loop = true
+          video.play()
+        })
 
         const playVideo = () => {
           video
@@ -99,9 +108,29 @@ export default function ARView() {
       }}
     >
       {showMessage && (
-        <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-lg z-10">
-          Point camera at the target image
+        <div className="absolute top-6 left-1/2 -translate-x-1/2 z-10">
+          <div
+            style={{
+              backgroundColor: 'rgba(0, 0, 0, 0.50)',
+            }}
+            className="px-6 py-4 rounded-2xl text-white shadow-2xl border border-white/10"
+          >
+            <p className="text-xs uppercase tracking-widest text-white/70">AR Ready</p>
+            <p className="text-sm font-semibold mt-1">Point your camera at the target image</p>
+          </div>
         </div>
+      )}
+
+      {showHomeButton && (
+        <button
+          onClick={() => {
+            window.location.href = '/'
+          }}
+          className="absolute group bottom-16 sm:bottom-8 left-1/2 -translate-x-1/2 px-4 py-2 sm:px-8 sm:py-4 font-semibold text-white bg-gradient-to-r from-[#369fff] to-[#12dc9f] rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[#12dc9f]/50 flex items-center gap-2 sm:gap-3 z-10"
+        >
+          Navigate to Home
+          <ExternalLink className="w-5 h-5" />
+        </button>
       )}
     </div>
   )

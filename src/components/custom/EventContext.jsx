@@ -142,7 +142,7 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/idea_pitching.webp',
       title: 'Idea Pitching',
       isApplicationOpen: true,
-      formLink: 'https://forms.gle/DRYsCcT1ExHf25BS7',
+      formLink: 'https://qrfy.io/b5Kwu_BrLg',
       day: '22',
       category: 'pre_event',
       details:
