@@ -4,7 +4,7 @@ import LocationPage from './Location'
 import FAQ from './FAQ-Page'
 import LandingComponent from '@/components/custom/Landing'
 import SponsorPage from './SponsorsPage'
-
+import ARpreviewCard from '@/components/custom/ARpreviewCard'
 const Home = () => {
   return (
     <div>
@@ -13,6 +13,8 @@ const Home = () => {
       <AboutPage />
       {/* <SponsorPage /> */}
       <FAQ />
+      <ARpreviewCard />
+
       <LocationPage />
     </div>
   )
