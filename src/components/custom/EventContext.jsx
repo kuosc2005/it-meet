@@ -7,7 +7,7 @@ function createEvent(event) {
   const now = new Date()
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
 
-  //const today = new Date(2025, 11, 26)
+  //const today = new Date(2021, 10, 26)
 
   const hasFormLink = Boolean(event.formLink && event.formLink.trim() !== '')
 
