@@ -235,4 +235,3 @@ EventProvider.propTypes = {
 }
 
 export const useEvents = () => useContext(EventContext)
-

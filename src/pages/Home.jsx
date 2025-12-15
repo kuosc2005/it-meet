@@ -4,7 +4,6 @@ import LocationPage from './Location'
 import FAQ from './FAQ-Page'
 import LandingComponent from '@/components/custom/Landing'
 import SponsorPage from './SponsorsPage'
-
 const Home = () => {
   return (
     <div>
@@ -13,6 +12,7 @@ const Home = () => {
       <AboutPage />
       <SponsorPage />
       <FAQ />
+
       <LocationPage />
     </div>
   )
