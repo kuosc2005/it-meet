@@ -43,7 +43,7 @@ const rawEvents = [
     id: 1,
     imgSrc: '/project.webp',
     title: 'Project Exhibition',
-    formLink: 'ldjfa',
+    formLink: '',
     day: '26',
     fullDate: '2025-12-26',
     category: 'main_event',
