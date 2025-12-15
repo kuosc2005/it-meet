@@ -22,9 +22,9 @@ export const images = [
   { id: 3, img: ev_3, direction: 'left' },
   { id: 4, img: ev_4, direction: 'left' },
   { id: 5, img: ev_5, direction: 'left' },
-  { id: 6, img: ev_6, direction: 'left' },
-  { id: 7, img: ev_7, direction: 'left' },
-  { id: 8, img: ev_8, direction: 'left' },
+  // { id: 6, img: ev_6, direction: 'left' },
+  // { id: 7, img: ev_7, direction: 'left' },
+  // { id: 8, img: ev_8, direction: 'left' },
 ]
 
 export const images1 = [
@@ -33,7 +33,7 @@ export const images1 = [
   { id: 3, img: eve_3, direction: 'right' },
   { id: 4, img: eve_4, direction: 'right' },
   { id: 5, img: eve_5, direction: 'right' },
-  { id: 6, img: eve_6, direction: 'right' },
-  { id: 7, img: eve_7, direction: 'right' },
-  { id: 8, img: eve_8, direction: 'right' },
+  // { id: 6, img: eve_6, direction: 'right' },
+  // { id: 7, img: eve_7, direction: 'right' },
+  // { id: 8, img: eve_8, direction: 'right' },
 ]
