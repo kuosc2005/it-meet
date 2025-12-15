@@ -125,7 +125,6 @@ export default function SponsorPage() {
         }
       })
       setSponsors(updatedSponsors)
-      console.log(updatedSponsors)
     }
     fetchImage()
   }, [])
