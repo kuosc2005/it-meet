@@ -4,7 +4,7 @@
 import SarojSigdel from '@/assets/team/event/SarojSigdel.webp'
 import BishistPant from '@/assets/team/volunteer/BishistBikramPant.webp'
 import NishantSapkota from '@/assets/team/sponsorship/NishantSapkota.webp'
-import PratikGhimire from '@/assets/team/sponsorship/PratikGhimire.webp'
+// import PratikGhimire from '@/assets/team/sponsorship/PratikGhimire.webp'
 import RikeshPanta from '@/assets/team/marketing/RikeshPanta.webp'
 import Priyanka from '@/assets/team/documentation/Priyanka.webp'
 import BivamshuKhadka from '@/assets/team/design/BivamshuKhadka.webp'
@@ -17,6 +17,12 @@ import AdityaYadav from '@/assets/team/pr/AadityaYadav.webp'
 import Utkrist from '@/assets/team/event/UtkristNeupane.webp'
 import SohamAryal from '@/assets/team/event/SohamAryal.webp'
 import AbhinabBasnet from '@/assets/team/event/AbhinabBasnet.webp'
+import GamingLeadPrabalLamichhane from '@/assets/team/event/GamingLeadPrabalLamichhane.webp'
+import FIFALeadNeoShakya from '@/assets/team/event/FIFALeadNeoShakya.webp'
+import EFootballLeadAbhinavLamsal from '@/assets/team/event/EFootballLeadAbhinavLamsal.webp'
+import ClashRoyaleLeadAkarshanShrestha from '@/assets/team/event/ClashRoyaleLeadAkarshanShrestha.webp'
+import MobileLegendsLeadPratisthaThapa from '@/assets/team/event/MobileLegendsLeadPratisthaThapa.webp'
+import EmpowerHerLeadNirjaraThapa from '@/assets/team/event/EmpowerHerLeadNirjaraThapa.webp'
 // -----------------------------------//
 
 //---------------Technical Team -----------------//
@@ -30,7 +36,6 @@ import TechnicalArjitChand from '@/assets/team/technical/TechnicalArjitChand.web
 import TechnicalLawanPoudyal from '@/assets/team/technical/TechnicalLawanPoudyal.webp'
 import TechnicalSwastiPradhan from '@/assets/team/technical/TechnicalSwastiPradhan.webp'
 import TechnicalSurajThapa from '@/assets/team/technical/TechnicalSurajThapa.webp'
-
 // -----------------------------------//
 
 //---------------Public Relations Team -----------------//
@@ -73,6 +78,10 @@ import MarketingRituKoju from '@/assets/team/marketing/MarketingRituKoju.webp'
 import LogisticsKapilAdhikari from '@/assets/team/logistics/LogisticsKapilAdhikari.webp'
 import LogisticsNirajKumarRam from '@/assets/team/logistics/LogisticsNirajKumarRam.webp'
 import LogisticsMohanKrishnaShrestha from '@/assets/team/logistics/LogisticsMohanKrishnaShrestha.webp'
+import LogisticsLujawDhunju from '@/assets/team/logistics/LogisticsLujawDhunju.webp'
+import LogisticsAyurvaPradhananga from '@/assets/team/logistics/LogisticsAyurvaPradhananga.webp'
+import LogisticsMahammadFarmanMansoor from '@/assets/team/logistics/LogisticsMahammadFarmanMansoor.webp'
+import LogisticsShubhamYadav from '@/assets/team/logistics/LogisticsShubhamYadav.webp'
 // -----------------------------------//
 
 //---------------Finance and Legalities Team -----------------//
@@ -83,6 +92,8 @@ import SponsorshipAjurshaDahal from '@/assets/team/sponsorship/SponsorshipAjursh
 import SponsorshipKiranDahal from '@/assets/team/sponsorship/SponsorshipKiranDahal.webp';
 import SponsorshipPratisthitKhaniya from '@/assets/team/sponsorship/SponsorshipPratisthitKhaniya.webp';
 import SponsorshipSunitiShrestha from '@/assets/team/sponsorship/SponsorshipSunitiShrestha.webp';
+import SponsorshipPrabeshPoudel from '@/assets/team/sponsorship/SponsorshipPrabeshPoudel.webp'
+
 // -----------------------------------//
 
 const team = [
@@ -129,14 +140,14 @@ const team = [
         insta: '',
         github: '',
       },
-      {
-        name: 'Pratik Ghimire',
-        department: 'SPONSORSHIP & PARTNERSHIP LEAD',
-        image: PratikGhimire,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
+      // {
+      //   name: 'Pratik Ghimire',
+      //   department: 'SPONSORSHIP & PARTNERSHIP LEAD',
+      //   image: PratikGhimire,
+      //   linkedIn: '',
+      //   insta: '',
+      //   github: '',
+      // },
       {
         name: 'Nishant Sapkota',
         department: 'SPONSORSHIP & PARTNERSHIP LEAD',
@@ -183,14 +194,6 @@ const team = [
         name: 'Aditya Yadav',
         department: 'PUBLIC RELATION LEAD',
         image: AdityaYadav,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
-      {
-        name: 'Abhinab Basnet',
-        department: 'Idea Pitching Lead',
-        image: AbhinabBasnet,
         linkedIn: '',
         insta: '',
         github: '',
@@ -300,14 +303,14 @@ const team = [
   {
     title: 'Sponsorship & Partnership Team',
     members: [
-      {
-        name: 'Pratik Ghimire',
-        department: 'LEAD',
-        image: PratikGhimire,
-        linkedIn: '',
-        insta: '',
-        github: '',
-      },
+      // {
+      //   name: 'Pratik Ghimire',
+      //   department: 'LEAD',
+      //   image: PratikGhimire,
+      //   linkedIn: '',
+      //   insta: '',
+      //   github: '',
+      // },
       {
         name: 'Nishant Sapkota',
         department: 'LEAD',
@@ -318,6 +321,7 @@ const team = [
       },
       { name: 'Ajursha Dahal', department: 'Sponsorship', image: SponsorshipAjurshaDahal },
       { name: 'Kiran Dahal', department: 'Sponsorship', image: SponsorshipKiranDahal },
+      { name: 'Prabesh Poudel', department: 'Sponsorships', image: SponsorshipPrabeshPoudel },
       { name: 'Pratisthit Khaniya', department: 'Sponsorship', image: SponsorshipPratisthitKhaniya },
       { name: 'Suniti Shrestha', department: 'Sponsorship', image: SponsorshipSunitiShrestha },
 
@@ -334,13 +338,13 @@ const team = [
         insta: '',
         github: '',
       },
+      { name: 'Ayurva Pradhananga', department: 'Logistics', image: LogisticsAyurvaPradhananga },
       { name: 'Kapil Adhikari', department: 'Member', image: LogisticsKapilAdhikari },
-      {
-        name: 'Mohan Krishna Shrestha',
-        department: 'Member',
-        image: LogisticsMohanKrishnaShrestha,
-      },
+      { name: 'Lujaw Dhunju', department: 'Logistics', image: LogisticsLujawDhunju },
+      { name: 'Mahammad Farman Mansoor', department: 'Logistics', image: LogisticsMahammadFarmanMansoor },
+      { name: 'Mohan Krishna Shrestha', department: 'Member', image: LogisticsMohanKrishnaShrestha },
       { name: 'Niraj Kumar Ram', department: 'Member', image: LogisticsNirajKumarRam },
+      { name: 'Shubham Yadav', department: 'Member', image: LogisticsShubhamYadav },
     ],
   },
   {
@@ -363,6 +367,22 @@ const team = [
         github: '',
       },
       {
+        name: 'Nirjara Thapa',
+        department: 'EmpowerHer Lead',
+        image: EmpowerHerLeadNirjaraThapa,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
+        name: 'Nabin Kafle',
+        department: 'We Shield Cyber Lead',
+        image: Utkrist,
+        linkedIn: '',
+        insta: '',
+        github: '',
+      },
+      {
         name: 'Abhinab Basnet',
         department: 'Idea Pitching Lead',
         image: AbhinabBasnet,
@@ -370,7 +390,11 @@ const team = [
         insta: '',
         github: '',
       },
-      ,
+      { name: 'Prabal Lamichhane', department: 'Gaming Lead', image: GamingLeadPrabalLamichhane },
+      { name: 'Abhinav Lamsal', department: 'eFootball Lead', image: EFootballLeadAbhinavLamsal },
+      { name: 'Akarshan Shrestha', department: 'Clash Royale Lead', image: ClashRoyaleLeadAkarshanShrestha },
+      { name: 'Neo Shakya', department: 'FC26 Lead', image: FIFALeadNeoShakya },
+      { name: 'Pratistha Thapa', department: 'Mobile Legends Lead', image: MobileLegendsLeadPratisthaThapa },
     ],
   },
 ]
