@@ -67,7 +67,7 @@ export default function ARNavigation() {
   return (
     <div className="flex flex-col overflow-hidden p-6 sm:p-8 md:p-10 py-20 lg:px-20 gap-8 items-center justify-center min-h-screen bg-[#171A23]">
       <div className="flex flex-col items-center gap-4 md:gap-6 text-center max-w-4xl">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f] pb-1">
           Navigate with AR
         </h1>
         <div className="w-32 sm:w-40 md:w-48 rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2"></div>
