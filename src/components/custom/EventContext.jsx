@@ -187,7 +187,7 @@ const rawEvents = [
     id: 12,
     imgSrc: '/weshieldlogo.webp',
     title: 'We Shield Cyber',
-    formLink: '',
+    formLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeaGrO-9dKXz8HhbnXJg6-WGsnQq1fPT7kuu3YFW-sRMcyXYQ/viewform',
     day: '21',
     fullDate: '2025-12-21',
     category: 'pre_event',
