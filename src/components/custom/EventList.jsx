@@ -10,7 +10,6 @@ import {
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-// --- Sub-components ---
 
 const ImagePlaceholder = ({ imgSrc, alt }) => {
   return (
@@ -52,6 +51,18 @@ ChevronIcon.propTypes = {
   isOpen: PropTypes.bool,
 }
 
+const getMonthName = (dateStr) => {
+  if (!dateStr || dateStr === 'TBD') return ''
+  try {
+    const parts = dateStr.split('-')
+    if (parts.length < 2) return ''
+    const monthIndex = parseInt(parts[1], 10) - 1
+    const date = new Date(2025, monthIndex, 1)
+    return date.toLocaleString('default', { month: 'short' }).toUpperCase()
+  } catch (e) {
+    return ''
+  }
+}
 
 const EventRow = ({ event }) => {
   const [isExpanded, setIsExpanded] = useState(!event.isCompleted)
@@ -72,7 +83,7 @@ const EventRow = ({ event }) => {
       }
     }
 
-    //Event Running (Green, Pulsing)
+    // Event Running (Green, Pulsing)
     if (event.isRunning) {
       return {
         showBadge: true,
@@ -82,7 +93,8 @@ const EventRow = ({ event }) => {
         text: 'text-[#12dc9f]',
         label: 'Event Running',
         pulse: true,
-        gradientTitle: 'bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent',
+        gradientTitle:
+          'bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent',
         borderColor: '#12dc9f',
       }
     }
@@ -97,7 +109,8 @@ const EventRow = ({ event }) => {
         text: 'text-amber-500',
         label: 'Closing Soon',
         pulse: true,
-        gradientTitle: 'bg-gradient-to-r from-[#f59e0b] to-[#fbbf24] bg-clip-text text-transparent',
+        gradientTitle:
+          'bg-gradient-to-r from-[#f59e0b] to-[#fbbf24] bg-clip-text text-transparent',
         borderColor: '#f59e0b',
       }
     }
@@ -112,7 +125,8 @@ const EventRow = ({ event }) => {
         text: 'text-[#12dc9f]',
         label: 'Registration Open',
         pulse: true,
-        gradientTitle: 'bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent',
+        gradientTitle:
+          'bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent',
         borderColor: '#12dc9f',
       }
     }
@@ -124,12 +138,14 @@ const EventRow = ({ event }) => {
       color: '#369FFF',
       label: '',
       pulse: false,
-      gradientTitle: 'bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent',
+      gradientTitle:
+        'bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent',
       borderColor: '#369FFF',
     }
   }
 
   const config = getStatusConfig()
+  const monthName = getMonthName(event.fullDate)
 
   const toggleExpand = () => {
     if (event.isCompleted) {
@@ -159,12 +175,23 @@ const EventRow = ({ event }) => {
             className={`absolute inset-0 rounded-full border-[3px] ${event.isCompleted ? 'border-slate-700' : 'border-[#369FFF]'} opacity-100 group-hover:opacity-0 transition-opacity duration-300`}
           ></div>
 
-          <span
-            className={`font-bold text-lg md:text-xl leading-none transition-colors duration-300 z-10 ${event.isCompleted ? 'text-slate-500' : 'text-white'
-              }`}
-          >
-            {event.day || '00'}
-          </span>
+          {/* Date Content: Month (Top) + Day (Bottom) */}
+          <div className="z-10 flex flex-col items-center justify-center leading-none">
+            {monthName && (
+              <span
+                className={`text-[9px] md:text-[10px] font-bold uppercase tracking-wider mb-[1px] ${event.isCompleted ? 'text-slate-500' : 'text-gray-300'
+                  }`}
+              >
+                {monthName}
+              </span>
+            )}
+            <span
+              className={`font-bold text-lg md:text-xl transition-colors duration-300 ${event.isCompleted ? 'text-slate-500' : 'text-white'
+                }`}
+            >
+              {event.day || '00'}
+            </span>
+          </div>
         </div>
       </div>
 
@@ -307,6 +334,7 @@ EventRow.propTypes = {
     description: PropTypes.string,
     imgSrc: PropTypes.string.isRequired,
     day: PropTypes.string,
+    fullDate: PropTypes.string,
     isApplicationOpen: PropTypes.bool,
     isClosingSoon: PropTypes.bool,
     isCompleted: PropTypes.bool,
@@ -321,6 +349,10 @@ export default function EventList({ events }) {
 
   const sortedEvents = useMemo(() => {
     return [...events].sort((a, b) => {
+      if (a.fullDate && b.fullDate && a.fullDate !== 'TBD' && b.fullDate !== 'TBD') {
+        return new Date(a.fullDate) - new Date(b.fullDate);
+      }
+
       const dayA = parseInt(a.day, 10)
       const dayB = parseInt(b.day, 10)
       const isANumber = !isNaN(dayA)

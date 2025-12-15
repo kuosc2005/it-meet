@@ -4,13 +4,15 @@ import PropTypes from 'prop-types'
 const EventContext = createContext()
 
 function createEvent(event) {
-  const today = new Date().getDate()
+  const now = new Date()
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
 
-  const eventDay = Number(event.day)
+  //const today = new Date(2025, 11, 26)
 
   const hasFormLink = Boolean(event.formLink && event.formLink.trim() !== '')
 
-  if (isNaN(eventDay)) {
+  // Handle TBD or missing dates
+  if (!event.fullDate || event.fullDate === 'TBD') {
     return {
       ...event,
       isApplicationOpen: false,
@@ -20,26 +22,35 @@ function createEvent(event) {
     }
   }
 
+
+  const [year, month, day] = event.fullDate.split('-').map(Number)
+  const eventDate = new Date(year, month - 1, day)
+
+  const timeDiff = eventDate.getTime() - today.getTime()
+  const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24))
+
   return {
     ...event,
-    isApplicationOpen: today < eventDay && hasFormLink,
-    isClosingSoon: today >= eventDay - 2 && today < eventDay && hasFormLink,
-    isRunning: today === eventDay,
-    isCompleted: today > eventDay,
+    isApplicationOpen: today < eventDate && hasFormLink,
+    isClosingSoon: daysDiff <= 2 && daysDiff > 0 && hasFormLink,
+    isRunning: today.getTime() === eventDate.getTime(),
+    isCompleted: today > eventDate,
   }
 }
+
 const rawEvents = [
   {
     id: 1,
     imgSrc: '/project.webp',
     title: 'Project Exhibition',
-    formLink: '',
+    formLink: 'ldjfa',
     day: '26',
+    fullDate: '2025-12-26',
     category: 'main_event',
     description:
       'An opportunity for creators to display their completed projects, highlight technical achievements, and interact with viewers through hands-on demonstrations and detailed explanations.',
     details:
-      'IT Meet “Project Exhibition” stands as a testament to the extraordinary technical prowess and innovative spirit of our participants. Here, they will have the opportunity to unveil and demonstrate their software and hardware projects before a panel of esteemed judges. Each project not only showcases their depth of knowledge and technical skill but also highlights their creativity and unwavering dedication to pushing the boundaries of technology.',
+      'IT Meet “Project Exhibition” stands as a testament to the extraordinary technical prowess and innovative spirit of our participants. Here, they will have the opportunity to unveil and demonstrate their software and hardware projects before a panel of esteemed judges.',
   },
   {
     id: 2,
@@ -47,11 +58,12 @@ const rawEvents = [
     title: 'Panel Discussion',
     formLink: '',
     day: '26',
+    fullDate: '2025-12-26',
     category: 'main_event',
     description:
       "The event features experts discussing key tech topics, with the 2024 focus on artificial intelligence and its implications for Nepal's industries.",
     details:
-      "A “Panel Discussion” at IT Meet serves as a vital pre-event platform where distinguished experts from Nepal's top IT institutions and the tech industry gather to discuss pivotal topics in the IT sector. This structured forum promotes engaging conversations and debates on emerging technologies, industry trends, and relevant challenges.",
+      "A “Panel Discussion” at IT Meet serves as a vital pre-event platform where distinguished experts from Nepal's top IT institutions and the tech industry gather to discuss pivotal topics in the IT sector.",
   },
   {
     id: 3,
@@ -59,11 +71,12 @@ const rawEvents = [
     title: 'KU Hackfest',
     formLink: 'https://hackfest.kucc.ku.edu.np/',
     day: '24',
+    fullDate: '2025-12-24',
     category: 'main_event',
     description:
       '“KU Hackfest”, one of the biggest events within IT Meet, is an international-level, 48-hour hackathon, scheduled for 24-26 December 2025.',
     details:
-      ' “KU Hackfest”, one of the biggest events within IT Meet, is an international-level, 48-hour hackathon, scheduled for 24-26 December 2025. This event aims to cultivate creativity, drive innovation, and empower talented individuals to solve real-world problems.',
+      ' “KU Hackfest”, one of the biggest events within IT Meet, is an international-level, 48-hour hackathon, scheduled for 24-26 December 2025. This event aims to cultivate creativity, drive innovation, and empower talented individuals.',
   },
   {
     id: 4,
@@ -71,6 +84,7 @@ const rawEvents = [
     title: 'Alumni Meet',
     formLink: '',
     day: '25',
+    fullDate: '2025-12-25',
     category: 'pre_event',
     description:
       'An alumni meet is a special gathering where our alumni of KU come together to reconnect, celebrate, and strengthen their bond with their alma mater.',
@@ -83,9 +97,10 @@ const rawEvents = [
     title: 'Mock Placement',
     formLink: '',
     day: '26',
+    fullDate: '2025-12-26',
     category: 'main_event',
     description:
-      'The event simulates corporate recruitment processes, including tests and interviews, offering participants valuable feedback from HR professionals to improve their job readiness.',
+      'The event simulates corporate recruitment processes, including tests and interviews, offering participants valuable feedback from HR professionals.',
     details:
       'The “Mock Placement” event mirrors the actual recruitment procedures found in corporate settings, encompassing three pivotal rounds: an aptitude test, group discussion, and personal interview.',
   },
@@ -95,11 +110,12 @@ const rawEvents = [
     title: 'Career Fair',
     formLink: '',
     day: '26',
+    fullDate: '2025-12-26',
     category: 'main_event',
     description:
-      'The event connects students with potential employers through initial interviews and mock placement activities, facilitating valuable exchanges and insights into employment criteria.',
+      'The event connects students with potential employers through initial interviews and mock placement activities, facilitating valuable exchanges.',
     details:
-      'The “Career Fair” serves as a bustling hub of interaction, bridging the gap between potential employers and prospective employees. An essential component of IT Meet, this event offers students a valuable opportunity to meet employers and engage in initial interviews.',
+      'The “Career Fair” serves as a bustling hub of interaction, bridging the gap between potential employers and prospective employees. An essential component of IT Meet.',
   },
   {
     id: 7,
@@ -107,6 +123,7 @@ const rawEvents = [
     title: 'Blood Donation',
     formLink: '',
     day: '26',
+    fullDate: '2025-12-26',
     category: 'main_event',
     description:
       'The KU Youth Red Cross and IT Meet organizing committee collaborate on blood donation drives, encouraging attendees to contribute to saving lives.',
@@ -117,12 +134,12 @@ const rawEvents = [
     id: 8,
     imgSrc: '/quiz.webp',
     title: 'IT Quiz',
-    formLink:
-      '',
+    formLink: '',
     day: '26',
+    fullDate: '2025-12-26',
     category: 'main_event',
     description:
-      'The event is an inter-school event that challenges teams of four with various IT-related questions across seven rounds, inspiring young minds while awarding prizes.',
+      'The event is an inter-school event that challenges teams of four with various IT-related questions across seven rounds, inspiring young minds.',
     details:
       'The “IT Quiz Competition” is an inter-school event that tests participants’ knowledge of information technology. Teams of four engage in a series of thought-provoking questions.',
   },
@@ -132,11 +149,12 @@ const rawEvents = [
     title: 'Gaming Events',
     formLink: 'https://linktr.ee/Itmeetgaming2025',
     day: '22',
+    fullDate: '2025-12-22',
     category: 'pre_event',
     description:
       'IT Meet 2025 will host a grand Gaming (Esports) event featuring popular games and a competitive prize pool, following a successful 2024.',
     details:
-      'IT Meet 2025 will feature a grand Gaming (Esports) event, showcasing games like Valorant, Clash Royale, PUBG, and FIFA. The event is divided into two parts: the pre-event qualifiers and the semi-finals.',
+      'IT Meet 2025 will feature a grand Gaming (Esports) event, showcasing games like Valorant, Clash Royale, PUBG, and FIFA. The event is divided into two parts.',
   },
   {
     id: 10,
@@ -145,9 +163,10 @@ const rawEvents = [
     formLink:
       'https://docs.google.com/forms/d/1Yi7CQKg-wuNAwRUYCRqgIgXo2CsQT_CHUOKmUm4K3_w/viewform?edit_requested=true&brid=aRSE_vjT8Xy1tlD7gF4SFg',
     day: '20',
+    fullDate: '2025-12-20',
     category: 'pre_event',
     description:
-      '"EmpowerHer" is an initiative designed to inspire young girls in tech by providing a platform for discussion, skill-building workshops, and networking. ',
+      '"EmpowerHer" is an initiative designed to inspire young girls in tech by providing a platform for discussion, skill-building workshops, and networking.',
     details:
       'EmpowerHer is a dedicated initiative to encourage women in technology and academia by building confidence, enhancing technical skills, and fostering leadership.',
   },
@@ -157,11 +176,12 @@ const rawEvents = [
     title: 'Idea Pitching',
     formLink: 'https://qrfy.io/b5Kwu_BrLg',
     day: '22',
+    fullDate: '2025-12-22',
     category: 'pre_event',
     description:
-      'A platform where participants showcase innovative concepts, present problem-solving approaches, and demonstrate creativity through concise and impactful pitches.',
+      'A platform where participants showcase innovative concepts, present problem-solving approaches, and demonstrate creativity through concise pitches.',
     details:
-      'The “Idea Pitching” competition at IT Meet emphasizes the convergence of creativity, innovation, and strategic foresight. It provides participants with a unique opportunity to showcase their ability to articulate compelling ideas.',
+      'The “Idea Pitching” competition at IT Meet emphasizes the convergence of creativity, innovation, and strategic foresight. It provides participants with a unique opportunity to showcase their ability.',
   },
   {
     id: 12,
@@ -169,33 +189,36 @@ const rawEvents = [
     title: 'We Shield Cyber',
     formLink: '',
     day: '21',
+    fullDate: '2025-12-21',
     category: 'pre_event',
     description:
-      'A cybersecurity-focused event that encourages participants to explore digital defense, analyze vulnerabilities, and build awareness on safeguarding systems.',
+      'A cybersecurity-focused event that encourages participants to explore digital defense, analyze vulnerabilities, and build awareness.',
     details:
-      '"We Shield Cyber" is a premier cybersecurity conference at IT Meet 2025, organized by the Kathmandu University Networking and Cybersecurity Community in collaboration with Women in Cybersecurity Nepal.',
+      '"We Shield Cyber" is a premier cybersecurity conference at IT Meet 2025, organized by the Kathmandu University Networking and Cybersecurity Community.',
   },
   {
     id: 13,
     imgSrc: '/AcousticNight.webp',
     title: 'Acoustic Night',
     day: '26',
+    fullDate: '2025-12-26',
     formLink: '',
     category: 'post_event',
     description:
       '"Acoustic Night," the closing event of IT Meet, features talented student performances that create an enchanting evening filled with diverse melodies.',
     details:
-      'Acoustic Night” is a special celebration of music and serves as the closing event of IT MEET. This event features talented students performing a variety of songs, creating an enchanting evening of melodies.',
+      'Acoustic Night” is a special celebration of music and serves as the closing event of IT MEET. This event features talented students performing a variety of songs.',
   },
   {
     id: 14,
     imgSrc: '/treasurehunt.webp',
     title: 'AR Treasure Hunt',
     day: 'TBD',
+    fullDate: 'TBD',
     formLink: '',
     category: 'post_event',
     description:
-      'The "AR Treasure Hunt" is an exciting event that immerses participants in Augmented Reality, similar to Pokémon Go, as they follow clues to find hidden treasures.',
+      'The "AR Treasure Hunt" is an exciting event that immerses participants in Augmented Reality, similar to Pokémon Go, as they follow clues.',
     details:
       'The "AR Treasure Hunt" is an exciting event that immerses participants in Augmented Reality, similar to Pokémon Go, as they follow clues to find hidden treasures.',
   },
