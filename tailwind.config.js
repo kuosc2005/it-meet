@@ -9,6 +9,22 @@ module.exports = {
   ],
   prefix: '',
   theme: {
+    extend: {
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' }, // Assuming double list
+        },
+        'marquee-reverse': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
+        }
+      },
+      animation: {
+        marquee: 'marquee 25s linear infinite',
+        'marquee-reverse': 'marquee-reverse 25s linear infinite',
+      }
+    },
     container: {
       center: true,
       padding: '2rem',
