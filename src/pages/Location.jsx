@@ -28,7 +28,8 @@ export default function LocationPage() {
       </div>
 
       <ARPreviewCard />
-      <div className="w-full">
+
+      <div className="w-full px-4">
         <MapContainer
           center={[27.617225501485724, 85.53628499165596]}
           zoom={15}

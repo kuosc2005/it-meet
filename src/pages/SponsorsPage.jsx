@@ -9,7 +9,7 @@ const Sponsor = ({ tier, images }) => {
     Gold: { base: 'w-22 md:w-34 lg:w-42' },
     'Silver Sponsor': { base: 'w-14 md:w-24 lg:w-32' },
     'Bronze Sponsor': { base: 'w-12 md:w-20 lg:w-28' },
-    'Community Partners': { base: 'w-8 md:w-12 lg:w-20' },
+    'Community Partners': { base: 'w-14 md:w-14 lg:w-20' },
     'Supported Partner': { base: 'w-8 md:w-12 lg:w-16' },
     'Banking Partner': { base: 'w-8 md:w-12 lg:w-16' },
     'Beverage Partner': { base: 'w-8 md:w-12 lg:w-16' },
@@ -132,7 +132,7 @@ export default function SponsorPage() {
   return (
     <div
       id="sponsors"
-      className="flex flex-col overflow-hidden p-10 py-20 lg:px-20 gap-8 items-center justify-center min-h-screen bg-[#171A23]"
+      className="flex flex-col overflow-hidden p-10 py-28 min-h-[50vh] lg:px-20 gap-8 items-center justify-center  bg-[#171A23]"
     >
       <div className="flex flex-col items-center gap-2 md:gap-4">
         <h1
