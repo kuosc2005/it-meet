@@ -10,6 +10,7 @@ import {
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
+// --- Sub-components ---
 
 const ImagePlaceholder = ({ imgSrc, alt }) => {
   return (
@@ -51,13 +52,12 @@ ChevronIcon.propTypes = {
   isOpen: PropTypes.bool,
 }
 
-// --- Event Row Component ---
 
 const EventRow = ({ event }) => {
   const [isExpanded, setIsExpanded] = useState(!event.isCompleted)
 
   const getStatusConfig = () => {
-    // Completed (Grey)
+    // Event Completed (Gray, Collapsed)
     if (event.isCompleted) {
       return {
         showBadge: true,
@@ -72,7 +72,22 @@ const EventRow = ({ event }) => {
       }
     }
 
-    // Closing Soon (Orange)
+    //Event Running (Green, Pulsing)
+    if (event.isRunning) {
+      return {
+        showBadge: true,
+        theme: 'green',
+        color: '#12dc9f',
+        bg: 'bg-[#12dc9f]',
+        text: 'text-[#12dc9f]',
+        label: 'Event Running',
+        pulse: true,
+        gradientTitle: 'bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent',
+        borderColor: '#12dc9f',
+      }
+    }
+
+    // Closing Soon (Orange, Pulsing)
     if (event.isClosingSoon) {
       return {
         showBadge: true,
@@ -87,7 +102,7 @@ const EventRow = ({ event }) => {
       }
     }
 
-    // Application Open (Green)
+    // Registration Open (Green, Pulsing)
     if (event.isApplicationOpen) {
       return {
         showBadge: true,
@@ -102,7 +117,7 @@ const EventRow = ({ event }) => {
       }
     }
 
-    // No Badge
+    // Default (No Badge)
     return {
       showBadge: false,
       theme: 'blue',
@@ -129,16 +144,20 @@ const EventRow = ({ event }) => {
         <div
           className={`relative w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#171A23] border-[3px] transition-colors duration-500 flex flex-col items-center justify-center z-10 
           ${event.isCompleted ? 'border-slate-700 shadow-none' : 'shadow-[0_0_15px_rgba(54,159,255,0.3)]'}`}
-          style={{
-            borderColor: event.isCompleted ? undefined : undefined,
-
-          }}
+          style={{ borderColor: event.isCompleted ? undefined : undefined }}
         >
-          <div className={`absolute inset-0 rounded-full border-[3px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`}
-            style={{ borderColor: event.isCompleted ? '#334155' : config.borderColor }}>
-          </div>
+          {/* Hover Overlay */}
+          <div
+            className={`absolute inset-0 rounded-full border-[3px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`}
+            style={{
+              borderColor: event.isCompleted ? '#334155' : config.borderColor,
+            }}
+          ></div>
 
-          <div className={`absolute inset-0 rounded-full border-[3px] ${event.isCompleted ? 'border-slate-700' : 'border-[#369FFF]'} opacity-100 group-hover:opacity-0 transition-opacity duration-300`}></div>
+          {/* Base Border */}
+          <div
+            className={`absolute inset-0 rounded-full border-[3px] ${event.isCompleted ? 'border-slate-700' : 'border-[#369FFF]'} opacity-100 group-hover:opacity-0 transition-opacity duration-300`}
+          ></div>
 
           <span
             className={`font-bold text-lg md:text-xl leading-none transition-colors duration-300 z-10 ${event.isCompleted ? 'text-slate-500' : 'text-white'
@@ -149,7 +168,7 @@ const EventRow = ({ event }) => {
         </div>
       </div>
 
-      {/* Horizontal Connector Line */}
+      {/* Connector Line */}
       <div
         className="absolute left-8 md:left-14 top-6 w-8 md:w-14 h-[1px] opacity-50 transition-colors duration-300"
         style={{
@@ -165,7 +184,7 @@ const EventRow = ({ event }) => {
               className={`p-0 pb-3 ${event.isCompleted ? 'cursor-pointer' : ''}`}
               onClick={toggleExpand}
             >
-              {/* Badge & Dropdown Area */}
+              {/* Badge Section */}
               {(config.showBadge || event.isCompleted) && (
                 <div className="mb-3 flex justify-between items-center pr-4">
                   <div className="flex justify-start">
@@ -181,7 +200,6 @@ const EventRow = ({ event }) => {
                             : 'none',
                         }}
                       >
-                        {/* Status Dot */}
                         <span className="relative flex h-2 w-2">
                           {config.pulse && (
                             <span
@@ -199,7 +217,6 @@ const EventRow = ({ event }) => {
                     )}
                   </div>
 
-                  {/* Dropdown Arrow*/}
                   {event.isCompleted && (
                     <div className="text-gray-400 hover:text-white transition-colors">
                       <ChevronIcon isOpen={isExpanded} />
@@ -207,7 +224,6 @@ const EventRow = ({ event }) => {
                   )}
                 </div>
               )}
-
 
               <CardTitle
                 className={`text-2xl sm:text-3xl md:text-4xl font-bold leading-tight tracking-wide transition-all duration-300 ${config.gradientTitle
@@ -217,7 +233,6 @@ const EventRow = ({ event }) => {
               </CardTitle>
             </CardHeader>
 
-            {/* Collapsible Content */}
             <div
               className={`grid transition-[grid-template-rows] duration-500 ease-in-out ${isExpanded
                 ? 'grid-rows-[1fr] opacity-100'
@@ -226,7 +241,6 @@ const EventRow = ({ event }) => {
             >
               <div className="overflow-hidden">
                 <div className="flex flex-col lg:flex-row gap-8 items-start pt-2">
-                  {/* Left Column */}
                   <div className="w-full lg:w-3/5">
                     <CardContent className="p-0">
                       <CardDescription className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed text-pretty">
@@ -259,15 +273,12 @@ const EventRow = ({ event }) => {
                               color: config.color,
                             }}
                           >
-                            {/* Hover Gradient Background */}
                             <span
                               className="absolute inset-0 w-full h-full opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"
                               style={{
                                 background: `linear-gradient(to right, ${config.color}, #369FFF)`,
                               }}
                             ></span>
-
-                            {/* Button Text */}
                             <span className="relative uppercase tracking-widest text-sm z-10 group-hover/btn:text-black">
                               Interested
                             </span>
@@ -276,8 +287,6 @@ const EventRow = ({ event }) => {
                       )}
                     </CardFooter>
                   </div>
-
-                  {/* Right Column: Image */}
                   <div className="w-full lg:w-2/5 flex justify-center lg:justify-end">
                     <ImagePlaceholder imgSrc={event.imgSrc} alt={event.title} />
                   </div>
@@ -301,10 +310,9 @@ EventRow.propTypes = {
     isApplicationOpen: PropTypes.bool,
     isClosingSoon: PropTypes.bool,
     isCompleted: PropTypes.bool,
+    isRunning: PropTypes.bool,
   }).isRequired,
 }
-
-
 
 export default function EventList({ events }) {
   useEffect(() => {
@@ -315,10 +323,8 @@ export default function EventList({ events }) {
     return [...events].sort((a, b) => {
       const dayA = parseInt(a.day, 10)
       const dayB = parseInt(b.day, 10)
-
       const isANumber = !isNaN(dayA)
       const isBNumber = !isNaN(dayB)
-
       if (isANumber && isBNumber) return dayA - dayB
       if (!isANumber && isBNumber) return 1
       if (isANumber && !isBNumber) return -1
@@ -329,9 +335,7 @@ export default function EventList({ events }) {
   return (
     <div className="relative flex flex-col p-6 py-12 bg-[#171A23] min-h-screen overflow-hidden">
       <div className="w-full max-w-6xl mx-auto relative">
-        {/* Main Vertical Timeline Line */}
         <div className="absolute left-4 md:left-8 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#369fff] via-[#12dc9f] to-[#171A23] opacity-70"></div>
-
         <div className="flex flex-col gap-16">
           {sortedEvents.map((event) => (
             <EventRow key={event.id} event={event} />
@@ -343,16 +347,5 @@ export default function EventList({ events }) {
 }
 
 EventList.propTypes = {
-  events: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string,
-      imgSrc: PropTypes.string.isRequired,
-      day: PropTypes.string,
-      isApplicationOpen: PropTypes.bool,
-      isClosingSoon: PropTypes.bool,
-      isCompleted: PropTypes.bool,
-    }),
-  ).isRequired,
+  events: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
