@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from 'react'
 import PropTypes from 'prop-types'
+
 const EventContext = createContext()
 
 export const EventProvider = ({ children }) => {
@@ -9,6 +10,8 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/project.webp',
       title: 'Project Exhibition',
       isApplicationOpen: false,
+      isClosingSoon: false,
+      isCompleted: false,
       formLink: 'https://linktr.ee/projectexhibition',
       day: '26',
       category: 'main_event',
@@ -22,6 +25,8 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/panel.webp',
       title: 'Panel Discussion',
       isApplicationOpen: false,
+      isClosingSoon: false,
+      isCompleted: false,
       formLink: '',
       day: '26',
       category: 'main_event',
@@ -35,6 +40,8 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/hackfest.webp',
       title: 'KU Hackfest',
       isApplicationOpen: true,
+      isClosingSoon: false,
+      isCompleted: false,
       formLink: 'https://hackfest.kucc.ku.edu.np/',
       day: '24',
       category: 'main_event',
@@ -48,6 +55,8 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/alumnimeet.webp',
       title: 'Alumni Meet',
       isApplicationOpen: false,
+      isClosingSoon: false,
+      isCompleted: false,
       formLink: 'https://forms.gle/pcKX3CLpiiuLVjiPA',
       day: '25',
       category: 'pre_event',
@@ -56,12 +65,13 @@ export const EventProvider = ({ children }) => {
       details:
         'The “Alumni Meet” is a gathering that unites graduates from the Department of Computer Science and Engineering, offering them a platform to reconnect, network, and share their experiences. This event fosters a strong sense of community among alumni, allowing them to reminisce about their university years, celebrate their achievements, and reflect on their professional journeys since graduation. In Alumni Meet 2024, approximately 27 alumni attended, spanning graduation years from 2000 onwards. The event featured nostalgic reunions where alumni reconnected with peers and professors, shared personal and professional accomplishments, and imparted valuable insights to current students, inspiring them to envision their own future paths. Their contributions added depth and significance to the event, creating a memorable and enriching experience for all participants.',
     },
-
     {
       id: 5,
       imgSrc: '/mock.webp',
       title: 'Mock Placement',
       isApplicationOpen: false,
+      isClosingSoon: false,
+      isCompleted: false,
       formLink: 'https://forms.gle/X1XPqRXj6q5vAduK6',
       day: '26',
       category: 'main_event',
@@ -75,6 +85,8 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/career.webp',
       title: 'Career Fair',
       isApplicationOpen: false,
+      isClosingSoon: false,
+      isCompleted: false,
       formLink: '',
       day: '26',
       category: 'main_event',
@@ -88,6 +100,8 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/blood.webp',
       title: 'Blood Donation',
       isApplicationOpen: false,
+      isClosingSoon: false,
+      isCompleted: false,
       formLink: 'https://forms.gle/7m6ER61ejLmBCNsV7',
       day: '26',
       category: 'main_event',
@@ -101,6 +115,8 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/quiz.webp',
       title: 'IT Quiz',
       isApplicationOpen: false,
+      isClosingSoon: false,
+      isCompleted: false,
       formLink:
         'https://docs.google.com/forms/d/e/1FAIpQLScB2l8RZ0hQ_jSFuCAalebuwSW8o9qlgS2QvK_gEhZ12svkSQ/viewform?usp=sf_link',
       day: '26',
@@ -115,6 +131,8 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/gaming.webp',
       title: 'Gaming Events',
       isApplicationOpen: true,
+      isClosingSoon: false,
+      isCompleted: false,
       formLink: 'https://linktr.ee/Itmeetgaming2025',
       day: '22',
       category: 'pre_event',
@@ -128,6 +146,8 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/empoweher.webp',
       title: 'EmpowerHer',
       isApplicationOpen: true,
+      isClosingSoon: false,
+      isCompleted: false,
       formLink:
         'https://docs.google.com/forms/d/1Yi7CQKg-wuNAwRUYCRqgIgXo2CsQT_CHUOKmUm4K3_w/viewform?edit_requested=true&brid=aRSE_vjT8Xy1tlD7gF4SFg',
       day: '20',
@@ -142,6 +162,8 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/idea_pitching.webp',
       title: 'Idea Pitching',
       isApplicationOpen: true,
+      isClosingSoon: false,
+      isCompleted: false,
       formLink: 'https://qrfy.io/b5Kwu_BrLg',
       day: '22',
       category: 'pre_event',
@@ -155,6 +177,8 @@ export const EventProvider = ({ children }) => {
       imgSrc: '/weshieldlogo.webp',
       title: 'We Shield Cyber',
       isApplicationOpen: false,
+      isClosingSoon: false,
+      isCompleted: false,
       formLink:
         'https://docs.google.com/forms/d/e/1FAIpQLSc9SpFmwz3QVm5oQtVF6xXfS-HiajySVEOOUT9sNZ4iJiLEMQ/viewform ',
       day: '21',
@@ -170,6 +194,8 @@ export const EventProvider = ({ children }) => {
       title: 'Acoustic Night',
       day: '26',
       isApplicationOpen: false,
+      isClosingSoon: false,
+      isCompleted: false,
       formLink: '',
       category: 'post_event',
       description:
@@ -183,6 +209,8 @@ export const EventProvider = ({ children }) => {
       title: 'AR Treasure Hunt',
       day: 'TBD',
       isApplicationOpen: false,
+      isClosingSoon: false,
+      isCompleted: false,
       formLink: '',
       category: 'post_event',
       description:
@@ -192,7 +220,9 @@ export const EventProvider = ({ children }) => {
     },
   ])
 
-  return <EventContext.Provider value={{ events }}>{children}</EventContext.Provider>
+  return (
+    <EventContext.Provider value={{ events }}>{children}</EventContext.Provider>
+  )
 }
 
 EventProvider.propTypes = {
