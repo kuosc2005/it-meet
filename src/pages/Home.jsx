@@ -11,7 +11,7 @@ const Home = () => {
       {/* <HeroPage /> */}
       <LandingComponent />
       <AboutPage />
-      {/* <SponsorPage /> */}
+      <SponsorPage />
       <FAQ />
       <LocationPage />
     </div>
