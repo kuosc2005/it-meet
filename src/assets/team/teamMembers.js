@@ -23,6 +23,7 @@ import EFootballLeadAbhinavLamsal from '@/assets/team/event/EFootballLeadAbhinav
 import ClashRoyaleLeadAkarshanShrestha from '@/assets/team/event/ClashRoyaleLeadAkarshanShrestha.webp'
 import MobileLegendsLeadPratisthaThapa from '@/assets/team/event/MobileLegendsLeadPratisthaThapa.webp'
 import EmpowerHerLeadNirjaraThapa from '@/assets/team/event/EmpowerHerLeadNirjaraThapa.webp'
+import WeShieldCyberLeadNabinKafle from '@/assets/team/event/WeShieldCyberLeadNabinKafle.webp'
 // -----------------------------------//
 
 //---------------Technical Team -----------------//
@@ -93,6 +94,7 @@ import SponsorshipKiranDahal from '@/assets/team/sponsorship/SponsorshipKiranDah
 import SponsorshipPratisthitKhaniya from '@/assets/team/sponsorship/SponsorshipPratisthitKhaniya.webp';
 import SponsorshipSunitiShrestha from '@/assets/team/sponsorship/SponsorshipSunitiShrestha.webp';
 import SponsorshipPrabeshPoudel from '@/assets/team/sponsorship/SponsorshipPrabeshPoudel.webp'
+import SponsorshipNicolsonParajuli from '@/assets/team/sponsorship/SponsorshipNicolsonParajuli.webp'
 
 // -----------------------------------//
 
@@ -321,6 +323,7 @@ const team = [
       },
       { name: 'Ajursha Dahal', department: 'Sponsorship', image: SponsorshipAjurshaDahal },
       { name: 'Kiran Dahal', department: 'Sponsorship', image: SponsorshipKiranDahal },
+      { name: 'Nicolson Parajuli', department: 'Sponsorship', image: SponsorshipNicolsonParajuli },
       { name: 'Prabesh Poudel', department: 'Sponsorships', image: SponsorshipPrabeshPoudel },
       { name: 'Pratisthit Khaniya', department: 'Sponsorship', image: SponsorshipPratisthitKhaniya },
       { name: 'Suniti Shrestha', department: 'Sponsorship', image: SponsorshipSunitiShrestha },
@@ -375,17 +378,17 @@ const team = [
         github: '',
       },
       {
-        name: 'Nabin Kafle',
-        department: 'We Shield Cyber Lead',
-        image: Utkrist,
+        name: 'Abhinab Basnet',
+        department: 'Idea Pitching Lead',
+        image: AbhinabBasnet,
         linkedIn: '',
         insta: '',
         github: '',
       },
       {
-        name: 'Abhinab Basnet',
-        department: 'Idea Pitching Lead',
-        image: AbhinabBasnet,
+        name: 'Nabin Kafle',
+        department: 'We Shield Cyber Lead',
+        image: WeShieldCyberLeadNabinKafle,
         linkedIn: '',
         insta: '',
         github: '',
