@@ -60,17 +60,16 @@ export default function UpcomingEventsSection() {
           </h1>
           <div className="w-48 rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5"></div>
         </div>
-
+        {/* for device with width more than 450px */}
         <div className="p-5 py-2 group w-full flex justify-end">
           <Link
             to={`/events`}
-            className="display max-[450px]:hidden flex items-center p-5 pr-0 gap-2 text-black self-end text-end"
+            className="hidden min-[450px]:flex items-center p-5 pr-0 gap-2 text-black self-end text-end"
           >
             <span className="font-medium text-xs sm:text-sm text-gray-300">More Events</span>
             <ArrowRight className="bg-[#12dc9f] group-hover:bg-[#369fff] group-hover:scale-110 p-[2px]  text-xl font-bold rounded-full" />
           </Link>
         </div>
-
         {/* CATEGORY TABS */}
         <div className="grid max-[450px]:grid-cols-2 grid-cols-3 gap-3 sm:gap-4">
           {eventCategories.map((category) => {
@@ -100,15 +99,15 @@ export default function UpcomingEventsSection() {
             )
           })}
 
+          {/* for device with width less than 450px */}
           <Link
             to={`/events`}
-            className="display min-[450px]:hidden flex items-center p-2 gap-2 text-black group"
+            className="flex min-[450px]:hidden items-center p-2 gap-2 text-black group"
           >
             <span className="font-medium text-xs sm:text-sm text-gray-300">More Events</span>
             <ArrowRight className="bg-[#12dc9f] p-[2px] group-hover:right-10 text-xl font-bold rounded-full" />
           </Link>
         </div>
-
         {/* EVENT DISPLAY */}
         {currentEvent ? (
           <div className="relative rounded-2xl overflow-hidden backdrop-blur-sm">
