@@ -161,8 +161,8 @@ const rawEvents = [
     title: 'EmpowerHer',
     formLink:
       'https://docs.google.com/forms/d/1Yi7CQKg-wuNAwRUYCRqgIgXo2CsQT_CHUOKmUm4K3_w/viewform?edit_requested=true&brid=aRSE_vjT8Xy1tlD7gF4SFg',
-    day: '15',
-    fullDate: '2025-12-15',
+    day: '20',
+    fullDate: '2025-12-20',
     category: 'pre_event',
     description:
       '"EmpowerHer" is an initiative designed to inspire young girls in tech by providing a platform for discussion, skill-building workshops, and networking.',
