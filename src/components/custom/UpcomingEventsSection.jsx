@@ -46,28 +46,9 @@ export default function UpcomingEventsSection() {
     return eventCategories.find((cat) => cat.id === selectedCategory)?.event || null
   }, [eventCategories, selectedCategory])
 
-  // to if there are any upcoming events at all
+  // if there are no any upcoming events at all
   const hasAnyUpcomingEvents = eventCategories.length > 0
-  if (!hasAnyUpcomingEvents) {
-    return (
-      <div className="min-h-screen w-full bg-gradient-to-b from-[#0A0E1A] via-[#171A23] to-[#0A0E1A] py-12 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col items-center gap-3 mb-12">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#369fff] to-[#12dc9f]">
-              Upcoming Events
-            </h1>
-            <div className="w-48 rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5"></div>
-          </div>
-          <div className="text-center py-20 text-gray-400 rounded-2xl border-2 border-white/10 bg-[#1E222D]/30">
-            <p className="text-xl mb-2">All events have concluded</p>
-            <p className="text-sm text-gray-500">
-              Thank you for your participation! Check back for future events.
-            </p>
-          </div>
-        </div>
-      </div>
-    )
-  }
+  if (!hasAnyUpcomingEvents) return null
 
   return (
     <div className=" min-h-[50vh] w-full bg-[#171A23] py-12">
