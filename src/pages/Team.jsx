@@ -27,9 +27,8 @@ const Team = () => {
             {/* Arrow SVG */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className={`h-5 w-5 transition-transform duration-300 ${
-                isDropdownOpen ? 'rotate-180' : ''
-              }`}
+              className={`h-5 w-5 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''
+                }`}
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -43,11 +42,10 @@ const Team = () => {
               {team.map((team, index) => (
                 <button
                   key={index}
-                  className={`w-full text-left px-4 py-2 text-[12px] font-semibold transition-all duration-300 ease-in-out ${
-                    index === selectedTeamIndex
+                  className={`w-full text-left px-4 py-2 text-[12px] font-semibold transition-all duration-300 ease-in-out ${index === selectedTeamIndex
                       ? 'bg-gradient-to-r from-[#369FFF] to-[#14C58F] text-white'
                       : 'bg-gray-700 text-gray-300 hover:bg-gradient-to-r hover:from-[#369FFF] hover:to-[#14C58F] hover:text-white'
-                  }`}
+                    }`}
                   onClick={() => {
                     handleTeamClick(index)
                     setIsDropdownOpen(false) // Close dropdown after selection
@@ -65,11 +63,10 @@ const Team = () => {
           {team.map((team, index) => (
             <button
               key={index}
-              className={`px-1 py-2 text-[12px] lg:text-[16px] xl:text-[19px] font-semibold rounded transition-all duration-1000 ease-in-out ${
-                index === selectedTeamIndex
+              className={`px-1 py-2 text-[12px] lg:text-[16px] xl:text-[19px] font-semibold rounded transition-all duration-1000 ease-in-out ${index === selectedTeamIndex
                   ? 'bg-gradient-to-r from-[#369FFF] to-[#14C58F] text-white'
                   : 'bg-gray-700 text-gray-300 hover:bg-gradient-to-r hover:from-[#369FFF] hover:to-[#14C58F] hover:text-white'
-              }`}
+                }`}
               onClick={() => handleTeamClick(index)}
             >
               {team.title}
@@ -105,7 +102,7 @@ const Team = () => {
                   </svg>
 
                   <span className="ml-2 text-[12px] sm:text-[13px] md:text-[14px] pt-[3px]">
-                    {member.department}
+                    {member.role}
                   </span>
                 </div>
 

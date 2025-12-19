@@ -95,6 +95,7 @@ import SponsorshipPratisthitKhaniya from '@/assets/team/sponsorship/SponsorshipP
 import SponsorshipSunitiShrestha from '@/assets/team/sponsorship/SponsorshipSunitiShrestha.webp';
 import SponsorshipPrabeshPoudel from '@/assets/team/sponsorship/SponsorshipPrabeshPoudel.webp'
 import SponsorshipNicolsonParajuli from '@/assets/team/sponsorship/SponsorshipNicolsonParajuli.webp'
+import SponsorshipSmritiNiroula from '@/assets/team/sponsorship/SponsorshipSmritiNiroula.webp'
 
 // -----------------------------------//
 
@@ -104,7 +105,7 @@ const team = [
     members: [
       {
         name: 'Saroj Sigdel',
-        department: 'IT MEET COORDINATOR',
+        role: 'IT MEET COORDINATOR',
         image: SarojSigdel,
         linkedIn: '',
         insta: '',
@@ -112,7 +113,7 @@ const team = [
       },
       {
         name: 'Utkrist Mani Neupane',
-        department: 'KU HACKFEST LEAD',
+        role: 'KU HACKFEST LEAD',
         image: Utkrist,
         linkedIn: '',
         insta: '',
@@ -120,7 +121,7 @@ const team = [
       },
       {
         name: 'Sauhardha Kafle',
-        department: 'TECHNICAL LEAD',
+        role: 'TECHNICAL LEAD',
         image: SauhardaImage,
         linkedIn: '',
         insta: '',
@@ -128,7 +129,7 @@ const team = [
       },
       {
         name: 'Rikesh Panta',
-        department: 'MARKETING LEAD',
+        role: 'MARKETING LEAD',
         image: RikeshPanta,
         linkedIn: '',
         insta: '',
@@ -136,7 +137,7 @@ const team = [
       },
       {
         name: 'Soham Aryal',
-        department: 'EVENT LEAD',
+        role: 'EVENT LEAD',
         image: SohamAryal,
         linkedIn: '',
         insta: '',
@@ -144,7 +145,7 @@ const team = [
       },
       // {
       //   name: 'Pratik Ghimire',
-      //   department: 'SPONSORSHIP & PARTNERSHIP LEAD',
+      //   role: 'SPONSORSHIP & PARTNERSHIP LEAD',
       //   image: PratikGhimire,
       //   linkedIn: '',
       //   insta: '',
@@ -152,7 +153,7 @@ const team = [
       // },
       {
         name: 'Nishant Sapkota',
-        department: 'SPONSORSHIP & PARTNERSHIP LEAD',
+        role: 'SPONSORSHIP & PARTNERSHIP LEAD',
         image: NishantSapkota,
         linkedIn: '',
         insta: '',
@@ -161,7 +162,7 @@ const team = [
 
       {
         name: 'Subash Singh',
-        department: 'LOGISTICS LEAD',
+        role: 'LOGISTICS LEAD',
         image: SubashSingh,
         linkedIn: '',
         insta: '',
@@ -170,7 +171,7 @@ const team = [
 
       {
         name: 'Bishist Bikram Pant',
-        department: 'VOLUNTEER LEAD',
+        role: 'VOLUNTEER LEAD',
         image: BishistPant,
         linkedIn: '',
         insta: '',
@@ -178,7 +179,7 @@ const team = [
       },
       {
         name: 'Bivamshu Khadka',
-        department: 'DESIGN LEAD',
+        role: 'DESIGN LEAD',
         image: BivamshuKhadka,
         linkedIn: '',
         insta: '',
@@ -186,7 +187,7 @@ const team = [
       },
       {
         name: 'Priyanka Ghimire ',
-        department: 'DOCUMENTATION LEAD',
+        role: 'DOCUMENTATION LEAD',
         image: Priyanka,
         linkedIn: '',
         insta: '',
@@ -194,7 +195,7 @@ const team = [
       },
       {
         name: 'Aditya Yadav',
-        department: 'PUBLIC RELATION LEAD',
+        role: 'PUBLIC RELATION LEAD',
         image: AdityaYadav,
         linkedIn: '',
         insta: '',
@@ -207,22 +208,22 @@ const team = [
     members: [
       {
         name: 'Sauhardha Kafle',
-        department: 'LEAD',
+        role: 'LEAD',
         image: SauhardaImage,
         linkedIn: '',
         insta: '',
         github: '',
       },
-      { name: 'Adarsha Pant', department: 'Member', image: TechnicalAdarshaPant },
-      { name: 'Arjit Chand', department: 'Member', image: TechnicalArjitChand },
-      { name: 'Ashitom Budhathoki', department: 'Member', image: TechnicalAshitomBudhathoki },
-      { name: 'Lawan Poudyal', department: 'Member', image: TechnicalLawanPoudyal },
-      { name: 'Pranaya Shrestha', department: 'Member', image: TechnicalPranayaShrestha },
-      { name: 'Samir Panday', department: 'Member', image: TechnicalSamirPanday },
-      { name: 'Suyagya Paudel', department: 'Member', image: TechnicalSuyagyaPaudel },
-      { name: 'Swarnim Bajracharya', department: 'Member', image: TechnicalSwarnimBajracharya },
-      { name: 'Swasti Pradhan', department: 'Member', image: TechnicalSwastiPradhan },
-      { name: 'Suraj Thapa', department: 'Member', image: TechnicalSurajThapa },
+      { name: 'Adarsha Pant', role: 'Member', image: TechnicalAdarshaPant },
+      { name: 'Arjit Chand', role: 'Member', image: TechnicalArjitChand },
+      { name: 'Ashitom Budhathoki', role: 'Member', image: TechnicalAshitomBudhathoki },
+      { name: 'Lawan Poudyal', role: 'Member', image: TechnicalLawanPoudyal },
+      { name: 'Pranaya Shrestha', role: 'Member', image: TechnicalPranayaShrestha },
+      { name: 'Samir Panday', role: 'Member', image: TechnicalSamirPanday },
+      { name: 'Suyagya Paudel', role: 'Member', image: TechnicalSuyagyaPaudel },
+      { name: 'Swarnim Bajracharya', role: 'Member', image: TechnicalSwarnimBajracharya },
+      { name: 'Swasti Pradhan', role: 'Member', image: TechnicalSwastiPradhan },
+      { name: 'Suraj Thapa', role: 'Member', image: TechnicalSurajThapa },
     ],
   },
   {
@@ -230,17 +231,17 @@ const team = [
     members: [
       {
         name: 'Aditya Yadav',
-        department: 'LEAD',
+        role: 'LEAD',
         image: AdityaYadav,
         linkedIn: '',
         insta: '',
         github: '',
       },
-      { name: 'Ayush Paudel', department: 'Member', image: PRAyushPaudel },
-      { name: 'Bisista Adhikari', department: 'Member', image: PRBisistaAdhikari },
-      { name: 'Mahesh Panta', department: 'Member', image: PRMaheshPanta },
-      { name: 'Primul Gairapiple', department: 'Member', image: PRPrimulGairapiple },
-      { name: 'Shreyash Mahato', department: 'Member', image: PRShreyashMahato },
+      { name: 'Ayush Paudel', role: 'Member', image: PRAyushPaudel },
+      { name: 'Bisista Adhikari', role: 'Member', image: PRBisistaAdhikari },
+      { name: 'Mahesh Panta', role: 'Member', image: PRMaheshPanta },
+      { name: 'Primul Gairapiple', role: 'Member', image: PRPrimulGairapiple },
+      { name: 'Shreyash Mahato', role: 'Member', image: PRShreyashMahato },
     ],
   },
 
@@ -249,18 +250,18 @@ const team = [
     members: [
       {
         name: 'Bivamshu  Khadka',
-        department: 'LEAD',
+        role: 'LEAD',
         image: BivamshuKhadka,
         linkedIn: '',
         insta: '',
         github: '',
       },
-      { name: 'Anubhav Basnet', department: 'Design', image: DesignAnubhavBasnet },
-      { name: 'Ashutosh Chaudhary', department: 'Design', image: DesignAshutoshChaudhary },
-      { name: 'Bishwas Adhikari', department: 'Design', image: DesignBishwasAdhikari },
-      { name: 'Dinisha Uprety', department: 'Design', image: DesignDinishaUprety },
-      { name: 'Kritam Khatiwada', department: 'Design', image: DesignKritamKhatiwada },
-      { name: 'Subhechha Karki', department: 'Design', image: DesignSubhechhaKarki }
+      { name: 'Anubhav Basnet', role: 'Member', image: DesignAnubhavBasnet },
+      { name: 'Ashutosh Chaudhary', role: 'Member', image: DesignAshutoshChaudhary },
+      { name: 'Bishwas Adhikari', role: 'Member', image: DesignBishwasAdhikari },
+      { name: 'Dinisha Uprety', role: 'Member', image: DesignDinishaUprety },
+      { name: 'Kritam Khatiwada', role: 'Member', image: DesignKritamKhatiwada },
+      { name: 'Subhechha Karki', role: 'Member', image: DesignSubhechhaKarki }
     ],
   },
   {
@@ -268,16 +269,16 @@ const team = [
     members: [
       {
         name: 'Priyanka Ghimire',
-        department: 'LEAD',
+        role: 'LEAD',
         image: Priyanka,
         linkedIn: '',
         insta: '',
         github: '',
       },
-      { name: 'Deekshya Badal', department: 'Member', image: DocumentationDeekshyaBadal },
-      { name: 'Prasiddhi Dumre', department: 'Member', image: DocumentationPrasiddhiDumre },
-      { name: 'Sajana Ranjitkar', department: 'Member', image: DocumentationSajanaRanjitkar },
-      { name: 'Swasti Pradhan', department: 'Member', image: TechnicalSwastiPradhan },
+      { name: 'Deekshya Badal', role: 'Member', image: DocumentationDeekshyaBadal },
+      { name: 'Prasiddhi Dumre', role: 'Member', image: DocumentationPrasiddhiDumre },
+      { name: 'Sajana Ranjitkar', role: 'Member', image: DocumentationSajanaRanjitkar },
+      { name: 'Swasti Pradhan', role: 'Member', image: TechnicalSwastiPradhan },
     ],
   },
   {
@@ -285,21 +286,21 @@ const team = [
     members: [
       {
         name: 'Rikesh Panta',
-        department: 'LEAD',
+        role: 'LEAD',
         image: RikeshPanta,
         linkedIn: '',
         insta: '',
         github: '',
       },
-      { name: 'Abhyudaya Pokhrel', department: 'Member', image: MarketingAbhyudayaPokhrel },
-      { name: 'Baldeep Karki', department: 'Member', image: MarketingBaldeepKarki },
-      { name: 'Dalton Khatri', department: 'Member', image: MarketingDaltonKhatri },
-      { name: 'Divyanshi Mainali', department: 'Member', image: MarketingDivyanshiMainali },
-      { name: 'Ritu Koju', department: 'Member', image: MarketingRituKoju },
-      { name: 'Rubin Bhattarai', department: 'Member', image: MarketingRubinBhattarai },
-      { name: 'Saurav Shah', department: 'Member', image: MarketingSauravShah },
-      { name: 'Sahaj Wagle', department: 'Member', image: MarketingSahajWagle },
-      { name: 'Silviya Thapa', department: 'Member', image: MarketingSilviyaThapa },
+      { name: 'Abhyudaya Pokhrel', role: 'Member', image: MarketingAbhyudayaPokhrel },
+      { name: 'Baldeep Karki', role: 'Member', image: MarketingBaldeepKarki },
+      { name: 'Dalton Khatri', role: 'Member', image: MarketingDaltonKhatri },
+      { name: 'Divyanshi Mainali', role: 'Member', image: MarketingDivyanshiMainali },
+      { name: 'Ritu Koju', role: 'Member', image: MarketingRituKoju },
+      { name: 'Rubin Bhattarai', role: 'Member', image: MarketingRubinBhattarai },
+      { name: 'Saurav Shah', role: 'Member', image: MarketingSauravShah },
+      { name: 'Sahaj Wagle', role: 'Member', image: MarketingSahajWagle },
+      { name: 'Silviya Thapa', role: 'Member', image: MarketingSilviyaThapa },
     ],
   },
   {
@@ -307,7 +308,7 @@ const team = [
     members: [
       // {
       //   name: 'Pratik Ghimire',
-      //   department: 'LEAD',
+      //   role: 'LEAD',
       //   image: PratikGhimire,
       //   linkedIn: '',
       //   insta: '',
@@ -315,19 +316,19 @@ const team = [
       // },
       {
         name: 'Nishant Sapkota',
-        department: 'LEAD',
+        role: 'LEAD',
         image: NishantSapkota,
         linkedIn: '',
         insta: '',
         github: '',
       },
-      { name: 'Ajursha Dahal', department: 'Sponsorship', image: SponsorshipAjurshaDahal },
-      { name: 'Kiran Dahal', department: 'Sponsorship', image: SponsorshipKiranDahal },
-      { name: 'Nicolson Parajuli', department: 'Sponsorship', image: SponsorshipNicolsonParajuli },
-      { name: 'Prabesh Poudel', department: 'Sponsorships', image: SponsorshipPrabeshPoudel },
-      { name: 'Pratisthit Khaniya', department: 'Sponsorship', image: SponsorshipPratisthitKhaniya },
-      { name: 'Suniti Shrestha', department: 'Sponsorship', image: SponsorshipSunitiShrestha },
-
+      { name: 'Ajursha Dahal', role: 'Member', image: SponsorshipAjurshaDahal },
+      { name: 'Kiran Dahal', role: 'Member', image: SponsorshipKiranDahal },
+      { name: 'Nicolson Parajuli', role: 'Member', image: SponsorshipNicolsonParajuli },
+      { name: 'Prabesh Poudel', role: 'Member', image: SponsorshipPrabeshPoudel },
+      { name: 'Pratisthit Khaniya', role: 'Member', image: SponsorshipPratisthitKhaniya },
+      { name: 'Smriti Niroula', role: 'Member', image: SponsorshipSmritiNiroula },
+      { name: 'Suniti Shrestha', role: 'Member', image: SponsorshipSunitiShrestha },
     ],
   },
   {
@@ -335,19 +336,19 @@ const team = [
     members: [
       {
         name: 'Subash Singh',
-        department: 'LEAD',
+        role: 'LEAD',
         image: SubashSingh,
         linkedIn: '',
         insta: '',
         github: '',
       },
-      { name: 'Ayurva Pradhananga', department: 'Logistics', image: LogisticsAyurvaPradhananga },
-      { name: 'Kapil Adhikari', department: 'Member', image: LogisticsKapilAdhikari },
-      { name: 'Lujaw Dhunju', department: 'Logistics', image: LogisticsLujawDhunju },
-      { name: 'Mahammad Farman Mansoor', department: 'Logistics', image: LogisticsMahammadFarmanMansoor },
-      { name: 'Mohan Krishna Shrestha', department: 'Member', image: LogisticsMohanKrishnaShrestha },
-      { name: 'Niraj Kumar Ram', department: 'Member', image: LogisticsNirajKumarRam },
-      { name: 'Shubham Yadav', department: 'Member', image: LogisticsShubhamYadav },
+      { name: 'Ayurva Pradhananga', role: 'Member', image: LogisticsAyurvaPradhananga },
+      { name: 'Kapil Adhikari', role: 'Member', image: LogisticsKapilAdhikari },
+      { name: 'Lujaw Dhunju', role: 'Member', image: LogisticsLujawDhunju },
+      { name: 'Mahammad Farman Mansoor', role: 'Member', image: LogisticsMahammadFarmanMansoor },
+      { name: 'Mohan Krishna Shrestha', role: 'Member', image: LogisticsMohanKrishnaShrestha },
+      { name: 'Niraj Kumar Ram', role: 'Member', image: LogisticsNirajKumarRam },
+      { name: 'Shubham Yadav', role: 'Member', image: LogisticsShubhamYadav },
     ],
   },
   {
@@ -355,7 +356,7 @@ const team = [
     members: [
       {
         name: 'Soham Aryal',
-        department: 'Event Lead',
+        role: 'Event Lead',
         image: SohamAryal,
         linkedIn: '',
         insta: '',
@@ -363,7 +364,7 @@ const team = [
       },
       {
         name: 'Utkrist Mani Neupane',
-        department: 'Hackfest Lead',
+        role: 'Hackfest Lead',
         image: Utkrist,
         linkedIn: '',
         insta: '',
@@ -371,7 +372,7 @@ const team = [
       },
       {
         name: 'Nirjara Thapa',
-        department: 'EmpowerHer Lead',
+        role: 'EmpowerHer Lead',
         image: EmpowerHerLeadNirjaraThapa,
         linkedIn: '',
         insta: '',
@@ -379,7 +380,7 @@ const team = [
       },
       {
         name: 'Abhinab Basnet',
-        department: 'Idea Pitching Lead',
+        role: 'Idea Pitching Lead',
         image: AbhinabBasnet,
         linkedIn: '',
         insta: '',
@@ -387,17 +388,17 @@ const team = [
       },
       {
         name: 'Nabin Kafle',
-        department: 'We Shield Cyber Lead',
+        role: 'We Shield Cyber Lead',
         image: WeShieldCyberLeadNabinKafle,
         linkedIn: '',
         insta: '',
         github: '',
       },
-      { name: 'Prabal Lamichhane', department: 'Gaming Lead', image: GamingLeadPrabalLamichhane },
-      { name: 'Abhinav Lamsal', department: 'eFootball Lead', image: EFootballLeadAbhinavLamsal },
-      { name: 'Akarshan Shrestha', department: 'Clash Royale Lead', image: ClashRoyaleLeadAkarshanShrestha },
-      { name: 'Neo Shakya', department: 'FC26 Lead', image: FIFALeadNeoShakya },
-      { name: 'Pratistha Thapa', department: 'Mobile Legends Lead', image: MobileLegendsLeadPratisthaThapa },
+      { name: 'Prabal Lamichhane', role: 'Gaming Lead', image: GamingLeadPrabalLamichhane },
+      { name: 'Abhinav Lamsal', role: 'eFootball Lead', image: EFootballLeadAbhinavLamsal },
+      { name: 'Akarshan Shrestha', role: 'Clash Royale Lead', image: ClashRoyaleLeadAkarshanShrestha },
+      { name: 'Neo Shakya', role: 'FC26 Lead', image: FIFALeadNeoShakya },
+      { name: 'Pratistha Thapa', role: 'Mobile Legends Lead', image: MobileLegendsLeadPratisthaThapa },
     ],
   },
 ]
