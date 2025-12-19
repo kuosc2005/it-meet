@@ -202,7 +202,7 @@ const rawEvents = [
     title: 'Acoustic Night',
     day: '26',
     fullDate: '2025-12-26',
-    formLink: '',
+    formLink: 'https://qrco.de/bgWnUv',
     category: 'post_event',
     description:
       '"Acoustic Night," the closing event of IT Meet, features talented student performances that create an enchanting evening filled with diverse melodies.',

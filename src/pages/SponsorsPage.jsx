@@ -135,19 +135,9 @@ export default function SponsorPage() {
       className="flex flex-col overflow-hidden p-10 py-28 min-h-[50vh] lg:px-20 gap-8 items-center justify-center  bg-[#171A23]"
     >
       <div className="flex flex-col items-center gap-2 md:gap-4">
-        <h1
-          className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]"
-          style={{ backgroundImage: 'linear-gradient(90deg, #369FFF, #3BD0A3, #14C58F)' }}
-        >
+        <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
           Our Sponsors
         </h1>
-        {/* <img
-          src={ITMeetLogo}
-          alt="itmeetlogodark"
-          className="object-contain w-[150px]"
-          width={500}
-          height={500}
-        /> */}
         <div className="w-full mb-2 md:mb-5 rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2 lg:h-2.5"></div>
       </div>
 

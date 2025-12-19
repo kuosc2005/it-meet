@@ -28,7 +28,7 @@ export default function ARView() {
 
         // Video
         const video = document.createElement('video')
-        video.src = 'https://sauhardh.github.io/ar-assets/ad.mp4' // video is hosted on this link
+        video.src = '/ad.mp4' // video is hosted on this link
         video.crossOrigin = 'anonymous'
         video.loop = false
         video.muted = true
