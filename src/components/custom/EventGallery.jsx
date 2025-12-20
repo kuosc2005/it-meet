@@ -1,125 +1,66 @@
-import React from 'react'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import { images, images1 } from '@/assets/itmeet_images/itmeetimg'
+import React, { useMemo } from "react";
+import { images, images1 } from "@/assets/itmeet_images/itmeetimg";
 
-function EventGallery() {
-  const settings = {
-    infinite: true,
-    lazyload: true,
-    autoplay: true,
-    speed: 8000,
-    autoplaySpeed: 8000,
-    cssEase: 'linear',
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: false,
-    draggable: false,
-    pauseOnHover: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  }
-
-  const settings1 = {
-    infinite: true,
-    lazyload: true,
-    autoplay: true,
-    speed: 8000,
-    autoplaySpeed: 8000,
-    cssEase: 'linear',
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: false,
-    draggable: false,
-    pauseOnHover: false,
-    rtl: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  }
+// Memoize MarqueeRow to prevent unnecessary re-renders
+const MarqueeRow = React.memo(({ items, reverse = false }) => {
+  // Pre-calculate duplicated array to avoid doing it on every render
+  const duplicatedItems = useMemo(() => [...items, ...items], [items]);
 
   return (
-    <div className="w-full max-w-[40rem] sm:max-w-[60rem] md:max-w-[90rem] lg:max-w-[100rem] xl:max-w-[120rem] mx-auto flex flex-col space-y-6">
-      <Slider {...settings}>
-        {images.map((image) => (
-          <div key={image.id} className="px-2 sm:px-4">
-            <img
-              src={image.img}
-              alt={`event-${image.id}`}
-              className="w-full sm:w-[300px] md:w-[390px] xl:w-[500px] rounded-2xl object-contain bg-gradient-to-r from-[#369fff] via-[#14C58F] to-purple-500 p-1"
-            />
+    <div className="overflow-hidden w-full">
+      <div
+        className={`flex gap-6 w-max ${reverse ? "animate-marquee-reverse" : "animate-marquee"
+          }`}
+        // Add GPU acceleration for smooth animation
+        style={{
+          willChange: 'transform',
+          backfaceVisibility: 'hidden',
+          perspective: '1000px'
+        }}
+      >
+        {duplicatedItems.map((image, index) => (
+          <div
+            key={`${image.id || index}-${reverse ? 'r' : 'l'}`}
+            className="shrink-0"
+          >
+            <div
+              className="
+                w-[300px] h-[200px]
+                bg-gradient-to-r from-[#369fff] via-[#14C58F] to-purple-500
+                p-1 rounded-2xl flex items-center justify-center
+              "
+            >
+              <img
+                src={image.img}
+                alt="event"
+                width="300"
+                height="200"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover rounded-xl pointer-events-none"
+                style={{
+                  contentVisibility: 'auto',
+                  willChange: 'transform'
+                }}
+              />
+            </div>
           </div>
         ))}
-      </Slider>
-      <Slider {...settings1}>
-        {images1.map((image) => (
-          <div key={image.id} className="px-2 sm:px-4">
-            <img
-              src={image.img}
-              alt={`event-${image.id}`}
-              className="w-ful sm:w-[300px] md:w-[390px] xl:w-[500px] rounded-2xl object-contain bg-gradient-to-r from-[#369fff] via-[#14C58F] to-purple-500 p-1"
-            />
-          </div>
-        ))}
-      </Slider>
+      </div>
     </div>
-  )
-}
+  );
+});
 
-export default EventGallery
+MarqueeRow.displayName = 'MarqueeRow';
+
+export default function EventGallery() {
+  return (
+    <div className="w-full max-w-[90rem] mx-auto space-y-8">
+      {/* LEFT TO RIGHT */}
+      <MarqueeRow items={images} />
+
+      {/* RIGHT TO LEFT */}
+      <MarqueeRow items={images1} reverse />
+    </div>
+  );
+}

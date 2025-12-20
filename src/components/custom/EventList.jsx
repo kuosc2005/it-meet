@@ -10,15 +10,11 @@ import {
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-const ImagePlaceholder = ({ imgSrc, alt }) => {
+export const ImagePlaceholder = ({ imgSrc, alt }) => {
   return (
     <div className="relative w-full h-full flex items-center justify-center">
       <div className="bg-[#1A1E28] w-full max-w-sm aspect-[16/9] lg:aspect-[4/3] rounded-xl overflow-hidden relative shadow-lg border border-white/5 group-hover:scale-[1.02] transition-transform duration-500">
-        <img
-          src={imgSrc}
-          alt={alt}
-          className="w-full h-full object-contain absolute inset-0 p-2"
-        />
+        <img src={imgSrc} alt={alt} className="w-full h-full object-contain absolute inset-0 p-2" />
       </div>
     </div>
   )
@@ -90,8 +86,7 @@ const EventRow = ({ event }) => {
         text: 'text-[#12dc9f]',
         label: 'Event Running',
         pulse: true,
-        gradientTitle:
-          'bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent',
+        gradientTitle: 'bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent',
         borderColor: '#12dc9f',
       }
     }
@@ -122,8 +117,7 @@ const EventRow = ({ event }) => {
         text: 'text-amber-500',
         label: 'Closing Soon',
         pulse: true,
-        gradientTitle:
-          'bg-gradient-to-r from-[#f59e0b] to-[#fbbf24] bg-clip-text text-transparent',
+        gradientTitle: 'bg-gradient-to-r from-[#f59e0b] to-[#fbbf24] bg-clip-text text-transparent',
         borderColor: '#f59e0b',
       }
     }
@@ -138,8 +132,7 @@ const EventRow = ({ event }) => {
         text: 'text-[#12dc9f]',
         label: 'Registration Open',
         pulse: true,
-        gradientTitle:
-          'bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent',
+        gradientTitle: 'bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent',
         borderColor: '#12dc9f',
       }
     }
@@ -151,8 +144,7 @@ const EventRow = ({ event }) => {
       color: '#369FFF',
       label: '',
       pulse: false,
-      gradientTitle:
-        'bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent',
+      gradientTitle: 'bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent',
       borderColor: '#369FFF',
     }
   }
@@ -235,9 +227,7 @@ const EventRow = ({ event }) => {
                         style={{
                           backgroundColor: `${config.color}1A`,
                           borderColor: `${config.color}4D`,
-                          boxShadow: config.pulse
-                            ? `0 0 10px ${config.color}26`
-                            : 'none',
+                          boxShadow: config.pulse ? `0 0 10px ${config.color}26` : 'none',
                         }}
                       >
                         <span className="relative flex h-2 w-2">
@@ -274,9 +264,7 @@ const EventRow = ({ event }) => {
             </CardHeader>
 
             <div
-              className={`grid transition-[grid-template-rows] duration-500 ease-in-out ${isExpanded
-                ? 'grid-rows-[1fr] opacity-100'
-                : 'grid-rows-[0fr] opacity-0'
+              className={`grid transition-[grid-template-rows] duration-500 ease-in-out ${isExpanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                 }`}
             >
               <div className="overflow-hidden">
@@ -293,15 +281,11 @@ const EventRow = ({ event }) => {
                           disabled
                           className="px-6 py-2 font-medium text-slate-500 border border-slate-700 rounded-lg cursor-not-allowed"
                         >
-                          <span className="uppercase tracking-widest text-sm">
-                            Closed
-                          </span>
+                          <span className="uppercase tracking-widest text-sm">Closed</span>
                         </button>
                       ) : (
                         <Link
-                          to={`/events/${event.title
-                            .toLowerCase()
-                            .replace(/ /g, '-')}`}
+                          to={`/events/${event.title.toLowerCase().replace(/ /g, '-')}`}
                           state={{ eventData: event }}
                           className="inline-block"
                         >
@@ -431,3 +415,4 @@ export default function EventList({ events }) {
 EventList.propTypes = {
   events: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
+
