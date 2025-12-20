@@ -7,7 +7,6 @@ const EventContext = createContext()
 function calculateStatus(event) {
   const now = new Date()
 
-  // 1. RESOLVE DATES
   const rawEventDate = event.eventDate
   const rawRegDate = event.registrationClosingDate
 
@@ -17,11 +16,9 @@ function calculateStatus(event) {
 
   const regClosingDate = rawRegDate ? new Date(rawRegDate) : null
 
-  // 2. RESOLVE FORM LINK
   const currentFormLink = event.formLink || ''
   const hasFormLink = Boolean(currentFormLink && currentFormLink.trim() !== '')
 
-  // 3. UPDATE UI STRINGS
   let displayDay = event.day || 'TBD'
   let displayFullDate = event.fullDate || 'TBD'
 
@@ -30,7 +27,6 @@ function calculateStatus(event) {
     displayFullDate = eventOccurrenceDate.toISOString().split('T')[0]
   }
 
-  // 4. HANDLE "TBD" CASE
   if (!eventOccurrenceDate || isNaN(eventOccurrenceDate.getTime())) {
     return {
       ...event,
@@ -38,13 +34,12 @@ function calculateStatus(event) {
       fullDate: 'TBD',
       isApplicationOpen: false,
       isClosingSoon: false,
-      isRegistrationClosed: false, // NEW
+      isRegistrationClosed: false,
       isRunning: false,
       isCompleted: false,
     }
   }
 
-  // 5. CALCULATE BOOLEAN FLAGS
   let isApplicationOpen = false
   let isClosingSoon = false
   let isRegistrationClosed = false // NEW
@@ -74,7 +69,7 @@ function calculateStatus(event) {
     fullDate: displayFullDate,
     isApplicationOpen,
     isClosingSoon,
-    isRegistrationClosed, // NEW Key
+    isRegistrationClosed,
     isRunning,
     isCompleted,
   }

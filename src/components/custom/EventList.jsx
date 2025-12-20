@@ -328,7 +328,6 @@ const EventRow = ({ event }) => {
                               </button>
                             </a>
                           ) : event.isRegistrationClosed ? (
-                            // Disabled button for Registration Closed
                             <button
                               disabled
                               className="px-6 py-2 font-medium text-red-500 border border-red-500/50 rounded-lg cursor-not-allowed opacity-80"
@@ -385,7 +384,7 @@ EventRow.propTypes = {
     fullDate: PropTypes.string,
     isApplicationOpen: PropTypes.bool,
     isClosingSoon: PropTypes.bool,
-    isRegistrationClosed: PropTypes.bool, // NEW
+    isRegistrationClosed: PropTypes.bool,
     isCompleted: PropTypes.bool,
     isRunning: PropTypes.bool,
     formLink: PropTypes.string,
