@@ -316,8 +316,8 @@ const EventRow = ({ event }) => {
                               className={`relative px-6 py-2 overflow-hidden font-medium border rounded-lg shadow-inner group/btn hover:text-black transition-all duration-300 ease-out
                                   ${config.text}`}
                               style={{
-                                borderColor: config.color,
-                                color: config.color,
+                                borderColor: '#369FFF',
+                                color: '#369FFF',
                               }}
                             >
                               <span
