@@ -96,7 +96,7 @@ const EventRow = ({ event }) => {
       }
     }
 
-    // 3. Registration Closed (Red) - NEW
+    // 3. Registration Closed (Red) - 
     if (event.isRegistrationClosed) {
       return {
         showBadge: true,
@@ -107,7 +107,7 @@ const EventRow = ({ event }) => {
         label: 'Registration Closed',
         pulse: false,
         gradientTitle:
-          'bg-gradient-to-r from-[#ef4444] to-[#f87171] bg-clip-text text-transparent',
+          'bg-gradient-to-r from-[#369FFF] to-[#60a5fa] bg-clip-text text-transparent',
         borderColor: '#ef4444',
       }
     }
@@ -329,11 +329,21 @@ const EventRow = ({ event }) => {
                             </a>
                           ) : event.isRegistrationClosed ? (
                             <button
-                              disabled
-                              className="px-6 py-2 font-medium text-red-500 border border-red-500/50 rounded-lg cursor-not-allowed opacity-80"
+                              className={`relative px-6 py-2 overflow-hidden font-medium border rounded-lg shadow-inner group/btn hover:text-black transition-all duration-300 ease-out
+                                  ${config.text}`}
+                              style={{
+                                borderColor: config.color,
+                                color: config.color,
+                              }}
                             >
-                              <span className="uppercase tracking-widest text-sm">
-                                Registration Closed
+                              <span
+                                className="absolute inset-0 w-full h-full opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"
+                                style={{
+                                  background: `linear-gradient(to right, ${config.color}, #369FFF)`,
+                                }}
+                              ></span>
+                              <span className="relative uppercase tracking-widest text-sm z-10 group-hover/btn:text-black">
+                                See More
                               </span>
                             </button>
                           ) : (
