@@ -10,7 +10,6 @@ import {
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-
 const ImagePlaceholder = ({ imgSrc, alt }) => {
   return (
     <div className="relative w-full h-full flex items-center justify-center">
@@ -54,10 +53,8 @@ ChevronIcon.propTypes = {
 const getMonthName = (dateStr) => {
   if (!dateStr || dateStr === 'TBD') return ''
   try {
-    const parts = dateStr.split('-')
-    if (parts.length < 2) return ''
-    const monthIndex = parseInt(parts[1], 10) - 1
-    const date = new Date(2025, monthIndex, 1)
+    const date = new Date(dateStr)
+    if (isNaN(date.getTime())) return ''
     return date.toLocaleString('default', { month: 'short' }).toUpperCase()
   } catch (e) {
     return ''
@@ -68,7 +65,7 @@ const EventRow = ({ event }) => {
   const [isExpanded, setIsExpanded] = useState(!event.isCompleted)
 
   const getStatusConfig = () => {
-    // Event Completed (Gray, Collapsed)
+    // 1. Event Completed (Gray)
     if (event.isCompleted) {
       return {
         showBadge: true,
@@ -83,7 +80,7 @@ const EventRow = ({ event }) => {
       }
     }
 
-    // Event Running (Green, Pulsing)
+    // 2. Event Running (Green, Pulsing)
     if (event.isRunning) {
       return {
         showBadge: true,
@@ -99,7 +96,23 @@ const EventRow = ({ event }) => {
       }
     }
 
-    // Closing Soon (Orange, Pulsing)
+    // 3. Registration Closed (Red) - NEW
+    if (event.isRegistrationClosed) {
+      return {
+        showBadge: true,
+        theme: 'red',
+        color: '#ef4444', // Tailwind red-500
+        bg: 'bg-red-500',
+        text: 'text-red-500',
+        label: 'Registration Closed',
+        pulse: false,
+        gradientTitle:
+          'bg-gradient-to-r from-[#ef4444] to-[#f87171] bg-clip-text text-transparent',
+        borderColor: '#ef4444',
+      }
+    }
+
+    // 4. Closing Soon (Orange, Pulsing)
     if (event.isClosingSoon) {
       return {
         showBadge: true,
@@ -115,7 +128,7 @@ const EventRow = ({ event }) => {
       }
     }
 
-    // Registration Open (Green, Pulsing)
+    // 5. Registration Open (Green, Pulsing)
     if (event.isApplicationOpen) {
       return {
         showBadge: true,
@@ -131,7 +144,7 @@ const EventRow = ({ event }) => {
       }
     }
 
-    // Default (No Badge)
+    // 6. Default (Blue)
     return {
       showBadge: false,
       theme: 'blue',
@@ -175,7 +188,7 @@ const EventRow = ({ event }) => {
             className={`absolute inset-0 rounded-full border-[3px] ${event.isCompleted ? 'border-slate-700' : 'border-[#369FFF]'} opacity-100 group-hover:opacity-0 transition-opacity duration-300`}
           ></div>
 
-          {/* Date Content: Month (Top) + Day (Bottom) */}
+          {/* Date Content */}
           <div className="z-10 flex flex-col items-center justify-center leading-none">
             {monthName && (
               <span
@@ -292,24 +305,59 @@ const EventRow = ({ event }) => {
                           state={{ eventData: event }}
                           className="inline-block"
                         >
-                          <button
-                            className={`relative px-6 py-2 overflow-hidden font-medium border rounded-lg shadow-inner group/btn hover:text-black transition-all duration-300 ease-out
-                            ${config.text}`}
-                            style={{
-                              borderColor: config.color,
-                              color: config.color,
-                            }}
-                          >
-                            <span
-                              className="absolute inset-0 w-full h-full opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"
+                          {/* BUTTON LOGIC */}
+                          {event.isApplicationOpen ? (
+                            <a href={event.formLink} target="_blank" rel="noopener noreferrer">
+                              <button
+                                className={`relative px-6 py-2 overflow-hidden font-medium border rounded-lg shadow-inner group/btn hover:text-black transition-all duration-300 ease-out
+                                  ${config.text}`}
+                                style={{
+                                  borderColor: config.color,
+                                  color: config.color,
+                                }}
+                              >
+                                <span
+                                  className="absolute inset-0 w-full h-full opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"
+                                  style={{
+                                    background: `linear-gradient(to right, ${config.color}, #369FFF)`,
+                                  }}
+                                ></span>
+                                <span className="relative uppercase tracking-widest text-sm z-10 group-hover/btn:text-black">
+                                  Register
+                                </span>
+                              </button>
+                            </a>
+                          ) : event.isRegistrationClosed ? (
+                            // Disabled button for Registration Closed
+                            <button
+                              disabled
+                              className="px-6 py-2 font-medium text-red-500 border border-red-500/50 rounded-lg cursor-not-allowed opacity-80"
+                            >
+                              <span className="uppercase tracking-widest text-sm">
+                                Registration Closed
+                              </span>
+                            </button>
+                          ) : (
+                            // View Details (e.g., TBD or No Form Link)
+                            <button
+                              className={`relative px-6 py-2 overflow-hidden font-medium border rounded-lg shadow-inner group/btn hover:text-black transition-all duration-300 ease-out
+                              ${config.text}`}
                               style={{
-                                background: `linear-gradient(to right, ${config.color}, #369FFF)`,
+                                borderColor: config.color,
+                                color: config.color,
                               }}
-                            ></span>
-                            <span className="relative uppercase tracking-widest text-sm z-10 group-hover/btn:text-black">
-                              Interested
-                            </span>
-                          </button>
+                            >
+                              <span
+                                className="absolute inset-0 w-full h-full opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"
+                                style={{
+                                  background: `linear-gradient(to right, ${config.color}, #369FFF)`,
+                                }}
+                              ></span>
+                              <span className="relative uppercase tracking-widest text-sm z-10 group-hover/btn:text-black">
+                                View Details
+                              </span>
+                            </button>
+                          )}
                         </Link>
                       )}
                     </CardFooter>
@@ -337,8 +385,10 @@ EventRow.propTypes = {
     fullDate: PropTypes.string,
     isApplicationOpen: PropTypes.bool,
     isClosingSoon: PropTypes.bool,
+    isRegistrationClosed: PropTypes.bool, // NEW
     isCompleted: PropTypes.bool,
     isRunning: PropTypes.bool,
+    formLink: PropTypes.string,
   }).isRequired,
 }
 
@@ -349,18 +399,9 @@ export default function EventList({ events }) {
 
   const sortedEvents = useMemo(() => {
     return [...events].sort((a, b) => {
-      if (a.fullDate && b.fullDate && a.fullDate !== 'TBD' && b.fullDate !== 'TBD') {
-        return new Date(a.fullDate) - new Date(b.fullDate);
-      }
-
-      const dayA = parseInt(a.day, 10)
-      const dayB = parseInt(b.day, 10)
-      const isANumber = !isNaN(dayA)
-      const isBNumber = !isNaN(dayB)
-      if (isANumber && isBNumber) return dayA - dayB
-      if (!isANumber && isBNumber) return 1
-      if (isANumber && !isBNumber) return -1
-      return 0
+      const dateA = a.fullDate && a.fullDate !== 'TBD' ? new Date(a.fullDate) : new Date(8640000000000000);
+      const dateB = b.fullDate && b.fullDate !== 'TBD' ? new Date(b.fullDate) : new Date(8640000000000000);
+      return dateA - dateB;
     })
   }, [events])
 
