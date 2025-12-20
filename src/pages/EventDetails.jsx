@@ -16,6 +16,7 @@ const EventDetails = () => {
   const { events } = useEvents()
   const location = useLocation()
 
+  // Find the event
   const event = events?.find((e) => e.title.toLowerCase().replace(/ /g, '-') === eventTitle)
 
   useEffect(() => {
@@ -27,6 +28,57 @@ const EventDetails = () => {
       <div className="flex justify-center items-center min-h-screen bg-[#171A23] text-white">
         Event not found
       </div>
+    )
+  }
+
+  // Helper to determine what button to render
+  const renderActionButton = () => {
+    // 1. Registration is OPEN
+    if (event.isApplicationOpen) {
+      return (
+        <a
+          href={event.formLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full max-w-[10rem] bg-gradient-to-r from-[#369FFF] to-[#14C58F] text-white font-bold py-2 px-4 rounded hover:shadow-lg transition duration-200 text-center"
+        >
+          Apply to Event
+        </a>
+      )
+    }
+
+    // 2. Registration is CLOSED (Deadline passed)
+    if (event.isRegistrationClosed) {
+      return (
+        <button
+          disabled
+          className="w-full max-w-[10rem] bg-red-900/20 border border-red-500/50 text-red-500 font-bold py-2 px-4 rounded cursor-not-allowed"
+        >
+          Form Closed
+        </button>
+      )
+    }
+
+    // 3. Event is COMPLETED (Date passed)
+    if (event.isCompleted) {
+      return (
+        <button
+          disabled
+          className="w-full max-w-[10rem] bg-slate-700 text-slate-400 font-bold py-2 px-4 rounded cursor-not-allowed"
+        >
+          Event Ended
+        </button>
+      )
+    }
+
+    // 4. Default: TBD or Opening Soon
+    return (
+      <button
+        disabled
+        className="w-full max-w-[10rem] bg-gray-700 text-gray-400 font-bold py-2 px-4 rounded cursor-not-allowed"
+      >
+        Opening soon!!
+      </button>
     )
   }
 
@@ -63,23 +115,8 @@ const EventDetails = () => {
               Back to Events
             </Link>
 
-            {event.isApplicationOpen ? (
-              <a
-                href={event.formLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full max-w-[10rem] bg-gradient-to-r from-[#369FFF] to-[#14C58F] text-white font-bold py-2 px-4 rounded hover:shadow-lg transition duration-200 text-center"
-              >
-                Apply to Event
-              </a>
-            ) : (
-              <button
-                disabled
-                className="w-full max-w-[10rem] bg-gray-700 text-gray-400 font-bold py-2 px-4 rounded cursor-not-allowed"
-              >
-                Opening soon!!
-              </button>
-            )}
+            {/* Render the appropriate button based on status */}
+            {renderActionButton()}
           </div>
 
           {event.coc && (
