@@ -9,7 +9,7 @@ const Sponsor = ({ tier, images }) => {
     Gold: { base: 'w-22 md:w-34 lg:w-42' },
     'Silver Sponsor': { base: 'w-14 md:w-24 lg:w-32' },
     'Bronze Sponsor': { base: 'w-12 md:w-20 lg:w-28' },
-    'Community Partners': { base: 'w-12 md:w-12 lg:w-16' },
+    'Community Partners': { base: 'w-14 md:w-16 lg:w-20' },
     'Supported Partner': { base: 'w-8 md:w-12 lg:w-16' },
     'Banking Partner': { base: 'w-8 md:w-12 lg:w-16' },
     'Beverage Partner': { base: 'w-8 md:w-12 lg:w-16' },
@@ -23,7 +23,12 @@ const Sponsor = ({ tier, images }) => {
     'SMS Partner': { base: 'w-8 md:w-12 lg:w-16' },
     'E-Commerce Partner': { base: 'w-8 md:w-12 lg:w-16' },
     'Confectionery Partner': { base: 'w-8 md:w-12 lg:w-16' },
-    'Media Partner': { base: 'w-8 md:w-12 lg:w-16' },
+    'Media Partner': { base: 'w-14 md:w-16 lg:w-20' },
+    'Sustainable Tech Partner': { base: 'w-14 md:w-16 lg:w-20' },
+    'Digital Learning Partner': { base: 'w-14 md:w-16 lg:w-20' },
+    'Study Abroad Partner': { base: 'w-14 md:w-16 lg:w-20' },
+    'Refreshment Partner': { base: 'w-14 md:w-16 lg:w-20' },
+    'Fintech Knowledge Partner': { base: 'w-14 md:w-16 lg:w-20' },
   }[tier] || { base: 'w-14 md:w-24 lg:w-32' }
 
   const textSize =
@@ -48,6 +53,11 @@ const Sponsor = ({ tier, images }) => {
       'E-Commerce Partner': 'text-xs md:text-sm lg:text-md',
       'Confectionery Partner': 'text-xs md:text-sm lg:text-md',
       'Media Partner': 'text-xs md:text-sm lg:text-md',
+      'Sustainable Tech Partner': 'text-xs md:text-sm lg:text-md',
+      'Digital Learning Partner': 'text-xs md:text-sm lg:text-md',
+      'Study Abroad Partner': 'text-xs md:text-sm lg:text-md',
+      'Refreshment Partner': 'text-xs md:text-sm lg:text-md',
+      'Fintech Knowledge Partner': 'text-xs md:text-sm lg:text-md',
     }[tier] || 'text-md md:text-xl lg:text-2xl'
 
   return (
@@ -82,7 +92,7 @@ export default function SponsorPage() {
 
   const sponsors = [
     // { name: 'Title', tier: 'Title Sponsor', images: [] },
-    // { name: 'Gold', tier: 'Gold Sponsor', images: [] },
+    { name: 'Gold', tier: 'Gold Sponsor', images: [] },
     // { name: 'Silver', tier: 'Silver Sponsor', images: [] },
     { name: 'Bronze', tier: 'Bronze Sponsor', images: [] },
     { name: 'Community', tier: 'Community Partners', images: [] },
@@ -100,6 +110,11 @@ export default function SponsorPage() {
     // { name: 'E-Commerce', tier: 'E-Commerce Partner', images: [] },
     // { name: 'Confectionery', tier: 'Confectionery Partner', images: [] },
     // { name: 'Media', tier: 'Media Partner', images: [] },
+    { name: 'SustainableTech', tier: 'Sustainable Tech Partner', images: [] },
+    { name: 'DigitalLearning', tier: 'Digital Learning Partner', images: [] },
+    // { name: 'StudyAbroad', tier: 'Study Abroad Partner', images: [] },
+    // { name: 'Refreshment', tier: 'Refreshment Partner', images: [] },
+    { name: 'FinTechKnowledge', tier: 'Fintech Knowledge Partner', images: [] },
   ]
 
   const [newSponsors, setSponsors] = useState(sponsors)
