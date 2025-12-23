@@ -5,31 +5,39 @@ import { useEffect, useState } from 'react'
 
 const Sponsor = ({ tier, images }) => {
   const imageDimensions = {
-    'Title Sponsor': { base: 'w-24 md:w-36 lg:w-44' },
-    Gold: { base: 'w-22 md:w-34 lg:w-42' },
-    'Silver Sponsor': { base: 'w-14 md:w-24 lg:w-32' },
-    'Bronze Sponsor': { base: 'w-12 md:w-20 lg:w-28' },
-    'Community Partners': { base: 'w-14 md:w-16 lg:w-20' },
-    'Supported Partner': { base: 'w-8 md:w-12 lg:w-16' },
-    'Banking Partner': { base: 'w-8 md:w-12 lg:w-16' },
-    'Beverage Partner': { base: 'w-8 md:w-12 lg:w-16' },
-    'Celebration Partner': { base: 'w-8 md:w-12 lg:w-16' },
-    'Career Partner': { base: 'w-8 md:w-12 lg:w-16' },
-    'Food Partner': { base: 'w-8 md:w-12 lg:w-16' },
-    'Gift Partner': { base: 'w-8 md:w-12 lg:w-16' },
-    'Wellness Partner': { base: 'w-8 md:w-12 lg:w-16' },
-    'Event Sponsor': { base: 'w-8 md:w-12 lg:w-16' },
-    'Internet Partner': { base: 'w-8 md:w-12 lg:w-16' },
-    'SMS Partner': { base: 'w-8 md:w-12 lg:w-16' },
-    'E-Commerce Partner': { base: 'w-8 md:w-12 lg:w-16' },
-    'Confectionery Partner': { base: 'w-8 md:w-12 lg:w-16' },
-    'Media Partner': { base: 'w-14 md:w-16 lg:w-20' },
-    'Sustainable Tech Partner': { base: 'w-14 md:w-16 lg:w-20' },
-    'Digital Learning Partner': { base: 'w-14 md:w-16 lg:w-20' },
-    'Study Abroad Partner': { base: 'w-14 md:w-16 lg:w-20' },
-    'Refreshment Partner': { base: 'w-14 md:w-16 lg:w-20' },
-    'Fintech Knowledge Partner': { base: 'w-14 md:w-16 lg:w-20' },
-  }[tier] || { base: 'w-14 md:w-24 lg:w-32' }
+    //  Major Sponsors (descending)
+    'Title Sponsor': { base: 'w-36 sm:w-44 md:w-56 lg:w-64' },
+    'Diamond Sponsor': { base: 'w-32 sm:w-40 md:w-52 lg:w-60' },
+    'Gold Sponsor': { base: 'w-28 sm:w-36 md:w-48 lg:w-56' },
+    'Silver Sponsor': { base: 'w-24 sm:w-32 md:w-40 lg:w-48' },
+    'Bronze Sponsor': { base: 'w-20 sm:w-28 md:w-36 lg:w-44' },
+
+    //  Other Titled Partners (medium & consistent)
+    'Media Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Sustainable Tech Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Digital Learning Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Study Abroad Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Refreshment Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Fintech Knowledge Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+
+    //  Community Partners (smaller than titled)
+    'Community Partners': { base: 'w-16 sm:w-20 md:w-24 lg:w-28' },
+
+    //  Supporting / Utility Partners (same as other titled)
+    'Supported Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Banking Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Beverage Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Celebration Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Career Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Food Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Gift Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Wellness Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Event Sponsor': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Internet Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'SMS Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'E-Commerce Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Confectionery Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+  }[tier] || { base: 'w-22 sm:w-26 md:w-30 lg:w-36' }
 
   const textSize =
     {
@@ -37,8 +45,6 @@ const Sponsor = ({ tier, images }) => {
       Gold: 'text-xl md:text-3xl lg:text-4xl',
       'Silver Sponsor': 'text-md md:text-xl lg:text-2xl',
       'Bronze Sponsor': 'text-sm md:text-lg lg:text-xl',
-      'Community Partners': 'text-xs md:text-sm lg:text-md',
-      // 'Community Partners': 'text-xs md:text-sm lg:text-lg',
       'Supported Partners': 'text-xs md:text-sm lg:text-md',
       'Banking Partner': 'text-xs md:text-sm lg:text-md',
       'Beverage Partner': 'text-xs md:text-sm lg:text-md',
@@ -58,6 +64,8 @@ const Sponsor = ({ tier, images }) => {
       'Study Abroad Partner': 'text-xs md:text-sm lg:text-md',
       'Refreshment Partner': 'text-xs md:text-sm lg:text-md',
       'Fintech Knowledge Partner': 'text-xs md:text-sm lg:text-md',
+      // 'Community Partners': 'text-xs md:text-sm lg:text-lg',
+      'Community Partners': 'text-xs md:text-sm lg:text-md',
     }[tier] || 'text-md md:text-xl lg:text-2xl'
 
   return (
@@ -73,7 +81,7 @@ const Sponsor = ({ tier, images }) => {
         {tier}
       </h3>
 
-      <div className="flex flex-row gap-4 md:gap-6">
+      <div className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-full">
         {images.map((img, index) => (
           <img
             key={index}
@@ -95,7 +103,6 @@ export default function SponsorPage() {
     { name: 'Gold', tier: 'Gold Sponsor', images: [] },
     // { name: 'Silver', tier: 'Silver Sponsor', images: [] },
     { name: 'Bronze', tier: 'Bronze Sponsor', images: [] },
-    { name: 'Community', tier: 'Community Partners', images: [] },
     // { name: 'Supported', tier: 'Supported Partners', images: [] },
     // { name: 'Banking', tier: 'Banking Partner', images: [] },
     // { name: 'Beverage', tier: 'Beverage Partner', images: [] },
@@ -115,6 +122,8 @@ export default function SponsorPage() {
     // { name: 'StudyAbroad', tier: 'Study Abroad Partner', images: [] },
     // { name: 'Refreshment', tier: 'Refreshment Partner', images: [] },
     { name: 'FinTechKnowledge', tier: 'Fintech Knowledge Partner', images: [] },
+
+    { name: 'Community', tier: 'Community Partners', images: [] },
   ]
 
   const [newSponsors, setSponsors] = useState(sponsors)
