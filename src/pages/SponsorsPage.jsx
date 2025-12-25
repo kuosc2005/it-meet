@@ -38,6 +38,7 @@ const Sponsor = ({ tier, images }) => {
     'E-Commerce Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
     'Confectionery Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
     'Official Cloud Infrastructure Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'IT Training & Internship Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
   }[tier] || { base: 'w-20 sm:w-24 md:w-28 lg:w-36' }
 
   const textSize =
@@ -66,7 +67,7 @@ const Sponsor = ({ tier, images }) => {
       'Refreshment Partner': 'text-xs md:text-sm lg:text-md',
       'Fintech Knowledge Partner': 'text-xs md:text-sm lg:text-md',
       'Official Cloud Infrastructure Partner': 'text-xs md:text-sm lg:text-md',
-      // 'Community Partners': 'text-xs md:text-sm lg:text-lg',
+      'IT Training & Internship Partner': 'text-xs md:text-sm lg:text-lg',
       'Community Partners': 'text-xs md:text-sm lg:text-md',
     }[tier] || 'text-md md:text-xl lg:text-2xl'
 
@@ -105,7 +106,6 @@ export default function SponsorPage() {
     { name: 'Gold', tier: 'Gold Sponsor', images: [] },
     { name: 'Silver', tier: 'Silver Sponsor', images: [] },
     { name: 'Bronze', tier: 'Bronze Sponsor', images: [] },
-    // { name: 'Supported', tier: 'Supported Partners', images: [] },
     // { name: 'Banking', tier: 'Banking Partner', images: [] },
     // { name: 'Beverage', tier: 'Beverage Partner', images: [] },
     // { name: 'Celebration', tier: 'Celebration Partner', images: [] },
@@ -113,7 +113,8 @@ export default function SponsorPage() {
     // { name: 'Wellness', tier: 'Wellness Partner', images: [] },
     // { name: 'SMS', tier: 'SMS Partner', images: [] },
     // { name: 'E-Commerce', tier: 'E-Commerce Partner', images: [] },
-    // { name: 'Confectionery', tier: 'Confectionery Partner', images: [] },
+    { name: 'ITTraining', tier: 'IT Training & Internship Partner', images: [] },
+    { name: 'Supported', tier: 'Supported Partners', images: [] },
     { name: 'Career', tier: 'Career Partner', images: [] },
     { name: 'Gift', tier: 'Gift Partner', images: [] },
     { name: 'SustainableTech', tier: 'Sustainable Tech Partner', images: [] },
