@@ -13,31 +13,32 @@ const Sponsor = ({ tier, images }) => {
     'Bronze Sponsor': { base: 'w-20 sm:w-28 md:w-36 lg:w-44' },
 
     //  Other Titled Partners (medium & consistent)
-    'Media Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'Sustainable Tech Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'Digital Learning Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'Study Abroad Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'Refreshment Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'Fintech Knowledge Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
+    'Media Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Sustainable Tech Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Digital Learning Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Study Abroad Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Refreshment Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Fintech Knowledge Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
 
     //  Community Partners (smaller than titled)
     'Community Partners': { base: 'w-16 sm:w-20 md:w-24 lg:w-28' },
 
     //  Supporting / Utility Partners (same as other titled)
-    'Supported Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'Banking Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'Beverage Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'Celebration Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'Career Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'Food Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'Gift Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'Wellness Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'Event Sponsor': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'Internet Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'SMS Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'E-Commerce Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-    'Confectionery Partner': { base: 'w-22 sm:w-26 md:w-30 lg:w-36' },
-  }[tier] || { base: 'w-22 sm:w-26 md:w-30 lg:w-36' }
+    'Supported Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Banking Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Beverage Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Celebration Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Career Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Food Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Gift Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Wellness Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Event Sponsor': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Internet Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'SMS Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'E-Commerce Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Confectionery Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+    'Official Cloud Infrastructure Partner': { base: 'w-20 sm:w-24 md:w-28 lg:w-36' },
+  }[tier] || { base: 'w-20 sm:w-24 md:w-28 lg:w-36' }
 
   const textSize =
     {
@@ -64,6 +65,7 @@ const Sponsor = ({ tier, images }) => {
       'Study Abroad Partner': 'text-xs md:text-sm lg:text-md',
       'Refreshment Partner': 'text-xs md:text-sm lg:text-md',
       'Fintech Knowledge Partner': 'text-xs md:text-sm lg:text-md',
+      'Official Cloud Infrastructure Partner': 'text-xs md:text-sm lg:text-md',
       // 'Community Partners': 'text-xs md:text-sm lg:text-lg',
       'Community Partners': 'text-xs md:text-sm lg:text-md',
     }[tier] || 'text-md md:text-xl lg:text-2xl'
@@ -112,17 +114,17 @@ export default function SponsorPage() {
     // { name: 'Event', tier: 'Event Sponsor', images: [] },
     // { name: 'Gift', tier: 'Gift Partner', images: [] },
     // { name: 'Wellness', tier: 'Wellness Partner', images: [] },
-    // { name: 'Internet', tier: 'Internet Partner', images: [] },
     // { name: 'SMS', tier: 'SMS Partner', images: [] },
     // { name: 'E-Commerce', tier: 'E-Commerce Partner', images: [] },
     // { name: 'Confectionery', tier: 'Confectionery Partner', images: [] },
-    // { name: 'Media', tier: 'Media Partner', images: [] },
     { name: 'SustainableTech', tier: 'Sustainable Tech Partner', images: [] },
     { name: 'DigitalLearning', tier: 'Digital Learning Partner', images: [] },
+    { name: 'FinTechKnowledge', tier: 'Fintech Knowledge Partner', images: [] },
     // { name: 'StudyAbroad', tier: 'Study Abroad Partner', images: [] },
     // { name: 'Refreshment', tier: 'Refreshment Partner', images: [] },
-    { name: 'FinTechKnowledge', tier: 'Fintech Knowledge Partner', images: [] },
-
+    { name: 'Cloud', tier: 'Official Cloud Infrastructure Partner', images: [] },
+    { name: 'Internet', tier: 'Internet Partner', images: [] },
+    { name: 'Media', tier: 'Media Partner', images: [] },
     { name: 'Community', tier: 'Community Partners', images: [] },
   ]
 
