@@ -23,6 +23,7 @@ import EFootballLeadAbhinavLamsal from '@/assets/team/event/EFootballLeadAbhinav
 import ClashRoyaleLeadAkarshanShrestha from '@/assets/team/event/ClashRoyaleLeadAkarshanShrestha.webp'
 import MobileLegendsLeadPratisthaThapa from '@/assets/team/event/MobileLegendsLeadPratisthaThapa.webp'
 import EmpowerHerLeadNirjaraThapa from '@/assets/team/event/EmpowerHerLeadNirjaraThapa.webp'
+import Nabin from '@/assets/team/event/nabin.webp'
 // -----------------------------------//
 
 //---------------Technical Team -----------------//
@@ -53,12 +54,12 @@ import DocumentationDeekshyaBadal from '@/assets/team/documentation/Documentatio
 // -----------------------------------//
 
 //---------------Design Team -----------------//
-import DesignAnubhavBasnet from '@/assets/team/design/DesignAnubhavBasnet.webp';
-import DesignAshutoshChaudhary from '@/assets/team/design/DesignAshutoshChaudhary.webp';
-import DesignBishwasAdhikari from '@/assets/team/design/DesignBishwasAdhikari.webp';
-import DesignDinishaUprety from '@/assets/team/design/DesignDinishaUprety.webp';
-import DesignKritamKhatiwada from '@/assets/team/design/DesignKritamKhatiwada.webp';
-import DesignSubhechhaKarki from '@/assets/team/design/DesignSubhechhaKarki.webp';
+import DesignAnubhavBasnet from '@/assets/team/design/DesignAnubhavBasnet.webp'
+import DesignAshutoshChaudhary from '@/assets/team/design/DesignAshutoshChaudhary.webp'
+import DesignBishwasAdhikari from '@/assets/team/design/DesignBishwasAdhikari.webp'
+import DesignDinishaUprety from '@/assets/team/design/DesignDinishaUprety.webp'
+import DesignKritamKhatiwada from '@/assets/team/design/DesignKritamKhatiwada.webp'
+import DesignSubhechhaKarki from '@/assets/team/design/DesignSubhechhaKarki.webp'
 
 // -----------------------------------//
 
@@ -88,10 +89,10 @@ import LogisticsShubhamYadav from '@/assets/team/logistics/LogisticsShubhamYadav
 // -----------------------------------//
 
 //---------------Sponsorship Team -----------------//
-import SponsorshipAjurshaDahal from '@/assets/team/sponsorship/SponsorshipAjurshaDahal.webp';
-import SponsorshipKiranDahal from '@/assets/team/sponsorship/SponsorshipKiranDahal.webp';
-import SponsorshipPratisthitKhaniya from '@/assets/team/sponsorship/SponsorshipPratisthitKhaniya.webp';
-import SponsorshipSunitiShrestha from '@/assets/team/sponsorship/SponsorshipSunitiShrestha.webp';
+import SponsorshipAjurshaDahal from '@/assets/team/sponsorship/SponsorshipAjurshaDahal.webp'
+import SponsorshipKiranDahal from '@/assets/team/sponsorship/SponsorshipKiranDahal.webp'
+import SponsorshipPratisthitKhaniya from '@/assets/team/sponsorship/SponsorshipPratisthitKhaniya.webp'
+import SponsorshipSunitiShrestha from '@/assets/team/sponsorship/SponsorshipSunitiShrestha.webp'
 import SponsorshipPrabeshPoudel from '@/assets/team/sponsorship/SponsorshipPrabeshPoudel.webp'
 
 // -----------------------------------//
@@ -258,7 +259,7 @@ const team = [
       { name: 'Bishwas Adhikari', department: 'Design', image: DesignBishwasAdhikari },
       { name: 'Dinisha Uprety', department: 'Design', image: DesignDinishaUprety },
       { name: 'Kritam Khatiwada', department: 'Design', image: DesignKritamKhatiwada },
-      { name: 'Subhechha Karki', department: 'Design', image: DesignSubhechhaKarki }
+      { name: 'Subhechha Karki', department: 'Design', image: DesignSubhechhaKarki },
     ],
   },
   {
@@ -322,9 +323,12 @@ const team = [
       { name: 'Ajursha Dahal', department: 'Sponsorship', image: SponsorshipAjurshaDahal },
       { name: 'Kiran Dahal', department: 'Sponsorship', image: SponsorshipKiranDahal },
       { name: 'Prabesh Poudel', department: 'Sponsorships', image: SponsorshipPrabeshPoudel },
-      { name: 'Pratisthit Khaniya', department: 'Sponsorship', image: SponsorshipPratisthitKhaniya },
+      {
+        name: 'Pratisthit Khaniya',
+        department: 'Sponsorship',
+        image: SponsorshipPratisthitKhaniya,
+      },
       { name: 'Suniti Shrestha', department: 'Sponsorship', image: SponsorshipSunitiShrestha },
-
     ],
   },
   {
@@ -341,8 +345,16 @@ const team = [
       { name: 'Ayurva Pradhananga', department: 'Logistics', image: LogisticsAyurvaPradhananga },
       { name: 'Kapil Adhikari', department: 'Member', image: LogisticsKapilAdhikari },
       { name: 'Lujaw Dhunju', department: 'Logistics', image: LogisticsLujawDhunju },
-      { name: 'Mahammad Farman Mansoor', department: 'Logistics', image: LogisticsMahammadFarmanMansoor },
-      { name: 'Mohan Krishna Shrestha', department: 'Member', image: LogisticsMohanKrishnaShrestha },
+      {
+        name: 'Mahammad Farman Mansoor',
+        department: 'Logistics',
+        image: LogisticsMahammadFarmanMansoor,
+      },
+      {
+        name: 'Mohan Krishna Shrestha',
+        department: 'Member',
+        image: LogisticsMohanKrishnaShrestha,
+      },
       { name: 'Niraj Kumar Ram', department: 'Member', image: LogisticsNirajKumarRam },
       { name: 'Shubham Yadav', department: 'Member', image: LogisticsShubhamYadav },
     ],
@@ -377,7 +389,7 @@ const team = [
       {
         name: 'Nabin Kafle',
         department: 'We Shield Cyber Lead',
-        image: Utkrist,
+        image: Nabin,
         linkedIn: '',
         insta: '',
         github: '',
@@ -392,9 +404,17 @@ const team = [
       },
       { name: 'Prabal Lamichhane', department: 'Gaming Lead', image: GamingLeadPrabalLamichhane },
       { name: 'Abhinav Lamsal', department: 'eFootball Lead', image: EFootballLeadAbhinavLamsal },
-      { name: 'Akarshan Shrestha', department: 'Clash Royale Lead', image: ClashRoyaleLeadAkarshanShrestha },
+      {
+        name: 'Akarshan Shrestha',
+        department: 'Clash Royale Lead',
+        image: ClashRoyaleLeadAkarshanShrestha,
+      },
       { name: 'Neo Shakya', department: 'FC26 Lead', image: FIFALeadNeoShakya },
-      { name: 'Pratistha Thapa', department: 'Mobile Legends Lead', image: MobileLegendsLeadPratisthaThapa },
+      {
+        name: 'Pratistha Thapa',
+        department: 'Mobile Legends Lead',
+        image: MobileLegendsLeadPratisthaThapa,
+      },
     ],
   },
 ]
