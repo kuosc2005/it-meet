@@ -42,7 +42,8 @@ const rawEvents = [
     id: 1,
     imgSrc: '/project.webp',
     title: 'Project Exhibition',
-    formLink: '',
+    formLink:
+      'https://docs.google.com/forms/d/e/1FAIpQLSfOvNXiyKLJI5ZVrK9pnjzdpx86M3D997besN8AA7XBS6c4lQ/viewform?usp=send_form',
     day: '26',
     fullDate: '2025-12-26',
     category: 'main_event',
@@ -69,27 +70,27 @@ const rawEvents = [
     imgSrc: '/hackfest.webp',
     title: 'KU Hackfest',
     formLink: 'https://hackfest.kucc.ku.edu.np/',
-    day: '24',
-    fullDate: '2025-12-24',
+    day: '25',
+    fullDate: '2025-12-25',
     category: 'main_event',
     description:
       '“KU Hackfest”, one of the biggest events within IT Meet, is an international-level, 48-hour hackathon, scheduled for 24-26 December 2025.',
     details:
       ' “KU Hackfest”, one of the biggest events within IT Meet, is an international-level, 48-hour hackathon, scheduled for 24-26 December 2025. This event aims to cultivate creativity, drive innovation, and empower talented individuals to solve real-world problems. By gathering programmers, developers, designers, and tech enthusiasts from around the globe, KU Hackfest creates a dynamic environment for knowledge sharing and collaboration. Participants will benefit from extensive networking opportunities, interactive workshops, and expert mentorship, bridging the gap between academia and industry. Building on past successes, KU Hackfest 2025 aspires to surpass previous iterations in scope and impact. Last year KU Hackfest 2024, held on Nov 15-17, was Nepal’s largest in-person Major League Hacking (MLH) hackathon, attracting 501 applicants from diverse backgrounds and resulting in 51 finalized projects. With a cash prize pool exceeding Rs. 1,70,000, the event fostered teamwork and creativity, offering young coders a platform to showcase their skills, learn, and collaborate on innovative solutions.',
   },
-  {
-    id: 4,
-    imgSrc: '/alumnimeet.webp',
-    title: 'Alumni Meet',
-    formLink: '',
-    day: '25',
-    fullDate: '2025-12-25',
-    category: 'pre_event',
-    description:
-      'An alumni meet is a special gathering where our alumni of KU come together to reconnect, celebrate, and strengthen their bond with their alma mater.',
-    details:
-      'The “Alumni Meet” is a gathering that unites graduates from the Department of Computer Science and Engineering, offering them a platform to reconnect, network, and share their experiences. This event fosters a strong sense of community among alumni, allowing them to reminisce about their university years, celebrate their achievements, and reflect on their professional journeys since graduation. In Alumni Meet 2024, approximately 27 alumni attended, spanning graduation years from 2000 onwards. The event featured nostalgic reunions where alumni reconnected with peers and professors, shared personal and professional accomplishments, and imparted valuable insights to current students, inspiring them to envision their own future paths. Their contributions added depth and significance to the event, creating a memorable and enriching experience for all participants.',
-  },
+  // {
+  //   id: 4,
+  //   imgSrc: '/alumnimeet.webp',
+  //   title: 'Alumni Meet',
+  //   formLink: '',
+  //   day: '25',
+  //   fullDate: '2025-12-25',
+  //   category: 'pre_event',
+  //   description:
+  //     'An alumni meet is a special gathering where our alumni of KU come together to reconnect, celebrate, and strengthen their bond with their alma mater.',
+  //   details:
+  //     'The “Alumni Meet” is a gathering that unites graduates from the Department of Computer Science and Engineering, offering them a platform to reconnect, network, and share their experiences. This event fosters a strong sense of community among alumni, allowing them to reminisce about their university years, celebrate their achievements, and reflect on their professional journeys since graduation. In Alumni Meet 2024, approximately 27 alumni attended, spanning graduation years from 2000 onwards. The event featured nostalgic reunions where alumni reconnected with peers and professors, shared personal and professional accomplishments, and imparted valuable insights to current students, inspiring them to envision their own future paths. Their contributions added depth and significance to the event, creating a memorable and enriching experience for all participants.',
+  // },
   {
     id: 5,
     imgSrc: '/mock.webp',
@@ -214,7 +215,7 @@ const rawEvents = [
     imgSrc: '/treasurehunt.webp',
     title: 'AR Treasure Hunt',
     day: 'TBD',
-    fullDate: 'TBD',
+    fullDate: 'https://www.arth25.tech/',
     formLink: '',
     category: 'post_event',
     description:

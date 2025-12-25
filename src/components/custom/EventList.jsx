@@ -86,7 +86,7 @@ const EventRow = ({ event }) => {
         color: '#12dc9f',
         bg: 'bg-[#12dc9f]',
         text: 'text-[#12dc9f]',
-        label: 'Event Running',
+        label: 'Happening Now',
         pulse: true,
         gradientTitle: 'bg-gradient-to-r from-[#369FFF] to-[#14C58F] bg-clip-text text-transparent',
         borderColor: '#12dc9f',
@@ -369,4 +369,3 @@ export default function EventList({ events }) {
 EventList.propTypes = {
   events: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
-
