@@ -15,42 +15,44 @@ export default function AboutPage() {
         </h1>
         <div className="w-full rounded-full bg-gradient-to-r from-[#369fff] to-[#12dc9f] h-1.5 md:h-2 lg:h-2.5"></div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-center items-center mt-5 sm:mt-7 md:mt-9 lg:mt-12 gap-8 lg:gap-20">
-        <div className="lg:hidden flex justify-center">
+
+      <div className="flex flex-col lg:flex-row items-center justify-center mt-10 lg:mt-16 gap-12 lg:gap-16 w-full">
+        {/* Mobile Logo */}
+        <div className="lg:hidden flex justify-center mb-6">
           <img
             src={ITMeetLogo}
-            alt="itmeetlogodark"
-            className="object-contain w-[160px] sm:w-[240px] md:w-[300px]"
-            width={1000}
-            height={1000}
+            alt="IT Meet Logo"
+            className="object-contain w-[180px] sm:w-[240px] md:w-[280px] transform transition-transform duration-500 hover:scale-105 shadow-md"
           />
         </div>
-        <div className="lg:w-full">
-          <p className="text-xs sm:text-sm md:text-base xl:text-lg leading-8 text-justify font-normal text-gray-500">
+
+        {/* Paragraph Container */}
+        <div className="lg:max-w-3xl bg-[#1f2230]/50 p-6 md:p-8 rounded-xl shadow-md">
+          <p className="text-sm sm:text-base md:text-base xl:text-lg leading-relaxed text-gray-300 text-justify">
             <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
               IT MEET
             </span>{' '}
             is an annual, national-level event organized by Kathmandu University Computer Club
-            (KUCC) with the intent of celebrating recent achievements in information and technology,
-            that brings together tech enthusiasts from all over Nepal. This year, IT Meet aims to
-            continue its tradition of promoting the creative zeal of technical personnel, providing
-            a premier platform to share innovative ideas and compete with their peers in a variety
-            of activities, including workshops, competitions, and networking sessions. Our vision is
-            to provide future change-makers with a platform to delve deep into the insights of the
-            tech world, emerging not only with technical skills and knowledge about hardware and
-            computers but also with personal growth.
+            (KUCC), celebrating recent achievements in information and technology. It brings
+            together tech enthusiasts from all over Nepal. This year, IT Meet continues its
+            tradition of promoting the creative zeal of technical personnel, providing a premier
+            platform to share innovative ideas and compete in workshops, competitions, and
+            networking sessions. Our vision is to empower future change-makers with insights into
+            the tech world, helping them emerge not only with technical skills but also personal
+            growth.
           </p>
         </div>
-        <div className="hidden lg:flex w-full justify-center">
+
+        {/* Desktop Logo */}
+        <div className="hidden lg:flex justify-center w-[45%] -ml-6">
           <img
             src={ITMeetLogo}
-            alt="itmeetlogodark"
-            className="object-contain w-[600px]"
-            width={1000}
-            height={1000}
+            alt="IT Meet Logo"
+            className="object-contain w-[450px] md:w-[550px] transform transition-transform duration-500 hover:scale-105 shadow-lg"
           />
         </div>
       </div>
+
       <div className="flex flex-col justify-center items-center gap-2 md:gap-3 my-10">
         <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold text-transparent bg-clip-text bg-gradient-to-l from-[#369fff] to-[#12dc9f]">
           Our Legacy
