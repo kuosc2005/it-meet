@@ -7,7 +7,7 @@ const Sponsor = ({ tier, images }) => {
   const imageDimensions = {
     //  Major Sponsors (descending)
     'Title Sponsor': { base: 'w-36 sm:w-44 md:w-56 lg:w-64' },
-    'Diamond Sponsor': { base: 'w-32 sm:w-40 md:w-52 lg:w-60' },
+    'Diamond Sponsor': { base: 'w-28 sm:w-36 md:w-48 lg:w-56' },
     'Gold Sponsor': { base: 'w-28 sm:w-36 md:w-48 lg:w-56' },
     'Silver Sponsor': { base: 'w-24 sm:w-32 md:w-40 lg:w-48' },
     'Bronze Sponsor': { base: 'w-20 sm:w-28 md:w-36 lg:w-44' },
@@ -45,6 +45,7 @@ const Sponsor = ({ tier, images }) => {
     {
       'Title Sponsor': 'text-2xl md:text-4xl lg:text-5xl',
       Gold: 'text-xl md:text-3xl lg:text-4xl',
+      'Diamond Sponsor': 'text-xl md:text-3xl lg:text-4xl',
       'Silver Sponsor': 'text-md md:text-xl lg:text-2xl',
       'Bronze Sponsor': 'text-sm md:text-lg lg:text-xl',
       'Supported Partners': 'text-xs md:text-sm lg:text-md',
@@ -103,6 +104,7 @@ export default function SponsorPage() {
 
   const sponsors = [
     // { name: 'Title', tier: 'Title Sponsor', images: [] },
+    { name: 'Diamond', tier: 'Diamond Sponsor', images: [] },
     { name: 'Gold', tier: 'Gold Sponsor', images: [] },
     { name: 'Silver', tier: 'Silver Sponsor', images: [] },
     { name: 'Bronze', tier: 'Bronze Sponsor', images: [] },
